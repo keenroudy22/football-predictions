@@ -396,7 +396,7 @@
         "id": "w1-bowers-rec",
         "title": "Brock Bowers OVER 60 receiving yards",
         "why": "Imported from lines screenshot.",
-        "risk": "Official Raiders inactives confirm he did not play; original sportsbook rules and price were not supplied, so ticket settlement is unknown.",
+        "risk": "Official Raiders inactives confirm he did not play. This is graded as a non-participation void; the original sportsbook and price were not supplied.",
         "sources": [
           "https://www.raiders.com/news/las-vegas-raiders-week-1-inactives-vs-miami-dolphins-091326"
         ],
@@ -404,12 +404,11 @@
         "gameIds": [
           "NFL-401872928"
         ],
-        "result": "unverified",
-        "actual": "Inactive; sportsbook settlement unknown",
+        "result": "void",
+        "actual": "Inactive scratch; did not participate",
         "resultSource": "https://www.raiders.com/news/las-vegas-raiders-week-1-inactives-vs-miami-dolphins-091326",
-        "settlementState": "checking_rules",
-        "lastCheckedAt": "2026-09-14T18:05:00Z",
-        "nextReviewAt": "2026-09-15T14:30:00Z"
+        "settlementState": "settled",
+        "lastCheckedAt": "2026-09-14T18:36:00Z"
       },
       {
         "id": "w1-nabers-rec",
