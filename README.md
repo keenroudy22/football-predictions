@@ -14,7 +14,7 @@ python -m unittest discover -s tests
 node --check site/app.js
 ```
 
-`site/` is the deployable directory. GitHub Actions refreshes schedules/results at 10:37, 16:37, and 22:37 UTC every day, including weekday college games. Actions can run late; the page displays source timestamps. Turn off the workflow in GitHub Actions to stop it. No local background process is required.
+`site/` is the deployable directory. GitHub Actions refreshes schedules/results throughout the day plus Eastern postgame windows, including weekday college games. Actions can run late; the page displays source timestamps. Turn off the workflow in GitHub Actions to stop it. No local background process is required.
 
 ## Two different kinds of forecasts
 

@@ -6,7 +6,7 @@ const FootballRecords = (() => {
   function latest(reports) {
     const result = new Map();
     reports.slice().sort((a,b)=>a.publishedAt.localeCompare(b.publishedAt)).forEach(report=>{
-      for(const kind of ['props','parlays']) for(const pick of report[kind]||[]){
+      for(const kind of ['props','riskyProps','parlays']) for(const pick of report[kind]||[]){
         const previous=result.get(pick.id);
         result.set(pick.id,{...previous,...pick,league:report.league,publishedAt:report.publishedAt,historicalImport:!!report.historicalImport,kind,originalOdds:previous?previous.originalOdds:(validOdds(pick.odds)?pick.odds:null),originalBook:previous?previous.originalBook:(pick.book??null)});
       }
@@ -46,7 +46,7 @@ const FootballRecords = (() => {
     return {units:stakes?units:null,roi:stakes?100*units/stakes:null,stakes,assumedWins};
   }
   const favorite = p => p.favorite===true || FAVORITES.has(p.id);
-  const category = p => p.kind==='props'?'Straights':p.parlayType==='longshot'?'Longshots':'Parlays';
+  const category = p => p.kind==='props'?'Straights':p.kind==='riskyProps'?'Risky lines':p.parlayType==='longshot'?'Longshots':'Parlays';
   const week = (p,games) => {
     const g=(p.gameIds||[]).map(id=>games.get(id)).find(Boolean);
     if(!g)return null;

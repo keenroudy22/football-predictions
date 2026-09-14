@@ -114,6 +114,7 @@ def validate_report(report, games):
     assert published.tzinfo is not None
     assert published <= datetime.now(timezone.utc) + timedelta(minutes=5), 'Future publication date'
     assert report.get('historicalImport') is True or len(report.get('props', [])) <= 5
+    assert len(report.get('riskyProps', [])) <= 3
     assert len(report.get('parlays', [])) <= 2
     historical = report.get('historicalImport') is True
     for score in report.get('scores', []):
@@ -125,11 +126,22 @@ def validate_report(report, games):
         assert score.get('why') and score.get('sources')
         assert all(s.startswith('https://') for s in score['sources'])
         assert historical and score.get('confidence') is None or 1 <= score['confidence'] <= 10
-    for pick in report.get('props', []) + report.get('parlays', []):
+    for pick in report.get('props', []) + report.get('riskyProps', []) + report.get('parlays', []):
         for key in ('id', 'title', 'why', 'risk', 'sources', 'status'):
             assert pick.get(key), f'Missing {key}'
         assert all(s.startswith('https://') for s in pick['sources'])
         assert pick['status'] in ('active', 'withdrawn', 'watch', 'expired', 'settled', 'historical')
+        if pick.get('recentForm') is not None:
+            form = pick['recentForm']
+            assert isinstance(form, dict)
+            assert form.get('stat')
+            assert form.get('source', '').startswith('https://')
+            for window, expected in (('last5', 5), ('last10', 10)):
+                if form.get(window) is not None:
+                    sample = form[window]
+                    assert isinstance(sample, dict)
+                    assert sample.get('sample') == expected
+                    assert isinstance(sample.get('hits'), int) and 0 <= sample['hits'] <= expected
         if pick['status'] == 'historical':
             assert pick.get('result') in ('win', 'loss', 'push', 'void', 'unverified')
             assert pick.get('actual') is not None

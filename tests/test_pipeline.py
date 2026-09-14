@@ -54,4 +54,10 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError,'Historical import'):
             validate_report(r,{g['id']:g})
 
+    def test_risky_props_and_verified_recent_form_are_allowed(self):
+        g=self.game()
+        p=dict(id='risky',title='test',why='test',risk='Higher variance',sources=['https://example.com'],status='active',book='Book',odds=125,quotedAt='2026-09-14T11:00:00Z',expiresAt='2099-09-14T20:00:00Z',gameIds=[g['id']],cutoff='+110',confidence=4,edge='test',projection=10,recentForm=dict(stat='Over 10 yards',source='https://example.com/log',last5=dict(hits=3,sample=5),last10=dict(hits=6,sample=10)))
+        r=dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',riskyProps=[p])
+        self.assertIs(validate_report(r,{g['id']:g}),r)
+
 if __name__ == '__main__': unittest.main()

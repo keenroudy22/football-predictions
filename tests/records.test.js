@@ -52,3 +52,10 @@ test('college opening weekend is labeled Week 0',()=>{
   assert.equal(R.week({gameIds:['a']},games).week,0);
   assert.equal(R.week({gameIds:['b']},games).week,1);
 });
+
+test('risky props remain official selections but have their own record category',()=>{
+  const picks=R.latest([{league:'NFL',publishedAt:'2026-09-01T12:00:00Z',riskyProps:[{id:'risky',odds:125,result:'win'}]}]);
+  assert.equal(picks.length,1);
+  assert.equal(R.category(picks[0]),'Risky lines');
+  assert.equal(R.summarize(picks).units,1.25);
+});

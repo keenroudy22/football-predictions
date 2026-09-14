@@ -11,15 +11,18 @@ Create `research/YYYY-MM-DD-NFL.json` or `research/YYYY-MM-DD-CFB.json`. Files a
 - `league`: NFL or CFB
 - `publishedAt`: actual ISO UTC publication time, never backdated
 - `summary`: a short league research update
-- `props`: zero to five picks
+- `props`: zero to five core picks
+- `riskyProps`: optional zero to three higher-variance player props, tracked separately from the core card and never used to fill the five-pick quota
 - `parlays`: zero to two cards, labelled Best-supported parlay or Speculative longshot
 - `watch`: optional array of text thresholds, explicitly conditional
 
 Each pick: `id`, `title`, `why`, `risk`, `sources` (HTTPS source links), `status` (active/withdrawn/watch/expired/settled). An active pick also requires `book`, American `odds`, `quotedAt`, `expiresAt`, `gameIds` matching slate IDs, `cutoff` (worst line and max juice), `confidence` 1–10 and `edge` (method, uncertainty, probability or EV if defensible). Props also include `projection`. College active picks require `jurisdictionVerified: true` following actual verification. No location guessing.
 
+For a published prop, optionally include a verified `recentForm` object to show its market-specific hit rate: `stat`, an HTTPS `source` linking to the game log, plus `last5` and/or `last10` in the form `{ "hits": 3, "sample": 5 }`. A hit rate must use the same line direction and market as the published prop. Do not use a player’s generic stat average, a different prop threshold, or an unlinked memory-based count. If that verification is unavailable, omit the field and the live card will say that recent-form verification is pending.
+
 When a sportsbook, Playbook, GamblyBot, or another authorized provider returns a canonical share/deep link for the exact active market, add it as `bookLink`. The site shows it as “Open verified bet slip.” Do not manufacture a URL, scrape/deep-link a provider that prohibits automated access, or imply that opening the link places a wager. The user reviews and submits any wager in their sportsbook.
 
-Parlays require `legs`, actual sportsbook combined `odds`, and `correlation` explaining the joint assumptions. Do not multiply individual probabilities while ignoring dependence. Pass if actual combined price is unavailable or no defensible value exists. Longshots are speculative, never the best bet by default.
+Parlays require `legs`, actual sportsbook combined `odds`, and `correlation` explaining the joint assumptions. Do not multiply individual probabilities while ignoring dependence. Pass if actual combined price is unavailable or no defensible value exists. Longshots are speculative, never the best bet by default. `riskyProps` must state the specific variance driver in `risk`; they are official one-unit tracked selections, but are shown separately and cannot be Daily Favorites unless explicitly marked.
 
 Mark each published daily favorite with `favorite: true` at publication time. Keep its ID in the all-picks ledger too; the UI counts it once. Mark speculative parlays with `parlayType: "longshot"`. Every ticket is a hypothetical 1-unit risk at its first published sportsbook price. Record a fresh line/price snapshot with retrieval and source quote times when available. Never replace the original price during a revision. A score call is not a spread or total pick unless separately published as a priced selection.
 
