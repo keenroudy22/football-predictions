@@ -1,0 +1,2486 @@
+[
+  {
+    "gameId": "NFL-401872931",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 19,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 17,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872931"
+    ]
+  },
+  {
+    "gameId": "NFL-401872932",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872932"
+    ]
+  },
+  {
+    "gameId": "NFL-401872933",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872933"
+    ]
+  },
+  {
+    "gameId": "NFL-401872937",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872937"
+    ]
+  },
+  {
+    "gameId": "NFL-401872939",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 19,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872939"
+    ]
+  },
+  {
+    "gameId": "NFL-401872946",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 16,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 22,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872946"
+    ]
+  },
+  {
+    "gameId": "NFL-401872936",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 21,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872936"
+    ]
+  },
+  {
+    "gameId": "NFL-401872935",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872935"
+    ]
+  },
+  {
+    "gameId": "NFL-401872938",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872938"
+    ]
+  },
+  {
+    "gameId": "NFL-401872934",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872934"
+    ]
+  },
+  {
+    "gameId": "NFL-401872940",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 21,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 19,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872940"
+    ]
+  },
+  {
+    "gameId": "NFL-401872941",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 22,
+    "away": 18,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 19,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872941"
+    ]
+  },
+  {
+    "gameId": "NFL-401872944",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872944"
+    ]
+  },
+  {
+    "gameId": "NFL-401872943",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 16,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 21
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872943"
+    ]
+  },
+  {
+    "gameId": "NFL-401872942",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 16,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872942"
+    ]
+  },
+  {
+    "gameId": "NFL-401872945",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 17,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872945"
+    ]
+  },
+  {
+    "gameId": "NFL-401872947",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 21,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872947"
+    ]
+  },
+  {
+    "gameId": "NFL-401872948",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 19,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872948"
+    ]
+  },
+  {
+    "gameId": "NFL-401872953",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872953"
+    ]
+  },
+  {
+    "gameId": "NFL-401872949",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 25,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872949"
+    ]
+  },
+  {
+    "gameId": "NFL-401872954",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872954"
+    ]
+  },
+  {
+    "gameId": "NFL-401872951",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 20
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872951"
+    ]
+  },
+  {
+    "gameId": "NFL-401872952",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 20,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 17
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872952"
+    ]
+  },
+  {
+    "gameId": "NFL-401872956",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 18,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872956"
+    ]
+  },
+  {
+    "gameId": "NFL-401872950",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 19,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872950"
+    ]
+  },
+  {
+    "gameId": "NFL-401872955",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 16,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 21
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872955"
+    ]
+  },
+  {
+    "gameId": "NFL-401872957",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 19,
+      "away": 22
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872957"
+    ]
+  },
+  {
+    "gameId": "NFL-401872958",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 18,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872958"
+    ]
+  },
+  {
+    "gameId": "NFL-401872959",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 20,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872959"
+    ]
+  },
+  {
+    "gameId": "NFL-401872960",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 21,
+    "away": 29,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872960"
+    ]
+  },
+  {
+    "gameId": "NFL-401872961",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 25,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872961"
+    ]
+  },
+  {
+    "gameId": "NFL-401872962",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 19,
+      "away": 21
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872962"
+    ]
+  },
+  {
+    "gameId": "NFL-401872963",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 20,
+      "away": 19
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872963"
+    ]
+  },
+  {
+    "gameId": "CFB-401858225",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858225"
+    ]
+  },
+  {
+    "gameId": "CFB-401858226",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 34,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 18
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858226"
+    ]
+  },
+  {
+    "gameId": "CFB-401856811",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 16,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856811"
+    ]
+  },
+  {
+    "gameId": "CFB-401858455",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 39,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 17,
+      "away": 4
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858455"
+    ]
+  },
+  {
+    "gameId": "CFB-401869940",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401869940"
+    ]
+  },
+  {
+    "gameId": "CFB-401856686",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 35,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856686"
+    ]
+  },
+  {
+    "gameId": "CFB-401858454",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 36,
+    "away": 15,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 16,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858454"
+    ]
+  },
+  {
+    "gameId": "CFB-401858456",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 33,
+    "away": 16,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858456"
+    ]
+  },
+  {
+    "gameId": "CFB-401856792",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856792"
+    ]
+  },
+  {
+    "gameId": "CFB-401856798",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 16,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856798"
+    ]
+  },
+  {
+    "gameId": "CFB-401856812",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 29,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856812"
+    ]
+  },
+  {
+    "gameId": "CFB-401858228",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858228"
+    ]
+  },
+  {
+    "gameId": "CFB-401858229",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 25,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858229"
+    ]
+  },
+  {
+    "gameId": "CFB-401858451",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858451"
+    ]
+  },
+  {
+    "gameId": "CFB-401860889",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 33,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860889"
+    ]
+  },
+  {
+    "gameId": "CFB-401858460",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858460"
+    ]
+  },
+  {
+    "gameId": "CFB-401856695",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856695"
+    ]
+  },
+  {
+    "gameId": "CFB-401864508",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864508"
+    ]
+  },
+  {
+    "gameId": "CFB-401858227",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858227"
+    ]
+  },
+  {
+    "gameId": "CFB-401858448",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858448"
+    ]
+  },
+  {
+    "gameId": "CFB-401862774",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862774"
+    ]
+  },
+  {
+    "gameId": "CFB-401856694",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 35,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856694"
+    ]
+  },
+  {
+    "gameId": "CFB-401856685",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 33,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 17,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856685"
+    ]
+  },
+  {
+    "gameId": "CFB-401858457",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 22,
+    "away": 35,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858457"
+    ]
+  },
+  {
+    "gameId": "CFB-401858230",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858230"
+    ]
+  },
+  {
+    "gameId": "CFB-401856801",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 36,
+    "away": 18,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856801"
+    ]
+  },
+  {
+    "gameId": "CFB-401858450",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858450"
+    ]
+  },
+  {
+    "gameId": "CFB-401856797",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856797"
+    ]
+  },
+  {
+    "gameId": "CFB-401858233",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858233"
+    ]
+  },
+  {
+    "gameId": "CFB-401860890",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 17,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860890"
+    ]
+  },
+  {
+    "gameId": "CFB-401866424",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 0
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401866424"
+    ]
+  },
+  {
+    "gameId": "CFB-401858449",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 44,
+    "away": 15,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858449"
+    ]
+  },
+  {
+    "gameId": "CFB-401858471",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 17,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858471"
+    ]
+  },
+  {
+    "gameId": "CFB-401858231",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 33,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 16,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858231"
+    ]
+  },
+  {
+    "gameId": "CFB-401866422",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401866422"
+    ]
+  },
+  {
+    "gameId": "CFB-401867804",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401867804"
+    ]
+  },
+  {
+    "gameId": "CFB-401856691",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856691"
+    ]
+  },
+  {
+    "gameId": "CFB-401868317",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401868317"
+    ]
+  },
+  {
+    "gameId": "CFB-401862710",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862710"
+    ]
+  },
+  {
+    "gameId": "CFB-401862771",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 31,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862771"
+    ]
+  },
+  {
+    "gameId": "CFB-401864574",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 34,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864574"
+    ]
+  },
+  {
+    "gameId": "CFB-401871047",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401871047"
+    ]
+  },
+  {
+    "gameId": "CFB-401856689",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856689"
+    ]
+  },
+  {
+    "gameId": "CFB-401856687",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856687"
+    ]
+  },
+  {
+    "gameId": "CFB-401856800",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856800"
+    ]
+  },
+  {
+    "gameId": "CFB-401856803",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856803"
+    ]
+  },
+  {
+    "gameId": "CFB-401861963",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401861963"
+    ]
+  },
+  {
+    "gameId": "CFB-401862772",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 34,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 16,
+      "away": 4
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862772"
+    ]
+  },
+  {
+    "gameId": "CFB-401862773",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 19,
+    "away": 31,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862773"
+    ]
+  },
+  {
+    "gameId": "CFB-401862777",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862777"
+    ]
+  },
+  {
+    "gameId": "CFB-401864443",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864443"
+    ]
+  },
+  {
+    "gameId": "CFB-401866423",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401866423"
+    ]
+  },
+  {
+    "gameId": "CFB-401869948",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 17,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401869948"
+    ]
+  },
+  {
+    "gameId": "CFB-401870764",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401870764"
+    ]
+  },
+  {
+    "gameId": "CFB-401858452",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858452"
+    ]
+  },
+  {
+    "gameId": "CFB-401858459",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 17,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858459"
+    ]
+  },
+  {
+    "gameId": "CFB-401858453",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 34,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858453"
+    ]
+  },
+  {
+    "gameId": "CFB-401856688",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 17,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856688"
+    ]
+  },
+  {
+    "gameId": "CFB-401856795",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 32,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856795"
+    ]
+  },
+  {
+    "gameId": "CFB-401856690",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 25,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856690"
+    ]
+  },
+  {
+    "gameId": "CFB-401856802",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 16,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856802"
+    ]
+  },
+  {
+    "gameId": "CFB-401856796",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856796"
+    ]
+  },
+  {
+    "gameId": "CFB-401858232",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858232"
+    ]
+  },
+  {
+    "gameId": "CFB-401856692",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 34,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856692"
+    ]
+  },
+  {
+    "gameId": "CFB-401856693",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856693"
+    ]
+  },
+  {
+    "gameId": "CFB-401856799",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856799"
+    ]
+  },
+  {
+    "gameId": "CFB-401862775",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862775"
+    ]
+  },
+  {
+    "gameId": "CFB-401862776",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 33,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862776"
+    ]
+  },
+  {
+    "gameId": "CFB-401860885",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 34,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 16,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860885"
+    ]
+  },
+  {
+    "gameId": "CFB-401860887",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 30,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860887"
+    ]
+  },
+  {
+    "gameId": "CFB-401856793",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 33,
+    "away": 15,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856793"
+    ]
+  },
+  {
+    "gameId": "CFB-401864507",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 21,
+    "away": 32,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864507"
+    ]
+  },
+  {
+    "gameId": "CFB-401858458",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858458"
+    ]
+  },
+  {
+    "gameId": "CFB-401860886",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 25,
+    "away": 29,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860886"
+    ]
+  },
+  {
+    "gameId": "CFB-401860888",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 22,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860888"
+    ]
+  },
+  {
+    "gameId": "CFB-401869941",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401869941"
+    ]
+  },
+  {
+    "gameId": "CFB-401862779",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862779"
+    ]
+  },
+  {
+    "gameId": "CFB-401858468",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858468"
+    ]
+  },
+  {
+    "gameId": "CFB-401862778",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 32,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862778"
+    ]
+  },
+  {
+    "gameId": "CFB-401858461",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 36,
+    "away": 16,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858461"
+    ]
+  },
+  {
+    "gameId": "CFB-401858234",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 24,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858234"
+    ]
+  },
+  {
+    "gameId": "CFB-401856704",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 28,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856704"
+    ]
+  },
+  {
+    "gameId": "CFB-401858236",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 32,
+    "away": 20,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858236"
+    ]
+  },
+  {
+    "gameId": "CFB-401864576",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864576"
+    ]
+  },
+  {
+    "gameId": "CFB-401866427",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401866427"
+    ]
+  },
+  {
+    "gameId": "CFB-401864510",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 22,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864510"
+    ]
+  },
+  {
+    "gameId": "CFB-401858244",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 33,
+    "away": 21,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 16,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858244"
+    ]
+  },
+  {
+    "gameId": "CFB-401864579",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 23,
+    "away": 30,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401864579"
+    ]
+  },
+  {
+    "gameId": "CFB-401866426",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401866426"
+    ]
+  },
+  {
+    "gameId": "CFB-401866428",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 0
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401866428"
+    ]
+  },
+  {
+    "gameId": "CFB-401868188",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 28,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 14,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401868188"
+    ]
+  },
+  {
+    "gameId": "CFB-401862781",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862781"
+    ]
+  },
+  {
+    "gameId": "CFB-401860892",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 1
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860892"
+    ]
+  },
+  {
+    "gameId": "CFB-401867909",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 31,
+    "away": 22,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401867909"
+    ]
+  },
+  {
+    "gameId": "CFB-401858238",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 36,
+    "away": 13,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 18,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858238"
+    ]
+  },
+  {
+    "gameId": "CFB-401869931",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 26,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401869931"
+    ]
+  },
+  {
+    "gameId": "CFB-401870745",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 34,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 15,
+      "away": 3
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401870745"
+    ]
+  },
+  {
+    "gameId": "CFB-401871048",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 17,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401871048"
+    ]
+  },
+  {
+    "gameId": "CFB-401856804",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 21,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856804"
+    ]
+  },
+  {
+    "gameId": "CFB-401860894",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 23,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 16
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860894"
+    ]
+  },
+  {
+    "gameId": "CFB-401862783",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 37,
+    "away": 19,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 2,
+    "sparse": true,
+    "trainingGames": {
+      "home": 16,
+      "away": 2
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. Limited team history; league-average assumptions carry more weight. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401862783"
+    ]
+  },
+  {
+    "gameId": "CFB-401856697",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 27,
+    "away": 24,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401856697"
+    ]
+  },
+  {
+    "gameId": "CFB-401860895",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 29,
+    "away": 25,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 14
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860895"
+    ]
+  },
+  {
+    "gameId": "CFB-401860891",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 30,
+    "away": 18,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 15,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401860891"
+    ]
+  },
+  {
+    "gameId": "CFB-401858240",
+    "publishedAt": "2026-09-14T12:13:32Z",
+    "home": 26,
+    "away": 27,
+    "model": "elo-total-v1",
+    "type": "baseline",
+    "confidence": 3,
+    "sparse": false,
+    "trainingGames": {
+      "home": 14,
+      "away": 15
+    },
+    "why": "Opponent-adjusted historical scoring margin with smoothed team game totals. No injury, roster, weather, or betting-market adjustment. Analyst review pending.",
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858240"
+    ]
+  }
+]
