@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-09-14T12:36:32Z",
+  "updatedAt": "2026-09-14T12:44:32Z",
   "sources": [
     {
       "league": "NFL",
       "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260801-20260928&limit=1000",
-      "retrievedAt": "2026-09-14T12:36:32Z"
+      "retrievedAt": "2026-09-14T12:44:32Z"
     },
     {
       "league": "CFB",
       "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260801-20260928&limit=1000&groups=80",
-      "retrievedAt": "2026-09-14T12:36:32Z"
+      "retrievedAt": "2026-09-14T12:44:32Z"
     }
   ],
   "games": [
