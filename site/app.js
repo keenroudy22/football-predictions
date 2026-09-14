@@ -28,7 +28,9 @@ function card(g){
   let detail=p?`<p>${esc(p.why)}</p><p>Confidence ${esc(p.confidence)}/10 · ${p.type==='analyst'?'Analyst':p.type==='historical'?'Historical import':'Uncalibrated baseline'}</p><p>${p.type==='historical'?'Imported':'Recorded'} ${pretty(p.publishedAt)} ET</p>${p.type==='historical'?'<p>Original screenshot supplied after the week; exact original posting time is not verified and this call is excluded from model grading.</p>':''}${links(p.sources)}`:'<p>No forecast was recorded before kickoff. This game is excluded from the prediction record.</p>';
   if(p&&final) detail=`<p>Pregame call: ${esc(g.away.abbreviation)} ${p.away} · ${esc(g.home.abbreviation)} ${p.home}</p>`+detail;
   if(p?.type==='analyst'&&original(g))detail+=`<p>Original baseline: ${original(g).away}–${original(g).home}. Revisions remain in the public archive.</p>`;
-  return `<article class="game"><div class="game-top"><span>${g.timeValid?fmt(g.kickoff,{hour:'numeric',minute:'2-digit'})+' ET':'Time TBD'}</span><span class="tag ${final?'final':''}">${label}</span></div>${side('away')}${side('home')}<div class="game-bottom"><span>${final?'Provider-reported final':p?`Projected total ${p.home+p.away}`:'Forecast pending'}</span><span>${g.neutral?'Neutral site':'@ '+esc(g.home.abbreviation)}</span></div><details><summary>${final?'Original call & sources':'Why this score'}</summary>${detail}${links([g.source])}</details></article>`;
+  const m=g.market;
+  const market=m?.total!=null?`<div class="market"><strong>${esc(m.provider||'Market')}</strong> <span>${esc(g.home.abbreviation)} ${esc(m.spread??'—')} (${esc(m.spreadOdds??'—')}) · O/U ${esc(m.total)} (${esc(m.overOdds??'—')}/${esc(m.underOdds??'—')})</span>${m.spreadOpen||m.totalOpen?`<small>Open: ${esc(m.spreadOpen??'—')} · ${esc(m.totalOpen??'—')}</small>`:''}${m.link?`<a href="${esc(m.link)}" target="_blank" rel="noopener noreferrer">Open at ${esc(m.provider)} ↗</a>`:''}</div>`:'';
+  return `<article class="game"><div class="game-top"><span>${g.timeValid?fmt(g.kickoff,{hour:'numeric',minute:'2-digit'})+' ET':'Time TBD'}</span><span class="tag ${final?'final':''}">${label}</span></div>${side('away')}${side('home')}<div class="game-bottom"><span>${final?'Provider-reported final':p?`Projected total ${p.home+p.away}`:'Forecast pending'}</span><span>${g.neutral?'Neutral site':'@ '+esc(g.home.abbreviation)}</span></div>${market}<details><summary>${final?'Original call & sources':'Why this score'}</summary>${detail}${links([g.source])}</details></article>`;
 }
 function scoreboard(){
   const list=games();
@@ -91,7 +93,7 @@ function render(){
   const age=(Date.now()-new Date(state.slate.updatedAt))/3600000;
   $('#freshness').textContent=`Feed checked ${pretty(state.slate.updatedAt)} ET`;
   $('#notice').classList.toggle('warn',age>12);
-  $('#notice').textContent=age>12?'Source data is more than 12 hours old. Check source links before relying on game times or results.':state.view==='scores'?'Baseline forecasts are live. Full analyst review is pending; these scores do not imply a betting edge.':'Only verified research can become an active recommendation. Expired quotes and games at kickoff are locked automatically.';
+  $('#notice').textContent=age>12?'Source data is more than 12 hours old. Check source links before relying on game times or results.':state.view==='scores'?'Baseline forecasts are live. Game-market comparison is DraftKings when carried by the source; check the timestamp and book before acting.':'Only verified research can become an active recommendation. Expired quotes and games at kickoff are locked automatically.';
   $('#content').innerHTML=state.view==='scores'?scoreboard():state.view==='record'?record():research(state.view);
 }
 async function init(){

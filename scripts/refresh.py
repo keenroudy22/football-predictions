@@ -46,6 +46,22 @@ def normalize(event, league):
         game[side] = dict(id=t['id'], name=t['displayName'], short=t.get('shortDisplayName', t['displayName']),
                           abbreviation=t.get('abbreviation', t['displayName']),
                           score=int(score) if score is not None and status['state'] != 'pre' else None)
+    odds = c.get('odds', [])
+    if odds:
+        odds = odds[0]
+        home_spread = odds.get('pointSpread', {}).get('home', {})
+        total = odds.get('total', {})
+        game['market'] = {
+            'provider': odds.get('provider', {}).get('displayName', odds.get('provider', {}).get('name')),
+            'spread': home_spread.get('close', {}).get('line'),
+            'spreadOdds': home_spread.get('close', {}).get('odds'),
+            'spreadOpen': home_spread.get('open', {}).get('line'),
+            'total': odds.get('overUnder'),
+            'totalOpen': total.get('over', {}).get('open', {}).get('line'),
+            'overOdds': total.get('over', {}).get('close', {}).get('odds'),
+            'underOdds': total.get('under', {}).get('close', {}).get('odds'),
+            'link': odds.get('link', {}).get('href')
+        }
     return game
 
 class Model:
