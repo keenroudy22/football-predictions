@@ -42,4 +42,16 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             validate_report(dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',props=[p]),{})
 
+    def test_historical_score_unknown_confidence_allowed(self):
+        g=self.game()
+        r=dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',historicalImport=True,scores=[dict(gameId=g['id'],home=20,away=10,why='Screenshot import',sources=['https://example.com'])])
+        self.assertIs(validate_report(r,{g['id']:g}),r)
+
+    def test_historical_import_cannot_publish_active_pick(self):
+        g=self.game()
+        p=dict(id='x',title='test',why='test',risk='test',sources=['https://example.com'],status='active',book='Book',odds=-110,quotedAt='2026-09-14T11:00:00Z',expiresAt='2099-09-14T20:00:00Z',gameIds=[g['id']],cutoff='-120',confidence=5,edge='test',projection=10)
+        r=dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',historicalImport=True,props=[p])
+        with self.assertRaisesRegex(AssertionError,'Historical import'):
+            validate_report(r,{g['id']:g})
+
 if __name__ == '__main__': unittest.main()

@@ -124,7 +124,7 @@ def validate_report(report, games):
         assert all(isinstance(score[s], int) and 0 <= score[s] <= 100 for s in ('home', 'away'))
         assert score.get('why') and score.get('sources')
         assert all(s.startswith('https://') for s in score['sources'])
-        assert 1 <= score['confidence'] <= 10
+        assert historical and score.get('confidence') is None or 1 <= score['confidence'] <= 10
     for pick in report.get('props', []) + report.get('parlays', []):
         for key in ('id', 'title', 'why', 'risk', 'sources', 'status'):
             assert pick.get(key), f'Missing {key}'
@@ -140,6 +140,7 @@ def validate_report(report, games):
             assert pick.get('settledAt') and pick.get('actual') is not None
             assert isinstance(pick.get('odds'), (int, float)) and abs(pick['odds']) >= 100
         if pick['status'] == 'active':
+            assert not historical, 'Historical import cannot become an active recommendation'
             for key in ('book', 'odds', 'quotedAt', 'expiresAt', 'gameIds', 'cutoff', 'confidence', 'edge'):
                 assert pick.get(key) is not None, f'Missing {key}'
             quote = datetime.fromisoformat(pick['quotedAt'].replace('Z', '+00:00'))
@@ -181,6 +182,20 @@ def main():
             if g['completed'] and datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')) < now:
                 model.train(g)
         for g in normalized:
+            previous = games.get(g['id'], {})
+            history = previous.get('marketHistory', [])
+            if g.get('market'):
+                market = g['market']
+                keys = ('provider', 'spread', 'spreadOdds', 'total', 'overOdds', 'underOdds')
+                snapshot = {key: market.get(key) for key in keys}
+                if not history or any(history[-1].get(key) != snapshot[key] for key in keys):
+                    snapshot['retrievedAt'] = stamp(now)
+                    snapshot['phase'] = 'pregame' if g['state'] == 'pre' and datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')) > now else 'post-start'
+                    history = (history + [snapshot])[-50:]
+                g['marketHistory'] = history
+                g['marketRetrievedAt'] = stamp(now)
+            elif history:
+                g['marketHistory'] = history
             games[g['id']] = g
             kickoff = datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00'))
             if g['state'] == 'pre' and kickoff > now and g['timeValid'] and g['id'] not in known:

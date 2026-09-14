@@ -26,7 +26,9 @@ jobs:
       - name: Check publication rules
         run: python -m unittest discover -s tests
       - name: Check browser script
-        run: node --check site/app.js
+        run: |
+          node --check site/app.js
+          node --test tests/records.test.js
       - name: Refresh schedules and record original forecasts
         run: python scripts/refresh.py
       - name: Preserve the public record

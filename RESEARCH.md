@@ -21,6 +21,8 @@ When a sportsbook, Playbook, GamblyBot, or another authorized provider returns a
 
 Parlays require `legs`, actual sportsbook combined `odds`, and `correlation` explaining the joint assumptions. Do not multiply individual probabilities while ignoring dependence. Pass if actual combined price is unavailable or no defensible value exists. Longshots are speculative, never the best bet by default.
 
+Mark each published daily favorite with `favorite: true` at publication time. Keep its ID in the all-picks ledger too; the UI counts it once. Mark speculative parlays with `parlayType: "longshot"`. Every ticket is a hypothetical 1-unit risk at its first published sportsbook price. Record a fresh line/price snapshot with retrieval and source quote times when available. Never replace the original price during a revision. A score call is not a spread or total pick unless separately published as a priced selection.
+
 Use short expiration windows for quotes. Expiry isn't a claim of continuous monitoring. Preserve original cards; publish changes in new timestamped report files with the same pick ID so the newest status supersedes the previous card. No silent deletion of losses, withdrawals or old prices.
 
 ## Analyst score revisions
@@ -30,6 +32,10 @@ Optional `scores` array: `gameId`, `home`, `away`, `why`, `confidence`, `sources
 ## Results
 
 Only forecasts published before kickoff count. Automatic scoreboard finals are ESPN-reported and not a substitute for official player-stat verification. Prop settlements must include `result` (win/loss/push/void), `settledAt`, `actual`, `resultSource` and original odds. Unknown outcomes stay unsettled. Flat hypothetical one-unit profits: win at positive odds = odds/100; negative = 100/abs(odds); loss = -1; push/void = 0. Do not infer real wagers.
+
+At every research check, revisit unsettled results. Give each a specific `settlementState`, `lastCheckedAt`, `nextReviewAt` and reason. After 24 hours, consult an alternate reliable source and flag discrepancies. A player missing from a box score is not automatically a loss or void: check participation, official inactives and the original sportsbook rule. Historical imports with missing odds may show a hit rate but cannot show units or ROI.
+
+After each week, record a short review of projected versus actual workload, target/carry mix, efficiency, positional defense and injury assumptions. Compare opponent strength and personnel before carrying a trend forward. Assign a version to changed score/prop methods and evaluate later games independently before claiming improvement. Keep the original forecast and its assumptions intact.
 
 ## Operations
 
