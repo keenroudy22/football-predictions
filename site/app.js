@@ -113,7 +113,7 @@ function navigate(){const view=location.hash.slice(1);state.view=['scores','prop
 async function init(){
   $('#today').textContent=fmt(new Date(),{weekday:'short',month:'short',day:'numeric',year:'numeric'}).toUpperCase();
   try{
-    const values=await Promise.all(['slate','forecasts','research'].map(async f=>{const r=await fetch(`data/${f}.json`,{cache:'no-store'});if(!r.ok)throw new Error('Data unavailable');return r.json()}));
+    const values=await Promise.all(['slate','forecasts','research'].map(async f=>{const r=await fetch(`data/${f}.json?refresh=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error('Data unavailable');return r.json()}));
     [state.slate,state.forecasts,state.reports]=values;setupWeeks();navigate();
     document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;localStorage.setItem('football-league',state.league);setupWeeks();render()}));
     document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{location.hash=b.dataset.view}));
