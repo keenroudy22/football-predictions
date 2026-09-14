@@ -37,7 +37,6 @@
         "gameId": "NFL-401872661",
         "away": 27,
         "home": 23,
-        "confidence": 4,
         "why": "Imported score call: Bears 27, Panthers 23.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872661"
@@ -47,7 +46,6 @@
         "gameId": "NFL-401872659",
         "away": 27,
         "home": 23,
-        "confidence": 4,
         "why": "Imported score call: Ravens 27, Colts 23.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872659"
@@ -55,9 +53,8 @@
       },
       {
         "gameId": "NFL-401872658",
-        "away": 27,
-        "home": 13,
-        "confidence": 4,
+        "away": 13,
+        "home": 27,
         "why": "Imported score call: Steelers 27, Falcons 13.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872658"
@@ -67,7 +64,6 @@
         "gameId": "NFL-401872922",
         "away": 13,
         "home": 30,
-        "confidence": 4,
         "why": "Imported score call: Jaguars 30, Browns 13.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872922"
@@ -75,10 +71,9 @@
       },
       {
         "gameId": "NFL-401872925",
-        "away": 28,
-        "home": 27,
-        "confidence": 4,
-        "why": "Imported score call: Bengals 28, Buccaneers 27.",
+        "away": 27,
+        "home": 31,
+        "why": "Imported score call: Bengals 31, Buccaneers 27.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872925"
         ]
@@ -87,7 +82,6 @@
         "gameId": "NFL-401872924",
         "away": 21,
         "home": 17,
-        "confidence": 4,
         "why": "Imported score call: Jets 21, Titans 17.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872924"
@@ -97,7 +91,6 @@
         "gameId": "NFL-401872923",
         "away": 21,
         "home": 34,
-        "confidence": 4,
         "why": "Imported score call: Lions 34, Saints 21.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872923"
@@ -106,9 +99,8 @@
       {
         "gameId": "NFL-401872660",
         "away": 21,
-        "home": 21,
-        "confidence": 4,
-        "why": "Imported score call: Texans 21, Bills 21.",
+        "home": 23,
+        "why": "Imported score call: Texans 23, Bills 21.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872660"
         ]
@@ -117,7 +109,6 @@
         "gameId": "NFL-401872926",
         "away": 17,
         "home": 31,
-        "confidence": 4,
         "why": "Imported score call: Chargers 31, Cardinals 17.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872926"
@@ -127,7 +118,6 @@
         "gameId": "NFL-401872928",
         "away": 17,
         "home": 24,
-        "confidence": 4,
         "why": "Imported score call: Raiders 24, Dolphins 17.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872928"
@@ -137,7 +127,6 @@
         "gameId": "NFL-401872927",
         "away": 23,
         "home": 27,
-        "confidence": 4,
         "why": "Imported score call: Vikings 27, Packers 23.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872927"
@@ -147,7 +136,6 @@
         "gameId": "NFL-401872929",
         "away": 17,
         "home": 27,
-        "confidence": 4,
         "why": "Imported score call: Eagles 27, Commanders 17.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872929"
@@ -157,7 +145,6 @@
         "gameId": "NFL-401872930",
         "away": 30,
         "home": 24,
-        "confidence": 4,
         "why": "Imported score call: Cowboys 30, Giants 24.",
         "sources": [
           "https://www.espn.com/nfl/game/_/gameId/401872930"
@@ -265,17 +252,17 @@
         "id": "w1-godwin-rec",
         "title": "Chris Godwin OVER 49.5 receiving yards",
         "why": "Imported from favorite-lines screenshot.",
-        "risk": "Player result was not found in the provider box score; no outcome is assumed.",
+        "risk": "Historical import; no original price or timestamp.",
         "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872925"
+          "https://fantasydata.com/nfl/chris-godwin-jr-fantasy/18880"
         ],
         "status": "historical",
         "gameIds": [
           "NFL-401872925"
         ],
-        "result": "unverified",
-        "actual": "Provider box score did not list a result",
-        "resultSource": "https://www.espn.com/nfl/game/_/gameId/401872925"
+        "result": "loss",
+        "actual": "40 receiving yards",
+        "resultSource": "https://fantasydata.com/nfl/chris-godwin-jr-fantasy/18880"
       },
       {
         "id": "w1-watson-rec",
@@ -409,21 +396,24 @@
         "id": "w1-bowers-rec",
         "title": "Brock Bowers OVER 60 receiving yards",
         "why": "Imported from lines screenshot.",
-        "risk": "Provider box score did not list a result; no outcome is assumed.",
+        "risk": "Official Raiders inactives confirm he did not play; original sportsbook rules and price were not supplied, so ticket settlement is unknown.",
         "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872928"
+          "https://www.raiders.com/news/las-vegas-raiders-week-1-inactives-vs-miami-dolphins-091326"
         ],
         "status": "historical",
         "gameIds": [
           "NFL-401872928"
         ],
         "result": "unverified",
-        "actual": "Provider box score did not list a result",
-        "resultSource": "https://www.espn.com/nfl/game/_/gameId/401872928"
+        "actual": "Inactive; sportsbook settlement unknown",
+        "resultSource": "https://www.raiders.com/news/las-vegas-raiders-week-1-inactives-vs-miami-dolphins-091326",
+        "settlementState": "checking_rules",
+        "lastCheckedAt": "2026-09-14T18:05:00Z",
+        "nextReviewAt": "2026-09-15T14:30:00Z"
       },
       {
         "id": "w1-nabers-rec",
-        "title": "Malik Nabers OVER 61.5 receiving yards",
+        "title": "Malik Nabers OVER 60 receiving yards",
         "why": "Imported from lines screenshot.",
         "risk": "Historical import; no original price or timestamp.",
         "sources": [
@@ -486,20 +476,20 @@
         "resultSource": "https://www.espn.com/nfl/game/_/gameId/401872929"
       },
       {
-        "id": "w1-conklin-rec",
-        "title": "Tyler Conklin OVER 18.5 receiving yards",
+        "id": "w1-shough-rush",
+        "title": "Tyler Shough OVER 18.5 rushing yards",
         "why": "Imported from lines screenshot.",
-        "risk": "Provider box score did not list a result; no outcome is assumed.",
+        "risk": "Historical import; no original price or timestamp.",
         "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872924"
+          "https://www.neworleanssaints.com/game-day/2026/reg-week1/lions-vs-saints/box-score"
         ],
         "status": "historical",
         "gameIds": [
-          "NFL-401872924"
+          "NFL-401872923"
         ],
-        "result": "unverified",
-        "actual": "Provider box score did not list a result",
-        "resultSource": "https://www.espn.com/nfl/game/_/gameId/401872924"
+        "result": "loss",
+        "actual": "8 rushing yards",
+        "resultSource": "https://www.neworleanssaints.com/game-day/2026/reg-week1/lions-vs-saints/box-score"
       },
       {
         "id": "w1-love-pass",
