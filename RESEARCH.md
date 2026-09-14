@@ -17,6 +17,8 @@ Create `research/YYYY-MM-DD-NFL.json` or `research/YYYY-MM-DD-CFB.json`. Files a
 
 Each pick: `id`, `title`, `why`, `risk`, `sources` (HTTPS source links), `status` (active/withdrawn/watch/expired/settled). An active pick also requires `book`, American `odds`, `quotedAt`, `expiresAt`, `gameIds` matching slate IDs, `cutoff` (worst line and max juice), `confidence` 1–10 and `edge` (method, uncertainty, probability or EV if defensible). Props also include `projection`. College active picks require `jurisdictionVerified: true` following actual verification. No location guessing.
 
+When a sportsbook, Playbook, GamblyBot, or another authorized provider returns a canonical share/deep link for the exact active market, add it as `bookLink`. The site shows it as “Open verified bet slip.” Do not manufacture a URL, scrape/deep-link a provider that prohibits automated access, or imply that opening the link places a wager. The user reviews and submits any wager in their sportsbook.
+
 Parlays require `legs`, actual sportsbook combined `odds`, and `correlation` explaining the joint assumptions. Do not multiply individual probabilities while ignoring dependence. Pass if actual combined price is unavailable or no defensible value exists. Longshots are speculative, never the best bet by default.
 
 Use short expiration windows for quotes. Expiry isn't a claim of continuous monitoring. Preserve original cards; publish changes in new timestamped report files with the same pick ID so the newest status supersedes the previous card. No silent deletion of losses, withdrawals or old prices.
