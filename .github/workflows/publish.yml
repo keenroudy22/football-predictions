@@ -5,6 +5,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '37 10,16,22 * * *'
+    - cron: '17 17,20 * * *'
+      timezone: America/New_York
+    - cron: '47 23 * * *'
+      timezone: America/New_York
+    - cron: '17 2 * * *'
+      timezone: America/New_York
 permissions:
   contents: write
   pages: write

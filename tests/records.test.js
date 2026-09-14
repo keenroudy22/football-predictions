@@ -35,6 +35,16 @@ test('Week 1 favorites follow the explicit final five, while the archive retains
   assert.equal(R.summarize(favorites).wins,1);
   assert.equal(R.summarize(favorites).losses,4);
   assert.equal(picks.length,26);
+  assert.equal(R.illustrative(favorites).units.toFixed(2),'-3.09');
+  assert.equal(R.illustrative(picks).units.toFixed(2),'1.73');
+});
+
+test('illustrative one-unit return uses known odds, excludes voids and pending, and marks assumed wins',()=>{
+  const s=R.illustrative([{result:'win',originalOdds:150},{result:'win',originalOdds:null},{result:'loss',originalOdds:null},{result:'push',originalOdds:null},{result:'void',originalOdds:null},{result:'unverified',originalOdds:null}]);
+  assert.equal(s.stakes,4);
+  assert.equal(s.assumedWins,1);
+  assert.equal(s.units.toFixed(2),'1.41');
+  assert.equal(s.roi.toFixed(1),'35.2');
 });
 
 test('college opening weekend is labeled Week 0',()=>{

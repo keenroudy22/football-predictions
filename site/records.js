@@ -31,6 +31,20 @@ const FootballRecords = (() => {
     s.roi=s.priced?100*s.units/s.priced:null;
     return s;
   }
+  function illustrative(picks, assumedOdds=-110){
+    let units=0, stakes=0, assumedWins=0;
+    for(const p of picks){
+      if(!['win','loss','push'].includes(p.result))continue;
+      stakes++;
+      if(p.result==='loss')units-=1;
+      if(p.result==='win'){
+        const hasPrice=validOdds(p.originalOdds);
+        units+=profit(hasPrice?p.originalOdds:assumedOdds);
+        if(!hasPrice)assumedWins++;
+      }
+    }
+    return {units:stakes?units:null,roi:stakes?100*units/stakes:null,stakes,assumedWins};
+  }
   const favorite = p => p.favorite===true || FAVORITES.has(p.id);
   const category = p => p.kind==='props'?'Straights':p.parlayType==='longshot'?'Longshots':'Parlays';
   const week = (p,games) => {
@@ -38,6 +52,6 @@ const FootballRecords = (() => {
     if(!g)return null;
     return {season:g.season,week:g.league==='CFB'&&g.week===1&&new Date(g.kickoff)<new Date(`${g.season}-09-01T00:00:00Z`)?0:g.week,league:g.league};
   };
-  return {FAVORITES,validOdds,profit,latest,summarize,favorite,category,week};
+  return {FAVORITES,validOdds,profit,latest,summarize,illustrative,favorite,category,week};
 })();
 if(typeof module!=='undefined')module.exports=FootballRecords;
