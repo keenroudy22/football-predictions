@@ -98,11 +98,26 @@ def validate_report(report, games):
     assert published.tzinfo is not None
     assert published <= datetime.now(timezone.utc) + timedelta(minutes=5), 'Future publication date'
     assert len(report.get('props', [])) <= 5
+    assert len(report.get('parlays', [])) <= 2
+    for score in report.get('scores', []):
+        assert score['gameId'] in games
+        g = games[score['gameId']]
+        assert g['league'] == report['league']
+        assert published < datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')), 'Late score forecast'
+        assert all(isinstance(score[s], int) and 0 <= score[s] <= 100 for s in ('home', 'away'))
+        assert score.get('why') and score.get('sources')
+        assert all(s.startswith('https://') for s in score['sources'])
+        assert 1 <= score['confidence'] <= 10
     for pick in report.get('props', []) + report.get('parlays', []):
         for key in ('id', 'title', 'why', 'risk', 'sources', 'status'):
             assert pick.get(key), f'Missing {key}'
         assert all(s.startswith('https://') for s in pick['sources'])
         assert pick['status'] in ('active', 'withdrawn', 'watch', 'expired', 'settled')
+        if pick['status'] == 'settled':
+            assert pick.get('result') in ('win', 'loss', 'push', 'void')
+            assert pick.get('resultSource', '').startswith('https://')
+            assert pick.get('settledAt') and pick.get('actual') is not None
+            assert isinstance(pick.get('odds'), (int, float)) and abs(pick['odds']) >= 100
         if pick['status'] == 'active':
             for key in ('book', 'odds', 'quotedAt', 'expiresAt', 'gameIds', 'cutoff', 'confidence', 'edge'):
                 assert pick.get(key) is not None, f'Missing {key}'
@@ -111,6 +126,11 @@ def validate_report(report, games):
             assert quote <= published < expires
             assert 1 <= pick['confidence'] <= 10
             assert isinstance(pick['odds'], (int, float)) and abs(pick['odds']) >= 100
+            assert pick['gameIds'], 'No games attached'
+            if pick in report.get('parlays', []):
+                assert len(pick.get('legs', [])) >= 2 and pick.get('correlation')
+            else:
+                assert pick.get('projection') is not None
             if report['league'] == 'CFB':
                 assert pick.get('jurisdictionVerified') is True
             for gid in pick['gameIds']:
@@ -130,6 +150,7 @@ def main():
     sources = []
     for league in ('NFL', 'CFB'):
         old, _ = fetch(league, datetime(season-1, 8, 1), datetime(season, 2, 20))
+        assert len(old) > 100, 'Historical feed unexpectedly incomplete'
         current, url = fetch(league, datetime(season, 8, 1), now + timedelta(days=14))
         normalized = [normalize(e, league) for e in current if e['season']['type'] in (2, 3)]
         sources.append({'league': league, 'url': url, 'retrievedAt': stamp(now)})

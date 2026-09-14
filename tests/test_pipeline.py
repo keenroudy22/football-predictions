@@ -32,4 +32,14 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             validate_report(dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',props=[{}]*6), {})
 
+    def test_late_analyst_score_rejected(self):
+        g=self.game(); g['kickoff']='2026-09-13T20:00:00Z'
+        r=dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',scores=[dict(gameId=g['id'],home=20,away=10,why='test',confidence=3,sources=['https://example.com'])])
+        with self.assertRaises(AssertionError): validate_report(r,{g['id']:g})
+
+    def test_unverified_settlement_rejected(self):
+        p=dict(id='x',title='test',why='test',risk='test',sources=['https://example.com'],status='settled',result='win')
+        with self.assertRaises(AssertionError):
+            validate_report(dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',props=[p]),{})
+
 if __name__ == '__main__': unittest.main()

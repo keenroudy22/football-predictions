@@ -1,0 +1,28 @@
+{
+  "league": "NFL",
+  "publishedAt": "2026-09-14T12:19:22Z",
+  "summary": "Imported the original conversation recommendation for transparency; quote expired and outcome unsettled.",
+  "props": [
+    {
+      "id": "2026-w1-mahomes-completions",
+      "title": "Patrick Mahomes UNDER 21.5 completions",
+      "why": "Archived recommendation from September 13: projected volume below 21.5 against Denver. Original conversation recommendation was approximately 7:55 p.m. ET; exact publication time was not verified.",
+      "risk": "Quote has not been reverified today. Kansas City availability and final inactives were pending at the original recommendation.",
+      "sources": [
+        "https://www.covers.com/sport/football/nfl/players/29483/patrick-mahomes"
+      ],
+      "status": "expired",
+      "book": "bet365",
+      "odds": -115,
+      "quotedAt": "2026-09-13T23:47:00Z",
+      "gameIds": [
+        "NFL-401872931"
+      ],
+      "cutoff": "Under 21.5 only, maximum price -120. Historical threshold; not a current verified offer.",
+      "confidence": 6,
+      "projection": 20,
+      "edge": "Historical uncalibrated judgment estimate: 58-60 percent. Not a demonstrated or tested model edge. Outcome and closing price unknown."
+    }
+  ],
+  "parlays": []
+}
