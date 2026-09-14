@@ -115,7 +115,7 @@ async function init(){
   try{
     const values=await Promise.all(['slate','forecasts','research'].map(async f=>{const r=await fetch(`data/${f}.json?refresh=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error('Data unavailable');return r.json()}));
     [state.slate,state.forecasts,state.reports]=values;setupWeeks();navigate();
-    document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;localStorage.setItem('football-league',state.league);setupWeeks();render()}));
+    document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;state.query='';state.filter='all';localStorage.setItem('football-league',state.league);setupWeeks();render()}));
     document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{location.hash=b.dataset.view}));
     window.addEventListener('hashchange',navigate);
     $('#content').addEventListener('input',e=>{if(e.target.id==='team-search'){state.query=e.target.value;$('#game-list').innerHTML=gameList()}});
