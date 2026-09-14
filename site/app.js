@@ -12,7 +12,7 @@ const gameMap = () => new Map(state.slate.games.map(g=>[g.id,g]));
 const games = () => state.slate.games.filter(g=>g.league===state.league && weekOf(g.kickoff)===state.week);
 const original = g => state.forecasts.find(p=>p.gameId===g.id);
 function forecast(g){
-  const revisions=state.reports.filter(r=>r.league===g.league && new Date(r.publishedAt)<new Date(g.kickoff)).flatMap(r=>(r.scores||[]).filter(p=>p.gameId===g.id).map(p=>({...p,publishedAt:r.publishedAt,type:'analyst'})));
+  const revisions=state.reports.filter(r=>r.league===g.league && (r.historicalImport || new Date(r.publishedAt)<new Date(g.kickoff))).flatMap(r=>(r.scores||[]).filter(p=>p.gameId===g.id).map(p=>({...p,publishedAt:r.publishedAt,type:r.historicalImport?'historical':'analyst',historicalImport:r.historicalImport})));
   return revisions.sort((a,b)=>a.publishedAt.localeCompare(b.publishedAt)).at(-1)||original(g);
 }
 function setupWeeks(){
@@ -23,9 +23,9 @@ function setupWeeks(){
 function card(g){
   const p=forecast(g),final=g.completed, underway=g.state!=='pre'||new Date(g.kickoff)<=new Date();
   const scores=final?g:p;
-  const label=final?'Final':underway?'In progress':p?.type==='analyst'?'Analyst forecast':'Baseline forecast';
+  const label=final?'Final':underway?'In progress':p?.type==='historical'?'Historical call':p?.type==='analyst'?'Analyst forecast':'Baseline forecast';
   const side=s=>`<div class="team"><span class="abbr">${esc(g[s].abbreviation)}</span><span class="team-name">${esc(g[s].short)}</span><span class="score">${final?esc(g[s].score):esc(scores?.[s]??'—')}</span></div>`;
-  let detail=p?`<p>${esc(p.why)}</p><p>Confidence ${esc(p.confidence)}/10 · ${p.type==='analyst'?'Analyst':'Uncalibrated baseline'}</p><p>Recorded ${pretty(p.publishedAt)} ET</p>${links(p.sources)}`:'<p>No forecast was recorded before kickoff. This game is excluded from the prediction record.</p>';
+  let detail=p?`<p>${esc(p.why)}</p><p>Confidence ${esc(p.confidence)}/10 · ${p.type==='analyst'?'Analyst':p.type==='historical'?'Historical import':'Uncalibrated baseline'}</p><p>${p.type==='historical'?'Imported':'Recorded'} ${pretty(p.publishedAt)} ET</p>${p.type==='historical'?'<p>Original screenshot supplied after the week; exact original posting time is not verified and this call is excluded from model grading.</p>':''}${links(p.sources)}`:'<p>No forecast was recorded before kickoff. This game is excluded from the prediction record.</p>';
   if(p&&final) detail=`<p>Pregame call: ${esc(g.away.abbreviation)} ${p.away} · ${esc(g.home.abbreviation)} ${p.home}</p>`+detail;
   if(p?.type==='analyst'&&original(g))detail+=`<p>Original baseline: ${original(g).away}–${original(g).home}. Revisions remain in the public archive.</p>`;
   return `<article class="game"><div class="game-top"><span>${g.timeValid?fmt(g.kickoff,{hour:'numeric',minute:'2-digit'})+' ET':'Time TBD'}</span><span class="tag ${final?'final':''}">${label}</span></div>${side('away')}${side('home')}<div class="game-bottom"><span>${final?'Provider-reported final':p?`Projected total ${p.home+p.away}`:'Forecast pending'}</span><span>${g.neutral?'Neutral site':'@ '+esc(g.home.abbreviation)}</span></div><details><summary>${final?'Original call & sources':'Why this score'}</summary>${detail}${links([g.source])}</details></article>`;
@@ -72,7 +72,8 @@ function research(kind){
   const no=kind==='props'?'No active prop card.':'No qualifying parlay published.';
   const reason=kind==='props'?'Live sportsbook quotes and full player research have not been verified for this slate. Baseline score forecasts do not establish a player-prop edge.':'The research desk has not verified a combined sportsbook price and defensible joint assumptions. Adding legs to fill a ticket would not make it a smart parlay.';
   const watch=state.reports.filter(r=>r.league===state.league&&weekOf(r.publishedAt)===state.week).flatMap(r=>r.watch||[]);
-  return `<div class="section-head"><div><h2>${title}</h2><p>${text}</p></div><span class="count">${active.length} ACTIVE</span></div>`+(active.length?'':empty(no,reason))+(all.length?`<div class="cards">${all.map(pickCard).join('')}</div>`:'')+(watch.length?`<div class="method"><h3>Lines to watch</h3><p>Conditional thresholds, not verified available bets.</p><ul>${watch.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></div>`:'');
+  const history=all.filter(p=>p.status==='historical');
+  return `<div class="section-head"><div><h2>${title}</h2><p>${text}</p></div><span class="count">${active.length} ACTIVE</span></div>`+(active.length?'':empty(no,reason))+(all.length?`<div class="cards">${all.map(pickCard).join('')}</div>`:'')+(history.length?`<div class="method"><h3>Week 1 imported card</h3><p>These are screenshot-derived historical lines. Prices and exact original timestamps were not supplied, so they are tracked as results only and excluded from hypothetical profit/ROI.</p></div>`:'')+(watch.length?`<div class="method"><h3>Lines to watch</h3><p>Conditional thresholds, not verified available bets.</p><ul>${watch.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></div>`:'');
 }
 function record(){
   const settled=state.slate.games.filter(g=>g.league===state.league&&g.completed&&original(g)&&new Date(original(g).publishedAt)<new Date(g.kickoff));

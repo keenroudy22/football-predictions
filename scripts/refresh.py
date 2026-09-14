@@ -97,13 +97,14 @@ def validate_report(report, games):
     published = datetime.fromisoformat(report['publishedAt'].replace('Z', '+00:00'))
     assert published.tzinfo is not None
     assert published <= datetime.now(timezone.utc) + timedelta(minutes=5), 'Future publication date'
-    assert len(report.get('props', [])) <= 5
+    assert report.get('historicalImport') is True or len(report.get('props', [])) <= 5
     assert len(report.get('parlays', [])) <= 2
+    historical = report.get('historicalImport') is True
     for score in report.get('scores', []):
         assert score['gameId'] in games
         g = games[score['gameId']]
         assert g['league'] == report['league']
-        assert published < datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')), 'Late score forecast'
+        assert historical or published < datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')), 'Late score forecast'
         assert all(isinstance(score[s], int) and 0 <= score[s] <= 100 for s in ('home', 'away'))
         assert score.get('why') and score.get('sources')
         assert all(s.startswith('https://') for s in score['sources'])
@@ -112,7 +113,11 @@ def validate_report(report, games):
         for key in ('id', 'title', 'why', 'risk', 'sources', 'status'):
             assert pick.get(key), f'Missing {key}'
         assert all(s.startswith('https://') for s in pick['sources'])
-        assert pick['status'] in ('active', 'withdrawn', 'watch', 'expired', 'settled')
+        assert pick['status'] in ('active', 'withdrawn', 'watch', 'expired', 'settled', 'historical')
+        if pick['status'] == 'historical':
+            assert pick.get('result') in ('win', 'loss', 'push', 'void', 'unverified')
+            assert pick.get('actual') is not None
+            assert pick.get('resultSource', '').startswith('https://')
         if pick['status'] == 'settled':
             assert pick.get('result') in ('win', 'loss', 'push', 'void')
             assert pick.get('resultSource', '').startswith('https://')
@@ -136,7 +141,7 @@ def validate_report(report, games):
             for gid in pick['gameIds']:
                 assert gid in games, f'Unknown game {gid}'
                 assert games[gid]['league'] == report['league']
-                assert published < datetime.fromisoformat(games[gid]['kickoff'].replace('Z', '+00:00')), 'Late recommendation'
+                assert historical or published < datetime.fromisoformat(games[gid]['kickoff'].replace('Z', '+00:00')), 'Late recommendation'
     return report
 
 def main():
