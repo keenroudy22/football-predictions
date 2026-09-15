@@ -46,5 +46,5 @@ After each week, record a short review of projected versus actual workload, targ
 
 ## Operations
 
-Run `python scripts/refresh.py`, `python -m unittest discover -s tests`, and `node --check site/app.js` before pushing. Commit only this repository. GitHub Actions publishes site updates and refreshes schedules/results three times daily. Research runs in the separate Codex task. No paid API services or autonomous hosted LLM research are configured. Missing data means pass/pending, not fabricated recommendations.
+Run `python scripts/refresh.py`, `python -m unittest discover -s tests`, and `node --check site/app.js` before pushing. Commit only this repository. GitHub Actions refreshes schedules/results throughout the day and after common game-end windows; research runs in the separate Codex task. For every qualified prop, obtain sourced exact-market last-five/last-ten form; when individual verified game values are available, populate the `recentForm.games` chart data. Missing data means pass/pending, not fabricated recommendations. No paid API services or autonomous hosted LLM research are configured.
 
