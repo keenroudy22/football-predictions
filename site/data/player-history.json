@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T18:58:51Z",
+  "updatedAt": "2026-09-15T18:59:02Z",
   "provider": "ESPN public athlete game logs and official box scores",
   "picks": {
     "2026-w1-mahomes-completions": {
@@ -81,6 +81,21 @@
           "hits": 3,
           "sample": 10
         },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 37.2,
+              "low": 28.0,
+              "high": 46.0
+            },
+            "last10": {
+              "average": 36.0,
+              "low": 28.0,
+              "high": 46.0
+            }
+          }
+        ],
         "lastVsOpponent": {
           "value": 29.0,
           "date": "2025-11-16",
@@ -167,7 +182,35 @@
         "last10": {
           "hits": 5,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 10.6,
+              "low": 5.0,
+              "high": 15.0
+            },
+            "last10": {
+              "average": 7.8,
+              "low": 4.0,
+              "high": 15.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 6.2,
+              "low": 3.0,
+              "high": 10.0
+            },
+            "last10": {
+              "average": 4.9,
+              "low": 3.0,
+              "high": 10.0
+            }
+          }
+        ]
       },
       "athleteId": "4723086"
     },
@@ -249,7 +292,35 @@
         "last10": {
           "hits": 3,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 31.2,
+              "low": 22.0,
+              "high": 44.0
+            },
+            "last10": {
+              "average": 29.8,
+              "low": 19.0,
+              "high": 44.0
+            }
+          },
+          {
+            "stat": "Completions",
+            "last5": {
+              "average": 20.0,
+              "low": 14.0,
+              "high": 33.0
+            },
+            "last10": {
+              "average": 18.6,
+              "low": 9.0,
+              "high": 33.0
+            }
+          }
+        ]
       },
       "athleteId": "3052587"
     },
@@ -331,7 +402,35 @@
         "last10": {
           "hits": 5,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 4.2,
+              "low": 2.0,
+              "high": 9.0
+            },
+            "last10": {
+              "average": 5.9,
+              "low": 2.0,
+              "high": 12.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 3.6,
+              "low": 2.0,
+              "high": 7.0
+            },
+            "last10": {
+              "average": 4.4,
+              "low": 2.0,
+              "high": 9.0
+            }
+          }
+        ]
       },
       "athleteId": "4243331"
     },
@@ -495,7 +594,35 @@
         "last10": {
           "hits": 9,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 1.8,
+              "low": 1.0,
+              "high": 3.0
+            },
+            "last10": {
+              "average": 2.3,
+              "low": 1.0,
+              "high": 4.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 0.8,
+              "low": 0.0,
+              "high": 2.0
+            },
+            "last10": {
+              "average": 1.0,
+              "low": 0.0,
+              "high": 2.0
+            }
+          }
+        ]
       },
       "athleteId": "4360939"
     },
@@ -577,7 +704,22 @@
         "last10": {
           "hits": 4,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Carries",
+            "last5": {
+              "average": 17.0,
+              "low": 9.0,
+              "high": 26.0
+            },
+            "last10": {
+              "average": 15.5,
+              "low": 6.0,
+              "high": 26.0
+            }
+          }
+        ]
       },
       "athleteId": "4890973"
     },
@@ -649,7 +791,25 @@
         "last5": {
           "hits": 2,
           "sample": 5
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 5.6,
+              "low": 1.0,
+              "high": 8.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.4,
+              "low": 1.0,
+              "high": 7.0
+            }
+          }
+        ]
       },
       "athleteId": "3116165"
     },
@@ -732,6 +892,34 @@
           "hits": 4,
           "sample": 10
         },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 5.6,
+              "low": 4.0,
+              "high": 7.0
+            },
+            "last10": {
+              "average": 5.8,
+              "low": 4.0,
+              "high": 10.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 3.4,
+              "low": 2.0,
+              "high": 5.0
+            },
+            "last10": {
+              "average": 3.4,
+              "low": 2.0,
+              "high": 5.0
+            }
+          }
+        ],
         "lastVsOpponent": {
           "value": 49.0,
           "date": "2025-11-23",
@@ -818,7 +1006,35 @@
         "last10": {
           "hits": 6,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 5.2,
+              "low": 4.0,
+              "high": 9.0
+            },
+            "last10": {
+              "average": 5.8,
+              "low": 4.0,
+              "high": 9.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.6,
+              "low": 3.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 4.6,
+              "low": 3.0,
+              "high": 8.0
+            }
+          }
+        ]
       },
       "athleteId": "3929645"
     },
@@ -900,7 +1116,35 @@
         "last10": {
           "hits": 7,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 4.8,
+              "low": 3.0,
+              "high": 7.0
+            },
+            "last10": {
+              "average": 6.0,
+              "low": 3.0,
+              "high": 14.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.2,
+              "low": 3.0,
+              "high": 7.0
+            },
+            "last10": {
+              "average": 4.7,
+              "low": 2.0,
+              "high": 8.0
+            }
+          }
+        ]
       },
       "athleteId": "4362238"
     },
@@ -982,7 +1226,35 @@
         "last10": {
           "hits": 6,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.0,
+              "low": 2.0,
+              "high": 12.0
+            },
+            "last10": {
+              "average": 4.9,
+              "low": 1.0,
+              "high": 12.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.8,
+              "low": 2.0,
+              "high": 9.0
+            },
+            "last10": {
+              "average": 3.9,
+              "low": 1.0,
+              "high": 9.0
+            }
+          }
+        ]
       },
       "athleteId": "4695883"
     },
@@ -1064,7 +1336,22 @@
         "last10": {
           "hits": 3,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Carries",
+            "last5": {
+              "average": 4.2,
+              "low": 2.0,
+              "high": 7.0
+            },
+            "last10": {
+              "average": 5.2,
+              "low": 2.0,
+              "high": 9.0
+            }
+          }
+        ]
       },
       "athleteId": "3916387"
     },
@@ -1146,7 +1433,22 @@
         "last10": {
           "hits": 6,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Carries",
+            "last5": {
+              "average": 18.4,
+              "low": 14.0,
+              "high": 25.0
+            },
+            "last10": {
+              "average": 14.4,
+              "low": 10.0,
+              "high": 25.0
+            }
+          }
+        ]
       },
       "athleteId": "3916148"
     },
@@ -1229,6 +1531,21 @@
           "hits": 6,
           "sample": 10
         },
+        "usage": [
+          {
+            "stat": "Carries",
+            "last5": {
+              "average": 21.6,
+              "low": 19.0,
+              "high": 26.0
+            },
+            "last10": {
+              "average": 19.3,
+              "low": 10.0,
+              "high": 26.0
+            }
+          }
+        ],
         "lastVsOpponent": {
           "value": 132.0,
           "date": "2025-12-20",
@@ -1316,6 +1633,34 @@
           "hits": 4,
           "sample": 10
         },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 7.2,
+              "low": 1.0,
+              "high": 10.0
+            },
+            "last10": {
+              "average": 8.5,
+              "low": 1.0,
+              "high": 12.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.8,
+              "low": 1.0,
+              "high": 6.0
+            },
+            "last10": {
+              "average": 5.4,
+              "low": 1.0,
+              "high": 7.0
+            }
+          }
+        ],
         "lastVsOpponent": {
           "value": 4.0,
           "date": "2026-01-04",
@@ -1402,7 +1747,35 @@
         "last10": {
           "hits": 3,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.2,
+              "low": 4.0,
+              "high": 9.0
+            },
+            "last10": {
+              "average": 7.0,
+              "low": 3.0,
+              "high": 13.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 5.0,
+              "low": 4.0,
+              "high": 6.0
+            },
+            "last10": {
+              "average": 5.4,
+              "low": 1.0,
+              "high": 12.0
+            }
+          }
+        ]
       },
       "athleteId": "4432665"
     },
@@ -1527,7 +1900,35 @@
         "last10": {
           "hits": 6,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 37.4,
+              "low": 27.0,
+              "high": 47.0
+            },
+            "last10": {
+              "average": 32.3,
+              "low": 15.0,
+              "high": 47.0
+            }
+          },
+          {
+            "stat": "Completions",
+            "last5": {
+              "average": 23.8,
+              "low": 17.0,
+              "high": 31.0
+            },
+            "last10": {
+              "average": 20.2,
+              "low": 9.0,
+              "high": 31.0
+            }
+          }
+        ]
       },
       "athleteId": "8439"
     },
@@ -1609,7 +2010,35 @@
         "last10": {
           "hits": 7,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 29.4,
+              "low": 26.0,
+              "high": 32.0
+            },
+            "last10": {
+              "average": 27.2,
+              "low": 18.0,
+              "high": 33.0
+            }
+          },
+          {
+            "stat": "Completions",
+            "last5": {
+              "average": 18.8,
+              "low": 12.0,
+              "high": 23.0
+            },
+            "last10": {
+              "average": 17.6,
+              "low": 10.0,
+              "high": 23.0
+            }
+          }
+        ]
       },
       "athleteId": "4038941"
     },
@@ -1669,7 +2098,25 @@
         "last5": {
           "hits": 3,
           "sample": 5
-        }
+        },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 23.2,
+              "low": 20.0,
+              "high": 26.0
+            }
+          },
+          {
+            "stat": "Completions",
+            "last5": {
+              "average": 14.2,
+              "low": 9.0,
+              "high": 19.0
+            }
+          }
+        ]
       },
       "athleteId": "4426348"
     },
@@ -1751,7 +2198,22 @@
         "last10": {
           "hits": 4,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Carries",
+            "last5": {
+              "average": 4.8,
+              "low": 2.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 4.5,
+              "low": 1.0,
+              "high": 8.0
+            }
+          }
+        ]
       },
       "athleteId": "4360689"
     },
@@ -1834,6 +2296,34 @@
           "hits": 6,
           "sample": 10
         },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 30.8,
+              "low": 13.0,
+              "high": 46.0
+            },
+            "last10": {
+              "average": 30.9,
+              "low": 13.0,
+              "high": 46.0
+            }
+          },
+          {
+            "stat": "Completions",
+            "last5": {
+              "average": 18.2,
+              "low": 8.0,
+              "high": 24.0
+            },
+            "last10": {
+              "average": 19.3,
+              "low": 8.0,
+              "high": 29.0
+            }
+          }
+        ],
         "lastVsOpponent": {
           "value": 139.0,
           "date": "2025-11-23",
@@ -1920,7 +2410,22 @@
         "last10": {
           "hits": 4,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Carries",
+            "last5": {
+              "average": 15.0,
+              "low": 12.0,
+              "high": 19.0
+            },
+            "last10": {
+              "average": 15.5,
+              "low": 11.0,
+              "high": 21.0
+            }
+          }
+        ]
       },
       "athleteId": "4427366"
     },
@@ -2003,6 +2508,34 @@
           "hits": 2,
           "sample": 10
         },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 7.2,
+              "low": 4.0,
+              "high": 11.0
+            },
+            "last10": {
+              "average": 7.8,
+              "low": 4.0,
+              "high": 12.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.4,
+              "low": 2.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 4.3,
+              "low": 2.0,
+              "high": 8.0
+            }
+          }
+        ],
         "lastVsOpponent": {
           "value": 101.0,
           "date": "2026-01-04",
@@ -2089,7 +2622,35 @@
         "last10": {
           "hits": 7,
           "sample": 10
-        }
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 10.2,
+              "low": 8.0,
+              "high": 13.0
+            },
+            "last10": {
+              "average": 10.3,
+              "low": 8.0,
+              "high": 13.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 7.6,
+              "low": 4.0,
+              "high": 12.0
+            },
+            "last10": {
+              "average": 7.9,
+              "low": 4.0,
+              "high": 12.0
+            }
+          }
+        ]
       },
       "athleteId": "4361307"
     }

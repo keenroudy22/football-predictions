@@ -19,6 +19,13 @@ MARKETS = {
     'passing yards': 'passingYards', 'completions': 'completions',
     'rushing yards': 'rushingYards', 'carries': 'rushingAttempts',
 }
+USAGE = {
+    'receiving yards': (('receivingTargets', 'Targets'), ('receptions', 'Receptions')),
+    'receptions': (('receivingTargets', 'Targets'),),
+    'passing yards': (('passingAttempts', 'Pass attempts'), ('completions', 'Completions')),
+    'completions': (('passingAttempts', 'Pass attempts'),),
+    'rushing yards': (('rushingAttempts', 'Carries'),),
+}
 
 
 def fetch(url):
@@ -78,10 +85,14 @@ def prop_history(pick, game, athlete_id, opponent_id):
     threshold = float(threshold)
     stat = MARKETS[market]
     rows = []
+    usage_rows = defaultdict(dict)
     for season in (game['season'] - 1, game['season']):
         url = f'{WEB}/athletes/{athlete_id}/gamelog?season={season}'
         try:
-            rows += game_rows(fetch(url), stat, game['kickoff'])
+            log = fetch(url)
+            rows += game_rows(log, stat, game['kickoff'])
+            for usage_stat, label in USAGE.get(market, ()):
+                usage_rows[label].update({r[1]: r[3] for r in game_rows(log, usage_stat, game['kickoff'])})
         except (OSError, ValueError, KeyError):
             continue
     # ESPN gameDate is a local calendar date, which can precede a UTC kickoff.
@@ -103,6 +114,18 @@ def prop_history(pick, game, athlete_id, opponent_id):
     for window in (5, 10):
         if len(rows) >= window:
             form[f'last{window}'] = {'hits': sum(hit(r[3]) for r in rows[:window]), 'sample': window}
+    usage = []
+    for label, values in usage_rows.items():
+        item = {'stat': label}
+        for window in (5, 10):
+            segment = [values.get(r[1]) for r in rows[:window]]
+            if len(segment) == window and all(x is not None for x in segment):
+                item[f'last{window}'] = {'average': round(sum(segment) / window, 1),
+                                          'low': min(segment), 'high': max(segment)}
+        if len(item) > 1:
+            usage.append(item)
+    if usage:
+        form['usage'] = usage
     prior = next((r for r in rows if r[2].get('opponent', {}).get('id') == opponent_id), None)
     if prior:
         form['lastVsOpponent'] = {'value': prior[3], 'date': prior[0][:10],

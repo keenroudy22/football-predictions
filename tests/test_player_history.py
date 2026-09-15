@@ -38,6 +38,14 @@ class PlayerHistoryTests(unittest.TestCase):
             self.assertTrue(all(g['source'].startswith('https://www.espn.com/nfl/boxscore/') for g in form['games']))
             if 'lastVsOpponent' in form:
                 self.assertNotEqual(form['lastVsOpponent']['source'].rsplit('/', 1)[-1], game_id)
+            for usage in form.get('usage', []):
+                self.assertTrue(usage['stat'])
+                for count in (5, 10):
+                    values = usage.get(f'last{count}')
+                    if values:
+                        self.assertGreaterEqual(len(form['games']), count)
+                        self.assertLessEqual(values['low'], values['average'])
+                        self.assertLessEqual(values['average'], values['high'])
             # Resolve exact line direction from the immutable recommendation.
         reports = json.loads((path.parent / 'research.json').read_text(encoding='utf-8'))
         picks = {p['id']: p for r in reports for p in r.get('props', []) + r.get('riskyProps', [])}
