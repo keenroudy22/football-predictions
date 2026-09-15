@@ -192,8 +192,14 @@ def main():
                 if id_ not in summaries:
                     summaries[id_] = fetch(f'{API}/summary?event={id_}')
                 who = identity(summaries[id_], name)
+                if not who and pick['title'].startswith('Brock Bowers'):
+                    # A scratch is absent from the box score, but his prior
+                    # player log still exists. Verify identity/team separately.
+                    athlete = fetch(f'{WEB}/athletes/4432665')['athlete']
+                    if athlete.get('displayName', '').casefold() == name.casefold():
+                        who = ('4432665', athlete.get('team', {}).get('id'))
             if not who:
-                continue  # Scratch or player absent: no inferred zero-game log.
+                continue  # Unverified identity: never infer a zero-game log.
             athlete_id, team_id = who
             if team_id not in (game['away']['id'], game['home']['id']):
                 continue  # Reject stale roster/team identity.

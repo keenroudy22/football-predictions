@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T15:13:57Z",
+  "updatedAt": "2026-09-15T15:11:45Z",
   "provider": "ESPN public athlete game logs and official box scores",
   "picks": {
     "2026-w1-mahomes-completions": {
@@ -1323,6 +1323,88 @@
         }
       },
       "athleteId": "4241389"
+    },
+    "w1-bowers-rec": {
+      "gameId": "NFL-401872928",
+      "position": "TE",
+      "recentForm": {
+        "stat": "receiving yards",
+        "line": 60.0,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4432665",
+        "games": [
+          {
+            "label": "2025-09-21 · WSH",
+            "value": 38.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772841"
+          },
+          {
+            "label": "2025-09-28 · CHI",
+            "value": 46.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772742"
+          },
+          {
+            "label": "2025-11-02 · JAX",
+            "value": 127.0,
+            "hit": true,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772873"
+          },
+          {
+            "label": "2025-11-07 · DEN",
+            "value": 31.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772944"
+          },
+          {
+            "label": "2025-11-18 · DAL",
+            "value": 72.0,
+            "hit": true,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772819"
+          },
+          {
+            "label": "2025-11-23 · CLE",
+            "value": 55.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772784"
+          },
+          {
+            "label": "2025-11-30 · LAC",
+            "value": 63.0,
+            "hit": true,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772788"
+          },
+          {
+            "label": "2025-12-07 · DEN",
+            "value": 46.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772794"
+          },
+          {
+            "label": "2025-12-14 · PHI",
+            "value": 28.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772906"
+          },
+          {
+            "label": "2025-12-21 · HOU",
+            "value": 33.0,
+            "hit": false,
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772805"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 1,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 3,
+          "sample": 10
+        }
+      },
+      "athleteId": "4432665"
     },
     "w1-nabers-rec": {
       "gameId": "NFL-401872930",
