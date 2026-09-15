@@ -575,6 +575,35 @@
     "watch": []
   },
   {
+    "league": "CFB",
+    "targetWeek": 3,
+    "publishedAt": "2026-09-15T01:15:00Z",
+    "summary": "Early college Week 3 market watch. There are no official player props because current player lines, availability and exact-market game-log checks have not been verified.",
+    "takeaways": [
+      "College screens will emphasize confirmed quarterback status, rotation stability, pace, opponent quality and blowout risk before any player prop is considered.",
+      "Syracuse at Pittsburgh is an early Thursday entry with Pittsburgh -10.5 and a 51.5 total. The initial screen will focus on confirmed roles and whether the available player markets reflect the projected game script.",
+      "Miami at Wake Forest has an early 55.5 total. That creates research interest, not an automatic passing or receiving recommendation.",
+      "Georgia at Arkansas is priced with Georgia favored by 25.5. Any player case must explicitly stress-test starter workload against a lopsided-game scenario."
+    ],
+    "watch": [
+      "Syracuse @ Pittsburgh \u2014 Pittsburgh -10.5, total 51.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Wait for confirmed depth-chart roles and exact player prices.",
+      "Miami @ Wake Forest \u2014 Wake Forest +20.5, total 55.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Screen quarterback confirmation, tempo and receiver participation before a prop can qualify.",
+      "North Carolina @ Clemson \u2014 Clemson -3.5, total 44.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Investigate volume roles after availability reports; the total alone is not a player edge.",
+      "Georgia @ Arkansas \u2014 Arkansas +25.5, total 54.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Treat blowout and late-game substitution risk as a first-order constraint.",
+      "Houston @ Texas Tech \u2014 Texas Tech -7.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Total was not available in the source feed, so no pace-based player inference is being made."
+    ],
+    "props": [],
+    "riskyProps": [],
+    "parlays": [],
+    "sources": [
+      "https://www.espn.com/college-football/game/_/gameId/401858225",
+      "https://www.espn.com/college-football/game/_/gameId/401858226",
+      "https://www.espn.com/college-football/game/_/gameId/401858229",
+      "https://www.espn.com/college-football/game/_/gameId/401856686",
+      "https://www.espn.com/college-football/game/_/gameId/401856811"
+    ]
+  },
+  {
     "league": "NFL",
     "targetWeek": 2,
     "publishedAt": "2026-09-15T01:05:00Z",
@@ -601,3 +630,4 @@
     ]
   }
 ]
+
