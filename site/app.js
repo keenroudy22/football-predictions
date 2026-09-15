@@ -134,10 +134,12 @@ function research(kind){
   const text=kind==='props'?'Up to five qualifying props. Fewer when the evidence says pass.':'A best-supported parlay and one speculative longshot, only when priced and researched.';
   const no=kind==='props'?'No active prop card.':'No qualifying parlay published.';
   const reason=kind==='props'?'Live sportsbook quotes and full player research have not been verified for this slate. Baseline score forecasts do not establish a player-prop edge.':'The research desk has not verified a combined sportsbook price and defensible joint assumptions. Adding legs to fill a ticket would not make it a smart parlay.';
-  const watch=state.reports.filter(r=>r.league===state.league&&weekOf(r.publishedAt)===state.week).flatMap(r=>r.watch||[]);
+  const selectedOfficialWeek=[...new Set(games().map(footballWeek))][0];
+  const selectedReports=state.reports.filter(r=>r.league===state.league&&(Number.isInteger(r.targetWeek)?r.targetWeek===selectedOfficialWeek:weekOf(r.publishedAt)===state.week));
+  const watch=selectedReports.flatMap(r=>r.watch||[]);
   const history=all.filter(p=>p.status==='historical'),core=all.filter(p=>p.kind!=='riskyProps'),risky=all.filter(p=>p.kind==='riskyProps');
   const coreActive=core.filter(p=>pickStatus(p)==='active'),riskyActive=risky.filter(p=>pickStatus(p)==='active');
-  const takeaways=state.reports.filter(r=>r.league===state.league&&weekOf(r.publishedAt)===state.week).at(-1)?.takeaways||[];
+  const takeaways=selectedReports.at(-1)?.takeaways||[];
   const takeawayBlock=takeaways.length?`<section class="takeaway-panel"><h3>Research takeaways</h3><ul>${takeaways.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>`:'';
   const positionCards=Object.entries(core.reduce((o,p)=>{(o[marketPosition(p)]??=[]).push(p);return o},{})).map(([pos,items])=>`<section class="position-group"><h3>${esc(pos)}</h3><div class="cards">${items.map(pickCard).join('')}</div></section>`).join('');
   const cards=kind==='props'?`${positionCards}${risky.length?`<section class="risky-lines"><div class="section-head"><div><h3>Risky lines</h3><p>Higher-variance props and longshot-style player outcomes. They are tracked separately from the main card.</p></div><span class="count">${riskyActive.length} ACTIVE</span></div><div class="cards">${risky.map(pickCard).join('')}</div></section>`:''}`:all.length?`<div class="cards">${all.map(pickCard).join('')}</div>`:'';

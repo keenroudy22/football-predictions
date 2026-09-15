@@ -1,0 +1,27 @@
+{
+  "league": "NFL",
+  "targetWeek": 2,
+  "publishedAt": "2026-09-15T01:05:00Z",
+  "summary": "Early Week 2 market watch. Game lines are available; no current player-prop line, price, availability and game-log package has been verified, so there are zero official plays.",
+  "takeaways": [
+    "Detroit at Buffalo has the board's highest early total at 53.5. The first player-prop pass will test projected pass volume, route roles and weather only after exact prices are available.",
+    "Philadelphia at Tennessee has the lowest early total at 39.5. A lower total alone is not a prop edge; it is a reason to scrutinize team-play and touchdown assumptions.",
+    "Miami at San Francisco opened with San Francisco favored by 13.5. Any player case there must stress-test starter workload against blowout and late-game substitution risk."
+  ],
+  "watch": [
+    "Lions @ Bills — DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
+    "Eagles @ Titans — DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
+    "Dolphins @ 49ers — San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
+    "Giants @ Rams — Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop."
+  ],
+  "props": [],
+  "riskyProps": [],
+  "parlays": [],
+  "sources": [
+    "https://www.espn.com/nfl/game/_/gameId/401872932",
+    "https://www.espn.com/nfl/game/_/gameId/401872939",
+    "https://www.espn.com/nfl/game/_/gameId/401872942",
+    "https://www.espn.com/nfl/game/_/gameId/401872947"
+  ]
+}
+

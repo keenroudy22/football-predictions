@@ -118,6 +118,8 @@ def validate_report(report, games):
     assert len(report.get('parlays', [])) <= 2
     assert isinstance(report.get('takeaways', []), list)
     assert isinstance(report.get('weeklyReview', []), list)
+    if report.get('targetWeek') is not None:
+        assert isinstance(report['targetWeek'], int) and report['targetWeek'] >= 0
     historical = report.get('historicalImport') is True
     for score in report.get('scores', []):
         assert score['gameId'] in games
