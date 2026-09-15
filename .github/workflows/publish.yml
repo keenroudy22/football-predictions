@@ -4,6 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
+    - cron: '07 15 * * *'
     - cron: '37 10,16,22 * * *'
     - cron: '17 17,20 * * *'
       timezone: America/New_York
@@ -39,6 +40,9 @@ jobs:
           node --test tests/records.test.js
       - name: Refresh schedules and record original forecasts
         run: python scripts/refresh.py
+      - name: Refresh verified player and position history
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        run: python scripts/player_history.py
       - name: Preserve the public record
         run: |
           git config user.name 'football-forecast[bot]'
@@ -55,4 +59,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-
