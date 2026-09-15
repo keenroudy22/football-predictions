@@ -127,7 +127,8 @@ function formChart(form){
   const bars=games.map((g,i)=>{
     const value=Number(g.value), height=Math.max(12,Math.round(value/max*100));
     const label=esc(g.label||g.date||`Game ${i+1}`);
-    return `<li class="form-game ${g.hit?'hit':'miss'}" title="${label}: ${value}${g.hit?' — hit':' — miss'}"><span class="form-outcome">${g.hit?'HIT':'MISS'}</span><span class="form-bar" style="height:${height}%"><span>${esc(value)}</span></span><small>${label}</small></li>`;
+    const opponent=esc((g.label||'').split('·').pop().trim()||`${i+1}`);
+    return `<li class="form-game ${g.hit?'hit':'miss'}" title="${label}: ${value}${g.hit?' — hit':' — miss'}"><span class="form-outcome">${g.hit?'HIT':'MISS'}</span><span class="form-bar" style="height:${height}%"><span>${esc(value)}</span></span><small>${opponent}</small></li>`;
   }).join('');
   const line=Number.isFinite(Number(form.line))?`<p class="form-chart-line">Line: ${esc(form.line)} · newest game at right</p>`:'';
   return `<figure class="form-chart"><figcaption><strong>Recent game results</strong><span>${title}</span></figcaption><ol>${bars}</ol>${line}</figure>`;
