@@ -17,16 +17,49 @@ def read(path, default):
 
 def fetch(league, start, end):
     slug = 'nfl' if league == 'NFL' else 'college-football'
-    url = f'https://site.api.espn.com/apis/site/v2/sports/football/{slug}/scoreboard?dates={start:%Y%m%d}-{end:%Y%m%d}&limit=1000'
-    if league == 'CFB':
-        url += '&groups=80'
-    with urlopen(url, timeout=45) as r:
-        data = json.load(r)
-    if not isinstance(data.get('events'), list):
-        raise ValueError(f'{league}: invalid provider response')
-    if len(data['events']) >= 1000:
-        raise ValueError('Provider limit reached; split date window before publishing')
-    return data['events'], url
+    cursor, final = start.date(), end.date()
+    events, urls = {}, []
+    while cursor <= final:
+        following_month = (cursor.replace(day=28) + timedelta(days=4)).replace(day=1)
+        through = min(following_month - timedelta(days=1), final)
+        url = f'https://site.api.espn.com/apis/site/v2/sports/football/{slug}/scoreboard?dates={cursor:%Y%m%d}-{through:%Y%m%d}&limit=1000'
+        if league == 'CFB':
+            url += '&groups=80'
+        with urlopen(url, timeout=45) as response:
+            data = json.load(response)
+        page = data.get('events')
+        if not isinstance(page, list):
+            raise ValueError(f'{league}: invalid provider response')
+        if len(page) >= 1000:
+            raise ValueError('Provider limit reached; split date window before publishing')
+        events.update({event['id']: event for event in page})
+        urls.append(url)
+        cursor = through + timedelta(days=1)
+    return list(events.values()), urls
+
+def prior_season(league, year):
+    """ESPN rejects completed-season date ranges; use season and weekly views."""
+    slug = 'nfl' if league == 'NFL' else 'college-football'
+    base = f'https://site.api.espn.com/apis/site/v2/sports/football/{slug}/scoreboard?dates={year}'
+    if league == 'NFL':
+        urls = [base + '&limit=1000']
+    else:
+        urls = [base + f'&seasontype=2&week={week}&groups=80&limit=1000' for week in range(1, 17)]
+        urls += [base + f'&seasontype=3&week={week}&groups=80&limit=1000' for week in range(1, 6)]
+    events = {}
+    capped = False
+    for url in urls:
+        with urlopen(url, timeout=45) as response:
+            payload = json.load(response)
+        page = payload.get('events')
+        if not isinstance(page, list):
+            raise ValueError(f'{league}: invalid prior-season response')
+        capped |= league == 'CFB' and len(page) == 25
+        events.update({event['id']: event for event in page})
+    if len(events) <= 100:
+        raise ValueError(f'{league}: incomplete prior-season training sample')
+    coverage = 'limited weekly provider sample' if capped else 'season feed'
+    return list(events.values()), coverage
 
 def normalize(event, league):
     c = event['competitions'][0]
@@ -206,11 +239,10 @@ def main():
     known = {p['gameId'] for p in forecasts}
     sources = []
     for league in ('NFL', 'CFB'):
-        old, _ = fetch(league, datetime(season-1, 8, 1), datetime(season, 2, 20))
-        assert len(old) > 100, 'Historical feed unexpectedly incomplete'
-        current, url = fetch(league, datetime(season, 8, 1), now + timedelta(days=14))
+        old, training_coverage = prior_season(league, season - 1)
+        current, urls = fetch(league, datetime(season, 8, 1), now + timedelta(days=14))
         normalized = [normalize(e, league) for e in current if e['season']['type'] in (2, 3)]
-        sources.append({'league': league, 'url': url, 'retrievedAt': stamp(now)})
+        sources.append({'league': league, 'url': urls[-1], 'dateWindowUrls': urls, 'retrievedAt': stamp(now), 'trainingCoverage': training_coverage})
         training = sorted([normalize(e, league) for e in old if e['season']['type'] in (2, 3)] + normalized, key=lambda g: g['kickoff'])
         model = Model(league)
         for g in training:
@@ -248,4 +280,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
