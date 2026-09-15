@@ -25,6 +25,58 @@
     "https://www.espn.com/college-football/game/_/gameId/401858229",
     "https://www.espn.com/college-football/game/_/gameId/401856686",
     "https://www.espn.com/college-football/game/_/gameId/401856811"
+  ],
+  "gameWatch": [
+    {
+      "id": "CFB-early-0",
+      "gameId": "CFB-401858225",
+      "title": "Syracuse @ Pittsburgh · volume markets",
+      "why": "Syracuse @ Pittsburgh — Pittsburgh -10.5, total 51.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Wait for confirmed depth-chart roles and exact player prices.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/college-football/game/_/gameId/401858225"
+      ]
+    },
+    {
+      "id": "CFB-early-1",
+      "gameId": "CFB-401858226",
+      "title": "Miami @ Wake Forest · volume markets",
+      "why": "Miami @ Wake Forest — Wake Forest +20.5, total 55.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Screen quarterback confirmation, tempo and receiver participation before a prop can qualify.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/college-football/game/_/gameId/401858226"
+      ]
+    },
+    {
+      "id": "CFB-early-2",
+      "gameId": "CFB-401858229",
+      "title": "North Carolina @ Clemson · volume markets",
+      "why": "North Carolina @ Clemson — Clemson -3.5, total 44.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Investigate volume roles after availability reports; the total alone is not a player edge.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/college-football/game/_/gameId/401858229"
+      ]
+    },
+    {
+      "id": "CFB-early-3",
+      "gameId": "CFB-401856686",
+      "title": "Georgia @ Arkansas · volume markets",
+      "why": "Georgia @ Arkansas — Arkansas +25.5, total 54.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Treat blowout and late-game substitution risk as a first-order constraint.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/college-football/game/_/gameId/401856686"
+      ]
+    },
+    {
+      "id": "CFB-early-4",
+      "gameId": "CFB-401856811",
+      "title": "Houston @ Texas Tech · volume markets",
+      "why": "Houston @ Texas Tech — Texas Tech -7.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Total was not available in the source feed, so no pace-based player inference is being made.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/college-football/game/_/gameId/401856811"
+      ]
+    }
   ]
 }
 

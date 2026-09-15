@@ -22,6 +22,48 @@
     "https://www.espn.com/nfl/game/_/gameId/401872939",
     "https://www.espn.com/nfl/game/_/gameId/401872942",
     "https://www.espn.com/nfl/game/_/gameId/401872947"
+  ],
+  "gameWatch": [
+    {
+      "id": "NFL-early-0",
+      "gameId": "NFL-401872932",
+      "title": "Lions @ Bills · volume markets",
+      "why": "Lions @ Bills — DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872932"
+      ]
+    },
+    {
+      "id": "NFL-early-1",
+      "gameId": "NFL-401872939",
+      "title": "Eagles @ Titans · volume markets",
+      "why": "Eagles @ Titans — DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872939"
+      ]
+    },
+    {
+      "id": "NFL-early-2",
+      "gameId": "NFL-401872942",
+      "title": "Dolphins @ 49ers · volume markets",
+      "why": "Dolphins @ 49ers — San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872942"
+      ]
+    },
+    {
+      "id": "NFL-early-3",
+      "gameId": "NFL-401872947",
+      "title": "Giants @ Rams · volume markets",
+      "why": "Giants @ Rams — Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop.",
+      "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+      "sources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872947"
+      ]
+    }
   ]
 }
 

@@ -15,6 +15,7 @@ Create `research/YYYY-MM-DD-NFL.json` or `research/YYYY-MM-DD-CFB.json`. Files a
 - `riskyProps`: optional zero to three higher-variance player props, tracked separately from the core card and never used to fill the five-pick quota
 - `parlays`: zero to two cards, labelled Best-supported parlay or Speculative longshot
 - `watch`: optional array of text thresholds, explicitly conditional
+- `gameWatch`: game-specific research candidates with stable `id`, `gameId`, `title`, `why`, `needs`, and HTTPS `sources`. Maintain these each research run so game breakdowns show the latest candidate rationale and missing checks. Revisions reuse candidate IDs; preserve the original report.
 - `targetWeek`: optional official football week for an early-look report published before that Tuesday-through-Monday slate begins
 - `takeaways`: optional short, sourced slate-level observations
 - `weeklyReview`: optional array of settled-week lessons about workload, efficiency, matchup and injury assumptions
