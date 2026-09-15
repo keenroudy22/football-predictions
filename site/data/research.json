@@ -601,6 +601,58 @@
       "https://www.espn.com/college-football/game/_/gameId/401858229",
       "https://www.espn.com/college-football/game/_/gameId/401856686",
       "https://www.espn.com/college-football/game/_/gameId/401856811"
+    ],
+    "gameWatch": [
+      {
+        "id": "CFB-early-0",
+        "gameId": "CFB-401858225",
+        "title": "Syracuse @ Pittsburgh \u00b7 volume markets",
+        "why": "Syracuse @ Pittsburgh \u2014 Pittsburgh -10.5, total 51.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Wait for confirmed depth-chart roles and exact player prices.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401858225"
+        ]
+      },
+      {
+        "id": "CFB-early-1",
+        "gameId": "CFB-401858226",
+        "title": "Miami @ Wake Forest \u00b7 volume markets",
+        "why": "Miami @ Wake Forest \u2014 Wake Forest +20.5, total 55.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Screen quarterback confirmation, tempo and receiver participation before a prop can qualify.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401858226"
+        ]
+      },
+      {
+        "id": "CFB-early-2",
+        "gameId": "CFB-401858229",
+        "title": "North Carolina @ Clemson \u00b7 volume markets",
+        "why": "North Carolina @ Clemson \u2014 Clemson -3.5, total 44.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Investigate volume roles after availability reports; the total alone is not a player edge.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401858229"
+        ]
+      },
+      {
+        "id": "CFB-early-3",
+        "gameId": "CFB-401856686",
+        "title": "Georgia @ Arkansas \u00b7 volume markets",
+        "why": "Georgia @ Arkansas \u2014 Arkansas +25.5, total 54.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Treat blowout and late-game substitution risk as a first-order constraint.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401856686"
+        ]
+      },
+      {
+        "id": "CFB-early-4",
+        "gameId": "CFB-401856811",
+        "title": "Houston @ Texas Tech \u00b7 volume markets",
+        "why": "Houston @ Texas Tech \u2014 Texas Tech -7.5 at DraftKings, retrieved Sep 14 at 9:08 p.m. ET. Total was not available in the source feed, so no pace-based player inference is being made.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401856811"
+        ]
+      }
     ]
   },
   {
@@ -627,6 +679,48 @@
       "https://www.espn.com/nfl/game/_/gameId/401872939",
       "https://www.espn.com/nfl/game/_/gameId/401872942",
       "https://www.espn.com/nfl/game/_/gameId/401872947"
+    ],
+    "gameWatch": [
+      {
+        "id": "NFL-early-0",
+        "gameId": "NFL-401872932",
+        "title": "Lions @ Bills \u00b7 volume markets",
+        "why": "Lions @ Bills \u2014 DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872932"
+        ]
+      },
+      {
+        "id": "NFL-early-1",
+        "gameId": "NFL-401872939",
+        "title": "Eagles @ Titans \u00b7 volume markets",
+        "why": "Eagles @ Titans \u2014 DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872939"
+        ]
+      },
+      {
+        "id": "NFL-early-2",
+        "gameId": "NFL-401872942",
+        "title": "Dolphins @ 49ers \u00b7 volume markets",
+        "why": "Dolphins @ 49ers \u2014 San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872942"
+        ]
+      },
+      {
+        "id": "NFL-early-3",
+        "gameId": "NFL-401872947",
+        "title": "Giants @ Rams \u00b7 volume markets",
+        "why": "Giants @ Rams \u2014 Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872947"
+        ]
+      }
     ]
   }
 ]
