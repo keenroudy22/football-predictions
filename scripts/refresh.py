@@ -120,6 +120,11 @@ def validate_report(report, games):
     assert isinstance(report.get('weeklyReview', []), list)
     if report.get('targetWeek') is not None:
         assert isinstance(report['targetWeek'], int) and report['targetWeek'] >= 0
+    for watch in report.get('gameWatch', []):
+        assert watch.get('gameId') in games, 'Watch entry has no matching game'
+        assert games[watch['gameId']]['league'] == report['league']
+        assert all(watch.get(k) for k in ('id', 'title', 'why', 'needs', 'sources'))
+        assert all(url.startswith('https://') for url in watch['sources'])
     historical = report.get('historicalImport') is True
     for score in report.get('scores', []):
         assert score['gameId'] in games
@@ -147,13 +152,18 @@ def validate_report(report, games):
                     assert sample.get('sample') == expected
                     assert isinstance(sample.get('hits'), int) and 0 <= sample['hits'] <= expected
             if form.get('games') is not None:
-                games = form['games']
-                assert isinstance(games, list) and 1 <= len(games) <= 10
+                form_games = form['games']
+                assert isinstance(form_games, list) and 1 <= len(form_games) <= 10
                 assert isinstance(form.get('line'), (int, float))
-                for game in games:
+                for game in form_games:
                     assert isinstance(game, dict)
                     assert isinstance(game.get('value'), (int, float))
                     assert isinstance(game.get('hit'), bool)
+            if form.get('lastVsOpponent') is not None:
+                last_vs = form['lastVsOpponent']
+                assert isinstance(last_vs, dict)
+                assert all(last_vs.get(k) is not None for k in ('value', 'date', 'source'))
+                assert last_vs['source'].startswith('https://')
         if pick['status'] == 'historical':
             assert pick.get('result') in ('win', 'loss', 'push', 'void', 'unverified')
             assert pick.get('actual') is not None
