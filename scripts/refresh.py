@@ -116,6 +116,8 @@ def validate_report(report, games):
     assert report.get('historicalImport') is True or len(report.get('props', [])) <= 5
     assert len(report.get('riskyProps', [])) <= 3
     assert len(report.get('parlays', [])) <= 2
+    assert isinstance(report.get('takeaways', []), list)
+    assert isinstance(report.get('weeklyReview', []), list)
     historical = report.get('historicalImport') is True
     for score in report.get('scores', []):
         assert score['gameId'] in games
@@ -165,6 +167,7 @@ def validate_report(report, games):
                 assert len(pick.get('legs', [])) >= 2 and pick.get('correlation')
             else:
                 assert pick.get('projection') is not None
+                assert pick.get('position'), 'Active prop missing position'
             if report['league'] == 'CFB':
                 assert pick.get('jurisdictionVerified') is True
             for gid in pick['gameIds']:

@@ -15,10 +15,14 @@ Create `research/YYYY-MM-DD-NFL.json` or `research/YYYY-MM-DD-CFB.json`. Files a
 - `riskyProps`: optional zero to three higher-variance player props, tracked separately from the core card and never used to fill the five-pick quota
 - `parlays`: zero to two cards, labelled Best-supported parlay or Speculative longshot
 - `watch`: optional array of text thresholds, explicitly conditional
+- `takeaways`: optional short, sourced slate-level observations
+- `weeklyReview`: optional array of settled-week lessons about workload, efficiency, matchup and injury assumptions
 
-Each pick: `id`, `title`, `why`, `risk`, `sources` (HTTPS source links), `status` (active/withdrawn/watch/expired/settled). An active pick also requires `book`, American `odds`, `quotedAt`, `expiresAt`, `gameIds` matching slate IDs, `cutoff` (worst line and max juice), `confidence` 1–10 and `edge` (method, uncertainty, probability or EV if defensible). Props also include `projection`. College active picks require `jurisdictionVerified: true` following actual verification. No location guessing.
+Each pick: `id`, `title`, `why`, `risk`, `sources` (HTTPS source links), `status` (active/withdrawn/watch/expired/settled). An active pick also requires `book`, American `odds`, `quotedAt`, `expiresAt`, `gameIds` matching slate IDs, `cutoff` (worst line and max juice), `confidence` 1–10 and `edge` (method, uncertainty, probability or EV if defensible). Props also include `projection` and `position` so the site can group QB, RB, WR, TE and other markets. College active picks require `jurisdictionVerified: true` following actual verification. No location guessing.
 
 For a published prop, optionally include a verified `recentForm` object to show its market-specific hit rate: `stat`, an HTTPS `source` linking to the game log, plus `last5` and/or `last10` in the form `{ "hits": 3, "sample": 5 }`. A hit rate must use the same line direction and market as the published prop. Do not use a player’s generic stat average, a different prop threshold, or an unlinked memory-based count. If that verification is unavailable, omit the field and the live card will say that recent-form verification is pending.
+
+Use `books` for verified comparison quotes in the form `{ "book": "Book", "odds": -110, "line": 50.5, "quotedAt": "..." }`. Use `movementReason` only when a sourced injury, role, weather or market event plausibly explains a change. After kickoff, `closingLine`, `closingOdds` and `closingValue` may record a comparable pregame closing observation; never use a post-start feed as the close.
 
 When a sportsbook, Playbook, GamblyBot, or another authorized provider returns a canonical share/deep link for the exact active market, add it as `bookLink`. The site shows it as “Open verified bet slip.” Do not manufacture a URL, scrape/deep-link a provider that prohibits automated access, or imply that opening the link places a wager. The user reviews and submits any wager in their sportsbook.
 
