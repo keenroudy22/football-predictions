@@ -144,6 +144,14 @@ def validate_report(report, games):
                     assert isinstance(sample, dict)
                     assert sample.get('sample') == expected
                     assert isinstance(sample.get('hits'), int) and 0 <= sample['hits'] <= expected
+            if form.get('games') is not None:
+                games = form['games']
+                assert isinstance(games, list) and 1 <= len(games) <= 10
+                assert isinstance(form.get('line'), (int, float))
+                for game in games:
+                    assert isinstance(game, dict)
+                    assert isinstance(game.get('value'), (int, float))
+                    assert isinstance(game.get('hit'), bool)
         if pick['status'] == 'historical':
             assert pick.get('result') in ('win', 'loss', 'push', 'void', 'unverified')
             assert pick.get('actual') is not None
@@ -228,3 +236,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

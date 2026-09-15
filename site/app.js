@@ -89,13 +89,27 @@ function pickStatus(p){
   if((p.gameIds||[]).some(id=>{const g=gameMap().get(id);return !g||g.state!=='pre'||new Date(g.kickoff)<=new Date()}))return 'locked at kickoff';
   return 'active';
 }
+function formChart(form){
+  const games=Array.isArray(form?.games)?form.games.filter(g=>Number.isFinite(Number(g?.value))&&typeof g?.hit==='boolean').slice(-10):[];
+  if(!games.length)return '';
+  const values=games.map(g=>Number(g.value)), max=Math.max(...values,Number(form.line)||0,1);
+  const title=esc(form.stat||'Verified recent results');
+  const bars=games.map((g,i)=>{
+    const value=Number(g.value), height=Math.max(12,Math.round(value/max*100));
+    const label=esc(g.label||g.date||`Game ${i+1}`);
+    return `<li class="form-game ${g.hit?'hit':'miss'}" title="${label}: ${value}${g.hit?' — hit':' — miss'}"><span class="form-outcome">${g.hit?'HIT':'MISS'}</span><span class="form-bar" style="height:${height}%"><span>${esc(value)}</span></span><small>${label}</small></li>`;
+  }).join('');
+  const line=Number.isFinite(Number(form.line))?`<p class="form-chart-line">Line: ${esc(form.line)} · newest game at right</p>`:'';
+  return `<figure class="form-chart"><figcaption><strong>Recent game results</strong><span>${title}</span></figcaption><ol>${bars}</ol>${line}</figure>`;
+}
 function pickCard(p,i){
   const status=pickStatus(p);
   const result=p.result==='unverified'?(p.settlementState==='checking_rules'?'Checking original book rules':'Awaiting verified settlement'):p.result||status;
   const calc=FootballRecords.validOdds(p.odds)?`<div class="calculator" data-odds="${esc(p.odds)}"><strong>Payout preview · quoted ${p.quotedAt?pretty(p.quotedAt)+' ET':'time unknown'}</strong><label>Amount <input class="calc-amount" type="number" min="0.01" step="0.01" value="1"></label><label>Risk as <select class="calc-mode"><option value="units">Units</option><option value="money">Dollars</option></select></label><label>Dollar value of 1 unit <input class="calc-unit" type="number" min="0.01" step="0.01" value="10"></label><p class="calc-output" aria-live="polite"></p></div>`:'';
   const rate=x=>x&&Number.isInteger(x.hits)&&Number.isInteger(x.sample)&&x.sample>0&&x.hits>=0&&x.hits<=x.sample?`${x.hits}/${x.sample} · ${(100*x.hits/x.sample).toFixed(0)}%`:null;
   const form5=rate(p.recentForm?.last5),form10=rate(p.recentForm?.last10);
-  const form=form5||form10?`<div class="recent-form"><strong>Recent hit rate</strong><span>${form5?`Last 5: ${form5}`:''}${form5&&form10?' · ':''}${form10?`Last 10: ${form10}`:''}</span>${p.recentForm?.stat?`<small>${esc(p.recentForm.stat)}</small>`:''}${p.recentForm?.source?`<a href="${esc(p.recentForm.source)}" target="_blank" rel="noopener noreferrer">Game log ↗</a>`:''}</div>`:status==='active'?`<div class="recent-form pending"><strong>Recent hit rate</strong><span>Game-log verification pending</span></div>`:'';
+  const chart=formChart(p.recentForm);
+  const form=form5||form10||chart?`<div class="recent-form"><strong>Recent hit rate</strong><span>${form5?`Last 5: ${form5}`:''}${form5&&form10?' · ':''}${form10?`Last 10: ${form10}`:''}</span>${p.recentForm?.stat?`<small>${esc(p.recentForm.stat)}</small>`:''}${chart}${p.recentForm?.source?`<a href="${esc(p.recentForm.source)}" target="_blank" rel="noopener noreferrer">Game log ↗</a>`:''}</div>`:status==='active'?`<div class="recent-form pending"><strong>Recent hit rate</strong><span>Game-log verification pending</span></div>`:'';
   const books=Array.isArray(p.books)?p.books.filter(x=>x&&x.book&&FootballRecords.validOdds(x.odds)).sort((a,b)=>Number(b.odds)-Number(a.odds)):[];
   const priceNote=books.length?`<p class="price-board"><strong>Best verified price:</strong> ${esc(books[0].book)} ${books[0].odds>0?'+':''}${esc(books[0].odds)}${books.length>1?` · ${books.length} books checked`:''}</p>`:'';
   const closeNote=p.closingLine||p.closingOdds!=null?`<p class="closing-note"><strong>Closing-line check:</strong> ${esc(p.closingLine||`${p.closingOdds>0?'+':''}${p.closingOdds}`)}${p.closingValue?` · ${esc(p.closingValue)}`:''}</p>`:'';
@@ -174,3 +188,4 @@ async function init(){
   }catch(e){$('#notice').textContent='The latest board could not load. Please refresh or check the public repository.';$('#notice').classList.add('warn');$('#content').innerHTML=empty('Data temporarily unavailable.','No recommendations are displayed while the source files are unavailable.');}
 }
 init();
+
