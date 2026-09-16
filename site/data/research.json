@@ -732,5 +732,79 @@
         ]
       }
     ]
+  },
+  {
+    "league": "CFB",
+    "targetWeek": 3,
+    "publishedAt": "2026-09-16T12:31:00Z",
+    "summary": "Thursday college market update: Steve Angeli full-game, first-quarter and first-half passing lines are visible at Underdog, but jurisdiction, exact-window history and price value are not sufficiently verified for an official play.",
+    "takeaways": [
+      "Steve Angeli's posted menu includes 250.5 full-game passing yards, 61.5 first-quarter passing yards and 127.5 first-half passing yards. The shorter windows are now part of the screen, but full-game averages cannot be reused as 1Q or 1H evidence.",
+      "Angeli threw three interceptions against California while Syracuse faced consistent pressure. Pittsburgh's early defensive results and the game script create research questions, not an automatic under.",
+      "Underdog multipliers and market availability may vary by jurisdiction. No college prop becomes official without verifying availability, settlement terms and the exact current selection."
+    ],
+    "watch": [
+      "Steve Angeli passing \u2014 250.5 full game, 61.5 first quarter and 127.5 first half at Underdog as reported Sep 15. Verify current availability, exact-window game logs and price value before publishing.",
+      "Steve Angeli interceptions \u2014 1.5 with a reported 1.27x higher multiplier. Last week's three interceptions are a one-game result, not a sufficient predictive sample."
+    ],
+    "props": [],
+    "riskyProps": [],
+    "parlays": [],
+    "sources": [
+      "https://www.syracuse.com/betting/2026/09/syracuse-vs-pitt-prediction-and-picks-plus-angeli-underdog-pickem-props.html",
+      "https://cuse.com/game-center/18833?Live=8378",
+      "https://www.espn.com/college-football/game/_/gameId/401858225"
+    ],
+    "gameWatch": [
+      {
+        "id": "CFB-early-0",
+        "gameId": "CFB-401858225",
+        "title": "Syracuse @ Pittsburgh \u00b7 Angeli full game, 1Q and 1H",
+        "why": "Underdog lines reported Sep 15: Angeli 250.5 passing yards, 61.5 first-quarter passing yards and 127.5 first-half passing yards. These give the research screen exact thresholds for multiple windows.",
+        "needs": "Verify current jurisdiction availability and selection terms, build exact-window history, compare a defensible projection and confirm the price. These are watched lines, not official picks.",
+        "sources": [
+          "https://www.syracuse.com/betting/2026/09/syracuse-vs-pitt-prediction-and-picks-plus-angeli-underdog-pickem-props.html",
+          "https://cuse.com/game-center/18833?Live=8378",
+          "https://www.espn.com/college-football/game/_/gameId/401858225"
+        ]
+      }
+    ]
+  },
+  {
+    "league": "NFL",
+    "targetWeek": 2,
+    "publishedAt": "2026-09-16T12:31:00Z",
+    "summary": "Thursday market update: DraftKings anytime-touchdown prices are now visible for Lions-Bills, but no player line has cleared the projection, injury and price-value checks for an official Hot Pick.",
+    "takeaways": [
+      "Detroit-Buffalo is still a high-total environment, but popular anytime-touchdown availability is not evidence of value. Jahmyr Gibbs at -320 and James Cook at -170 require very high break-even probabilities.",
+      "Detroit listed guard Christian Mahogany and tackle Blake Miller as non-participants on both Monday and Tuesday estimates. Wednesday participation and game statuses remain necessary before locking Detroit workload assumptions.",
+      "The first visible fun-market screen includes Amon-Ra St. Brown +105, Dalton Kincaid +180, Jameson Williams +205 and Khalil Shakir +215 to score. They remain watch items until touchdown opportunity, role and fair-price estimates are verified."
+    ],
+    "watch": [
+      "Lions @ Bills ATTD menu \u2014 DraftKings Network showed Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215 at the Sep 16 morning check. These are available prices, not recommendations.",
+      "Detroit offensive line \u2014 Mahogany and Miller were DNP on the first two estimated reports. Recheck the official Wednesday report before promoting Detroit rushing, passing or touchdown markets."
+    ],
+    "props": [],
+    "riskyProps": [],
+    "parlays": [],
+    "sources": [
+      "https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/",
+      "https://www.buffalobills.com/team/injury-report/",
+      "https://www.espn.com/nfl/game/_/gameId/401872932"
+    ],
+    "gameWatch": [
+      {
+        "id": "NFL-early-0",
+        "gameId": "NFL-401872932",
+        "title": "Lions @ Bills \u00b7 ATTD and volume markets",
+        "why": "DraftKings ATTD prices are posted: Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215. The menu is live, but popularity and a high game total do not establish value.",
+        "needs": "Verify Wednesday game statuses, especially Detroit's offensive line; obtain comparable prices and defensible touchdown or volume projections. No official Hot Pick yet.",
+        "sources": [
+          "https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/",
+          "https://www.buffalobills.com/team/injury-report/",
+          "https://www.espn.com/nfl/game/_/gameId/401872932"
+        ]
+      }
+    ]
   }
 ]
