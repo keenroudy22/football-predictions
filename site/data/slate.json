@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T19:22:01Z",
+  "updatedAt": "2026-09-16T00:37:05Z",
   "sources": [
     {
       "league": "NFL",
@@ -9,7 +9,10 @@
         "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260901-20260929&limit=1000"
       ],
       "retrievedAt": "2026-09-15T19:22:01Z",
-      "trainingCoverage": "season feed"
+      "trainingCoverage": "season feed",
+      "fetchStatus": "failed",
+      "lastAttemptAt": "2026-09-16T00:37:05Z",
+      "failureReason": "ESPN scoreboard HTTP 400"
     },
     {
       "league": "CFB",
@@ -19,7 +22,10 @@
         "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260901-20260929&limit=1000&groups=80"
       ],
       "retrievedAt": "2026-09-15T19:22:01Z",
-      "trainingCoverage": "limited weekly provider sample"
+      "trainingCoverage": "limited weekly provider sample",
+      "fetchStatus": "failed",
+      "lastAttemptAt": "2026-09-16T00:37:05Z",
+      "failureReason": "ESPN scoreboard HTTP 400"
     }
   ],
   "games": [
