@@ -1,0 +1,38 @@
+{
+  "league": "CFB",
+  "targetWeek": 3,
+  "publishedAt": "2026-09-16T12:31:00Z",
+  "summary": "Thursday college market update: Steve Angeli full-game, first-quarter and first-half passing lines are visible at Underdog, but jurisdiction, exact-window history and price value are not sufficiently verified for an official play.",
+  "takeaways": [
+    "Steve Angeli's posted menu includes 250.5 full-game passing yards, 61.5 first-quarter passing yards and 127.5 first-half passing yards. The shorter windows are now part of the screen, but full-game averages cannot be reused as 1Q or 1H evidence.",
+    "Angeli threw three interceptions against California while Syracuse faced consistent pressure. Pittsburgh's early defensive results and the game script create research questions, not an automatic under.",
+    "Underdog multipliers and market availability may vary by jurisdiction. No college prop becomes official without verifying availability, settlement terms and the exact current selection."
+  ],
+  "watch": [
+    "Steve Angeli passing — 250.5 full game, 61.5 first quarter and 127.5 first half at Underdog as reported Sep 15. Verify current availability, exact-window game logs and price value before publishing.",
+    "Steve Angeli interceptions — 1.5 with a reported 1.27x higher multiplier. Last week's three interceptions are a one-game result, not a sufficient predictive sample."
+  ],
+  "props": [],
+  "riskyProps": [],
+  "parlays": [],
+  "sources": [
+    "https://www.syracuse.com/betting/2026/09/syracuse-vs-pitt-prediction-and-picks-plus-angeli-underdog-pickem-props.html",
+    "https://cuse.com/game-center/18833?Live=8378",
+    "https://www.espn.com/college-football/game/_/gameId/401858225"
+  ],
+  "gameWatch": [
+    {
+      "id": "CFB-early-0",
+      "gameId": "CFB-401858225",
+      "title": "Syracuse @ Pittsburgh · Angeli full game, 1Q and 1H",
+      "why": "Underdog lines reported Sep 15: Angeli 250.5 passing yards, 61.5 first-quarter passing yards and 127.5 first-half passing yards. These give the research screen exact thresholds for multiple windows.",
+      "needs": "Verify current jurisdiction availability and selection terms, build exact-window history, compare a defensible projection and confirm the price. These are watched lines, not official picks.",
+      "sources": [
+        "https://www.syracuse.com/betting/2026/09/syracuse-vs-pitt-prediction-and-picks-plus-angeli-underdog-pickem-props.html",
+        "https://cuse.com/game-center/18833?Live=8378",
+        "https://www.espn.com/college-football/game/_/gameId/401858225"
+      ]
+    }
+  ]
+}
+

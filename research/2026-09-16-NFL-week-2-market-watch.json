@@ -1,0 +1,38 @@
+{
+  "league": "NFL",
+  "targetWeek": 2,
+  "publishedAt": "2026-09-16T12:31:00Z",
+  "summary": "Thursday market update: DraftKings anytime-touchdown prices are now visible for Lions-Bills, but no player line has cleared the projection, injury and price-value checks for an official Hot Pick.",
+  "takeaways": [
+    "Detroit-Buffalo is still a high-total environment, but popular anytime-touchdown availability is not evidence of value. Jahmyr Gibbs at -320 and James Cook at -170 require very high break-even probabilities.",
+    "Detroit listed guard Christian Mahogany and tackle Blake Miller as non-participants on both Monday and Tuesday estimates. Wednesday participation and game statuses remain necessary before locking Detroit workload assumptions.",
+    "The first visible fun-market screen includes Amon-Ra St. Brown +105, Dalton Kincaid +180, Jameson Williams +205 and Khalil Shakir +215 to score. They remain watch items until touchdown opportunity, role and fair-price estimates are verified."
+  ],
+  "watch": [
+    "Lions @ Bills ATTD menu — DraftKings Network showed Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215 at the Sep 16 morning check. These are available prices, not recommendations.",
+    "Detroit offensive line — Mahogany and Miller were DNP on the first two estimated reports. Recheck the official Wednesday report before promoting Detroit rushing, passing or touchdown markets."
+  ],
+  "props": [],
+  "riskyProps": [],
+  "parlays": [],
+  "sources": [
+    "https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/",
+    "https://www.buffalobills.com/team/injury-report/",
+    "https://www.espn.com/nfl/game/_/gameId/401872932"
+  ],
+  "gameWatch": [
+    {
+      "id": "NFL-early-0",
+      "gameId": "NFL-401872932",
+      "title": "Lions @ Bills · ATTD and volume markets",
+      "why": "DraftKings ATTD prices are posted: Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215. The menu is live, but popularity and a high game total do not establish value.",
+      "needs": "Verify Wednesday game statuses, especially Detroit's offensive line; obtain comparable prices and defensible touchdown or volume projections. No official Hot Pick yet.",
+      "sources": [
+        "https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/",
+        "https://www.buffalobills.com/team/injury-report/",
+        "https://www.espn.com/nfl/game/_/gameId/401872932"
+      ]
+    }
+  ]
+}
+
