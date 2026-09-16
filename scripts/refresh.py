@@ -18,10 +18,15 @@ def read(path, default):
 def fetch(league, start, end):
     slug = 'nfl' if league == 'NFL' else 'college-football'
     cursor, final = start.date(), end.date()
+    current_day = datetime.now(timezone.utc).date()
+    split_current_month = False
     events, urls = {}, []
     while cursor <= final:
         following_month = (cursor.replace(day=28) + timedelta(days=4)).replace(day=1)
         through = min(following_month - timedelta(days=1), final)
+        if cursor < current_day < through and not split_current_month:
+            through = current_day
+            split_current_month = True
         url = f'https://site.api.espn.com/apis/site/v2/sports/football/{slug}/scoreboard?dates={cursor:%Y%m%d}-{through:%Y%m%d}&limit=1000'
         if league == 'CFB':
             url += '&groups=80'
@@ -34,7 +39,9 @@ def fetch(league, start, end):
             raise ValueError('Provider limit reached; split date window before publishing')
         events.update({event['id']: event for event in page})
         urls.append(url)
-        cursor = through + timedelta(days=1)
+        cursor = through if split_current_month and through == current_day else through + timedelta(days=1)
+        if cursor == current_day and split_current_month:
+            split_current_month = False
     return list(events.values()), urls
 
 def prior_season(league, year):

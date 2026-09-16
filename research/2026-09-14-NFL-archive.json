@@ -1,7 +1,7 @@
 {
   "league": "NFL",
   "publishedAt": "2026-09-14T12:19:22Z",
-  "summary": "Imported the original conversation recommendation for transparency; quote expired and outcome unsettled.",
+  "summary": "Imported the original conversation recommendation for transparency; quote expired. Week 1 result verified against NFL.com and ESPN.",
   "props": [
     {
       "id": "2026-w1-mahomes-completions",
@@ -21,7 +21,17 @@
       "cutoff": "Under 21.5 only, maximum price -120. Historical threshold; not a current verified offer.",
       "confidence": 6,
       "projection": 20,
-      "edge": "Historical uncalibrated judgment estimate: 58-60 percent. Not a demonstrated or tested model edge. Outcome and closing price unknown."
+      "edge": "Historical uncalibrated judgment estimate: 58-60 percent. Not a demonstrated or tested model edge. Comparable closing price unavailable.",
+      "result": "win",
+      "actual": "15 completions",
+      "settledAt": "2026-09-15T21:32:46Z",
+      "resultSource": "https://www.nfl.com/players/patrick-mahomes/stats/logs/",
+      "lastCheckedAt": "2026-09-15T21:32:46Z",
+      "settlementState": "Verified official stats",
+      "settlementReason": "NFL.com lists 15 completions on 27 attempts against Denver; ESPN's game box score agrees. Mahomes played and the game finished. At 15, Under 21.5 won under the published threshold.",
+      "participationSource": "https://www.nfl.com/players/patrick-mahomes/stats/logs/",
+      "bookRuleSource": "https://help.oh.bet365.com/s/en-us/sportsrules/american-football/includes-nfl",
+      "nextReviewAt": null
     }
   ],
   "parlays": []
