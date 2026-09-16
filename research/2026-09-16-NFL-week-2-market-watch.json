@@ -1,18 +1,20 @@
 {
   "league": "NFL",
   "targetWeek": 2,
-  "publishedAt": "2026-09-16T21:30:00Z",
-  "summary": "Wednesday status update: Detroit ruled out starting guard Christian Mahogany and tackle Blake Miller for Thursday at Buffalo. The offensive-line downgrade matters for Detroit efficiency assumptions, but no available player line has cleared the projection and price-value checks for an official Hot Pick.",
+  "publishedAt": "2026-09-16T23:31:00Z",
+  "summary": "Wednesday evening update: Detroit ruled out starting guard Christian Mahogany and tackle Blake Miller, while several popular DraftKings touchdown prices shortened during the day. The injury and price moves are now recorded, but no available player line has cleared the projection and price-value checks for an official Hot Pick.",
   "takeaways": [
     "Detroit-Buffalo is still a high-total environment, but popular anytime-touchdown availability is not evidence of value. Jahmyr Gibbs at -320 and James Cook at -170 require very high break-even probabilities.",
     "Detroit ruled out guard Christian Mahogany and tackle Blake Miller after both missed all three practices. Center Juice Scruggs improved to full participation and has no game designation. Detroit rushing, passing and touchdown projections should account for two confirmed line absences.",
     "Buffalo listed safety Cole Bishop, running back Ty Johnson and defensive lineman T.J. Sanders as questionable. Terrel Bernard has no game designation after three limited practices.",
+    "DraftKings' public ATTD board shortened Amon-Ra St. Brown from +105 to -105, D.J. Moore from +175 to +145 and Jameson Williams from +205 to +190 between the morning and 7:30 p.m. ET checks. Those worse prices reduce any potential value; movement and public popularity do not establish an edge.",
     "The first visible fun-market screen includes Amon-Ra St. Brown +105, Dalton Kincaid +180, Jameson Williams +205 and Khalil Shakir +215 to score. They remain watch items until touchdown opportunity, role and fair-price estimates are verified."
   ],
   "watch": [
     "Lions @ Bills ATTD menu — DraftKings Network showed Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215 at the Sep 16 morning check. These are available prices, not recommendations.",
     "Detroit offensive line — Mahogany and Miller are OUT after three DNP listings. Scruggs is cleared after progressing from limited to full. This is confirmed context, not by itself a reason to bet an under.",
     "Bills availability — Bishop, Ty Johnson and Sanders are questionable. Recheck official inactives before kickoff; their statuses could affect secondary, backfield and defensive-line assumptions."
+    ,"Lions @ Bills ATTD movement — DraftKings morning to 7:30 p.m. ET: Amon-Ra +105 to -105, D.J. Moore +175 to +145, Jameson Williams +205 to +190, Kincaid +180 to +175, Josh Allen -135 to -130, Gibbs -320 to -310 and Cook unchanged at -170. No movement-based recommendation."
   ],
   "props": [],
   "riskyProps": [],
@@ -27,7 +29,7 @@
       "id": "NFL-early-0",
       "gameId": "NFL-401872932",
       "title": "Lions @ Bills · ATTD and volume markets",
-      "why": "DraftKings ATTD prices are posted: Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215. The menu is live, but popularity and a high game total do not establish value.",
+      "why": "DraftKings ATTD prices are posted. The morning-to-evening comparison shows Amon-Ra +105 to -105, D.J. Moore +175 to +145, Jameson Williams +205 to +190, Kincaid +180 to +175, Josh Allen -135 to -130, Gibbs -320 to -310, Cook unchanged at -170 and Shakir unchanged at +215. Shorter prices on several popular names reduce potential value; popularity and a high total do not establish an edge.",
       "needs": "Account for Detroit's two confirmed offensive-line absences, obtain comparable prices and defensible touchdown or volume projections, then recheck Buffalo's questionable players and official inactives. No official Hot Pick yet.",
       "sources": [
         "https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/",
