@@ -3,8 +3,11 @@ import unittest
 from pathlib import Path
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from refresh import Model, validate_report, retained_source
+from refresh import Model, validate_report, retained_source, fetch_by_week
 from urllib.error import HTTPError
+from unittest.mock import patch
+from io import BytesIO
+import json
 
 class PipelineTests(unittest.TestCase):
     def game(self):
@@ -71,5 +74,18 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(retained['fetchStatus'],'failed')
         self.assertEqual(source['fetchStatus'],'ok')
         with self.assertRaises(HTTPError): retained_source('CFB',error,{}, {},at)
+
+    def test_week_feed_requires_every_saved_game(self):
+        at=datetime(2026,9,16,0,30,tzinfo=timezone.utc)
+        g=self.game();g.update(kickoff='2026-09-17T20:00:00Z',week=2)
+        def response(url, timeout=45):
+            return BytesIO(json.dumps({'events':[{'id':'1'}]}).encode())
+        with patch('refresh.urlopen',side_effect=response):
+            events, urls=fetch_by_week('NFL',2026,{g['id']:g},at,at.replace(day=30))
+            self.assertEqual([e['id'] for e in events],['1'])
+            self.assertEqual(len(urls),1)
+            other=dict(g,id='NFL-2')
+            with self.assertRaisesRegex(ValueError,'missing 1 saved games'):
+                fetch_by_week('NFL',2026,{g['id']:g,other['id']:other},at,at.replace(day=30))
 
 if __name__ == '__main__': unittest.main()

@@ -9,6 +9,7 @@ from urllib.error import HTTPError
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'site' / 'data'
 MODEL = 'elo-total-v1'
+FBS_GROUPS = (80, 1, 4, 5, 8, 9, 12, 15, 17, 18, 37, 151)
 
 def stamp(dt):
     return dt.isoformat(timespec='seconds').replace('+00:00', 'Z')
@@ -76,6 +77,33 @@ def retained_source(league, error, prior_sources, games, now):
     source = dict(previous)
     source.update(fetchStatus='failed', lastAttemptAt=stamp(now), failureReason=f'ESPN scoreboard HTTP {error.code}')
     return source
+
+def fetch_by_week(league, season, games, now, end):
+    """Recover current results from complete week/conference unions when date ranges fail."""
+    slug = 'nfl' if league == 'NFL' else 'college-football'
+    start = now - timedelta(days=2)
+    saved = [g for g in games.values() if g['league'] == league and g['season'] == season
+             and start <= datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')) <= end]
+    weeks = sorted({g['week'] for g in saved})
+    if not weeks:
+        raise ValueError(f'{league}: no saved weeks to verify fallback coverage')
+    events, urls = {}, []
+    for week in weeks:
+        for group in (FBS_GROUPS if league == 'CFB' else (None,)):
+            url = f'https://site.api.espn.com/apis/site/v2/sports/football/{slug}/scoreboard?dates={season}&seasontype=2&week={week}&limit=1000'
+            if group is not None:
+                url += f'&groups={group}'
+            with urlopen(url, timeout=45) as response:
+                payload = json.load(response)
+            page = payload.get('events')
+            if not isinstance(page, list):
+                raise ValueError(f'{league}: invalid week {week} group {group} response')
+            events.update({event['id']: event for event in page})
+            urls.append(url)
+    missing = sorted(g['id'] for g in saved if g['id'].split('-', 1)[1] not in events)
+    if missing:
+        raise ValueError(f'{league}: weekly fallback missing {len(missing)} saved games: {missing[:4]}')
+    return list(events.values()), urls
 
 def normalize(event, league):
     c = event['competitions'][0]
@@ -257,16 +285,24 @@ def main():
     sources = []
     for league in ('NFL', 'CFB'):
         old, training_coverage = prior_season(league, season - 1)
+        method = 'date windows'
         try:
             current, urls = fetch(league, datetime(season, 8, 1), now + timedelta(days=14))
         except HTTPError as error:
-            source = retained_source(league, error, prior_sources, games, now)
-            sources.append(source)
-            print(f'{league} source failed (HTTP {error.code}); retained its last verified slate from {source["retrievedAt"]}.')
-            continue
+            try:
+                current, urls = fetch_by_week(league, season, games, now, now + timedelta(days=14))
+                method = 'verified season-week union'
+                print(f'{league} date-window feed failed (HTTP {error.code}); verified {len(current)} games from season/week feeds.')
+            except (HTTPError, ValueError) as fallback_error:
+                source = retained_source(league, error, prior_sources, games, now)
+                source['fallbackFailure'] = str(fallback_error)[:180]
+                sources.append(source)
+                print(f'{league} sources failed; retained its last verified slate from {source["retrievedAt"]}.')
+                continue
         normalized = [normalize(e, league) for e in current if e['season']['type'] in (2, 3)]
-        sources.append({'league': league, 'url': urls[-1], 'dateWindowUrls': urls, 'retrievedAt': stamp(now), 'trainingCoverage': training_coverage, 'fetchStatus': 'ok'})
-        training = sorted([normalize(e, league) for e in old if e['season']['type'] in (2, 3)] + normalized, key=lambda g: g['kickoff'])
+        sources.append({'league': league, 'url': urls[0], 'dateWindowUrls': urls, 'retrievedAt': stamp(now), 'trainingCoverage': training_coverage, 'fetchStatus': 'ok', 'fetchMethod': method})
+        earlier = [g for g in games.values() if g['league'] == league and g['season'] == season and g['completed'] and g['id'] not in {n['id'] for n in normalized}]
+        training = sorted([normalize(e, league) for e in old if e['season']['type'] in (2, 3)] + earlier + normalized, key=lambda g: g['kickoff'])
         model = Model(league)
         for g in training:
             if g['completed'] and datetime.fromisoformat(g['kickoff'].replace('Z', '+00:00')) < now:
