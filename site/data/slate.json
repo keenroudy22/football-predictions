@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T00:37:05Z",
+  "updatedAt": "2026-09-16T00:45:57Z",
   "sources": [
     {
       "league": "NFL",
@@ -11,7 +11,7 @@
       "retrievedAt": "2026-09-15T19:22:01Z",
       "trainingCoverage": "season feed",
       "fetchStatus": "failed",
-      "lastAttemptAt": "2026-09-16T00:37:05Z",
+      "lastAttemptAt": "2026-09-16T00:45:57Z",
       "failureReason": "ESPN scoreboard HTTP 400"
     },
     {
@@ -24,7 +24,7 @@
       "retrievedAt": "2026-09-15T19:22:01Z",
       "trainingCoverage": "limited weekly provider sample",
       "fetchStatus": "failed",
-      "lastAttemptAt": "2026-09-16T00:37:05Z",
+      "lastAttemptAt": "2026-09-16T00:45:57Z",
       "failureReason": "ESPN scoreboard HTTP 400"
     }
   ],
