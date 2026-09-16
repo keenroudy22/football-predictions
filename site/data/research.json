@@ -773,16 +773,18 @@
   {
     "league": "NFL",
     "targetWeek": 2,
-    "publishedAt": "2026-09-16T12:31:00Z",
-    "summary": "Thursday market update: DraftKings anytime-touchdown prices are now visible for Lions-Bills, but no player line has cleared the projection, injury and price-value checks for an official Hot Pick.",
+    "publishedAt": "2026-09-16T21:30:00Z",
+    "summary": "Wednesday status update: Detroit ruled out starting guard Christian Mahogany and tackle Blake Miller for Thursday at Buffalo. The offensive-line downgrade matters for Detroit efficiency assumptions, but no available player line has cleared the projection and price-value checks for an official Hot Pick.",
     "takeaways": [
       "Detroit-Buffalo is still a high-total environment, but popular anytime-touchdown availability is not evidence of value. Jahmyr Gibbs at -320 and James Cook at -170 require very high break-even probabilities.",
-      "Detroit listed guard Christian Mahogany and tackle Blake Miller as non-participants on both Monday and Tuesday estimates. Wednesday participation and game statuses remain necessary before locking Detroit workload assumptions.",
+      "Detroit ruled out guard Christian Mahogany and tackle Blake Miller after both missed all three practices. Center Juice Scruggs improved to full participation and has no game designation. Detroit rushing, passing and touchdown projections should account for two confirmed line absences.",
+      "Buffalo listed safety Cole Bishop, running back Ty Johnson and defensive lineman T.J. Sanders as questionable. Terrel Bernard has no game designation after three limited practices.",
       "The first visible fun-market screen includes Amon-Ra St. Brown +105, Dalton Kincaid +180, Jameson Williams +205 and Khalil Shakir +215 to score. They remain watch items until touchdown opportunity, role and fair-price estimates are verified."
     ],
     "watch": [
       "Lions @ Bills ATTD menu \u2014 DraftKings Network showed Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215 at the Sep 16 morning check. These are available prices, not recommendations.",
-      "Detroit offensive line \u2014 Mahogany and Miller were DNP on the first two estimated reports. Recheck the official Wednesday report before promoting Detroit rushing, passing or touchdown markets."
+      "Detroit offensive line \u2014 Mahogany and Miller are OUT after three DNP listings. Scruggs is cleared after progressing from limited to full. This is confirmed context, not by itself a reason to bet an under.",
+      "Bills availability \u2014 Bishop, Ty Johnson and Sanders are questionable. Recheck official inactives before kickoff; their statuses could affect secondary, backfield and defensive-line assumptions."
     ],
     "props": [],
     "riskyProps": [],
@@ -798,7 +800,7 @@
         "gameId": "NFL-401872932",
         "title": "Lions @ Bills \u00b7 ATTD and volume markets",
         "why": "DraftKings ATTD prices are posted: Gibbs -320, Cook -170, Josh Allen -135, Amon-Ra St. Brown +105, Kincaid +180, Jameson Williams +205 and Shakir +215. The menu is live, but popularity and a high game total do not establish value.",
-        "needs": "Verify Wednesday game statuses, especially Detroit's offensive line; obtain comparable prices and defensible touchdown or volume projections. No official Hot Pick yet.",
+        "needs": "Account for Detroit's two confirmed offensive-line absences, obtain comparable prices and defensible touchdown or volume projections, then recheck Buffalo's questionable players and official inactives. No official Hot Pick yet.",
         "sources": [
           "https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/",
           "https://www.buffalobills.com/team/injury-report/",
@@ -808,3 +810,4 @@
     ]
   }
 ]
+
