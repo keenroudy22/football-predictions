@@ -44,3 +44,16 @@ test('the entire Week 1 official prop archive shows favorites first',()=>{
   assert.match(html,/Brock Bowers OVER 60 receiving yards/);
 });
 
+test('player props can be filtered by game and position',()=>{
+  const slate=JSON.parse(fs.readFileSync(path.join(root,'site','data','slate.json')));
+  const reports=JSON.parse(fs.readFileSync(path.join(root,'site','data','research.json')));
+  const history=JSON.parse(fs.readFileSync(path.join(root,'site','data','player-history.json')));
+  for(const r of reports)for(const p of r.props||[]){const h=history.picks[p.id];if(h){p.gameIds=p.gameIds?.length?p.gameIds:[h.gameId];p.position=h.position}}
+  const state=context.testAPI.state;state.slate=slate;state.reports=reports;state.history=history;state.league='NFL';state.week='2026-09-08';state.propGame='all';state.propPosition='QB';
+  const byPosition=context.testAPI.research('props');
+  assert.match(byPosition,/id="prop-game"/);assert.match(byPosition,/id="prop-position"/);assert.match(byPosition,/Showing \d+ of 27 official player lines/);assert.doesNotMatch(byPosition,/Colston Loveland OVER 50.5/);
+  state.propPosition='all';state.propGame='NFL-401872929';
+  const byGame=context.testAPI.research('props');
+  assert.match(byGame,/Showing \d+ of 27 official player lines/);assert.match(byGame,/Jayden Daniels UNDER 200/);assert.doesNotMatch(byGame,/Lamar Jackson OVER 35/);
+});
+
