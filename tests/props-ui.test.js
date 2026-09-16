@@ -10,6 +10,14 @@ const context={FootballRecords:require(path.join(root,'site','records.js')),loca
 vm.createContext(context);
 vm.runInContext(script+'\n globalThis.testAPI={pickCard,research,state};',context);
 
+test('hot and fun market metadata is visible with an expiry check',()=>{
+  const html=context.testAPI.pickCard({id:'early',title:'Player OVER 3.5 first-quarter carries',kind:'riskyProps',status:'active',hot:true,fun:true,marketWindow:'1Q',odds:-110,book:'Example',quotedAt:'2099-09-16T12:00:00Z',expiresAt:'2099-09-16T13:00:00Z',publishedAt:'2099-09-16T12:00:00Z',confidence:6,projection:4.4,cutoff:'Over 3.5 through -120',why:'Verified early role.',risk:'Small window.',sources:[],gameIds:[]});
+  assert.match(html,/HOT PICK/);
+  assert.match(html,/FUN MARKET/);
+  assert.match(html,/>1Q</);
+  assert.match(html,/Recheck by/);
+});
+
 test('historical void with no next review renders without an invalid date',()=>{
   const p={id:'scratch',title:'Brock Bowers OVER 60 receiving yards',kind:'props',status:'historical',
     result:'void',actual:'Out',lastCheckedAt:'2026-09-14T18:36:00Z',nextReviewAt:null,
@@ -35,3 +43,4 @@ test('the entire Week 1 official prop archive shows favorites first',()=>{
   assert.ok(html.indexOf('Colston Loveland OVER 50.5')<html.indexOf('Jalen Coker OVER 38.5'));
   assert.match(html,/Brock Bowers OVER 60 receiving yards/);
 });
+
