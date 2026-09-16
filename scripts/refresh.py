@@ -4,6 +4,7 @@ import math
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from urllib.request import urlopen, Request
+from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'site' / 'data'
@@ -67,6 +68,14 @@ def prior_season(league, year):
         raise ValueError(f'{league}: incomplete prior-season training sample')
     coverage = 'limited weekly provider sample' if capped else 'season feed'
     return list(events.values()), coverage
+
+def retained_source(league, error, prior_sources, games, now):
+    previous = prior_sources.get(league)
+    if not previous or not previous.get('retrievedAt') or not any(g['league'] == league for g in games.values()):
+        raise error
+    source = dict(previous)
+    source.update(fetchStatus='failed', lastAttemptAt=stamp(now), failureReason=f'ESPN scoreboard HTTP {error.code}')
+    return source
 
 def normalize(event, league):
     c = event['competitions'][0]
@@ -241,15 +250,22 @@ def main():
     season = now.year if now.month >= 7 else now.year - 1
     DATA.mkdir(parents=True, exist_ok=True)
     existing = read(DATA / 'slate.json', {'games': []})
+    prior_sources = {source['league']: source for source in existing.get('sources', [])}
     games = {g['id']: g for g in existing['games']}
     forecasts = read(DATA / 'forecasts.json', [])
     known = {p['gameId'] for p in forecasts}
     sources = []
     for league in ('NFL', 'CFB'):
         old, training_coverage = prior_season(league, season - 1)
-        current, urls = fetch(league, datetime(season, 8, 1), now + timedelta(days=14))
+        try:
+            current, urls = fetch(league, datetime(season, 8, 1), now + timedelta(days=14))
+        except HTTPError as error:
+            source = retained_source(league, error, prior_sources, games, now)
+            sources.append(source)
+            print(f'{league} source failed (HTTP {error.code}); retained its last verified slate from {source["retrievedAt"]}.')
+            continue
         normalized = [normalize(e, league) for e in current if e['season']['type'] in (2, 3)]
-        sources.append({'league': league, 'url': urls[-1], 'dateWindowUrls': urls, 'retrievedAt': stamp(now), 'trainingCoverage': training_coverage})
+        sources.append({'league': league, 'url': urls[-1], 'dateWindowUrls': urls, 'retrievedAt': stamp(now), 'trainingCoverage': training_coverage, 'fetchStatus': 'ok'})
         training = sorted([normalize(e, league) for e in old if e['season']['type'] in (2, 3)] + normalized, key=lambda g: g['kickoff'])
         model = Model(league)
         for g in training:

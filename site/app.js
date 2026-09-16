@@ -203,10 +203,13 @@ function render(){
   const opened=[...document.querySelectorAll('#content details')].map((d,i)=>d.open?i:-1).filter(i=>i>=0);
   document.querySelectorAll('[data-league]').forEach(b=>{const selected=b.dataset.league===state.league;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',selected)});
   document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view===state.view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
-  const age=(Date.now()-new Date(state.slate.updatedAt))/3600000;
-  $('#freshness').textContent=`Feed checked ${pretty(state.slate.updatedAt)} ET`;
-  $('#notice').classList.toggle('warn',age>12);
-  $('#notice').textContent=age>12?'Source data is more than 12 hours old. Check source links before relying on game times or results.':state.view==='scores'?'Baseline forecasts are live. Game-market comparison is DraftKings when carried by the source; check the timestamp and book before acting.':'Only verified research can become an active recommendation. Expired quotes and games at kickoff are locked automatically.';
+  const source=(state.slate.sources||[]).find(s=>s.league===state.league);
+  const checkedAt=source?.retrievedAt||state.slate.updatedAt;
+  const age=(Date.now()-new Date(checkedAt))/3600000;
+  const failed=source?.fetchStatus==='failed';
+  $('#freshness').textContent=failed?`${state.league} source unavailable · last successful ${pretty(checkedAt)} ET`:`Feed checked ${pretty(checkedAt)} ET`;
+  $('#notice').classList.toggle('warn',failed||age>12);
+  $('#notice').textContent=failed?`ESPN schedule update failed at ${pretty(source.lastAttemptAt)} ET. Showing the last verified slate; current game status and quotes may be stale.`:age>12?'Source data is more than 12 hours old. Check source links before relying on game times or results.':state.view==='scores'?'Baseline forecasts are live. Game-market comparison is DraftKings when carried by the source; check the timestamp and book before acting.':'Only verified research can become an active recommendation. Expired quotes and games at kickoff are locked automatically.';
   $('#content').innerHTML=state.view==='game'?(gameMap().get(decodeURIComponent(location.hash.slice(6)))?gamePage(gameMap().get(decodeURIComponent(location.hash.slice(6)))):empty('Game unavailable.','The saved game link no longer matches the current feed.')):state.view==='scores'?scoreboard():state.view==='record'?record():research(state.view);
   document.querySelectorAll('#content details').forEach((d,i)=>{if(opened.includes(i))d.open=true});
   document.querySelectorAll('.calculator').forEach(updateCalculator);

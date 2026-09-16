@@ -3,7 +3,8 @@ import unittest
 from pathlib import Path
 from datetime import datetime, timezone
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from refresh import Model, validate_report
+from refresh import Model, validate_report, retained_source
+from urllib.error import HTTPError
 
 class PipelineTests(unittest.TestCase):
     def game(self):
@@ -59,5 +60,16 @@ class PipelineTests(unittest.TestCase):
         p=dict(id='risky',title='test',why='test',risk='Higher variance',sources=['https://example.com'],status='active',book='Book',odds=125,quotedAt='2026-09-14T11:00:00Z',expiresAt='2099-09-14T20:00:00Z',gameIds=[g['id']],cutoff='+110',confidence=4,edge='test',projection=10,position='WR',recentForm=dict(stat='Over 10 yards',source='https://example.com/log',last5=dict(hits=3,sample=5),last10=dict(hits=6,sample=10)))
         r=dict(league='NFL',publishedAt='2026-09-14T12:00:00Z',riskyProps=[p])
         self.assertIs(validate_report(r,{g['id']:g}),r)
+
+    def test_source_failure_preserves_last_success_and_marks_attempt(self):
+        at=datetime(2026,9,16,0,30,tzinfo=timezone.utc)
+        source={'league':'NFL','retrievedAt':'2026-09-15T19:20:00Z','url':'https://example.com','fetchStatus':'ok'}
+        error=HTTPError(source['url'],400,'Bad Request',{},None)
+        retained=retained_source('NFL',error,{'NFL':source},{'NFL-1':self.game()},at)
+        self.assertEqual(retained['retrievedAt'],source['retrievedAt'])
+        self.assertEqual(retained['lastAttemptAt'],'2026-09-16T00:30:00Z')
+        self.assertEqual(retained['fetchStatus'],'failed')
+        self.assertEqual(source['fetchStatus'],'ok')
+        with self.assertRaises(HTTPError): retained_source('CFB',error,{}, {},at)
 
 if __name__ == '__main__': unittest.main()
