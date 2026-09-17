@@ -8,7 +8,7 @@ const root=path.resolve(__dirname,'..');
 const script=fs.readFileSync(path.join(root,'site','app.js'),'utf8').replace(/\binit\(\);\s*$/,'');
 const context={FootballRecords:require(path.join(root,'site','records.js')),localStorage:{getItem:()=>null},Intl,Date};
 vm.createContext(context);
-vm.runInContext(script+'\n globalThis.testAPI={pickCard,research,state,builderEligible,compatibleTicket,ticketText,americanToDecimal,decimalToAmerican};',context);
+vm.runInContext(script+'\n globalThis.testAPI={pickCard,research,state,playerMovement,workloadPanel,builderEligible,compatibleTicket,ticketText,americanToDecimal,decimalToAmerican};',context);
 
 test('hot and fun market metadata is visible with an expiry check',()=>{
   const html=context.testAPI.pickCard({id:'early',title:'Player OVER 3.5 first-quarter carries',kind:'riskyProps',status:'active',hot:true,fun:true,marketWindow:'1Q',odds:-110,book:'Example',quotedAt:'2099-09-16T12:00:00Z',expiresAt:'2099-09-16T13:00:00Z',publishedAt:'2099-09-16T12:00:00Z',confidence:6,projection:4.4,cutoff:'Over 3.5 through -120',why:'Verified early role.',risk:'Small window.',sources:[],gameIds:[]});
@@ -95,4 +95,17 @@ test('early looks respect position and game filters without entering official co
   assert.equal(context.FootballRecords.latest(state.reports).length,0);
   state.propGame=state.slate.games.find(g=>g.league==='NFL'&&g.week===2&&g.id!=='NFL-401872932').id;
   assert.doesNotMatch(context.testAPI.research('props'),/Reference line: 3.5 receptions/);
+});
+
+test('player snapshots preserve revisions and reject post-start observations',()=>{
+ const state=context.testAPI.state;
+ const g={id:'test-game',kickoff:'2026-09-17T20:00:00Z'};state.slate={games:[g]};
+ const quote={book:'Book A',market:'receptions',window:'Full game',direction:'OVER',line:3.5,odds:-110,observedAt:'2026-09-16T12:00:00Z',source:'https://example.com/quote'};
+ state.reports=[{gameWatch:[{id:'watch',marketSnapshots:[quote]}]}];
+ const html=context.testAPI.playerMovement({id:'watch',gameId:g.id,marketSnapshots:[quote,{...quote,line:4.5,observedAt:'2026-09-17T12:00:00Z'},{...quote,line:99,observedAt:'2026-09-17T21:00:00Z'}]});
+ assert.match(html,/observations · 2/);assert.match(html,/3.5/);assert.match(html,/4.5/);assert.doesNotMatch(html,/>99/);assert.match(html,/Unknown. No sourced cause/);
+});
+test('workload does not invent averages when fewer games are available',()=>{
+ const html=context.testAPI.workloadPanel({games:[{label:'Week 1',workload:{touches:34,rushingAttempts:29,receptions:5}}]});
+ assert.match(html,/34/);assert.match(html,/Touches/);assert.match(html,/5-game avg/);assert.match(html,/<td>—<\/td>/);
 });

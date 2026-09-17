@@ -1,7 +1,8 @@
 import unittest
 import json
 from pathlib import Path
-from scripts.player_history import game_rows, number
+from scripts.player_history import game_rows, number, prop_history
+from unittest.mock import patch
 
 
 class PlayerHistoryTests(unittest.TestCase):
@@ -21,6 +22,20 @@ class PlayerHistoryTests(unittest.TestCase):
         }
         rows = game_rows(log, 'receivingYards', '2026-09-10T17:00Z')
         self.assertEqual([(r[1], r[3]) for r in rows], [('1', 52.0)])
+
+    def test_touches_require_carries_and_receptions(self):
+        log = {'names': ['rushingAttempts','receptions','receivingTargets'],
+               'events': {'1': {'id':'1','gameDate':'2026-09-13','opponent':{'id':'x','abbreviation':'NO'}}},
+               'seasonTypes':[{'categories':[{'type':'event','events':[{'eventId':'1','stats':['29','5','5']}]}]}]}
+        game = {'id':'NFL-2','season':2026,'kickoff':'2026-09-17T20:00:00Z'}
+        with patch('scripts.player_history.fetch', return_value=log):
+            f=prop_history({'title':'Player OVER 3.5 receptions'},game,'123','x')
+        self.assertEqual(f['games'][0]['workload']['touches'],34)
+        self.assertEqual(f['games'][0]['workload']['receivingTargets'],5)
+        log['seasonTypes'][0]['categories'][0]['events'][0]['stats'][0]='-'
+        with patch('scripts.player_history.fetch', return_value=log):
+            f=prop_history({'title':'Player OVER 3.5 receptions'},game,'123','x')
+        self.assertNotIn('touches',f['games'][0]['workload'])
 
     def test_stat_format(self):
         self.assertEqual(number('1,234'), 1234)

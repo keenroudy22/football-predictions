@@ -86,11 +86,18 @@ def prop_history(pick, game, athlete_id, opponent_id):
     stat = MARKETS[market]
     rows = []
     usage_rows = defaultdict(dict)
+    workload = defaultdict(dict)
     for season in (game['season'] - 1, game['season']):
         url = f'{WEB}/athletes/{athlete_id}/gamelog?season={season}'
         try:
             log = fetch(url)
             rows += game_rows(log, stat, game['kickoff'])
+            for key in ('rushingAttempts','rushingYards','receptions','receivingTargets','receivingYards','passingAttempts','completions','passingYards'):
+                for r in game_rows(log, key, game['kickoff']):
+                    workload[r[1]][key] = r[3]
+            for values in workload.values():
+                if 'rushingAttempts' in values and 'receptions' in values:
+                    values['touches'] = values['rushingAttempts'] + values['receptions']
             for usage_stat, label in USAGE.get(market, ()):
                 usage_rows[label].update({r[1]: r[3] for r in game_rows(log, usage_stat, game['kickoff'])})
         except (OSError, ValueError, KeyError):
@@ -105,7 +112,7 @@ def prop_history(pick, game, athlete_id, opponent_id):
     def hit(value):
         return value > threshold if direction == 'OVER' else value < threshold
     games = [{'label': f"{r[0][:10]} · {r[2]['opponent']['abbreviation']}",
-              'value': r[3], 'hit': hit(r[3]),
+              'value': r[3], 'hit': hit(r[3]), 'workload': workload.get(r[1], {}),
               'source': f'https://www.espn.com/nfl/boxscore/_/gameId/{r[1]}'}
              for r in reversed(latest)]
     form = {'stat': market, 'line': threshold,
@@ -232,6 +239,28 @@ def main():
                 histories[pick['id']] = {'gameId': game['id'], 'position': position(athlete_id, {}),
                                          'recentForm': form, 'athleteId': athlete_id}
 
+    # Watch candidates use the same logs but never join the official pick ledger.
+    watches = {}
+    candidates = {w['id']: w for report in reports if report['league'] == 'NFL'
+                  for w in report.get('gameWatch', []) if w.get('athleteId') and w.get('marketTitle')}
+    for id_, watch in candidates.items():
+        game = games.get(watch['gameId'])
+        if not game:
+            continue
+        try:
+            athlete = fetch(f'{WEB}/athletes/{watch["athleteId"]}')['athlete']
+            team = str(athlete.get('team', {}).get('id'))
+            if athlete.get('displayName', '').casefold() != watch.get('player', '').casefold():
+                continue
+            if team not in (game['away']['id'], game['home']['id']):
+                continue
+            opponent = game['away']['id'] if team == game['home']['id'] else game['home']['id']
+            form = prop_history({'title': watch['marketTitle']}, game, watch['athleteId'], opponent)
+            if form:
+                watches[id_] = {'gameId': game['id'], 'marketTitle': watch['marketTitle'], 'recentForm': form}
+        except (OSError, ValueError, KeyError):
+            continue
+
     # Each Week 2 defense's immediately preceding Week 1 opponent is a sourced
     # positional box-score reference, never a multi-game defense projection.
     positions = {}
@@ -260,7 +289,7 @@ def main():
                 contexts[game['id']] = context
     output = {'updatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z'),
               'provider': 'ESPN public athlete game logs and official box scores',
-              'picks': histories, 'defenses': contexts}
+              'picks': histories, 'watches': watches, 'defenses': contexts}
     (DATA / 'player-history.json').write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(f'{len(histories)} player histories, {len(contexts)} game defensive contexts')
 
