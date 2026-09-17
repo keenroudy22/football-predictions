@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T16:32:25Z",
+  "updatedAt": "2026-09-17T16:41:13Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -2772,7 +2772,7 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Hamstring",
-              "reportedAt": "2026-09-17T10:47Z",
+              "reportedAt": "2026-09-17T16:33Z",
               "source": "https://www.espn.com/nfl/player/_/id/4258173/nico-collins"
             },
             {
@@ -7137,6 +7137,15 @@
           "name": "Washington Commanders",
           "players": [
             {
+              "id": "4360635",
+              "name": "Chig Okonkwo",
+              "position": "TE",
+              "status": "Questionable",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-17T16:34Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4360635/chig-okonkwo"
+            },
+            {
               "id": "4572460",
               "name": "Tyler Owens",
               "position": "S",
@@ -7225,15 +7234,6 @@
               "injury": "Knee",
               "reportedAt": "2026-09-16T20:09Z",
               "source": "https://www.espn.com/nfl/player/_/id/4242205/klavon-chaisson"
-            },
-            {
-              "id": "4360635",
-              "name": "Chig Okonkwo",
-              "position": "TE",
-              "status": "Questionable",
-              "injury": "Hamstring",
-              "reportedAt": "2026-09-16T16:43Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4360635/chig-okonkwo"
             },
             {
               "id": "4426403",
@@ -7366,8 +7366,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T16:32:25Z",
-      "lastAttemptAt": "2026-09-17T16:32:25Z",
+      "checkedAt": "2026-09-17T16:41:13Z",
+      "lastAttemptAt": "2026-09-17T16:41:13Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7418,8 +7418,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T16:32:25Z",
-      "lastAttemptAt": "2026-09-17T16:32:25Z",
+      "checkedAt": "2026-09-17T16:41:13Z",
+      "lastAttemptAt": "2026-09-17T16:41:13Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
