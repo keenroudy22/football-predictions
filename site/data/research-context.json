@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T20:59:54Z",
+  "updatedAt": "2026-09-17T21:07:18Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -2077,6 +2077,15 @@
           "name": "Denver Broncos",
           "players": [
             {
+              "id": "4568490",
+              "name": "RJ Harvey",
+              "position": "RB",
+              "status": "Questionable",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-17T20:54Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4568490/rj-harvey"
+            },
+            {
               "id": "4686472",
               "name": "Marvin Mims Jr.",
               "position": "WR",
@@ -2084,15 +2093,6 @@
               "injury": "Foot",
               "reportedAt": "2026-09-16T23:26Z",
               "source": "https://www.espn.com/nfl/player/_/id/4686472/marvin-mims-jr"
-            },
-            {
-              "id": "4568490",
-              "name": "RJ Harvey",
-              "position": "RB",
-              "status": "Questionable",
-              "injury": "Hamstring",
-              "reportedAt": "2026-09-16T20:43Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4568490/rj-harvey"
             },
             {
               "id": "4360853",
@@ -5067,13 +5067,13 @@
           "name": "New Orleans Saints",
           "players": [
             {
-              "id": "3054850",
-              "name": "Alvin Kamara",
-              "position": "RB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-17T20:44Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3054850/alvin-kamara"
+              "id": "3929645",
+              "name": "Juwan Johnson",
+              "position": "TE",
+              "status": "Questionable",
+              "injury": "Illness",
+              "reportedAt": "2026-09-17T20:57Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3929645/juwan-johnson"
             },
             {
               "id": "4361370",
@@ -5081,17 +5081,17 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Hamstring",
-              "reportedAt": "2026-09-17T20:27Z",
+              "reportedAt": "2026-09-17T20:51Z",
               "source": "https://www.espn.com/nfl/player/_/id/4361370/chris-olave"
             },
             {
-              "id": "3929645",
-              "name": "Juwan Johnson",
-              "position": "TE",
-              "status": "Questionable",
-              "injury": "Illness",
-              "reportedAt": "2026-09-17T19:56Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3929645/juwan-johnson"
+              "id": "3054850",
+              "name": "Alvin Kamara",
+              "position": "RB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-17T20:44Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3054850/alvin-kamara"
             },
             {
               "id": "2575788",
@@ -7471,8 +7471,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-17T20:59:54Z",
-      "lastAttemptAt": "2026-09-17T20:59:54Z",
+      "checkedAt": "2026-09-17T21:07:18Z",
+      "lastAttemptAt": "2026-09-17T21:07:18Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7523,8 +7523,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T20:59:54Z",
-      "lastAttemptAt": "2026-09-17T20:59:54Z",
+      "checkedAt": "2026-09-17T21:07:18Z",
+      "lastAttemptAt": "2026-09-17T21:07:18Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
