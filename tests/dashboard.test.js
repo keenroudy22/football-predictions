@@ -13,7 +13,10 @@ test('all redesigned pages render using actual saved data',()=>{
 });
 test('historical archive keeps final five while verified record excludes imports',()=>{
  api.state.recordScope='favorites';api.state.resultTab='archive';const archive=api.resultsPage();assert.match(archive,/Colston Loveland/);assert.match(archive,/Unavailable/);assert.doesNotMatch(archive,/≈|at assumed/);
- api.state.resultTab='picks';assert.doesNotMatch(api.resultsPage(),/Colston Loveland/);
+ api.state.resultTab='picks';api.state.recordEvidence='verified';assert.doesNotMatch(api.resultsPage(),/Colston Loveland/);
+ api.state.recordEvidence='all';api.state.recordWeek='2026-1';const restored=api.resultsPage();assert.match(restored,/Colston Loveland/);assert.match(restored,/Baker Mayfield/);assert.match(restored,/1–4–0/);assert.match(restored,/5 picks/);assert.match(restored,/20.0%/);assert.match(restored,/original pregame time unverified/);
+ api.state.recordWeek='total';assert.match(api.resultsPage(),/1–4–0/);
+ api.state.recordScope='all';assert.match(api.resultsPage(),/Brock Bowers/);
 });
 test('research hub labels incomplete college coverage',()=>{
  api.state.league='CFB';assert.match(api.researchHub(),/College coverage is incomplete/);api.state.league='NFL';
