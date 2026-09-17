@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T15:17:55.962Z",
+  "generatedAt": "2026-09-17T15:42:48.846Z",
   "method": "pregame-evaluation-v1",
   "scoreGroups": [
     {
@@ -14,12 +14,12 @@
     }
   ],
   "selections": {
-    "total": 0,
+    "total": 1,
     "wins": 0,
     "losses": 0,
     "pushes": 0,
     "voids": 0,
-    "pending": 0,
+    "pending": 1,
     "priced": 0,
     "units": null,
     "graded": 0,
@@ -28,6 +28,13 @@
     "missing": 0
   },
   "workload": [],
-  "pending": [],
+  "pending": [
+    {
+      "id": "NFL-2026-W2-gibbs-over-29-5-recyd-dk",
+      "title": "Jahmyr Gibbs OVER 29.5 receiving yards",
+      "lastCheckedAt": null,
+      "nextReviewAt": null
+    }
+  ],
   "interpretation": "Descriptive evidence, not a trained update. Compare workload, personnel and opponent strength; register changes before evaluating later games. Never retune to a single result."
 }

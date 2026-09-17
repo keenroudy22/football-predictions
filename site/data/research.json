@@ -1,46 +1,6 @@
 [
   {
     "league": "NFL",
-    "publishedAt": "2026-09-14T12:19:22Z",
-    "summary": "Imported the original conversation recommendation for transparency; quote expired. Week 1 result verified against NFL.com and ESPN.",
-    "props": [
-      {
-        "id": "2026-w1-mahomes-completions",
-        "title": "Patrick Mahomes UNDER 21.5 completions",
-        "why": "Archived recommendation from September 13: projected volume below 21.5 against Denver. Original conversation recommendation was approximately 7:55 p.m. ET; exact publication time was not verified.",
-        "risk": "Quote has not been reverified today. Kansas City availability and final inactives were pending at the original recommendation.",
-        "sources": [
-          "https://www.covers.com/sport/football/nfl/players/29483/patrick-mahomes"
-        ],
-        "status": "expired",
-        "book": "bet365",
-        "odds": -115,
-        "quotedAt": "2026-09-13T23:47:00Z",
-        "gameIds": [
-          "NFL-401872931"
-        ],
-        "cutoff": "Under 21.5 only, maximum price -120. Historical threshold; not a current verified offer.",
-        "confidence": 6,
-        "projection": 20,
-        "edge": "Historical uncalibrated judgment estimate: 58-60 percent. Not a demonstrated or tested model edge. Comparable closing price unavailable.",
-        "result": "win",
-        "actual": "15 completions",
-        "settledAt": "2026-09-15T21:32:46Z",
-        "resultSource": "https://www.nfl.com/players/patrick-mahomes/stats/logs/",
-        "lastCheckedAt": "2026-09-15T21:32:46Z",
-        "settlementState": "Verified official stats",
-        "settlementReason": "NFL.com lists 15 completions on 27 attempts against Denver; ESPN's game box score agrees. Mahomes played and the game finished. At 15, Under 21.5 won under the published threshold.",
-        "participationSource": "https://www.nfl.com/players/patrick-mahomes/stats/logs/",
-        "bookRuleSource": "https://help.oh.bet365.com/s/en-us/sportsrules/american-football/includes-nfl",
-        "nextReviewAt": null
-      }
-    ],
-    "parlays": [],
-    "historicalImport": true,
-    "auditNote": "Metadata correction: this report explicitly imported a prior conversation pick whose exact original publication time was not verified. Preserve its outcome and quoted price in the historical archive; exclude from verified pregame performance."
-  },
-  {
-    "league": "NFL",
     "publishedAt": "2026-09-14T12:00:00Z",
     "historicalImport": true,
     "summary": "Week 1 player lines and score calls imported from user-supplied screenshots. Original sportsbook, price, and exact posting time were not captured. Results are stat outcomes only, not a profit record.",
@@ -587,6 +547,114 @@
     "watch": []
   },
   {
+    "league": "NFL",
+    "publishedAt": "2026-09-14T12:19:22Z",
+    "summary": "Imported the original conversation recommendation for transparency; quote expired. Week 1 result verified against NFL.com and ESPN.",
+    "props": [
+      {
+        "id": "2026-w1-mahomes-completions",
+        "title": "Patrick Mahomes UNDER 21.5 completions",
+        "why": "Archived recommendation from September 13: projected volume below 21.5 against Denver. Original conversation recommendation was approximately 7:55 p.m. ET; exact publication time was not verified.",
+        "risk": "Quote has not been reverified today. Kansas City availability and final inactives were pending at the original recommendation.",
+        "sources": [
+          "https://www.covers.com/sport/football/nfl/players/29483/patrick-mahomes"
+        ],
+        "status": "expired",
+        "book": "bet365",
+        "odds": -115,
+        "quotedAt": "2026-09-13T23:47:00Z",
+        "gameIds": [
+          "NFL-401872931"
+        ],
+        "cutoff": "Under 21.5 only, maximum price -120. Historical threshold; not a current verified offer.",
+        "confidence": 6,
+        "projection": 20,
+        "edge": "Historical uncalibrated judgment estimate: 58-60 percent. Not a demonstrated or tested model edge. Comparable closing price unavailable.",
+        "result": "win",
+        "actual": "15 completions",
+        "settledAt": "2026-09-15T21:32:46Z",
+        "resultSource": "https://www.nfl.com/players/patrick-mahomes/stats/logs/",
+        "lastCheckedAt": "2026-09-15T21:32:46Z",
+        "settlementState": "Verified official stats",
+        "settlementReason": "NFL.com lists 15 completions on 27 attempts against Denver; ESPN's game box score agrees. Mahomes played and the game finished. At 15, Under 21.5 won under the published threshold.",
+        "participationSource": "https://www.nfl.com/players/patrick-mahomes/stats/logs/",
+        "bookRuleSource": "https://help.oh.bet365.com/s/en-us/sportsrules/american-football/includes-nfl",
+        "nextReviewAt": null
+      }
+    ],
+    "parlays": [],
+    "historicalImport": true,
+    "auditNote": "Metadata correction: this report explicitly imported a prior conversation pick whose exact original publication time was not verified. Preserve its outcome and quoted price in the historical archive; exclude from verified pregame performance."
+  },
+  {
+    "league": "NFL",
+    "targetWeek": 2,
+    "publishedAt": "2026-09-15T01:05:00Z",
+    "summary": "Early Week 2 market watch. Game lines are available; no current player-prop line, price, availability and game-log package has been verified, so there are zero official plays.",
+    "takeaways": [
+      "Detroit at Buffalo has the board's highest early total at 53.5. The first player-prop pass will test projected pass volume, route roles and weather only after exact prices are available.",
+      "Philadelphia at Tennessee has the lowest early total at 39.5. A lower total alone is not a prop edge; it is a reason to scrutinize team-play and touchdown assumptions.",
+      "Miami at San Francisco opened with San Francisco favored by 13.5. Any player case there must stress-test starter workload against blowout and late-game substitution risk."
+    ],
+    "watch": [
+      "Lions @ Bills \u2014 DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
+      "Eagles @ Titans \u2014 DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
+      "Dolphins @ 49ers \u2014 San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
+      "Giants @ Rams \u2014 Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop."
+    ],
+    "props": [],
+    "riskyProps": [],
+    "parlays": [],
+    "sources": [
+      "https://www.espn.com/nfl/game/_/gameId/401872932",
+      "https://www.espn.com/nfl/game/_/gameId/401872939",
+      "https://www.espn.com/nfl/game/_/gameId/401872942",
+      "https://www.espn.com/nfl/game/_/gameId/401872947"
+    ],
+    "gameWatch": [
+      {
+        "id": "NFL-early-0",
+        "gameId": "NFL-401872932",
+        "title": "Lions @ Bills \u00b7 volume markets",
+        "why": "Lions @ Bills \u2014 DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872932"
+        ]
+      },
+      {
+        "id": "NFL-early-1",
+        "gameId": "NFL-401872939",
+        "title": "Eagles @ Titans \u00b7 volume markets",
+        "why": "Eagles @ Titans \u2014 DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872939"
+        ]
+      },
+      {
+        "id": "NFL-early-2",
+        "gameId": "NFL-401872942",
+        "title": "Dolphins @ 49ers \u00b7 volume markets",
+        "why": "Dolphins @ 49ers \u2014 San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872942"
+        ]
+      },
+      {
+        "id": "NFL-early-3",
+        "gameId": "NFL-401872947",
+        "title": "Giants @ Rams \u00b7 volume markets",
+        "why": "Giants @ Rams \u2014 Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop.",
+        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
+        "sources": [
+          "https://www.espn.com/nfl/game/_/gameId/401872947"
+        ]
+      }
+    ]
+  },
+  {
     "league": "CFB",
     "targetWeek": 3,
     "publishedAt": "2026-09-15T01:15:00Z",
@@ -663,74 +731,6 @@
         "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
         "sources": [
           "https://www.espn.com/college-football/game/_/gameId/401856811"
-        ]
-      }
-    ]
-  },
-  {
-    "league": "NFL",
-    "targetWeek": 2,
-    "publishedAt": "2026-09-15T01:05:00Z",
-    "summary": "Early Week 2 market watch. Game lines are available; no current player-prop line, price, availability and game-log package has been verified, so there are zero official plays.",
-    "takeaways": [
-      "Detroit at Buffalo has the board's highest early total at 53.5. The first player-prop pass will test projected pass volume, route roles and weather only after exact prices are available.",
-      "Philadelphia at Tennessee has the lowest early total at 39.5. A lower total alone is not a prop edge; it is a reason to scrutinize team-play and touchdown assumptions.",
-      "Miami at San Francisco opened with San Francisco favored by 13.5. Any player case there must stress-test starter workload against blowout and late-game substitution risk."
-    ],
-    "watch": [
-      "Lions @ Bills \u2014 DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
-      "Eagles @ Titans \u2014 DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
-      "Dolphins @ 49ers \u2014 San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
-      "Giants @ Rams \u2014 Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop."
-    ],
-    "props": [],
-    "riskyProps": [],
-    "parlays": [],
-    "sources": [
-      "https://www.espn.com/nfl/game/_/gameId/401872932",
-      "https://www.espn.com/nfl/game/_/gameId/401872939",
-      "https://www.espn.com/nfl/game/_/gameId/401872942",
-      "https://www.espn.com/nfl/game/_/gameId/401872947"
-    ],
-    "gameWatch": [
-      {
-        "id": "NFL-early-0",
-        "gameId": "NFL-401872932",
-        "title": "Lions @ Bills \u00b7 volume markets",
-        "why": "Lions @ Bills \u2014 DraftKings total 53.5, retrieved Sep 14 at 9:01 p.m. ET. Watch for verified QB attempts, WR receptions and RB receiving lines; no player prop is an official play yet.",
-        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
-        "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872932"
-        ]
-      },
-      {
-        "id": "NFL-early-1",
-        "gameId": "NFL-401872939",
-        "title": "Eagles @ Titans \u00b7 volume markets",
-        "why": "Eagles @ Titans \u2014 DraftKings total 39.5, retrieved Sep 14 at 9:01 p.m. ET. Watch volume props only after injury reports and offensive-line availability are confirmed.",
-        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
-        "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872939"
-        ]
-      },
-      {
-        "id": "NFL-early-2",
-        "gameId": "NFL-401872942",
-        "title": "Dolphins @ 49ers \u00b7 volume markets",
-        "why": "Dolphins @ 49ers \u2014 San Francisco -13.5, total 45.5, retrieved Sep 14 at 9:01 p.m. ET. Any potential player prop must account for game-script and starter-removal risk.",
-        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
-        "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872942"
-        ]
-      },
-      {
-        "id": "NFL-early-3",
-        "gameId": "NFL-401872947",
-        "title": "Giants @ Rams \u00b7 volume markets",
-        "why": "Giants @ Rams \u2014 Rams -7, total 48.5, retrieved Sep 14 at 9:01 p.m. ET. Wait for verified starting roles, target/carry shares and exact player prices before evaluating a prop.",
-        "needs": "Verify current player lines and prices, starting roles, injuries and recent workload. No numerical player threshold has qualified yet.",
-        "sources": [
-          "https://www.espn.com/nfl/game/_/gameId/401872947"
         ]
       }
     ]
@@ -893,6 +893,586 @@
           }
         ]
       }
+    ]
+  },
+  {
+    "league": "CFB",
+    "targetWeek": 3,
+    "publishedAt": "2026-09-17T15:35:50.156740+00:00",
+    "summary": "11:30 check: Syracuse at Pittsburgh tonight; no official college play from this review.",
+    "props": [],
+    "parlays": [],
+    "gameWatch": [
+      {
+        "id": "CFB-2026-W3-syr-pitt-1130",
+        "gameId": "CFB-401858225",
+        "title": "Syracuse at Pittsburgh \u00b7 spread and total screen",
+        "lineLabel": "DraftKings via ESPN: Pittsburgh -10.5 (-110), total 51.5 (O/U -110)",
+        "quoteNote": "Latest hosted slate checked this run; source quote time unavailable. Not a direct live sportsbook confirmation.",
+        "why": "Public comparison pages disagree on the spread, including an implausible -1.5 entry versus -10.5 in the ESPN feed. Do not promote an apparent discrepancy without checking the exact market.",
+        "needs": "Direct book confirmation, current starting QB/lineup and injury verification, matchup projection and jurisdiction review for any college player props. No official college selection yet.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "https://fantasydata.com/ncaa-football/odds"
+        ]
+      }
+    ]
+  },
+  {
+    "league": "NFL",
+    "targetWeek": 2,
+    "publishedAt": "2026-09-17T15:35:50.156740+00:00",
+    "summary": "11:30 research check: first official favorite is Gibbs OVER 29.5 receiving yards at DraftKings -115. Current receptions market is 4.5, not the earlier 3.5 article.",
+    "props": [
+      {
+        "id": "NFL-2026-W2-gibbs-over-29-5-recyd-dk",
+        "title": "Jahmyr Gibbs OVER 29.5 receiving yards",
+        "status": "active",
+        "favorite": true,
+        "hot": true,
+        "position": "RB",
+        "athleteId": "4429795",
+        "gameIds": [
+          "NFL-401872932"
+        ],
+        "book": "DraftKings",
+        "odds": -115,
+        "quotedAt": "2026-09-17T15:33:05Z",
+        "expiresAt": "2026-09-17T16:35:00Z",
+        "projection": 33,
+        "confidence": 6,
+        "line": 29.5,
+        "direction": "over",
+        "modelVersion": "judgment-volume-v1",
+        "cutoff": "OVER 29.5 at -115 or better only; pass at 30.5+ or -116 and worse. Reverify the live price after expiry.",
+        "edge": "Projected mean +3.5 yards, not a probability edge. Uncalibrated judgment: about 55% to clear, versus 53.49% break-even at -115 (about +1.5 percentage points; about +2.8% expected return if that estimate is right). Plausible 50\u201360% uncertainty includes negative value.",
+        "why": "The verified 29.5-yard number is below his 34.4 last-five and 44.9 last-ten averages. Five targets and 30 receiving yards in Week 1 support continuing receiving involvement; the team confirms an expanded lead-back role. My conservative 33-yard projection uses 5.5 targets \u00d7 75% catches \u00d7 8 yards per catch, below the recent target averages. Buffalo favored by 5.5 gives a plausible passing script. Detroit line absences may encourage outlets, but that is an inference, not the main reason.",
+        "risk": "Thin estimated edge and uncertain routes under a new coordinator. Missing Mahogany and Miller could require Gibbs to block instead. Buffalo held Houston RBs to four catches for 17 yards last week; that one game does not prove a favorable matchup. Overtime inflated Week 1 touches. Inactives and wind remain pregame checks; no unsupported weather or scheme boost.",
+        "recentForm": {
+          "stat": "receiving yards",
+          "line": 29.5,
+          "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
+          "games": [
+            {
+              "label": "2025-11-09 \u00b7 WSH",
+              "value": 30.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 15.0,
+                "rushingYards": 142.0,
+                "receptions": 3.0,
+                "receivingTargets": 4.0,
+                "receivingYards": 30.0,
+                "touches": 18.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772878"
+            },
+            {
+              "label": "2025-11-17 \u00b7 PHI",
+              "value": 107.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 12.0,
+                "rushingYards": 39.0,
+                "receptions": 5.0,
+                "receivingTargets": 8.0,
+                "receivingYards": 107.0,
+                "touches": 17.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772928"
+            },
+            {
+              "label": "2025-11-23 \u00b7 NYG",
+              "value": 45.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 15.0,
+                "rushingYards": 219.0,
+                "receptions": 11.0,
+                "receivingTargets": 12.0,
+                "receivingYards": 45.0,
+                "touches": 26.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772888"
+            },
+            {
+              "label": "2025-11-27 \u00b7 GB",
+              "value": 18.0,
+              "hit": false,
+              "workload": {
+                "rushingAttempts": 20.0,
+                "rushingYards": 68.0,
+                "receptions": 3.0,
+                "receivingTargets": 4.0,
+                "receivingYards": 18.0,
+                "touches": 23.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772891"
+            },
+            {
+              "label": "2025-12-05 \u00b7 DAL",
+              "value": 77.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 12.0,
+                "rushingYards": 43.0,
+                "receptions": 7.0,
+                "receivingTargets": 7.0,
+                "receivingYards": 77.0,
+                "touches": 19.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772947"
+            },
+            {
+              "label": "2025-12-14 \u00b7 LAR",
+              "value": 20.0,
+              "hit": false,
+              "workload": {
+                "rushingAttempts": 13.0,
+                "rushingYards": 38.0,
+                "receptions": 4.0,
+                "receivingTargets": 7.0,
+                "receivingYards": 20.0,
+                "touches": 17.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772909"
+            },
+            {
+              "label": "2025-12-21 \u00b7 PIT",
+              "value": 66.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 7.0,
+                "rushingYards": 2.0,
+                "receptions": 10.0,
+                "receivingTargets": 13.0,
+                "receivingYards": 66.0,
+                "touches": 17.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772806"
+            },
+            {
+              "label": "2025-12-25 \u00b7 MIN",
+              "value": 23.0,
+              "hit": false,
+              "workload": {
+                "rushingAttempts": 17.0,
+                "rushingYards": 41.0,
+                "receptions": 2.0,
+                "receivingTargets": 3.0,
+                "receivingYards": 23.0,
+                "touches": 19.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772711"
+            },
+            {
+              "label": "2026-01-04 \u00b7 CHI",
+              "value": 33.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 19.0,
+                "rushingYards": 80.0,
+                "receptions": 3.0,
+                "receivingTargets": 5.0,
+                "receivingYards": 33.0,
+                "touches": 22.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965"
+            },
+            {
+              "label": "2026-09-13 \u00b7 NO",
+              "value": 30.0,
+              "hit": true,
+              "workload": {
+                "rushingAttempts": 29.0,
+                "rushingYards": 156.0,
+                "receptions": 5.0,
+                "receivingTargets": 5.0,
+                "receivingYards": 30.0,
+                "touches": 34.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923"
+            }
+          ],
+          "sample": 10,
+          "method": "Games played before this recommendation game; exact published threshold and direction.",
+          "last5": {
+            "hits": 3,
+            "sample": 5
+          },
+          "last10": {
+            "hits": 7,
+            "sample": 10
+          },
+          "usage": [
+            {
+              "stat": "Targets",
+              "last5": {
+                "average": 6.6,
+                "low": 3.0,
+                "high": 13.0
+              },
+              "last10": {
+                "average": 6.8,
+                "low": 3.0,
+                "high": 13.0
+              }
+            },
+            {
+              "stat": "Receptions",
+              "last5": {
+                "average": 4.8,
+                "low": 2.0,
+                "high": 10.0
+              },
+              "last10": {
+                "average": 5.3,
+                "low": 2.0,
+                "high": 11.0
+              }
+            }
+          ]
+        },
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
+          "https://www.detroitlions.com/news/notebook-gibbs-ready-for-bigger-role-bartch-mahogany",
+          "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+          "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+          "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receiving yards",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 29.5,
+            "odds": -115,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook",
+            "sourceTimeNote": "Viewed directly at 11:33 AM ET; provider last-change time unavailable."
+          }
+        ]
+      }
+    ],
+    "riskyProps": [],
+    "parlays": [],
+    "gameWatch": [
+      {
+        "id": "NFL-2026-W2-gibbs-receptions-early",
+        "gameId": "NFL-401872932",
+        "position": "RB",
+        "title": "Jahmyr Gibbs receptions \u00b7 OVER candidate",
+        "lineLabel": "DraftKings: 4.5 receptions \u00b7 OVER +115 / UNDER -146",
+        "quoteNote": "Viewed directly Sep 17, 11:33 AM ET. Earlier BetMGM 3.5 was an article at a different book; this is not proven same-book movement.",
+        "why": "Pass on the receptions over at this check: five catches are now required in the observed DraftKings market. Receiving yards 29.5 is the chosen official favorite instead. The two markets should not be stacked as independent picks.",
+        "defense": "Compare Buffalo pressure with Detroit routes versus pass-blocking assignments. Buffalo lists Cole Bishop and T.J. Sanders questionable; their availability could change coverage and pressure. A favorable reception matchup is not established yet.",
+        "lineHealth": "Detroit ruled out Christian Mahogany (hip) and Blake Miller (knee) on Sep 16. Juice Scruggs finished full participation without a game designation. Confirm replacements and game-day inactives.",
+        "lineSkill": "Detroit\u2019s Sep 14 report described Ben Bartch\u2019s first game as uneven, citing one QB hit allowed and a 66.7 PFF run-block grade. One game does not establish unit quality; pass-block and run-block performance must be evaluated separately.",
+        "risk": "Protection problems could keep Gibbs blocking rather than running routes. A move to 4.5 changes the question materially; no playable cutoff has been established.",
+        "needs": "Recheck receptions and receiving yards at 5:30 PM; do not treat the earlier 3.5 article as a live offer.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sports.betmgm.com/en/blog/nfl/jahmyr-gibbs-props-odds-gaa/",
+          "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+          "https://www.detroitlions.com/news/key-questions-dan-campbell-detroit-lions-buffalo-bills-miller-gibbs-bartch",
+          "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+          "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "player": "Jahmyr Gibbs",
+        "athleteId": "4429795",
+        "marketTitle": "Jahmyr Gibbs OVER 4.5 receptions",
+        "marketSnapshots": [
+          {
+            "book": "BetMGM",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 3.5,
+            "odds": null,
+            "observedAt": "2026-09-17T13:47:54Z",
+            "quoteType": "article reference",
+            "sourceTimeNote": "Article dated Sep 16, 11:10 AM; sportsbook quote time not supplied.",
+            "source": "https://sports.betmgm.com/en/blog/nfl/jahmyr-gibbs-props-odds-gaa/"
+          },
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 4.5,
+            "odds": 115,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook",
+            "sourceTimeNote": "Direct viewing; source last-change time unavailable."
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-dalton-kincaid-receptions",
+        "gameId": "NFL-401872932",
+        "position": "TE",
+        "player": "Dalton Kincaid",
+        "title": "Dalton Kincaid \u00b7 receptions",
+        "lineLabel": "3.5 receptions \u00b7 OVER -164 / UNDER +128",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "His last ten logged games cleared 3.5 catches only four times. Week 1 had five catches on six targets, but that alone does not justify laying -164 (62.1% break-even). Detroit allowed seven TE catches last week; one matchup is not a reliable defensive rate.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "https://www.espn.com/nfl/player/gamelog/_/id/4385690"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 3.5,
+            "odds": -164,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-d.j.-moore-receptions",
+        "gameId": "NFL-401872932",
+        "position": "WR",
+        "player": "D.J. Moore",
+        "title": "D.J. Moore \u00b7 receptions",
+        "lineLabel": "4.5 receptions \u00b7 OVER -107 / UNDER -119",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 4.5,
+            "odds": -107,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-sam-laporta-receptions",
+        "gameId": "NFL-401872932",
+        "position": "TE",
+        "player": "Sam LaPorta",
+        "title": "Sam LaPorta \u00b7 receptions",
+        "lineLabel": "4.5 receptions \u00b7 OVER +107 / UNDER -136",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 4.5,
+            "odds": 107,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-amon-ra-st.-brown-receptions",
+        "gameId": "NFL-401872932",
+        "position": "WR",
+        "player": "Amon-Ra St. Brown",
+        "title": "Amon-Ra St. Brown \u00b7 receptions",
+        "lineLabel": "7.5 receptions \u00b7 OVER +104 / UNDER -133",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 7.5,
+            "odds": 104,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-khalil-shakir-receptions",
+        "gameId": "NFL-401872932",
+        "position": "WR",
+        "player": "Khalil Shakir",
+        "title": "Khalil Shakir \u00b7 receptions",
+        "lineLabel": "4.5 receptions \u00b7 OVER +115 / UNDER -147",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 4.5,
+            "odds": 115,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-jameson-williams-receptions",
+        "gameId": "NFL-401872932",
+        "position": "WR",
+        "player": "Jameson Williams",
+        "title": "Jameson Williams \u00b7 receptions",
+        "lineLabel": "4.5 receptions \u00b7 OVER +122 / UNDER -156",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 4.5,
+            "odds": 122,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-james-cook-receptions",
+        "gameId": "NFL-401872932",
+        "position": "RB",
+        "player": "James Cook",
+        "title": "James Cook \u00b7 receptions",
+        "lineLabel": "2.5 receptions \u00b7 OVER +105 / UNDER -134",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receptions",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 2.5,
+            "odds": 105,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-dalton-kincaid-receiving-yards",
+        "gameId": "NFL-401872932",
+        "position": "TE",
+        "player": "Dalton Kincaid",
+        "title": "Dalton Kincaid \u00b7 receiving yards",
+        "lineLabel": "52.5 receiving yards \u00b7 OVER -112 / UNDER -112",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "His last ten logged games cleared 3.5 catches only four times. Week 1 had five catches on six targets, but that alone does not justify laying -164 (62.1% break-even). Detroit allowed seven TE catches last week; one matchup is not a reliable defensive rate.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "https://www.espn.com/nfl/player/gamelog/_/id/4385690"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receiving yards",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 52.5,
+            "odds": -112,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      },
+      {
+        "id": "NFL-W2-menu-sam-laporta-receiving-yards",
+        "gameId": "NFL-401872932",
+        "position": "TE",
+        "player": "Sam LaPorta",
+        "title": "Sam LaPorta \u00b7 receiving yards",
+        "lineLabel": "45.5 receiving yards \u00b7 OVER -110 / UNDER -114",
+        "quoteNote": "DraftKings directly observed Sep 17, 11:33 AM ET. Available market, not a recommendation.",
+        "why": "Screened against the receiving menu; no independent projection edge established yet.",
+        "needs": "Verify role-adjusted projection, period-matched history and current price before promotion.",
+        "nextReviewAt": "2026-09-17T21:30:00Z",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ],
+        "marketSnapshots": [
+          {
+            "book": "DraftKings",
+            "market": "receiving yards",
+            "window": "Full game",
+            "direction": "OVER",
+            "line": 45.5,
+            "odds": -110,
+            "observedAt": "2026-09-17T15:33:05Z",
+            "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+            "quoteType": "sportsbook"
+          }
+        ]
+      }
+    ],
+    "takeaways": [
+      "First official selection published after direct sportsbook verification; favorite confidence 6/10 is research judgment, not a 60% win probability.",
+      "Parlay review: DraftKings offered Bills ML + Bills over 30.5 team points + over 3.5 team TDs at +116; passed because three correlated requirements still demand four touchdowns. Lower payout is not automatically lower risk.",
+      "DraftKings offered Lions ML + Bills first-quarter ML + over 54.5 at +1000. Passed pending period-specific support; no calibrated first-quarter model or joint edge established. No forced parlay at this check.",
+      "5:30 PM check will review the final evening card, injury changes and current quotes. No outstanding settled-pick backlog was found."
     ]
   }
 ]

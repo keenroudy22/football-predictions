@@ -1,179 +1,7 @@
 {
-  "updatedAt": "2026-09-17T14:03:03Z",
+  "updatedAt": "2026-09-17T15:42:48Z",
   "provider": "ESPN public athlete game logs and official box scores",
   "picks": {
-    "2026-w1-mahomes-completions": {
-      "gameId": "NFL-401872931",
-      "position": "QB",
-      "recentForm": {
-        "stat": "completions",
-        "line": 21.5,
-        "source": "https://www.espn.com/nfl/player/gamelog/_/id/3139477",
-        "games": [
-          {
-            "label": "2025-10-07 · JAX",
-            "value": 29.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 6.0,
-              "rushingYards": 60.0,
-              "passingAttempts": 41.0,
-              "completions": 29.0,
-              "passingYards": 318.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772814"
-          },
-          {
-            "label": "2025-10-13 · DET",
-            "value": 22.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 10.0,
-              "rushingYards": 32.0,
-              "passingAttempts": 30.0,
-              "completions": 22.0,
-              "passingYards": 257.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772923"
-          },
-          {
-            "label": "2025-10-19 · LV",
-            "value": 26.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 4.0,
-              "rushingYards": 28.0,
-              "passingAttempts": 35.0,
-              "completions": 26.0,
-              "passingYards": 286.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772753"
-          },
-          {
-            "label": "2025-10-28 · WSH",
-            "value": 25.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 4.0,
-              "rushingYards": 30.0,
-              "passingAttempts": 34.0,
-              "completions": 25.0,
-              "passingYards": 299.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772817"
-          },
-          {
-            "label": "2025-11-02 · BUF",
-            "value": 15.0,
-            "hit": true,
-            "workload": {
-              "rushingAttempts": 1.0,
-              "rushingYards": 5.0,
-              "passingAttempts": 34.0,
-              "completions": 15.0,
-              "passingYards": 250.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772768"
-          },
-          {
-            "label": "2025-11-16 · DEN",
-            "value": 29.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 1.0,
-              "rushingYards": 3.0,
-              "passingAttempts": 45.0,
-              "completions": 29.0,
-              "passingYards": 276.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772778"
-          },
-          {
-            "label": "2025-11-23 · IND",
-            "value": 29.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 4.0,
-              "rushingYards": 30.0,
-              "passingAttempts": 46.0,
-              "completions": 29.0,
-              "passingYards": 352.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772779"
-          },
-          {
-            "label": "2025-11-27 · DAL",
-            "value": 23.0,
-            "hit": false,
-            "workload": {
-              "rushingAttempts": 3.0,
-              "rushingYards": 30.0,
-              "passingAttempts": 34.0,
-              "completions": 23.0,
-              "passingYards": 261.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772694"
-          },
-          {
-            "label": "2025-12-08 · HOU",
-            "value": 14.0,
-            "hit": true,
-            "workload": {
-              "rushingAttempts": 7.0,
-              "rushingYards": 59.0,
-              "passingAttempts": 33.0,
-              "completions": 14.0,
-              "passingYards": 160.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772932"
-          },
-          {
-            "label": "2025-12-14 · LAC",
-            "value": 16.0,
-            "hit": true,
-            "workload": {
-              "rushingAttempts": 2.0,
-              "rushingYards": 15.0,
-              "passingAttempts": 28.0,
-              "completions": 16.0,
-              "passingYards": 189.0
-            },
-            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772798"
-          }
-        ],
-        "sample": 10,
-        "method": "Games played before this recommendation game; exact published threshold and direction.",
-        "last5": {
-          "hits": 2,
-          "sample": 5
-        },
-        "last10": {
-          "hits": 3,
-          "sample": 10
-        },
-        "usage": [
-          {
-            "stat": "Pass attempts",
-            "last5": {
-              "average": 37.2,
-              "low": 28.0,
-              "high": 46.0
-            },
-            "last10": {
-              "average": 36.0,
-              "low": 28.0,
-              "high": 46.0
-            }
-          }
-        ],
-        "lastVsOpponent": {
-          "value": 29.0,
-          "date": "2025-11-16",
-          "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772778"
-        }
-      },
-      "athleteId": "3139477"
-    },
     "w1-loveland-rec": {
       "gameId": "NFL-401872661",
       "position": "TE",
@@ -4576,15 +4404,377 @@
         ]
       },
       "athleteId": "4361307"
+    },
+    "2026-w1-mahomes-completions": {
+      "gameId": "NFL-401872931",
+      "position": "QB",
+      "recentForm": {
+        "stat": "completions",
+        "line": 21.5,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/3139477",
+        "games": [
+          {
+            "label": "2025-10-07 · JAX",
+            "value": 29.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 6.0,
+              "rushingYards": 60.0,
+              "passingAttempts": 41.0,
+              "completions": 29.0,
+              "passingYards": 318.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772814"
+          },
+          {
+            "label": "2025-10-13 · DET",
+            "value": 22.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 10.0,
+              "rushingYards": 32.0,
+              "passingAttempts": 30.0,
+              "completions": 22.0,
+              "passingYards": 257.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772923"
+          },
+          {
+            "label": "2025-10-19 · LV",
+            "value": 26.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 4.0,
+              "rushingYards": 28.0,
+              "passingAttempts": 35.0,
+              "completions": 26.0,
+              "passingYards": 286.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772753"
+          },
+          {
+            "label": "2025-10-28 · WSH",
+            "value": 25.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 4.0,
+              "rushingYards": 30.0,
+              "passingAttempts": 34.0,
+              "completions": 25.0,
+              "passingYards": 299.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772817"
+          },
+          {
+            "label": "2025-11-02 · BUF",
+            "value": 15.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 5.0,
+              "passingAttempts": 34.0,
+              "completions": 15.0,
+              "passingYards": 250.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772768"
+          },
+          {
+            "label": "2025-11-16 · DEN",
+            "value": 29.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 3.0,
+              "passingAttempts": 45.0,
+              "completions": 29.0,
+              "passingYards": 276.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772778"
+          },
+          {
+            "label": "2025-11-23 · IND",
+            "value": 29.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 4.0,
+              "rushingYards": 30.0,
+              "passingAttempts": 46.0,
+              "completions": 29.0,
+              "passingYards": 352.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772779"
+          },
+          {
+            "label": "2025-11-27 · DAL",
+            "value": 23.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 3.0,
+              "rushingYards": 30.0,
+              "passingAttempts": 34.0,
+              "completions": 23.0,
+              "passingYards": 261.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772694"
+          },
+          {
+            "label": "2025-12-08 · HOU",
+            "value": 14.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 7.0,
+              "rushingYards": 59.0,
+              "passingAttempts": 33.0,
+              "completions": 14.0,
+              "passingYards": 160.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772932"
+          },
+          {
+            "label": "2025-12-14 · LAC",
+            "value": 16.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 15.0,
+              "passingAttempts": 28.0,
+              "completions": 16.0,
+              "passingYards": 189.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772798"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 2,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 3,
+          "sample": 10
+        },
+        "usage": [
+          {
+            "stat": "Pass attempts",
+            "last5": {
+              "average": 37.2,
+              "low": 28.0,
+              "high": 46.0
+            },
+            "last10": {
+              "average": 36.0,
+              "low": 28.0,
+              "high": 46.0
+            }
+          }
+        ],
+        "lastVsOpponent": {
+          "value": 29.0,
+          "date": "2025-11-16",
+          "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772778"
+        }
+      },
+      "athleteId": "3139477"
+    },
+    "NFL-2026-W2-gibbs-over-29-5-recyd-dk": {
+      "gameId": "NFL-401872932",
+      "position": "RB",
+      "recentForm": {
+        "stat": "receiving yards",
+        "line": 29.5,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
+        "games": [
+          {
+            "label": "2025-11-09 · WSH",
+            "value": 30.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 15.0,
+              "rushingYards": 142.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 30.0,
+              "touches": 18.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772878"
+          },
+          {
+            "label": "2025-11-17 · PHI",
+            "value": 107.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 12.0,
+              "rushingYards": 39.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 107.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772928"
+          },
+          {
+            "label": "2025-11-23 · NYG",
+            "value": 45.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 15.0,
+              "rushingYards": 219.0,
+              "receptions": 11.0,
+              "receivingTargets": 12.0,
+              "receivingYards": 45.0,
+              "touches": 26.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772888"
+          },
+          {
+            "label": "2025-11-27 · GB",
+            "value": 18.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 20.0,
+              "rushingYards": 68.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 18.0,
+              "touches": 23.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772891"
+          },
+          {
+            "label": "2025-12-05 · DAL",
+            "value": 77.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 12.0,
+              "rushingYards": 43.0,
+              "receptions": 7.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 77.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772947"
+          },
+          {
+            "label": "2025-12-14 · LAR",
+            "value": 20.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 38.0,
+              "receptions": 4.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 20.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772909"
+          },
+          {
+            "label": "2025-12-21 · PIT",
+            "value": 66.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 7.0,
+              "rushingYards": 2.0,
+              "receptions": 10.0,
+              "receivingTargets": 13.0,
+              "receivingYards": 66.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772806"
+          },
+          {
+            "label": "2025-12-25 · MIN",
+            "value": 23.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 17.0,
+              "rushingYards": 41.0,
+              "receptions": 2.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 23.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772711"
+          },
+          {
+            "label": "2026-01-04 · CHI",
+            "value": 33.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 19.0,
+              "rushingYards": 80.0,
+              "receptions": 3.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 33.0,
+              "touches": 22.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965"
+          },
+          {
+            "label": "2026-09-13 · NO",
+            "value": 30.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 29.0,
+              "rushingYards": 156.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 30.0,
+              "touches": 34.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 3,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 7,
+          "sample": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.6,
+              "low": 3.0,
+              "high": 13.0
+            },
+            "last10": {
+              "average": 6.8,
+              "low": 3.0,
+              "high": 13.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.8,
+              "low": 2.0,
+              "high": 10.0
+            },
+            "last10": {
+              "average": 5.3,
+              "low": 2.0,
+              "high": 11.0
+            }
+          }
+        ]
+      },
+      "athleteId": "4429795"
     }
   },
   "watches": {
     "NFL-2026-W2-gibbs-receptions-early": {
       "gameId": "NFL-401872932",
-      "marketTitle": "Jahmyr Gibbs OVER 3.5 receptions",
+      "marketTitle": "Jahmyr Gibbs OVER 4.5 receptions",
       "recentForm": {
         "stat": "receptions",
-        "line": 3.5,
+        "line": 4.5,
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
         "games": [
           {
@@ -4660,7 +4850,7 @@
           {
             "label": "2025-12-14 · LAR",
             "value": 4.0,
-            "hit": true,
+            "hit": false,
             "workload": {
               "rushingAttempts": 13.0,
               "rushingYards": 38.0,
@@ -4731,11 +4921,11 @@
         "sample": 10,
         "method": "Games played before this recommendation game; exact published threshold and direction.",
         "last5": {
-          "hits": 3,
+          "hits": 2,
           "sample": 5
         },
         "last10": {
-          "hits": 6,
+          "hits": 5,
           "sample": 10
         },
         "usage": [
