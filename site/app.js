@@ -237,7 +237,7 @@ function render(){
   if(window.KeenSports?.matches(location.hash)){window.KeenSports.render({state});return;}
   window.KeenSports?.syncNavigation(state.league,state.recordLeague);
   if(window.KeenPlayers?.matches(location.hash)){
-    document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view==='research')b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+    document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view==='players')b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
     $('#freshness').textContent=state.history?.updatedAt?`History refresh ${pretty(state.history.updatedAt)} ET`:'Player history unavailable';
     $('#notice').textContent=state.history?.updatedAt?'Each player shows its last successful history check. Market windows, quote times and incomplete coverage are labeled below.':'Player history is unavailable. Research coverage is labeled below.';
     $('#notice').classList.toggle('warn',!state.history?.updatedAt);
@@ -249,6 +249,17 @@ function render(){
     $('#notice').classList.add('warn');
     $('#freshness').textContent='Football source unavailable';
     $('#content').innerHTML=empty('Football board temporarily unavailable.','Refresh to try again, or open another sport. No football records or recommendations are displayed from incomplete files.');
+    return;
+  }
+  if(window.KeenBoard&&['props','parlays'].includes(state.view)){
+    document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view==='props')b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+    $('.week-label').hidden=false;
+    const source=(state.slate.sources||[]).find(s=>s.league===state.league);
+    const failed=source?.fetchStatus==='failed';
+    $('#freshness').textContent=failed?'Schedule refresh delayed':state.marketLines?.updatedAt?`Line board compiled ${pretty(state.marketLines.updatedAt)} ET`:'Saved line observations';
+    $('#notice').textContent=failed?'Schedule update delayed. Saved game times and line observations need rechecking.':'Tap any line for the research. Favorites are our picks; other lines are for your own comparison. Each price has its own check time.';
+    $('#notice').classList.toggle('warn',failed);
+    window.KeenBoard.render({state,helpers:{parlayBoard,pickCard,formChart,workloadPanel,playerMovement}});
     return;
   }
   const routeKey=[state.view,state.week,state.league,state.propGame,state.propPosition].join('|');
@@ -281,7 +292,7 @@ function parlayTier(p){
 }
 function parlayBoard(picks){
   const tiers=[['Tier 1 · Lower relative risk','Shorter tickets, usually two supported legs. Lower payout; still capable of losing.'],['Tier 2 · Medium relative risk','More ambitious combinations. Each ticket explains its added uncertainty.'],['Tier 3 · Longshots & fun','High payout and low hit probability. First-quarter tickets belong here unless a different tier is justified.']];
-  return `<section class="parlay-tiers"><h3>Three ways to play</h3><p>Actual sportsbook odds appear on each published ticket. Risk reflects the legs, market window and correlation, not payout alone. Every official ticket is tracked at 1 unit; personal drafts stay separate.</p>${tiers.map(([name,note],i)=>{const items=picks.filter(p=>parlayTier(p).rank===i);return `<section class="position-group"><h3>${name}</h3><p>${note}</p>${items.length?`<div class="cards">${items.map(pickCard).join('')}</div>`:'<p class="record-note">No verified ticket published in this tier yet.</p>'}</section>`}).join('')}</section>`;
+  return `<section class="parlay-tiers"><h3>Three ways to play</h3><p>Actual sportsbook odds appear on each published ticket. Risk reflects the legs, market window and correlation, not payout alone. Every official ticket is tracked at 1 unit; personal drafts stay separate.</p>${tiers.map(([name,note],i)=>{const items=picks.filter(p=>parlayTier(p).rank===i);return `<section class="position-group"><h3>${name}</h3><p>${note}</p>${items.length?`<div class="kr-published-list">${items.map(p=>`<details class="kr-published-item"><summary><strong>${esc(p.title)}</strong><span>${esc(p.book||'Book unavailable')} ${FootballRecords.validOdds(p.odds)?(Number(p.odds)>0?'+':'')+p.odds:'Price unavailable'}</span></summary>${pickCard(p)}</details>`).join('')}</div>`:'<p class="record-note">No verified ticket published in this tier yet.</p>'}</section>`}).join('')}</section>`;
 }
 function builderEligible(p){
   return pickStatus(p)==='active' && !/paus/i.test(p.entryNote||'') && ['props','riskyProps'].includes(p.kind) &&
@@ -353,6 +364,7 @@ async function init(){
     try{const c=await fetch('data/research-context.json?refresh='+Date.now(),{cache:'no-store'});if(c.ok)state.context=await c.json()}catch(e){state.context=null}
     try{const r=await fetch('data/player-identity.json?refresh='+Date.now(),{cache:'no-store'});if(r.ok)state.identities=await r.json()}catch(e){state.identities=null}
     try{const r=await fetch('data/opponent-history.json?refresh='+Date.now(),{cache:'no-store'});if(r.ok)state.opponents=await r.json()}catch(e){state.opponents=null}
+    try{const r=await fetch('data/market-lines.json?refresh='+Date.now(),{cache:'no-store'});if(r.ok)state.marketLines=await r.json()}catch(e){state.marketLines=null}
     await sportsReady;
     if(!location.hash)history.replaceState(null,'','#sports');
     setupWeeks();navigate();

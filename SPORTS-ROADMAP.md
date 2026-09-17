@@ -52,5 +52,11 @@ Recent-form charts must use the exact market and window. Show sample size and ro
 
 Acceptance: football records unchanged; stable player/event identities; no doubleheader collisions; injury/scratch and postponement rules tested; duplicate revisions cannot double-count; missing prices never produce invented ROI; original pregame predictions remain auditable.
 
+## Compact research workspace
+
+The Picks & lines workspace now combines compact favorite rows with a broader sourced market catalog, exact-selection detail and a personal ticket draft. The home page leads to the line board, player explorer, ticket builder and season record. Players retain separate history and defense-matchup views. Favorites and official records never inherit visitor drafts or unreviewed catalog observations.
+
+The catalog deliberately distinguishes current verified quotes from editorial references, comparison-feed observations and missing prices. A wider catalog does not establish comprehensive sportsbook coverage. Durable public observations live in `market-observations/`; the existing hosted refresh compiles them with research snapshots. No new polling process, paid data service or sportsbook account is introduced.
+
 ## Public address
 The canonical site is https://keenroudy.com/sports/ in keenroudy22/sports. The original repository was renamed with its history intact. The root portfolio repository hosts the legacy /football-predictions/ redirect and preserves old game/results fragments. Keep this redirect when changing hosting; the local workspace folder retains its old name.
