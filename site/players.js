@@ -20,7 +20,7 @@
   };
   const playerName = record => record.player || record.playerName || parsedMarket(record.marketTitle || record.title)?.name || String(record.title || '').match(/^(.+?)\s+(?:—\s*)?(?:anytime|ATTD)\b/i)?.[1]?.trim() || null;
   const route = (league, athleteId) => `#player/${league}/${encodeURIComponent(athleteId)}`;
-  let filters = { query: '', league: 'All', position: 'All', market: '' }, lastRoute = '';
+  let filters = { query: '', league: 'All', position: 'All', market: '', historyWindow: '10', historyOpponent: 'all', historyVenue: 'all' }, lastRoute = '';
 
   function matches(hash) { return hash === '#players' || /^#player\//.test(hash || ''); }
   function reportRecords(report) {
@@ -55,11 +55,13 @@
       if (!saved || saved.gameId !== record.gameId || !record.marketTitle || saved.marketTitle !== record.marketTitle) return null;
       return exactForm(saved.recentForm, record);
     }
-    if (record.recentForm) return exactForm(record.recentForm, record);
-    if (!saved || (record.athleteId && saved.athleteId && String(record.athleteId) !== String(saved.athleteId))) return null;
-    if (saved.gameId && !(record.gameIds || []).includes(saved.gameId)) return null;
-    if (saved.marketTitle && saved.marketTitle !== (record.marketTitle || record.title)) return null;
-    return exactForm(saved.recentForm, record);
+    const embedded = exactForm(record.recentForm, record);
+    if (!saved || (record.athleteId && saved.athleteId && String(record.athleteId) !== String(saved.athleteId))) return embedded;
+    if (saved.gameId && !(record.gameIds || []).includes(saved.gameId)) return embedded;
+    if (saved.marketTitle && saved.marketTitle !== (record.marketTitle || record.title)) return embedded;
+    const enriched = exactForm(saved.recentForm, record);
+    if (enriched?.historyGames?.length && validTime(enriched.checkedAt) && (!validTime(embedded?.checkedAt) || Date.parse(enriched.checkedAt) >= Date.parse(embedded.checkedAt))) return enriched;
+    return embedded || enriched;
   }
   function index(state = {}) {
     const latest = new Map();
@@ -132,9 +134,60 @@
   function rate(value, size, form) {
     return value && value.sample === size && Number.isInteger(value.hits) && value.hits >= 0 && value.hits <= size && form.games.length >= size && form.games.slice(-size).filter(g => g.hit).length === value.hits ? `${value.hits}/${size} · ${(value.hits / size * 100).toFixed(0)}%` : 'Not verified';
   }
-  function historyPanel(record, helpers) {
+  function historyView(record, state = {}, view = {}) {
+    const form = record?.recentForm, market = parsedMarket(record?.marketTitle || record?.title);
+    const empty = { rows: [], allRows: [], sample: 0, hits: 0, misses: 0, pushes: 0, decisions: 0, hitRate: null, average: null, median: null, requested: null, complete: false, excluded: 0, opponentId: null, opponentLabel: 'Recorded opponent', targetSeason: null, cutoffAt: null, status: form?.status || 'unavailable', coverage: form?.coverage || null };
+    const marketKeys = { 'receiving yards': 'receivingYards', receptions: 'receptions', 'passing yards': 'passingYards', completions: 'completions', 'rushing yards': 'rushingYards', 'rushing attempts': 'rushingAttempts', 'passing attempts': 'passingAttempts' };
+    if (!market || !form || !url(form.source) || typeof form.line !== 'number' || market.line !== form.line || market.stat !== statName(form.stat) || (form.direction && normalize(form.direction) !== market.direction) || (form.statKey && form.statKey !== marketKeys[market.stat])) return empty;
+    const targetGames = (record.gameIds || (record.gameId ? [record.gameId] : [])).map(id => (state.slate?.games || []).find(g => g.id === id)).filter(Boolean);
+    const targets = new Set((record.gameIds || (record.gameId ? [record.gameId] : [])).map(id => String(id).split('-').at(-1)));
+    const cutoffs = [form.cutoffAt, record.originalPublishedAt || record.publishedAt, ...targetGames.map(g => g.kickoff)].filter(validTime).map(Date.parse);
+    if (!cutoffs.length) return empty;
+    const cutoff = Math.min(...cutoffs), sourceRows = Array.isArray(form.historyGames) ? form.historyGames : Array.isArray(form.games) ? form.games : [];
+    const unique = new Map(), conflicts = new Set();
+    for (const row of sourceRows) {
+      const eventId = idValue(row.eventId), sourceId = url(row.source) ? row.source.match(/\/gameId\/([^/?#]+)/)?.[1] : null;
+      if (!eventId || eventId !== sourceId || targets.has(eventId) || typeof row.value !== 'number' || !Number.isFinite(row.value) || !validTime(row.date) || Date.parse(row.date) >= cutoff || !['regular', 2, '2'].includes(row.seasonType) || !Number.isInteger(row.season)) continue;
+      if (conflicts.has(eventId)) continue;
+      if (unique.has(eventId) && unique.get(eventId).value !== row.value) { unique.delete(eventId); conflicts.add(eventId); continue; }
+      unique.set(eventId, { ...row, eventId, hit: market.direction === 'over' ? row.value > market.line : row.value < market.line, push: row.value === market.line });
+    }
+    const allRows = [...unique.values()].sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
+    const opponentId = idValue(form.vsOpponent?.opponentId), opponent = allRows.find(r => opponentId && String(r.opponent?.id) === opponentId)?.opponent || targetGames.flatMap(g => [g.away, g.home]).find(team => opponentId && String(team?.id) === opponentId);
+    const opponentLabel = opponent?.name || opponent?.abbreviation || (opponentId ? `Opponent ${opponentId}` : 'Recorded opponent');
+    const targetSeason = targetGames.find(g => Number.isInteger(g.season))?.season ?? null;
+    const window = ['5', '10', '20', 'season'].includes(String(view.historyWindow)) ? String(view.historyWindow) : '10';
+    let rows = allRows.filter(row => (view.historyOpponent !== 'opponent' || (opponentId && String(row.opponent?.id) === opponentId)) && (view.historyVenue !== 'home' || row.isHome === true) && (view.historyVenue !== 'away' || row.isHome === false));
+    if (window === 'season') rows = rows.filter(row => targetSeason != null && row.season === targetSeason);
+    else rows = rows.slice(-Number(window));
+    const sample = rows.length, hits = rows.filter(row => row.hit).length, pushes = rows.filter(row => row.push).length, misses = sample - hits - pushes, decisions = hits + misses;
+    const values = rows.map(row => row.value).sort((a, b) => a - b);
+    return { ...empty, rows, allRows, line: market.line, direction: market.direction, stat: form.stat, sample, hits, misses, pushes, decisions, hitRate: decisions ? 100 * hits / decisions : null, average: sample ? values.reduce((sum, value) => sum + value, 0) / sample : null, median: sample ? (values[Math.floor((sample - 1) / 2)] + values[Math.floor(sample / 2)]) / 2 : null, requested: window === 'season' ? null : Number(window), complete: window !== 'season' && sample === Number(window), excluded: sourceRows.length - allRows.length, opponentId, opponentLabel, targetSeason, cutoffAt: new Date(cutoff).toISOString(), checkedAt: form.checkedAt || null };
+  }
+  function historyChart(snapshot) {
+    const rows = snapshot.rows.slice(-20);
+    if (!rows.length) return '<p class="player-history-empty">No verified games match these filters.</p>';
+    const low = Math.min(0, ...rows.map(row => row.value)), high = Math.max(snapshot.line || 0, ...rows.map(row => row.value), 0), range = Math.max(high - low, 1), zero = -low / range * 100;
+    const bars = rows.map(row => {
+      const outcome = row.push ? 'Push' : row.hit ? 'Hit' : 'Miss', opponent = row.opponent?.abbreviation || row.opponent?.name || 'Unknown opponent';
+      const height = Math.abs(row.value) / range * 100, bottom = (Math.min(0, row.value) - low) / range * 100;
+      return `<li class="form-game ${outcome.toLowerCase()}${row.value < 0 ? ' negative' : ''}" data-value="${row.value}" title="${esc(row.date.slice(0, 10))} · ${esc(opponent)}: ${row.value} · ${outcome}"><span class="form-outcome">${outcome.toUpperCase()}</span><span class="form-bar" style="position:absolute;left:50%;transform:translateX(-50%);min-height:0;bottom:${bottom.toFixed(3)}%;height:${height.toFixed(3)}%"><span>${row.value}</span></span><small>${esc(opponent)}</small></li>`;
+    }).join('');
+    return `<figure class="form-chart player-history-chart"><figcaption><strong>Game-by-game ${esc(snapshot.stat)}</strong><span>${rows.length < snapshot.rows.length ? `Latest ${rows.length} of ${snapshot.rows.length} shown` : 'Oldest → newest'}</span></figcaption><ol style="position:relative"><li class="history-zero-line" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:${zero.toFixed(3)}%;border-top:1px dashed #80939f;list-style:none;pointer-events:none"><span style="position:absolute;left:0;bottom:0;font-size:9px">0</span></li>${bars}</ol><p class="form-chart-line">Recorded line: ${esc(snapshot.direction.toUpperCase())} ${snapshot.line} · pushes are separate.${low < 0 ? ' Negative values extend below zero.' : ''}</p>${rows.length > 10 ? '<p class="player-chart-scroll-hint">Swipe or scroll the chart sideways on a narrow screen.</p>' : ''}</figure>`;
+  }
+  function historyPanel(record, helpers, state, view) {
     const f = record.recentForm;
     if (!f) return `<section class="player-panel player-history-empty"><h3>Recent form</h3><p>${esc(record.historyReason)}</p><p>We do not reuse hit rates from a different line, direction or matchup. More history will appear after verification.</p></section>`;
+    const structured = Array.isArray(f.historyGames) || (f.games || []).some(row => row.eventId && row.date);
+    if (structured) {
+      const snapshot = historyView(record, state, view), selectedWindow = ['5', '10', '20', 'season'].includes(String(view.historyWindow)) ? String(view.historyWindow) : '10';
+      const display = value => value == null ? '—' : Number.isInteger(value) ? String(value) : value.toFixed(1);
+      const coverage = snapshot.requested != null ? snapshot.complete ? `${snapshot.sample} matching games` : `Incomplete sample: ${snapshot.sample} of ${snapshot.requested} matching games available` : `${snapshot.sample} observed game${snapshot.sample === 1 ? '' : 's'} in recorded season ${snapshot.targetSeason ?? 'unavailable'}`;
+      const seasons = [...new Set(snapshot.allRows.map(r => r.season))].sort().join(', ');
+      const filteredForm = { ...f, games: snapshot.rows };
+      const log = snapshot.rows.length ? `<details class="stat-log player-history-log"><summary>Source-linked game log · ${snapshot.rows.length} games</summary><div class="record-table"><table><thead><tr><th>Game</th><th>Venue</th><th>${esc(f.stat)}</th><th>At ${esc(snapshot.direction)} ${snapshot.line}</th></tr></thead><tbody>${snapshot.rows.slice().reverse().map(row => `<tr><td><a href="${esc(row.source)}" target="_blank" rel="noopener noreferrer">${esc(row.date.slice(0, 10))} · ${esc(row.opponent?.abbreviation || row.opponent?.name || 'Opponent unavailable')} ↗</a><small>${row.season} regular season</small></td><td>${row.isHome === true ? 'Home' : row.isHome === false ? 'Away' : 'Not verified'}</td><td>${row.value}</td><td>${row.push ? 'Push' : row.hit ? 'Hit' : 'Miss'}</td></tr>`).join('')}</tbody></table></div></details>` : '';
+      return `<section class="player-panel player-history-explorer"><h3>Player game history</h3><p>${esc(record.marketTitle || record.title)} · original line stays fixed.</p><div class="player-history-controls">${select('player-history-window', 'Games', [['5', 'Last 5'], ['10', 'Last 10'], ['20', 'Last 20'], ['season', 'Recorded season']], selectedWindow)}${select('player-history-opponent', 'Matchup', [['all', 'All opponents'], ['opponent', `Vs ${snapshot.opponentLabel}`]], view.historyOpponent === 'opponent' ? 'opponent' : 'all')}${select('player-history-venue', 'Venue', [['all', 'Home & away'], ['home', 'Home'], ['away', 'Away']], ['home', 'away'].includes(view.historyVenue) ? view.historyVenue : 'all')}</div><p class="player-history-coverage">${coverage}${f.status === 'stale' ? ' · Saved data; refresh delayed' : ''}</p><div class="player-rates player-history-stats"><div><span>Hit rate</span><strong>${snapshot.hitRate == null ? '—' : snapshot.hitRate.toFixed(0) + '%'}</strong><small>${snapshot.hits} hit · ${snapshot.misses} miss · ${snapshot.pushes} push</small></div><div><span>Average</span><strong>${display(snapshot.average)}</strong></div><div><span>Median</span><strong>${display(snapshot.median)}</strong></div><div><span>Sample</span><strong>${snapshot.sample}</strong></div></div>${historyChart(snapshot)}<p class="player-notice">Hit rate excludes pushes. Filters use the most recent matching games before ${esc(stamp(snapshot.cutoffAt))}. Descriptive regular-season history${seasons ? `: ${esc(seasons)}` : ''}; this is not a full career history or a win probability. Missing statistics never count as zero.</p>${snapshot.checkedAt ? `<p class="player-history-coverage">History checked ${esc(stamp(snapshot.checkedAt))}</p>` : ''}${sourceLinks([f.source])}${log}${helpers.workloadPanel ? helpers.workloadPanel(filteredForm) : '<p>Workload detail is not attached.</p>'}</section>`;
+    }
     const chart = helpers.formChart ? helpers.formChart(f) : `<ul>${f.games.slice(-10).map(g => `<li>${esc(g.label || g.date)} · ${esc(g.value)} · ${g.hit ? 'Hit' : 'Miss'}</li>`).join('')}</ul>`;
     return `<section class="player-panel"><h3>Recent form at this line</h3><p>${esc(record.marketTitle || record.title)} · ${esc(f.stat)}. Games were gathered before the recorded matchup.</p><div class="player-rates"><div><span>Last 5</span><strong>${rate(f.last5, 5, f)}</strong></div><div><span>Last 10</span><strong>${rate(f.last10, 10, f)}</strong></div><div><span>Verified games</span><strong>${f.games.length}</strong></div></div>${chart}<p class="player-notice">Historical hit rates describe these games; they are not a forecast or win probability. This may be an older season, not the player's latest games today.</p>${sourceLinks([f.source])}${helpers.workloadPanel ? helpers.workloadPanel(f) : '<p>Workload detail is not attached.</p>'}${f.lastVsOpponent ? `<div class="prior-opponent"><strong>Last sourced meeting with this opponent</strong><p>${esc(f.lastVsOpponent.value)} ${esc(f.stat)} · ${esc(f.lastVsOpponent.date)}</p>${sourceLinks([f.lastVsOpponent.source])}<small>One meeting; roles and personnel may have changed.</small></div>` : '<p class="player-notice">No verified player-specific prior meeting attached.</p>'}</section>`;
   }
@@ -158,17 +211,17 @@
     const player = match ? index(state).find(p => p.league === match[1] && p.athleteId === match[2]) : null;
     if (!player) return '<section class="players-page"><a href="#players">← Find a player</a><div class="player-history-empty"><h2>Player not found in collected research</h2><p>This profile is not available. Search the players we follow; no identity or statistics are inferred from the URL.</p></div></section>';
     const record = player.records.find(r => r.key === view.market) || player.records[0];
-    return `<section class="player-profile"><a class="back-board" href="#players">← Find a player</a><header class="player-profile-head"><div><p class="eyebrow">${esc(leagues[player.league])} · ${esc(player.position)}</p><h2>${esc(player.name)}</h2><p>Gathered player research · ${player.records.length} tracked market${player.records.length === 1 ? '' : 's'}</p></div></header>${identityNote(player)}<div class="player-market-picker">${select('player-market', 'Choose a recorded market', player.records.map(r => [r.key, `${r.official ? 'Official' : 'Research'} · ${r.marketTitle || r.title} · ${stamp(r.publishedAt)}`]), record.key)}</div><p class="players-coverage">Each market keeps its own line, game and source date. Research looks are not official picks.</p><div class="player-profile-grid">${historyPanel(record, helpers)}${analysisPanel(record, state, helpers)}</div></section>`;
+    return `<section class="player-profile"><a class="back-board" href="#players">← Find a player</a><header class="player-profile-head"><div><p class="eyebrow">${esc(leagues[player.league])} · ${esc(player.position)}</p><h2>${esc(player.name)}</h2><p>Gathered player research · ${player.records.length} tracked market${player.records.length === 1 ? '' : 's'}</p></div></header>${identityNote(player)}<div class="player-market-picker">${select('player-market', 'Choose a recorded market', player.records.map(r => [r.key, `${r.official ? 'Official' : 'Research'} · ${r.marketTitle || r.title} · ${stamp(r.publishedAt)}`]), record.key)}</div><p class="players-coverage">Each market keeps its own line, game and source date. Research looks are not official picks.</p><div class="player-profile-grid">${historyPanel(record, helpers, state, view)}${analysisPanel(record, state, helpers)}</div>${helpers.matchupPanel ? helpers.matchupPanel(record, player, state) : ''}</section>`;
   }
   function pageHTML(state = {}, hash = '#players', helpers = {}, view = {}) {
-    const options = { query: '', league: 'All', position: 'All', market: '', ...view };
+    const options = { query: '', league: 'All', position: 'All', market: '', historyWindow: '10', historyOpponent: 'all', historyVenue: 'all', ...view };
     const warning = state.footballError ? '<p class="player-notice">Football research could not load on this visit. Missing profiles or markets may reflect that failure; they do not confirm there is no research. Retry when the source is available.</p>' : '';
     return warning + (hash === '#players' ? directory(state, options) : profile(state, hash, helpers, options));
   }
   function render({ state, helpers = {} }) {
     if (typeof document === 'undefined') return;
     const hash = location.hash;
-    if (hash !== lastRoute) { filters.market = ''; lastRoute = hash; }
+    if (hash !== lastRoute) { filters.market = ''; filters.historyWindow = '10'; filters.historyOpponent = 'all'; filters.historyVenue = 'all'; lastRoute = hash; }
     filters.league = state.playerLeague || 'All';
     filters.query = state.playerSearch || '';
     filters.position = state.playerPosition || 'All';
@@ -176,13 +229,14 @@
     if (!content) return;
     const draw = () => {
       content.innerHTML = pageHTML(state, hash, helpers, filters);
-      for (const [id, key] of [['player-search', 'query'], ['player-league', 'league'], ['player-position', 'position'], ['player-market', 'market']]) {
+      for (const [id, key] of [['player-search', 'query'], ['player-league', 'league'], ['player-position', 'position'], ['player-market', 'market'], ['player-history-window', 'historyWindow'], ['player-history-opponent', 'historyOpponent'], ['player-history-venue', 'historyVenue']]) {
         const control = content.querySelector(`#${id}`);
         if (!control) continue;
         control.addEventListener(key === 'query' ? 'input' : 'change', () => {
           const start = key === 'query' ? control.selectionStart : null;
           filters[key] = control.value;
           if (key === 'league') { filters.position = 'All'; state.playerPosition = 'All'; }
+          if (key === 'market') { filters.historyOpponent = 'all'; filters.historyVenue = 'all'; }
           if (key === 'league') state.playerLeague = filters.league;
           if (key === 'query') state.playerSearch = filters.query;
           if (key === 'position') state.playerPosition = filters.position;
@@ -195,5 +249,5 @@
     };
     draw();
   }
-  return { matches, hrefFor, index, pageHTML, render };
+  return { matches, hrefFor, index, pageHTML, historyView, render };
 });

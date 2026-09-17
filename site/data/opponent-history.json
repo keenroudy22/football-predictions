@@ -1,0 +1,1909 @@
+{
+  "updatedAt": "2026-09-17T20:22:09Z",
+  "provider": "ESPN public team schedules and final box scores",
+  "coverage": "Up to four upcoming followed NFL games; last five regular-season games across the current and previous season. Position labels are provider classifications, not historical snap alignments.",
+  "failures": [],
+  "games": {
+    "NFL-401872932": {
+      "home": {
+        "defenseId": "2",
+        "defenseName": "Buffalo Bills",
+        "gameId": "NFL-401872932",
+        "cutoffAt": "2026-09-18T00:15Z",
+        "sample": 5,
+        "games": [
+          {
+            "date": "2026-09-13",
+            "opponent": "Houston Texans",
+            "defenseId": "2",
+            "eventId": "401872660",
+            "kickoff": "2026-09-13T17:00:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "players": [
+              {
+                "athleteId": "4432577",
+                "name": "C.J. Stroud",
+                "position": "QB",
+                "stats": {
+                  "completions": 26,
+                  "passingAttempts": 38,
+                  "passingYards": 274.0,
+                  "yardsPerPassAttempt": 7.2,
+                  "passingTouchdowns": 2.0,
+                  "interceptions": 0.0,
+                  "adjQBR": 68.3,
+                  "QBRating": 106.7,
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 15.0,
+                  "yardsPerRushAttempt": 7.5,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 15.0
+                }
+              },
+              {
+                "athleteId": "4035538",
+                "name": "David Montgomery",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 20.0,
+                  "rushingYards": 60.0,
+                  "yardsPerRushAttempt": 3.0,
+                  "rushingTouchdowns": 2.0,
+                  "longRushing": 18.0,
+                  "receptions": 3.0,
+                  "receivingYards": 19.0,
+                  "yardsPerReception": 6.3,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 9.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "4429059",
+                "name": "Woody Marks",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 9.0,
+                  "rushingYards": 42.0,
+                  "yardsPerRushAttempt": 4.7,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 12.0,
+                  "receptions": 1.0,
+                  "receivingYards": -2.0,
+                  "yardsPerReception": -2.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": -2.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4426496",
+                "name": "Cade Stover",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": -2.0,
+                  "yardsPerReception": -2.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": -2.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "3117256",
+                "name": "Dalton Schultz",
+                "position": "TE",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 35.0,
+                  "yardsPerReception": 8.8,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 18.0,
+                  "receivingTargets": 8.0
+                }
+              },
+              {
+                "athleteId": "3843945",
+                "name": "Foster Moreau",
+                "position": "TE",
+                "stats": {
+                  "receptions": 2.0,
+                  "receivingYards": 15.0,
+                  "yardsPerReception": 7.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 9.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4695705",
+                "name": "Marlin Klein",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 16.0,
+                  "yardsPerReception": 16.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 16.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4430681",
+                "name": "Jared Wayne",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 12.0,
+                  "yardsPerReception": 12.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 12.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4586312",
+                "name": "Jaylin Noel",
+                "position": "WR",
+                "stats": {
+                  "receptions": 2.0,
+                  "receivingYards": 53.0,
+                  "yardsPerReception": 26.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 35.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4429022",
+                "name": "Kayshon Boutte",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 21.0,
+                  "yardsPerReception": 21.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 21.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4258173",
+                "name": "Nico Collins",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 7.0,
+                  "yardsPerRushAttempt": 7.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 7.0,
+                  "receptions": 7.0,
+                  "receivingYards": 75.0,
+                  "yardsPerReception": 10.7,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 25.0,
+                  "receivingTargets": 10.0
+                }
+              },
+              {
+                "athleteId": "4686422",
+                "name": "Xavier Hutchinson",
+                "position": "WR",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 32.0,
+                  "yardsPerReception": 10.7,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 20.0,
+                  "receivingTargets": 6.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
+            "positions": {
+              "QB": {
+                "passingYards": 274.0,
+                "completions": 26,
+                "passingAttempts": 38
+              },
+              "RB": {
+                "rushingAttempts": 29.0,
+                "rushingYards": 102.0,
+                "receptions": 4.0,
+                "receivingYards": 17.0
+              },
+              "WR": {
+                "receptions": 14.0,
+                "receivingYards": 193.0
+              },
+              "TE": {
+                "receptions": 8.0,
+                "receivingYards": 64.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2026
+          },
+          {
+            "date": "2026-01-04",
+            "opponent": "New York Jets",
+            "defenseId": "2",
+            "eventId": "401772967",
+            "kickoff": "2026-01-04T21:25:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "20",
+              "name": "New York Jets",
+              "abbreviation": "NYJ"
+            },
+            "players": [
+              {
+                "athleteId": "4429435",
+                "name": "Brady Cook",
+                "position": "QB",
+                "stats": {
+                  "completions": 11,
+                  "passingAttempts": 22,
+                  "passingYards": 60.0,
+                  "yardsPerPassAttempt": 2.7,
+                  "passingTouchdowns": 1.0,
+                  "interceptions": 0.0,
+                  "adjQBR": 24.6,
+                  "QBRating": 71.4,
+                  "rushingAttempts": 3.0,
+                  "rushingYards": 7.0,
+                  "yardsPerRushAttempt": 2.3,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 5.0
+                }
+              },
+              {
+                "athleteId": "4035537",
+                "name": "Kene Nwangwu",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 7.0,
+                  "rushingYards": 18.0,
+                  "yardsPerRushAttempt": 2.6,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 6.0,
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4035886",
+                "name": "Khalil Herbert",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 12.0,
+                  "rushingYards": 42.0,
+                  "yardsPerRushAttempt": 3.5,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 7.0,
+                  "receptions": 1.0,
+                  "receivingYards": 4.0,
+                  "yardsPerReception": 4.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 4.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4597500",
+                "name": "Adonai Mitchell",
+                "position": "WR",
+                "stats": {
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "4429105",
+                "name": "Arian Smith",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 2.0,
+                  "yardsPerRushAttempt": 2.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 2.0,
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4569371",
+                "name": "Isaiah Williams",
+                "position": "WR",
+                "stats": {
+                  "receptions": 5.0,
+                  "receivingYards": 24.0,
+                  "yardsPerReception": 4.8,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 13.0,
+                  "receivingTargets": 7.0
+                }
+              },
+              {
+                "athleteId": "4567096",
+                "name": "John Metchie III",
+                "position": "WR",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 20.0,
+                  "yardsPerReception": 6.7,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 11.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4613050",
+                "name": "Quentin Skinner",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 10.0,
+                  "yardsPerReception": 10.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 10.0,
+                  "receivingTargets": 1.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772967",
+            "positions": {
+              "QB": {
+                "passingYards": 60.0,
+                "completions": 11,
+                "passingAttempts": 22
+              },
+              "RB": {
+                "rushingAttempts": 19.0,
+                "rushingYards": 60.0,
+                "receptions": 1.0,
+                "receivingYards": 4.0
+              },
+              "WR": {
+                "receptions": 9.0,
+                "receivingYards": 54.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          },
+          {
+            "date": "2025-12-28",
+            "opponent": "Philadelphia Eagles",
+            "defenseId": "2",
+            "eventId": "401772917",
+            "kickoff": "2025-12-28T21:25:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "21",
+              "name": "Philadelphia Eagles",
+              "abbreviation": "PHI"
+            },
+            "players": [
+              {
+                "athleteId": "4040715",
+                "name": "Jalen Hurts",
+                "position": "QB",
+                "stats": {
+                  "completions": 13,
+                  "passingAttempts": 27,
+                  "passingYards": 110.0,
+                  "yardsPerPassAttempt": 4.1,
+                  "passingTouchdowns": 1.0,
+                  "interceptions": 0.0,
+                  "adjQBR": 39.5,
+                  "QBRating": 71.5,
+                  "rushingAttempts": 3.0,
+                  "rushingYards": 5.0,
+                  "yardsPerRushAttempt": 1.7,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 4.0
+                }
+              },
+              {
+                "athleteId": "3929630",
+                "name": "Saquon Barkley",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 19.0,
+                  "rushingYards": 68.0,
+                  "yardsPerRushAttempt": 3.6,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 16.0
+                }
+              },
+              {
+                "athleteId": "4429013",
+                "name": "Tank Bigsby",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 7.0,
+                  "yardsPerRushAttempt": 3.5,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 5.0,
+                  "receptions": 1.0,
+                  "receivingYards": 2.0,
+                  "yardsPerReception": 2.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 2.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4431545",
+                "name": "Will Shipley",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 2.0,
+                  "yardsPerRushAttempt": 1.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 4.0
+                }
+              },
+              {
+                "athleteId": "3121023",
+                "name": "Dallas Goedert",
+                "position": "TE",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 8.0,
+                  "yardsPerReception": 2.7,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 4.0,
+                  "receivingTargets": 6.0
+                }
+              },
+              {
+                "athleteId": "4241374",
+                "name": "Grant Calcaterra",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 3.0,
+                  "yardsPerReception": 3.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 3.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4047646",
+                "name": "A.J. Brown",
+                "position": "WR",
+                "stats": {
+                  "receptions": 5.0,
+                  "receivingYards": 68.0,
+                  "yardsPerReception": 13.6,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 27.0,
+                  "receivingTargets": 7.0
+                }
+              },
+              {
+                "athleteId": "4715355",
+                "name": "Darius Cooper",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 4.0,
+                  "yardsPerReception": 4.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 4.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4241478",
+                "name": "DeVonta Smith",
+                "position": "WR",
+                "stats": {
+                  "receptions": 2.0,
+                  "receivingYards": 25.0,
+                  "yardsPerReception": 12.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 14.0,
+                  "receivingTargets": 5.0
+                }
+              },
+              {
+                "athleteId": "4361409",
+                "name": "Jahan Dotson",
+                "position": "WR",
+                "stats": {
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772917",
+            "positions": {
+              "QB": {
+                "passingYards": 110.0,
+                "completions": 13,
+                "passingAttempts": 27
+              },
+              "RB": {
+                "rushingAttempts": 23.0,
+                "rushingYards": 77.0,
+                "receptions": 1.0,
+                "receivingYards": 2.0
+              },
+              "WR": {
+                "receptions": 8.0,
+                "receivingYards": 97.0
+              },
+              "TE": {
+                "receptions": 4.0,
+                "receivingYards": 11.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          },
+          {
+            "date": "2025-12-21",
+            "opponent": "Cleveland Browns",
+            "defenseId": "2",
+            "eventId": "401772802",
+            "kickoff": "2025-12-21T18:00:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "5",
+              "name": "Cleveland Browns",
+              "abbreviation": "CLE"
+            },
+            "players": [
+              {
+                "athleteId": "4427238",
+                "name": "Dillon Gabriel",
+                "position": "QB",
+                "stats": {
+                  "completions": 0,
+                  "passingAttempts": 0,
+                  "passingYards": 0.0,
+                  "yardsPerPassAttempt": 0.0,
+                  "passingTouchdowns": 0.0,
+                  "interceptions": 0.0,
+                  "adjQBR": 0.0,
+                  "QBRating": 0.0
+                }
+              },
+              {
+                "athleteId": "4432762",
+                "name": "Shedeur Sanders",
+                "position": "QB",
+                "stats": {
+                  "completions": 20,
+                  "passingAttempts": 29,
+                  "passingYards": 157.0,
+                  "yardsPerPassAttempt": 5.4,
+                  "passingTouchdowns": 1.0,
+                  "interceptions": 2.0,
+                  "adjQBR": 27.7,
+                  "QBRating": 64.9,
+                  "rushingAttempts": 4.0,
+                  "rushingYards": 49.0,
+                  "yardsPerRushAttempt": 12.3,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 16.0
+                }
+              },
+              {
+                "athleteId": "4685702",
+                "name": "Quinshon Judkins",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 8.0,
+                  "rushingYards": 22.0,
+                  "yardsPerRushAttempt": 2.8,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 5.0,
+                  "receptions": 5.0,
+                  "receivingYards": 29.0,
+                  "yardsPerReception": 5.8,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 16.0,
+                  "receivingTargets": 6.0
+                }
+              },
+              {
+                "athleteId": "4601080",
+                "name": "Raheim Sanders",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 11.0,
+                  "rushingYards": 42.0,
+                  "yardsPerRushAttempt": 3.8,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 9.0,
+                  "receptions": 1.0,
+                  "receivingYards": 4.0,
+                  "yardsPerReception": 4.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 4.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4035222",
+                "name": "Trayveon Williams",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 3.0,
+                  "rushingYards": 17.0,
+                  "yardsPerRushAttempt": 5.7,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 11.0,
+                  "receptions": 4.0,
+                  "receivingYards": 38.0,
+                  "yardsPerReception": 9.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 26.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4362603",
+                "name": "Brenden Bates",
+                "position": "TE",
+                "stats": {
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "5083076",
+                "name": "Harold Fannin Jr.",
+                "position": "TE",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 1.0,
+                  "yardsPerRushAttempt": 1.0,
+                  "rushingTouchdowns": 1.0,
+                  "longRushing": 1.0,
+                  "receptions": 4.0,
+                  "receivingYards": 34.0,
+                  "yardsPerReception": 8.5,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 13.0,
+                  "receivingTargets": 6.0
+                }
+              },
+              {
+                "athleteId": "4369863",
+                "name": "Cedric Tillman",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 8.0,
+                  "yardsPerReception": 8.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 8.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4808839",
+                "name": "Isaiah Bond",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": -1.0,
+                  "yardsPerRushAttempt": -1.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": -1.0,
+                  "receptions": 0.0,
+                  "receivingYards": 21.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 21.0,
+                  "receivingTargets": 0.0
+                }
+              },
+              {
+                "athleteId": "4241463",
+                "name": "Jerry Jeudy",
+                "position": "WR",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 12.0,
+                  "yardsPerReception": 4.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 7.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4613104",
+                "name": "Malachi Corley",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 3.0,
+                  "rushingYards": 30.0,
+                  "yardsPerRushAttempt": 10.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 14.0,
+                  "receptions": 2.0,
+                  "receivingYards": 11.0,
+                  "yardsPerReception": 5.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 11.0,
+                  "receivingTargets": 4.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772802",
+            "positions": {
+              "QB": {
+                "passingYards": 157.0,
+                "completions": 20,
+                "passingAttempts": 29
+              },
+              "RB": {
+                "rushingAttempts": 22.0,
+                "rushingYards": 81.0,
+                "receptions": 10.0,
+                "receivingYards": 71.0
+              },
+              "WR": {
+                "receptions": 6.0,
+                "receivingYards": 52.0
+              },
+              "TE": {
+                "receptions": 4.0,
+                "receivingYards": 34.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          },
+          {
+            "date": "2025-12-14",
+            "opponent": "New England Patriots",
+            "defenseId": "2",
+            "eventId": "401772795",
+            "kickoff": "2025-12-14T18:00:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "players": [
+              {
+                "athleteId": "4431452",
+                "name": "Drake Maye",
+                "position": "QB",
+                "stats": {
+                  "completions": 14,
+                  "passingAttempts": 23,
+                  "passingYards": 155.0,
+                  "yardsPerPassAttempt": 6.7,
+                  "passingTouchdowns": 0.0,
+                  "interceptions": 1.0,
+                  "adjQBR": 63.4,
+                  "QBRating": 62.8,
+                  "rushingAttempts": 4.0,
+                  "rushingYards": 43.0,
+                  "yardsPerRushAttempt": 10.8,
+                  "rushingTouchdowns": 2.0,
+                  "longRushing": 17.0
+                }
+              },
+              {
+                "athleteId": "4569173",
+                "name": "Rhamondre Stevenson",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 6.0,
+                  "rushingYards": 50.0,
+                  "yardsPerRushAttempt": 8.3,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 15.0,
+                  "receptions": 3.0,
+                  "receivingYards": 27.0,
+                  "yardsPerReception": 9.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 16.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "4432710",
+                "name": "TreVeyon Henderson",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 14.0,
+                  "rushingYards": 148.0,
+                  "yardsPerRushAttempt": 10.6,
+                  "rushingTouchdowns": 2.0,
+                  "longRushing": 65.0,
+                  "receptions": 2.0,
+                  "receivingYards": 13.0,
+                  "yardsPerReception": 6.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 7.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "3046439",
+                "name": "Hunter Henry",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 18.0,
+                  "yardsPerReception": 18.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 18.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "4427095",
+                "name": "DeMario Douglas",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 5.0,
+                  "yardsPerRushAttempt": 5.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 5.0
+                }
+              },
+              {
+                "athleteId": "4429022",
+                "name": "Kayshon Boutte",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 30.0,
+                  "yardsPerReception": 30.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 30.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "2991662",
+                "name": "Mack Hollins",
+                "position": "WR",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 41.0,
+                  "yardsPerReception": 10.3,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 18.0,
+                  "receivingTargets": 8.0
+                }
+              },
+              {
+                "athleteId": "2976212",
+                "name": "Stefon Diggs",
+                "position": "WR",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 26.0,
+                  "yardsPerReception": 8.7,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 16.0,
+                  "receivingTargets": 4.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772795",
+            "positions": {
+              "QB": {
+                "passingYards": 155.0,
+                "completions": 14,
+                "passingAttempts": 23
+              },
+              "RB": {
+                "rushingAttempts": 20.0,
+                "rushingYards": 198.0,
+                "receptions": 5.0,
+                "receivingYards": 40.0
+              },
+              "WR": {
+                "receptions": 8.0,
+                "receivingYards": 97.0
+              },
+              "TE": {
+                "receptions": 1.0,
+                "receivingYards": 18.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          }
+        ],
+        "status": "ok",
+        "checkedAt": "2026-09-17T20:22:09Z",
+        "lastAttemptAt": "2026-09-17T20:22:09Z",
+        "sources": [
+          "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/2/schedule?season=2025&seasontype=2",
+          "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/2/schedule?season=2026&seasontype=2"
+        ]
+      },
+      "away": {
+        "defenseId": "8",
+        "defenseName": "Detroit Lions",
+        "gameId": "NFL-401872932",
+        "cutoffAt": "2026-09-18T00:15Z",
+        "sample": 5,
+        "games": [
+          {
+            "date": "2026-09-13",
+            "opponent": "New Orleans Saints",
+            "defenseId": "8",
+            "eventId": "401872923",
+            "kickoff": "2026-09-13T17:00:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "18",
+              "name": "New Orleans Saints",
+              "abbreviation": "NO"
+            },
+            "players": [
+              {
+                "athleteId": "4360689",
+                "name": "Tyler Shough",
+                "position": "QB",
+                "stats": {
+                  "completions": 35,
+                  "passingAttempts": 56,
+                  "passingYards": 410.0,
+                  "yardsPerPassAttempt": 7.3,
+                  "passingTouchdowns": 3.0,
+                  "interceptions": 2.0,
+                  "adjQBR": 51.1,
+                  "QBRating": 87.6,
+                  "rushingAttempts": 4.0,
+                  "rushingYards": 8.0,
+                  "yardsPerRushAttempt": 2.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 4.0
+                }
+              },
+              {
+                "athleteId": "5081999",
+                "name": "CJ Donaldson",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 4.0,
+                  "yardsPerRushAttempt": 2.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 3.0,
+                  "receptions": 1.0,
+                  "receivingYards": -2.0,
+                  "yardsPerReception": -2.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": -2.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4599739",
+                "name": "Kendre Miller",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 9.0,
+                  "rushingYards": 30.0,
+                  "yardsPerRushAttempt": 3.3,
+                  "rushingTouchdowns": 1.0,
+                  "longRushing": 8.0
+                }
+              },
+              {
+                "athleteId": "4239996",
+                "name": "Travis Etienne Jr.",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 9.0,
+                  "rushingYards": 46.0,
+                  "yardsPerRushAttempt": 5.1,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 18.0,
+                  "receptions": 7.0,
+                  "receivingYards": 32.0,
+                  "yardsPerReception": 4.6,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 16.0,
+                  "receivingTargets": 9.0
+                }
+              },
+              {
+                "athleteId": "3929645",
+                "name": "Juwan Johnson",
+                "position": "TE",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 54.0,
+                  "yardsPerReception": 18.0,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 27.0,
+                  "receivingTargets": 7.0
+                }
+              },
+              {
+                "athleteId": "4036131",
+                "name": "Noah Fant",
+                "position": "TE",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 33.0,
+                  "yardsPerReception": 8.3,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 10.0,
+                  "receivingTargets": 8.0
+                }
+              },
+              {
+                "athleteId": "4698597",
+                "name": "Barion Brown",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 3.0,
+                  "yardsPerRushAttempt": 3.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 3.0
+                }
+              },
+              {
+                "athleteId": "4879276",
+                "name": "Bryce Lance",
+                "position": "WR",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 42.0,
+                  "yardsPerReception": 14.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 19.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4361370",
+                "name": "Chris Olave",
+                "position": "WR",
+                "stats": {
+                  "receptions": 10.0,
+                  "receivingYards": 182.0,
+                  "yardsPerReception": 18.2,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 47.0,
+                  "receivingTargets": 13.0
+                }
+              },
+              {
+                "athleteId": "4569559",
+                "name": "Devaughn Vele",
+                "position": "WR",
+                "stats": {
+                  "receptions": 7.0,
+                  "receivingYards": 69.0,
+                  "yardsPerReception": 9.9,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 31.0,
+                  "receivingTargets": 9.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
+            "positions": {
+              "QB": {
+                "passingYards": 410.0,
+                "completions": 35,
+                "passingAttempts": 56
+              },
+              "RB": {
+                "rushingAttempts": 20.0,
+                "rushingYards": 80.0,
+                "receptions": 8.0,
+                "receivingYards": 30.0
+              },
+              "WR": {
+                "receptions": 20.0,
+                "receivingYards": 293.0
+              },
+              "TE": {
+                "receptions": 7.0,
+                "receivingYards": 87.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2026
+          },
+          {
+            "date": "2026-01-04",
+            "opponent": "Chicago Bears",
+            "defenseId": "8",
+            "eventId": "401772965",
+            "kickoff": "2026-01-04T21:25:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "3",
+              "name": "Chicago Bears",
+              "abbreviation": "CHI"
+            },
+            "players": [
+              {
+                "athleteId": "4431611",
+                "name": "Caleb Williams",
+                "position": "QB",
+                "stats": {
+                  "completions": 20,
+                  "passingAttempts": 33,
+                  "passingYards": 212.0,
+                  "yardsPerPassAttempt": 6.4,
+                  "passingTouchdowns": 2.0,
+                  "interceptions": 1.0,
+                  "adjQBR": 56.6,
+                  "QBRating": 86.9,
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 1.0,
+                  "yardsPerRushAttempt": 1.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 1.0
+                }
+              },
+              {
+                "athleteId": "4259545",
+                "name": "D'Andre Swift",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 10.0,
+                  "rushingYards": 40.0,
+                  "yardsPerRushAttempt": 4.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 10.0,
+                  "receptions": 1.0,
+                  "receivingYards": 8.0,
+                  "yardsPerReception": 8.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 8.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4608686",
+                "name": "Kyle Monangai",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 6.0,
+                  "rushingYards": 14.0,
+                  "yardsPerRushAttempt": 2.3,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 6.0,
+                  "receptions": 1.0,
+                  "receivingYards": 15.0,
+                  "yardsPerReception": 15.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 15.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4258595",
+                "name": "Cole Kmet",
+                "position": "TE",
+                "stats": {
+                  "receptions": 2.0,
+                  "receivingYards": 16.0,
+                  "yardsPerReception": 8.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 19.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "4723086",
+                "name": "Colston Loveland",
+                "position": "TE",
+                "stats": {
+                  "receptions": 10.0,
+                  "receivingYards": 91.0,
+                  "yardsPerReception": 9.1,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 27.0,
+                  "receivingTargets": 13.0
+                }
+              },
+              {
+                "athleteId": "3915416",
+                "name": "DJ Moore",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 11.0,
+                  "yardsPerReception": 11.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 11.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "5160110",
+                "name": "Jahdae Walker",
+                "position": "WR",
+                "stats": {
+                  "receptions": 2.0,
+                  "receivingYards": 36.0,
+                  "yardsPerReception": 18.0,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 25.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "4685278",
+                "name": "Luther Burden III",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 10.0,
+                  "yardsPerRushAttempt": 10.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 10.0,
+                  "receptions": 3.0,
+                  "receivingYards": 35.0,
+                  "yardsPerReception": 11.7,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 13.0,
+                  "receivingTargets": 4.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965",
+            "positions": {
+              "QB": {
+                "passingYards": 212.0,
+                "completions": 20,
+                "passingAttempts": 33
+              },
+              "RB": {
+                "rushingAttempts": 16.0,
+                "rushingYards": 54.0,
+                "receptions": 2.0,
+                "receivingYards": 23.0
+              },
+              "WR": {
+                "receptions": 6.0,
+                "receivingYards": 82.0
+              },
+              "TE": {
+                "receptions": 12.0,
+                "receivingYards": 107.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          },
+          {
+            "date": "2025-12-25",
+            "opponent": "Minnesota Vikings",
+            "defenseId": "8",
+            "eventId": "401772711",
+            "kickoff": "2025-12-25T21:30:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "16",
+              "name": "Minnesota Vikings",
+              "abbreviation": "MIN"
+            },
+            "players": [
+              {
+                "athleteId": "4573398",
+                "name": "Max Brosmer",
+                "position": "QB",
+                "stats": {
+                  "completions": 9,
+                  "passingAttempts": 16,
+                  "passingYards": 51.0,
+                  "yardsPerPassAttempt": 3.2,
+                  "passingTouchdowns": 0.0,
+                  "interceptions": 0.0,
+                  "adjQBR": 8.8,
+                  "QBRating": 62.2,
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 16.0,
+                  "yardsPerRushAttempt": 8.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 11.0
+                }
+              },
+              {
+                "athleteId": "3042519",
+                "name": "Aaron Jones Sr.",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 18.0,
+                  "rushingYards": 53.0,
+                  "yardsPerRushAttempt": 2.9,
+                  "rushingTouchdowns": 1.0,
+                  "longRushing": 10.0,
+                  "receptions": 3.0,
+                  "receivingYards": 10.0,
+                  "yardsPerReception": 3.3,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 10.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4242431",
+                "name": "Ty Chandler",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 7.0,
+                  "rushingYards": 24.0,
+                  "yardsPerRushAttempt": 3.4,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 5.0
+                }
+              },
+              {
+                "athleteId": "4373030",
+                "name": "Ben Sims",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 3.0,
+                  "yardsPerReception": 3.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 3.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "3921690",
+                "name": "Josh Oliver",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 8.0,
+                  "yardsPerReception": 8.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 8.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4382466",
+                "name": "Jalen Nailor",
+                "position": "WR",
+                "stats": {
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4429205",
+                "name": "Jordan Addison",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 65.0,
+                  "yardsPerRushAttempt": 65.0,
+                  "rushingTouchdowns": 1.0,
+                  "longRushing": 65.0,
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4262921",
+                "name": "Justin Jefferson",
+                "position": "WR",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 30.0,
+                  "yardsPerReception": 7.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 10.0,
+                  "receivingTargets": 5.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772711",
+            "positions": {
+              "QB": {
+                "passingYards": 51.0,
+                "completions": 9,
+                "passingAttempts": 16
+              },
+              "RB": {
+                "rushingAttempts": 25.0,
+                "rushingYards": 77.0,
+                "receptions": 3.0,
+                "receivingYards": 10.0
+              },
+              "WR": {
+                "receptions": 4.0,
+                "receivingYards": 30.0
+              },
+              "TE": {
+                "receptions": 2.0,
+                "receivingYards": 11.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          },
+          {
+            "date": "2025-12-21",
+            "opponent": "Pittsburgh Steelers",
+            "defenseId": "8",
+            "eventId": "401772806",
+            "kickoff": "2025-12-21T21:25:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "23",
+              "name": "Pittsburgh Steelers",
+              "abbreviation": "PIT"
+            },
+            "players": [
+              {
+                "athleteId": "8439",
+                "name": "Aaron Rodgers",
+                "position": "QB",
+                "stats": {
+                  "completions": 27,
+                  "passingAttempts": 41,
+                  "passingYards": 266.0,
+                  "yardsPerPassAttempt": 6.5,
+                  "passingTouchdowns": 1.0,
+                  "interceptions": 0.0,
+                  "adjQBR": 56.9,
+                  "QBRating": 92.1,
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 9.0,
+                  "yardsPerRushAttempt": 4.5,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 7.0
+                }
+              },
+              {
+                "athleteId": "4569987",
+                "name": "Jaylen Warren",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 14.0,
+                  "rushingYards": 143.0,
+                  "yardsPerRushAttempt": 10.2,
+                  "rushingTouchdowns": 2.0,
+                  "longRushing": 45.0,
+                  "receptions": 2.0,
+                  "receivingYards": 8.0,
+                  "yardsPerReception": 4.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 6.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "4371733",
+                "name": "Kenny Gainwell",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 9.0,
+                  "rushingYards": 50.0,
+                  "yardsPerRushAttempt": 5.6,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 18.0,
+                  "receptions": 5.0,
+                  "receivingYards": 78.0,
+                  "yardsPerReception": 15.6,
+                  "receivingTouchdowns": 1.0,
+                  "longReception": 45.0,
+                  "receivingTargets": 7.0
+                }
+              },
+              {
+                "athleteId": "4430802",
+                "name": "Darnell Washington",
+                "position": "TE",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 36.0,
+                  "yardsPerReception": 12.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 18.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "3054212",
+                "name": "Jonnu Smith",
+                "position": "TE",
+                "stats": {
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 28.0,
+                  "yardsPerRushAttempt": 14.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 20.0,
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4361411",
+                "name": "Pat Freiermuth",
+                "position": "TE",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 20.0,
+                  "yardsPerReception": 5.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 11.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "16460",
+                "name": "Adam Thielen",
+                "position": "WR",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 49.0,
+                  "yardsPerReception": 12.3,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 17.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4243389",
+                "name": "Calvin Austin III",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 8.0,
+                  "yardsPerReception": 8.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 8.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4047650",
+                "name": "DK Metcalf",
+                "position": "WR",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 42.0,
+                  "yardsPerReception": 10.5,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 20.0,
+                  "receivingTargets": 9.0
+                }
+              },
+              {
+                "athleteId": "3051738",
+                "name": "Marquez Valdes-Scantling",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 6.0,
+                  "yardsPerReception": 6.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 6.0,
+                  "receivingTargets": 3.0
+                }
+              },
+              {
+                "athleteId": "3914397",
+                "name": "Scotty Miller",
+                "position": "WR",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 19.0,
+                  "yardsPerReception": 6.3,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 9.0,
+                  "receivingTargets": 3.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772806",
+            "positions": {
+              "QB": {
+                "passingYards": 266.0,
+                "completions": 27,
+                "passingAttempts": 41
+              },
+              "RB": {
+                "rushingAttempts": 23.0,
+                "rushingYards": 193.0,
+                "receptions": 7.0,
+                "receivingYards": 86.0
+              },
+              "WR": {
+                "receptions": 13.0,
+                "receivingYards": 124.0
+              },
+              "TE": {
+                "receptions": 7.0,
+                "receivingYards": 56.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          },
+          {
+            "date": "2025-12-14",
+            "opponent": "Los Angeles Rams",
+            "defenseId": "8",
+            "eventId": "401772909",
+            "kickoff": "2025-12-14T21:25:00Z",
+            "sample": 1,
+            "opponentTeam": {
+              "id": "14",
+              "name": "Los Angeles Rams",
+              "abbreviation": "LAR"
+            },
+            "players": [
+              {
+                "athleteId": "12483",
+                "name": "Matthew Stafford",
+                "position": "QB",
+                "stats": {
+                  "completions": 24,
+                  "passingAttempts": 38,
+                  "passingYards": 368.0,
+                  "yardsPerPassAttempt": 9.7,
+                  "passingTouchdowns": 2.0,
+                  "interceptions": 1.0,
+                  "adjQBR": 73.9,
+                  "QBRating": 101.6,
+                  "rushingAttempts": 1.0,
+                  "rushingYards": 2.0,
+                  "yardsPerRushAttempt": 2.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 2.0
+                }
+              },
+              {
+                "athleteId": "4429096",
+                "name": "Blake Corum",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 11.0,
+                  "rushingYards": 71.0,
+                  "yardsPerRushAttempt": 6.5,
+                  "rushingTouchdowns": 1.0,
+                  "longRushing": 24.0
+                }
+              },
+              {
+                "athleteId": "4430737",
+                "name": "Kyren Williams",
+                "position": "RB",
+                "stats": {
+                  "rushingAttempts": 15.0,
+                  "rushingYards": 78.0,
+                  "yardsPerRushAttempt": 5.2,
+                  "rushingTouchdowns": 2.0,
+                  "longRushing": 19.0,
+                  "receptions": 1.0,
+                  "receivingYards": 10.0,
+                  "yardsPerReception": 10.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 10.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4242557",
+                "name": "Colby Parkinson",
+                "position": "TE",
+                "stats": {
+                  "receptions": 5.0,
+                  "receivingYards": 75.0,
+                  "yardsPerReception": 15.0,
+                  "receivingTouchdowns": 2.0,
+                  "longReception": 26.0,
+                  "receivingTargets": 7.0
+                }
+              },
+              {
+                "athleteId": "4426553",
+                "name": "Davis Allen",
+                "position": "TE",
+                "stats": {
+                  "receptions": 3.0,
+                  "receivingYards": 16.0,
+                  "yardsPerReception": 5.3,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 7.0,
+                  "receivingTargets": 4.0
+                }
+              },
+              {
+                "athleteId": "4570037",
+                "name": "Terrance Ferguson",
+                "position": "TE",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 6.0,
+                  "yardsPerReception": 6.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 6.0,
+                  "receivingTargets": 2.0
+                }
+              },
+              {
+                "athleteId": "16800",
+                "name": "Davante Adams",
+                "position": "WR",
+                "stats": {
+                  "receptions": 4.0,
+                  "receivingYards": 71.0,
+                  "yardsPerReception": 17.8,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 21.0,
+                  "receivingTargets": 9.0
+                }
+              },
+              {
+                "athleteId": "4569382",
+                "name": "Jordan Whittington",
+                "position": "WR",
+                "stats": {
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4710855",
+                "name": "Konata Mumpfield",
+                "position": "WR",
+                "stats": {
+                  "receptions": 0.0,
+                  "receivingYards": 0.0,
+                  "yardsPerReception": 0.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 0.0,
+                  "receivingTargets": 1.0
+                }
+              },
+              {
+                "athleteId": "4426515",
+                "name": "Puka Nacua",
+                "position": "WR",
+                "stats": {
+                  "rushingAttempts": 2.0,
+                  "rushingYards": 8.0,
+                  "yardsPerRushAttempt": 4.0,
+                  "rushingTouchdowns": 0.0,
+                  "longRushing": 6.0,
+                  "receptions": 9.0,
+                  "receivingYards": 181.0,
+                  "yardsPerReception": 20.1,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 39.0,
+                  "receivingTargets": 11.0
+                }
+              },
+              {
+                "athleteId": "4360797",
+                "name": "Tutu Atwell",
+                "position": "WR",
+                "stats": {
+                  "receptions": 1.0,
+                  "receivingYards": 9.0,
+                  "yardsPerReception": 9.0,
+                  "receivingTouchdowns": 0.0,
+                  "longReception": 9.0,
+                  "receivingTargets": 2.0
+                }
+              }
+            ],
+            "checkedAt": "2026-09-17T20:22:09Z",
+            "status": "ok",
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772909",
+            "positions": {
+              "QB": {
+                "passingYards": 368.0,
+                "completions": 24,
+                "passingAttempts": 38
+              },
+              "RB": {
+                "rushingAttempts": 26.0,
+                "rushingYards": 149.0,
+                "receptions": 1.0,
+                "receivingYards": 10.0
+              },
+              "WR": {
+                "receptions": 14.0,
+                "receivingYards": 261.0
+              },
+              "TE": {
+                "receptions": 9.0,
+                "receivingYards": 97.0
+              }
+            },
+            "note": "One prior game against this defense; opponent personnel and game script differ.",
+            "season": 2025
+          }
+        ],
+        "status": "ok",
+        "checkedAt": "2026-09-17T20:22:09Z",
+        "lastAttemptAt": "2026-09-17T20:22:09Z",
+        "sources": [
+          "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule?season=2025&seasontype=2",
+          "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule?season=2026&seasontype=2"
+        ]
+      }
+    }
+  }
+}

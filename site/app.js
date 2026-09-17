@@ -240,7 +240,7 @@ function render(){
     document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view==='research')b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
     $('#notice').textContent=state.history?.updatedAt?`Collected player history checked ${pretty(state.history.updatedAt)} ET. Each market has its own game window and quote time.`:'Player history is unavailable. Research coverage is labeled below.';
     $('#notice').classList.toggle('warn',!state.history?.updatedAt);
-    window.KeenPlayers.render({state,helpers:{pickCard,formChart,workloadPanel,playerMovement}});
+    window.KeenPlayers.render({state,helpers:{pickCard,formChart,workloadPanel,playerMovement,matchupPanel:window.KeenMatchups?.panel}});
     return;
   }
   if(state.footballError){
@@ -351,6 +351,7 @@ async function init(){
     }catch(e){state.history=null}
     try{const c=await fetch('data/research-context.json?refresh='+Date.now(),{cache:'no-store'});if(c.ok)state.context=await c.json()}catch(e){state.context=null}
     try{const r=await fetch('data/player-identity.json?refresh='+Date.now(),{cache:'no-store'});if(r.ok)state.identities=await r.json()}catch(e){state.identities=null}
+    try{const r=await fetch('data/opponent-history.json?refresh='+Date.now(),{cache:'no-store'});if(r.ok)state.opponents=await r.json()}catch(e){state.opponents=null}
     await sportsReady;
     if(!location.hash)history.replaceState(null,'','#sports');
     setupWeeks();navigate();

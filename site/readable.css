@@ -230,3 +230,37 @@ body[data-page-view="players"] .intro h1{font-size:28px;margin:0}
  .player-rates strong{font-size:16px}
 }
 @media(max-width:480px){.player-results{grid-template-columns:1fr}.player-tile{padding:17px}.player-search-controls select{font-size:13px}.player-rates{gap:6px}.player-rates>div{padding:10px 8px}.player-rates strong{font-size:15px}}
+
+/* Historical comparisons live in research, away from the simple Picks card. */
+.player-history-controls{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:9px;margin:18px 0 10px;padding:13px;background:#eef3f4;border-radius:6px}
+.player-history-controls label{display:grid;gap:6px;min-width:0;font-size:11px;font-weight:650;color:#496574}
+.player-history-controls select{min-height:42px;width:100%;max-width:100%;min-width:0;margin:0;padding:8px 6px;font-size:12px;border:1px solid #bfcfd5;border-radius:4px;color:#18384a;background:#fff}
+.player-history-stats{grid-template-columns:1.65fr 1fr 1fr .85fr}
+.player-history-stats small,.opponent-panel .player-rates small{display:block;font-size:10px;line-height:1.5;margin-top:4px;color:#516b70}
+.player-panel .player-history-coverage{font-size:11px;color:#596f7a;line-height:1.6;margin:9px 0}
+.player-history-chart{overflow-x:auto;scrollbar-width:thin}
+.player-history-chart ol{display:flex;gap:6px;min-width:100%;width:max-content}
+.player-history-chart .form-game{flex:1 0 26px;min-width:26px;max-width:55px}
+.player-history-chart .form-game.push .form-bar{background:#9b771f}
+.player-history-chart .form-game.push .form-outcome{color:#7a5d16}
+.player-history-log table{font-size:12px;width:100%}
+.player-history-log td small{display:block;font-size:10px;line-height:1.5;margin-top:4px}
+.opponent-panel{margin-top:20px}
+.opponent-heading{display:flex;justify-content:space-between;align-items:start;gap:20px}
+.opponent-heading .eyebrow{font-size:10px;font-weight:750;color:#38685f;letter-spacing:1px;margin:0 0 8px}
+.opponent-heading h3{font-size:23px;max-width:700px}
+.opponent-heading>a{font-size:12px;white-space:nowrap;font-weight:700;min-height:40px;display:flex;align-items:center;text-decoration:none}
+.opponent-panel>.player-rates{max-width:720px}
+.opponent-game{margin:12px 0;border:1px solid #d1dee1;border-radius:6px;background:#f7fafb;overflow:hidden}
+.opponent-game>summary{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:13px 15px;font-size:12px;line-height:1.5;cursor:pointer;list-style:none}
+.opponent-game>summary>strong{margin-left:auto;font-size:12px;color:#28544a}
+.opponent-game>summary::after{content:'+';font-size:20px;color:#3d655b}
+.opponent-game[open]>summary::after{content:'−'}
+.opponent-table-wrap{padding:0 15px;overflow:auto}
+.opponent-game table{border-collapse:collapse;width:100%;font-size:12px;line-height:1.5;text-align:left}
+.opponent-game caption{text-align:left;font-size:11px;color:#59727b;padding:8px 0}
+.opponent-game th,.opponent-game td{padding:10px 8px;border-bottom:1px solid #dbe5e7;white-space:normal}
+.opponent-game thead th{color:#4c6671;font-weight:650;background:#eaf0f2}
+.opponent-game tbody th{font-weight:650;color:#203f50}
+.opponent-source{font-size:11px;display:inline-flex;min-height:42px;align-items:center;margin:3px 15px;color:#2c655b}
+@media(max-width:720px){.player-history-controls{gap:6px;padding:10px}.player-history-controls select{font-size:11px}.player-history-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.opponent-heading{display:block}.opponent-heading h3{font-size:21px}.opponent-game>summary{display:grid;grid-template-columns:1fr auto;padding:12px}.opponent-game>summary>strong{margin:0;grid-column:1}.opponent-game>summary::after{grid-column:2;grid-row:1/3}.opponent-table-wrap{padding:0 8px}.opponent-game th,.opponent-game td{padding:9px 5px;font-size:11px}}

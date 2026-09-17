@@ -52,7 +52,7 @@ jobs:
           python - <<'PY'
           import os, subprocess
           changed = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD'], text=True).splitlines() if os.environ['EVENT_NAME'] == 'push' else []
-          needed = any(p.startswith('research/') or p in ('scripts/player_history.py', 'site/data/research.json') for p in changed)
+          needed = any(p.startswith('research/') or p in ('scripts/player_history.py', 'scripts/opponent_history.py', 'site/data/research.json') for p in changed)
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
               output.write('needed=' + str(needed).lower() + '\n')
           PY
@@ -62,6 +62,9 @@ jobs:
       - name: Refresh followed player identities and team colors
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
         run: python scripts/player_identity.py
+      - name: Refresh followed opponent matchup history
+        if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        run: python scripts/opponent_history.py
       - name: Refresh injury context
         run: python scripts/research_context.py
       - name: Build research review evidence

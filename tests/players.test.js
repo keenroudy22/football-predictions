@@ -176,3 +176,123 @@ test('player text and filter values are escaped and unsafe sources are not links
   assert.doesNotMatch(directory,/<script>/);
   assert.match(directory,/&quot;&gt;&lt;script&gt;/);
 });
+
+function historyFixture(){
+  const state=fixture();
+  const target={...game('NFL','NFL-9999'),kickoff:'2026-09-17T23:00:00Z',home:{id:'2',abbreviation:'BUF',name:'Buffalo'},away:{id:'8',abbreviation:'DET',name:'Detroit'}};
+  state.slate.games=[target];
+  const row=(eventId,date,value,extra={})=>({eventId:String(eventId),date,season:2026,seasonType:'regular',isHome:false,opponent:{id:'2',abbreviation:'BUF',name:'Buffalo'},label:date.slice(0,10)+' · BUF',value,hit:value>5,source:`https://www.espn.com/nfl/boxscore/_/gameId/${eventId}`,...extra});
+  const rows=[
+    row('101','2026-01-04T18:00:00Z',8,{season:2025,isHome:true}),
+    row('102','2026-09-01T18:00:00Z',2,{isHome:true}),
+    row('103','2026-09-08T18:00:00Z',5),
+    row('104','2026-09-10T18:00:00Z',8,{opponent:{id:'99',abbreviation:'BUF',name:'Buffalo'},isHome:true}),
+    row('105','2026-09-12T18:00:00Z',9,{opponent:{id:'2',abbreviation:'RENAMED',name:'Same structured defense'}})
+  ];
+  const record={...pick('history-market','111',{title:'Alex Sample OVER 5 receptions',gameIds:[target.id],line:5,direction:'OVER',cutoff:'Through 5 at -115'}),league:'NFL',official:true,kind:'props',publishedAt:quotedAt,originalPublishedAt:quotedAt,recentForm:{...form(5),direction:'OVER',games:rows,historyGames:rows,cutoffAt:target.kickoff,vsOpponent:{opponentId:'2',opponentLabel:'Buffalo',games:rows.filter(row=>row.opponent.id==='2')}}};
+  return {state,record,row,rows};
+}
+
+test('history opponent filters use structured IDs rather than matching labels or team names',()=>{
+  const {state,record}=historyFixture();
+  const history=Players.historyView(record,state,{historyWindow:'20',historyOpponent:'opponent'});
+  assert.deepEqual(history.rows.map(row=>row.eventId),['101','102','103','105']);
+  assert.equal(history.opponentId,'2');
+  assert.equal(history.sample,4);
+});
+
+test('history cutoff excludes the recommendation event and all observations after publication',()=>{
+  const {state,record,row}=historyFixture();
+  record.recentForm.historyGames.push(
+    row('9999','2026-09-01T00:00:00Z',99),
+    row('106',quotedAt,66),
+    row('107','2026-09-16T15:00:00Z',77),
+    row('108','2026-09-18T18:00:00Z',88)
+  );
+  const history=Players.historyView(record,state,{historyWindow:'20'});
+  assert.deepEqual(history.rows.map(row=>row.eventId),['101','102','103','104','105']);
+  assert.equal(Date.parse(history.cutoffAt),Date.parse(quotedAt));
+  assert.ok(history.excluded>=4,'Excluded recommendation and later rows must not silently count as history');
+});
+
+test('history season and venue filters select comparable regular-season games',()=>{
+  const {state,record,row}=historyFixture();
+  record.recentForm.historyGames.push(row('106','2026-08-25T18:00:00Z',66,{seasonType:'preseason'}));
+  const season=Players.historyView(record,state,{historyWindow:'season'});
+  assert.deepEqual(season.rows.map(row=>row.eventId),['102','103','104','105']);
+  assert.equal(season.targetSeason,2026);
+  const home=Players.historyView(record,state,{historyWindow:'season',historyVenue:'home'});
+  assert.deepEqual(home.rows.map(row=>row.eventId),['102','104']);
+  const away=Players.historyView(record,state,{historyWindow:'season',historyVenue:'away'});
+  assert.deepEqual(away.rows.map(row=>row.eventId),['103','105']);
+  const homeAgainstTarget=Players.historyView(record,state,{historyWindow:'season',historyVenue:'home',historyOpponent:'opponent'});
+  assert.deepEqual(homeAgainstTarget.rows.map(row=>row.eventId),['102']);
+});
+
+test('Last 5 applies after opponent selection and keeps the newest matching games',()=>{
+  const {state,record,row}=historyFixture();
+  record.recentForm.historyGames=Array.from({length:12},(_,i)=>row(String(200+i),`2026-09-${String(i+1).padStart(2,'0')}T18:00:00Z`,i+1,{opponent:{id:i%2?'99':'2',abbreviation:i%2?'OTHER':'BUF'}}));
+  const history=Players.historyView(record,state,{historyWindow:'5',historyOpponent:'opponent'});
+  assert.deepEqual(history.rows.map(row=>row.eventId),['202','204','206','208','210']);
+  assert.equal(history.sample,5);assert.equal(history.requested,5);assert.equal(history.complete,true);
+});
+
+test('history separates pushes from misses and the descriptive hit-rate denominator',()=>{
+  const {state,record}=historyFixture();
+  const history=Players.historyView(record,state,{historyWindow:'season'});
+  assert.equal(history.sample,4);assert.equal(history.hits,2);assert.equal(history.misses,1);assert.equal(history.pushes,1);
+  assert.equal(history.decisions,3);assert.ok(Math.abs(history.hitRate-200/3)<0.01);
+  assert.equal(history.average,6);assert.equal(history.median,6.5);
+  record.recentForm.historyGames=record.recentForm.historyGames.filter(row=>row.value===5);
+  const pushes=Players.historyView(record,state,{historyWindow:'20'});
+  assert.equal(pushes.pushes,1);assert.equal(pushes.decisions,0);assert.equal(pushes.hitRate,null);
+});
+
+test('incomplete Last 20 history is labeled without altering the original selection',()=>{
+  const {state,record}=historyFixture();
+  state.reports[0].props=[record];state.history.picks={};
+  const before=JSON.stringify({title:record.title,line:record.line,odds:record.odds,book:record.book,quotedAt:record.quotedAt,cutoff:record.cutoff});
+  const history=Players.historyView(record,state,{historyWindow:'20'});
+  assert.equal(history.requested,20);assert.equal(history.sample,5);assert.equal(history.complete,false);
+  const html=Players.pageHTML(state,'#player/NFL/111',helpers,{historyWindow:'20'});
+  assert.match(html,/id="player-history-window"/);assert.match(html,/id="player-history-opponent"/);assert.match(html,/id="player-history-venue"/);
+  assert.match(html,/5 (?:of|\/) ?20|5\/20|only 5|5 available|5 verified|incomplete/i);
+  assert.match(html,/descriptive|not a forecast|not a win probability|not.*predict/i);
+  assert.match(html,/DraftKings -110/);assert.match(html,/Alex Sample OVER 5 receptions/);
+  assert.equal(JSON.stringify({title:record.title,line:record.line,odds:record.odds,book:record.book,quotedAt:record.quotedAt,cutoff:record.cutoff}),before);
+});
+
+test('profile matchup helper receives the selected player and recorded market',()=>{
+  const {state,record}=historyFixture();
+  state.reports[0].props=[record];state.history.picks={};
+  let received;
+  const html=Players.pageHTML(state,'#player/NFL/111',{...helpers,matchupPanel:(...args)=>{received=args;return '<section data-tested-matchup>Comparable defensive context</section>';}});
+  assert.match(html,/data-tested-matchup/);
+  assert.ok(received?.some(value=>value?.id==='history-market'||value?.records?.some(record=>record.id==='history-market')),'The matchup helper receives the relevant player or record context');
+});
+
+test('signed history bars extend below or above zero and a 20-game chart explains scrolling',()=>{
+  const {state,record,row}=historyFixture();
+  record.title='Alex Sample OVER 5 rushing yards';record.recentForm.stat='rushing yards';
+  const rows=[-3,0,6].map((value,i)=>row(String(301+i),`2026-09-0${i+1}T18:00:00Z`,value));
+  record.recentForm.games=rows;record.recentForm.historyGames=rows;state.reports[0].props=[record];
+  const html=Players.pageHTML(state,'#player/NFL/111',helpers,{historyWindow:'20'});
+  const zero=Number(html.match(/class="history-zero-line"[^>]*style="[^"]*bottom:([\d.]+)%/)?.[1]);
+  assert.ok(Number.isFinite(zero)&&zero>0&&zero<100,'A mixed-sign chart needs a visible zero baseline');
+  const geometry=value=>{
+    const match=html.match(new RegExp('data-value="'+value+'"[\\s\\S]*?class="form-bar" style="[^"]*bottom:([\\d.]+)%;height:([\\d.]+)%'));
+    assert.ok(match,'Expected bar for '+value);
+    return {bottom:Number(match[1]),height:Number(match[2])};
+  };
+  const negative=geometry(-3),atZero=geometry(0),positive=geometry(6);
+  assert.ok(negative.bottom<zero&&negative.height>0);
+  assert.ok(Math.abs(negative.bottom+negative.height-zero)<0.01,'Negative bar ends at zero from below');
+  assert.equal(atZero.height,0);assert.equal(atZero.bottom,zero);
+  assert.equal(positive.bottom,zero);assert.ok(positive.height>0,'Positive bar grows above zero');
+  assert.doesNotMatch(html,/player-chart-scroll-hint/);
+  const twenty=Array.from({length:20},(_,i)=>row(String(400+i),`2026-08-${String(i+1).padStart(2,'0')}T18:00:00Z`,i-3));
+  record.recentForm.games=twenty;record.recentForm.historyGames=twenty;
+  const wide=Players.pageHTML(state,'#player/NFL/111',helpers,{historyWindow:'20'});
+  assert.equal((wide.match(/data-value="/g)||[]).length,20);
+  assert.match(wide,/Swipe or scroll the chart sideways/);
+});
