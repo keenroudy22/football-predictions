@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T20:34:07Z",
+  "updatedAt": "2026-09-17T20:36:55Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -1387,6 +1387,15 @@
           "name": "Cincinnati Bengals",
           "players": [
             {
+              "id": "4362628",
+              "name": "Ja'Marr Chase",
+              "position": "WR",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-17T20:25Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4362628/jamarr-chase"
+            },
+            {
               "id": "3915511",
               "name": "Joe Burrow",
               "position": "QB",
@@ -1529,15 +1538,6 @@
               "injury": null,
               "reportedAt": "2026-09-13T21:08Z",
               "source": "https://www.espn.com/nfl/player/_/id/4362238/chase-brown"
-            },
-            {
-              "id": "4362628",
-              "name": "Ja'Marr Chase",
-              "position": "WR",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-13T21:01Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4362628/jamarr-chase"
             },
             {
               "id": "5085189",
@@ -5067,6 +5067,15 @@
           "name": "New Orleans Saints",
           "players": [
             {
+              "id": "4361370",
+              "name": "Chris Olave",
+              "position": "WR",
+              "status": "Questionable",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-17T20:27Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4361370/chris-olave"
+            },
+            {
               "id": "3929645",
               "name": "Juwan Johnson",
               "position": "TE",
@@ -5227,15 +5236,6 @@
               "injury": null,
               "reportedAt": "2026-09-13T22:45Z",
               "source": "https://www.espn.com/nfl/player/_/id/4239996/travis-etienne-jr"
-            },
-            {
-              "id": "4361370",
-              "name": "Chris Olave",
-              "position": "WR",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-13T22:36Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4361370/chris-olave"
             },
             {
               "id": "4569559",
@@ -7137,6 +7137,15 @@
           "name": "Washington Commanders",
           "players": [
             {
+              "id": "4360635",
+              "name": "Chig Okonkwo",
+              "position": "TE",
+              "status": "Questionable",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-17T20:19Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4360635/chig-okonkwo"
+            },
+            {
               "id": "3925354",
               "name": "Daron Payne",
               "position": "DT",
@@ -7144,15 +7153,6 @@
               "injury": null,
               "reportedAt": "2026-09-17T20:13Z",
               "source": "https://www.espn.com/nfl/player/_/id/3925354/daron-payne"
-            },
-            {
-              "id": "4360635",
-              "name": "Chig Okonkwo",
-              "position": "TE",
-              "status": "Questionable",
-              "injury": "Hamstring",
-              "reportedAt": "2026-09-17T16:34Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4360635/chig-okonkwo"
             },
             {
               "id": "4572460",
@@ -7460,11 +7460,19 @@
           "to": "Active",
           "observedAt": "2026-09-17T20:34:07Z",
           "source": "https://www.espn.com/nfl/player/_/id/3925354/daron-payne"
+        },
+        {
+          "teamId": "18",
+          "name": "Chris Olave",
+          "from": "Active",
+          "to": "Questionable",
+          "observedAt": "2026-09-17T20:36:55Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4361370/chris-olave"
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-17T20:34:07Z",
-      "lastAttemptAt": "2026-09-17T20:34:07Z",
+      "checkedAt": "2026-09-17T20:36:55Z",
+      "lastAttemptAt": "2026-09-17T20:36:55Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7515,8 +7523,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T20:34:07Z",
-      "lastAttemptAt": "2026-09-17T20:34:07Z",
+      "checkedAt": "2026-09-17T20:36:55Z",
+      "lastAttemptAt": "2026-09-17T20:36:55Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
