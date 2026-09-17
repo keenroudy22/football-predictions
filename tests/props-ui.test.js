@@ -8,7 +8,7 @@ const root=path.resolve(__dirname,'..');
 const script=fs.readFileSync(path.join(root,'site','app.js'),'utf8').replace(/\binit\(\);\s*$/,'');
 const context={FootballRecords:require(path.join(root,'site','records.js')),localStorage:{getItem:()=>null},Intl,Date};
 vm.createContext(context);
-vm.runInContext(script+'\n globalThis.testAPI={pickCard,research,state,playerMovement,workloadPanel,builderEligible,compatibleTicket,ticketText,americanToDecimal,decimalToAmerican,weekOf};',context);
+vm.runInContext(script+'\n globalThis.testAPI={pickCard,parlayBoard,research,state,playerMovement,workloadPanel,builderEligible,compatibleTicket,ticketText,americanToDecimal,decimalToAmerican,weekOf};',context);
 
 // Keep assertions about initially visible content independent of nested research disclosures.
 function disclosure(html,className){
@@ -223,4 +223,40 @@ test('compact team colors require a matching game team and a safe verified color
   identity.team.color='#005A9C';identity.status='stale';
   assert.doesNotMatch(context.testAPI.pickCard(p,0,{compact:true}),/--pick-team-color/);
   delete state.identities;
+});
+
+test('published parlay expands to a numbered card with all four exact legs and individual form',()=>{
+  const report=JSON.parse(fs.readFileSync(path.join(root,'research','2026-09-17-NFL-1730-review.json')));
+  const actual=context.FootballRecords.latest([report]).find(p=>p.id==='NFL-2026-W2-det-buf-volume-fun-sgp-dk');
+  assert.ok(actual,'Expected the published four-leg ticket');
+  const p=compactFixture({...actual,kind:'parlays',favorite:false,status:'active',recentForm:{last5:{hits:5,sample:5},last10:{hits:10,sample:10}}});
+  const html=context.testAPI.parlayBoard([p]),card=disclosure(html,'kr-published-item');
+  assert.match(card.inside,/<span class="number">01<\/span>/);
+  assert.doesNotMatch(html,/NaN|Game-log verification pending|Recent hit rate/);
+  const visible=disclosure(card.inside,'pick-details').outside;
+  assert.match(visible,/Ticket legs · 4/);
+  for(const leg of actual.legs)assert.ok(visible.includes(leg),leg);
+  assert.match(visible,/Last 5: 3\/5 · 60% · Last 10: 6\/10 · 60%/);
+  assert.match(visible,/Last 5: 3\/5 · 60% · Last 10: 7\/10 · 70%/);
+  assert.match(visible,/Last 5: 2\/5 · 40% · Last 10: 4\/10 · 40%/);
+  assert.match(visible,/Last 5: 4\/5 · 80% · Last 10: 7\/10 · 70%/);
+  assert.match(visible,/not this ticket’s win probability/);
+  assert.doesNotMatch(visible,/Last 5: 5\/5|Last 10: 10\/10/);
+  for(const leg of actual.legResearch)assert.ok(visible.includes(leg.source));
+  assert.doesNotMatch(context.testAPI.pickCard(p),/NaN/,'direct callers without an index are also safe');
+});
+
+test('parlay leg rates reject different thresholds, windows, unsupported comparisons and invalid observations',()=>{
+  const research={player:'Example Player',line:4,market:'receptions',comparison:'at least',window:'Full game',last5:{hits:3,sample:5},last10:{hits:6,sample:10},valuesNewestFirst:[4,5,2,3,6,4,5,2,3,6],source:'https://example.com/log'};
+  const p=compactFixture({kind:'parlays',marketWindow:'Full game',legs:['Example Player 4+ receptions · Full game'],legResearch:[research],recentForm:null});
+  const good=disclosure(context.testAPI.pickCard(p),'pick-details').outside;
+  assert.match(good,/Last 5: 3\/5 · 60% · Last 10: 6\/10 · 60%/,'a value equal to an at-least line is a hit');
+  for(const extra of [{line:5},{window:'1Q'},{comparison:'OVER'},{source:'javascript:bad'},{valuesNewestFirst:[null,5,2,3,6,4,5,2,3,6]},{valuesNewestFirst:[NaN,5,2,3,6,4,5,2,3,6]},{last5:{hits:5,sample:5},last10:{hits:10,sample:10}}]){
+    const html=disclosure(context.testAPI.pickCard({...p,legResearch:[{...research,...extra}]}),'pick-details').outside;
+    assert.match(html,/See individual leg history/,JSON.stringify(extra));
+    assert.doesNotMatch(html,/Last 5:|Last 10:|Game-log verification pending|NaN/,JSON.stringify(extra));
+  }
+  const duplicate=disclosure(context.testAPI.pickCard({...p,legResearch:[research,research]}),'pick-details').outside;
+  assert.match(duplicate,/See individual leg history/);
+  const absent=context.testAPI.pickCard({...p,legResearch:[]});assert.match(absent,/Example Player 4\+ receptions · Full game/);assert.doesNotMatch(absent,/Game-log verification pending/);
 });
