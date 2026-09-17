@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T18:02:54Z",
+  "updatedAt": "2026-09-17T19:00:37Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -1387,6 +1387,15 @@
           "name": "Cincinnati Bengals",
           "players": [
             {
+              "id": "3915511",
+              "name": "Joe Burrow",
+              "position": "QB",
+              "status": "Questionable",
+              "injury": "Back",
+              "reportedAt": "2026-09-17T17:58Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3915511/joe-burrow"
+            },
+            {
               "id": "4685562",
               "name": "Shemar Stewart",
               "position": "DE",
@@ -1394,15 +1403,6 @@
               "injury": null,
               "reportedAt": "2026-09-16T23:52Z",
               "source": "https://www.espn.com/nfl/player/_/id/4685562/shemar-stewart"
-            },
-            {
-              "id": "3915511",
-              "name": "Joe Burrow",
-              "position": "QB",
-              "status": "Questionable",
-              "injury": "Back",
-              "reportedAt": "2026-09-16T19:45Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3915511/joe-burrow"
             },
             {
               "id": "4427729",
@@ -2772,7 +2772,7 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Hamstring",
-              "reportedAt": "2026-09-17T16:33Z",
+              "reportedAt": "2026-09-17T10:47Z",
               "source": "https://www.espn.com/nfl/player/_/id/4258173/nico-collins"
             },
             {
@@ -7366,8 +7366,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T18:02:54Z",
-      "lastAttemptAt": "2026-09-17T18:02:54Z",
+      "checkedAt": "2026-09-17T19:00:37Z",
+      "lastAttemptAt": "2026-09-17T19:00:37Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7418,8 +7418,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T18:02:54Z",
-      "lastAttemptAt": "2026-09-17T18:02:54Z",
+      "checkedAt": "2026-09-17T19:00:37Z",
+      "lastAttemptAt": "2026-09-17T19:00:37Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
