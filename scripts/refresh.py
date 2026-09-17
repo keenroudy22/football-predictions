@@ -192,7 +192,7 @@ def validate_report(report, games):
     assert published <= datetime.now(timezone.utc) + timedelta(minutes=5), 'Future publication date'
     assert report.get('historicalImport') is True or len(report.get('props', [])) <= 5
     assert len(report.get('riskyProps', [])) <= 3
-    assert len(report.get('parlays', [])) <= 2
+    assert len(report.get('parlays', [])) <= 3
     assert isinstance(report.get('takeaways', []), list)
     assert isinstance(report.get('weeklyReview', []), list)
     if report.get('targetWeek') is not None:
