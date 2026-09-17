@@ -1,0 +1,24 @@
+{
+  "league": "CFB",
+  "targetWeek": 3,
+  "publishedAt": "2026-09-17T15:35:50.156740+00:00",
+  "summary": "11:30 check: Syracuse at Pittsburgh tonight; no official college play from this review.",
+  "props": [],
+  "parlays": [],
+  "gameWatch": [
+    {
+      "id": "CFB-2026-W3-syr-pitt-1130",
+      "gameId": "CFB-401858225",
+      "title": "Syracuse at Pittsburgh \u00b7 spread and total screen",
+      "lineLabel": "DraftKings via ESPN: Pittsburgh -10.5 (-110), total 51.5 (O/U -110)",
+      "quoteNote": "Latest hosted slate checked this run; source quote time unavailable. Not a direct live sportsbook confirmation.",
+      "why": "Public comparison pages disagree on the spread, including an implausible -1.5 entry versus -10.5 in the ESPN feed. Do not promote an apparent discrepancy without checking the exact market.",
+      "needs": "Direct book confirmation, current starting QB/lineup and injury verification, matchup projection and jurisdiction review for any college player props. No official college selection yet.",
+      "nextReviewAt": "2026-09-17T21:30:00Z",
+      "sources": [
+        "https://www.espn.com/college-football/game/_/gameId/401858225",
+        "https://fantasydata.com/ncaa-football/odds"
+      ]
+    }
+  ]
+}
