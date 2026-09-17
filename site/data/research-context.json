@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T20:36:55Z",
+  "updatedAt": "2026-09-17T20:59:54Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -472,7 +472,7 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Hamstring",
-              "reportedAt": "2026-09-17T17:07Z",
+              "reportedAt": "2026-09-17T20:33Z",
               "source": "https://www.espn.com/nfl/player/_/id/4429615/zay-flowers"
             },
             {
@@ -5067,6 +5067,15 @@
           "name": "New Orleans Saints",
           "players": [
             {
+              "id": "3054850",
+              "name": "Alvin Kamara",
+              "position": "RB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-17T20:44Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3054850/alvin-kamara"
+            },
+            {
               "id": "4361370",
               "name": "Chris Olave",
               "position": "WR",
@@ -5110,15 +5119,6 @@
               "injury": "Shoulder",
               "reportedAt": "2026-09-16T21:35Z",
               "source": "https://www.espn.com/nfl/player/_/id/4361194/isaiah-stalbird"
-            },
-            {
-              "id": "3054850",
-              "name": "Alvin Kamara",
-              "position": "RB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-16T20:52Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3054850/alvin-kamara"
             },
             {
               "id": "3124890",
@@ -5527,6 +5527,15 @@
           "name": "New York Jets",
           "players": [
             {
+              "id": "4723820",
+              "name": "Omar Cooper Jr.",
+              "position": "WR",
+              "status": "Questionable",
+              "injury": "Ankle",
+              "reportedAt": "2026-09-17T20:28Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4723820/omar-cooper-jr"
+            },
+            {
               "id": "5118340",
               "name": "D'Angelo Ponds",
               "position": "CB",
@@ -5579,15 +5588,6 @@
               "injury": "Foot",
               "reportedAt": "2026-09-15T15:39Z",
               "source": "https://www.espn.com/nfl/player/_/id/4362094/joseph-ossai"
-            },
-            {
-              "id": "4723820",
-              "name": "Omar Cooper Jr.",
-              "position": "WR",
-              "status": "Questionable",
-              "injury": "Ankle",
-              "reportedAt": "2026-09-15T14:13Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4723820/omar-cooper-jr"
             },
             {
               "id": "3124679",
@@ -7471,8 +7471,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-17T20:36:55Z",
-      "lastAttemptAt": "2026-09-17T20:36:55Z",
+      "checkedAt": "2026-09-17T20:59:54Z",
+      "lastAttemptAt": "2026-09-17T20:59:54Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7523,8 +7523,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T20:36:55Z",
-      "lastAttemptAt": "2026-09-17T20:36:55Z",
+      "checkedAt": "2026-09-17T20:59:54Z",
+      "lastAttemptAt": "2026-09-17T20:59:54Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
