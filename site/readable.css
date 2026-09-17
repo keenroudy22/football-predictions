@@ -28,3 +28,5 @@ body{line-height:1.6}button,input,select{font:inherit}a{color:var(--blue);text-u
 @media(max-width:620px){.intro{padding:16px;margin:16px 0}.intro h1{font-size:30px}.intro p:last-child{font-size:13px}.edition{margin-top:8px}.watch-list>ul{grid-template-columns:1fr}.pick-details>summary{font-size:13px}.parlay-grid input{max-width:100%}.section-head .count{font-size:11px}.sections button{font-size:12px}}
 
 #game-lines,#game-props,#game-injuries,#game-history{scroll-margin-top:85px}
+
+.metric{display:block}.metric strong{margin:8px 0;grid-column:auto;grid-row:auto}
