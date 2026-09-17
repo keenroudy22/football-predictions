@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T21:50:30Z",
+  "updatedAt": "2026-09-17T22:06:58Z",
   "provider": "ESPN public athlete game logs and official box scores",
   "coverage": "NFL regular-season player logs across the current and two previous seasons; defense context is one sourced prior game. Per-record checkedAt is the last successful history check.",
   "picks": {
@@ -14,8 +14,8 @@
         "opponentId": "29",
         "teamId": "3",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4723086",
         "games": [
@@ -883,8 +883,8 @@
         "opponentId": "4",
         "teamId": "27",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3052587",
         "games": [
@@ -2242,8 +2242,8 @@
         "opponentId": "4",
         "teamId": "27",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4243331",
         "games": [
@@ -3525,8 +3525,8 @@
         "opponentId": "20",
         "teamId": "10",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3916148",
         "games": [
@@ -4908,8 +4908,8 @@
         "opponentId": "11",
         "teamId": "33",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4360939",
         "games": [
@@ -6191,8 +6191,8 @@
         "opponentId": "15",
         "teamId": "13",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4890973",
         "games": [
@@ -7077,8 +7077,8 @@
         "opponentId": "4",
         "teamId": "27",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3116165",
         "games": [
@@ -7940,8 +7940,8 @@
         "opponentId": "16",
         "teamId": "9",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4248528",
         "games": [
@@ -9141,8 +9141,8 @@
         "opponentId": "8",
         "teamId": "18",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3929645",
         "games": [
@@ -10544,8 +10544,8 @@
         "opponentId": "27",
         "teamId": "4",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4362238",
         "games": [
@@ -11917,8 +11917,8 @@
         "opponentId": "3",
         "teamId": "29",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4695883",
         "games": [
@@ -12998,8 +12998,8 @@
         "opponentId": "11",
         "teamId": "33",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3916387",
         "games": [
@@ -14228,8 +14228,8 @@
         "opponentId": "20",
         "teamId": "10",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3916148",
         "games": [
@@ -15626,8 +15626,8 @@
         "opponentId": "28",
         "teamId": "21",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3929630",
         "games": [
@@ -17054,8 +17054,8 @@
         "opponentId": "19",
         "teamId": "6",
         "cutoffAt": "2026-09-14T00:20:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4241389",
         "games": [
@@ -18612,7 +18612,7 @@
           }
         ],
         "status": "stale",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "sourceFailures": [
           {
             "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4432665/gamelog?season=2026",
@@ -18633,8 +18633,8 @@
         "opponentId": "6",
         "teamId": "19",
         "cutoffAt": "2026-09-14T00:20:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4595348",
         "games": [
@@ -19684,8 +19684,8 @@
         "opponentId": "1",
         "teamId": "23",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/8439",
         "games": [
@@ -21014,8 +21014,8 @@
         "opponentId": "22",
         "teamId": "24",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4038941",
         "games": [
@@ -22381,8 +22381,8 @@
         "opponentId": "21",
         "teamId": "28",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4426348",
         "games": [
@@ -23516,8 +23516,8 @@
         "opponentId": "8",
         "teamId": "18",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4360689",
         "games": [
@@ -24201,8 +24201,8 @@
         "opponentId": "16",
         "teamId": "9",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4036378",
         "games": [
@@ -25539,8 +25539,8 @@
         "opponentId": "10",
         "teamId": "20",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4427366",
         "games": [
@@ -26907,8 +26907,8 @@
         "opponentId": "9",
         "teamId": "16",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4262921",
         "games": [
@@ -28438,8 +28438,8 @@
         "opponentId": "24",
         "teamId": "22",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4361307",
         "games": [
@@ -29849,8 +29849,8 @@
         "opponentId": "7",
         "teamId": "12",
         "cutoffAt": "2026-09-15T00:15:00Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3139477",
         "games": [
@@ -31144,9 +31144,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
         "games": [
@@ -32615,9 +32615,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
         "games": [
@@ -33807,9 +33807,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
         "games": [
@@ -35266,9 +35266,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
         "games": [
@@ -36455,9 +36455,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4385690",
         "games": [
@@ -37644,9 +37644,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4374302",
         "games": [
@@ -39103,9 +39103,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4373678",
         "games": [
@@ -40472,9 +40472,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4426388",
         "games": [
@@ -41871,9 +41871,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4385690",
         "games": [
@@ -43073,9 +43073,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T21:50:30Z",
-        "checkedAt": "2026-09-17T21:50:30Z",
-        "lastAttemptAt": "2026-09-17T21:50:30Z",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
         "games": [
@@ -44262,6 +44262,2984 @@
           "opponentId": "2"
         }
       }
+    },
+    "NFL-W2-menu-d.j.-moore-receptions": {
+      "gameId": "NFL-401872932",
+      "athleteId": "3915416",
+      "position": "WR",
+      "marketTitle": "D.J. Moore OVER 4.5 receptions",
+      "recentForm": {
+        "stat": "receptions",
+        "statKey": "receptions",
+        "line": 4.5,
+        "direction": "OVER",
+        "opponentId": "8",
+        "teamId": "2",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "status": "ok",
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/3915416",
+        "games": [
+          {
+            "label": "2025-11-09 · NYG",
+            "eventId": "401772875",
+            "date": "2025-11-09T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "19",
+              "name": "New York Giants",
+              "abbreviation": "NYG"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 0.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 0.0,
+              "touches": 0.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772875"
+          },
+          {
+            "label": "2025-11-16 · MIN",
+            "eventId": "401772880",
+            "date": "2025-11-16T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "16",
+              "name": "Minnesota Vikings",
+              "abbreviation": "MIN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 3.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 18.0,
+              "touches": 2.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772880"
+          },
+          {
+            "label": "2025-11-23 · PIT",
+            "eventId": "401772780",
+            "date": "2025-11-23T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "23",
+              "name": "Pittsburgh Steelers",
+              "abbreviation": "PIT"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 64.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772780"
+          },
+          {
+            "label": "2025-11-28 · PHI",
+            "eventId": "401772621",
+            "date": "2025-11-28T20:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "21",
+              "name": "Philadelphia Eagles",
+              "abbreviation": "PHI"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 10.0,
+              "receptions": 2.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 17.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772621"
+          },
+          {
+            "label": "2025-12-07 · GB",
+            "eventId": "401772897",
+            "date": "2025-12-07T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "9",
+              "name": "Green Bay Packers",
+              "abbreviation": "GB"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": -4.0,
+              "touches": 1.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772897"
+          },
+          {
+            "label": "2025-12-14 · CLE",
+            "eventId": "401772904",
+            "date": "2025-12-14T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "5",
+              "name": "Cleveland Browns",
+              "abbreviation": "CLE"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 69.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772904"
+          },
+          {
+            "label": "2025-12-21 · GB",
+            "eventId": "401772613",
+            "date": "2025-12-21T01:20:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "9",
+              "name": "Green Bay Packers",
+              "abbreviation": "GB"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 12.0,
+              "receptions": 5.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 97.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772613"
+          },
+          {
+            "label": "2025-12-29 · SF",
+            "eventId": "401772935",
+            "date": "2025-12-29T01:20:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "25",
+              "name": "San Francisco 49ers",
+              "abbreviation": "SF"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 1.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 7.0,
+              "touches": 1.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772935"
+          },
+          {
+            "label": "2026-01-04 · DET",
+            "eventId": "401772965",
+            "date": "2026-01-04T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "8",
+              "name": "Detroit Lions",
+              "abbreviation": "DET"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 11.0,
+              "touches": 1.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965"
+          },
+          {
+            "label": "2026-09-13 · HOU",
+            "eventId": "401872660",
+            "date": "2026-09-13T17:00:00Z",
+            "season": 2026,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 100.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+          }
+        ],
+        "historyGames": [
+          {
+            "label": "2024-09-08 · TEN",
+            "eventId": "401671719",
+            "date": "2024-09-08T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "10",
+              "name": "Tennessee Titans",
+              "abbreviation": "TEN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 14.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 36.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671719"
+          },
+          {
+            "label": "2024-09-16 · HOU",
+            "eventId": "401671786",
+            "date": "2024-09-16T00:20:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 6.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 10.0,
+              "receivingYards": 53.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671786"
+          },
+          {
+            "label": "2024-09-22 · IND",
+            "eventId": "401671865",
+            "date": "2024-09-22T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "11",
+              "name": "Indianapolis Colts",
+              "abbreviation": "IND"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 8.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": -6.0,
+              "receptions": 8.0,
+              "receivingTargets": 10.0,
+              "receivingYards": 78.0,
+              "touches": 9.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671865"
+          },
+          {
+            "label": "2024-09-29 · LAR",
+            "eventId": "401671871",
+            "date": "2024-09-29T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "14",
+              "name": "Los Angeles Rams",
+              "abbreviation": "LAR"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 3.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 22.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671871"
+          },
+          {
+            "label": "2024-10-06 · CAR",
+            "eventId": "401671872",
+            "date": "2024-10-06T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "29",
+              "name": "Carolina Panthers",
+              "abbreviation": "CAR"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 105.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671872"
+          },
+          {
+            "label": "2024-10-13 · JAX",
+            "eventId": "401671802",
+            "date": "2024-10-13T13:30:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "30",
+              "name": "Jacksonville Jaguars",
+              "abbreviation": "JAX"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 20.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671802"
+          },
+          {
+            "label": "2024-10-27 · WSH",
+            "eventId": "401671599",
+            "date": "2024-10-27T20:25:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "28",
+              "name": "Washington Commanders",
+              "abbreviation": "WSH"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 7.0,
+              "receptions": 2.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 27.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671599"
+          },
+          {
+            "label": "2024-11-03 · ARI",
+            "eventId": "401671661",
+            "date": "2024-11-03T21:05:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "22",
+              "name": "Arizona Cardinals",
+              "abbreviation": "ARI"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 9.0,
+              "receivingYards": 33.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671661"
+          },
+          {
+            "label": "2024-11-10 · NE",
+            "eventId": "401671873",
+            "date": "2024-11-10T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 3.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 3.0,
+              "receptions": 3.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 24.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671873"
+          },
+          {
+            "label": "2024-11-17 · GB",
+            "eventId": "401671869",
+            "date": "2024-11-17T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "9",
+              "name": "Green Bay Packers",
+              "abbreviation": "GB"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 7.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 5.0,
+              "receptions": 7.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 62.0,
+              "touches": 8.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671869"
+          },
+          {
+            "label": "2024-11-24 · MIN",
+            "eventId": "401671870",
+            "date": "2024-11-24T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "16",
+              "name": "Minnesota Vikings",
+              "abbreviation": "MIN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 7.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 13.0,
+              "receptions": 7.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 106.0,
+              "touches": 8.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671870"
+          },
+          {
+            "label": "2024-11-28 · DET",
+            "eventId": "401671492",
+            "date": "2024-11-28T17:30:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "8",
+              "name": "Detroit Lions",
+              "abbreviation": "DET"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 8.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 8.0,
+              "receivingTargets": 16.0,
+              "receivingYards": 97.0,
+              "touches": 8.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671492"
+          },
+          {
+            "label": "2024-12-08 · SF",
+            "eventId": "401671774",
+            "date": "2024-12-08T21:25:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "25",
+              "name": "San Francisco 49ers",
+              "abbreviation": "SF"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 6.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 49.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671774"
+          },
+          {
+            "label": "2024-12-17 · MIN",
+            "eventId": "401671489",
+            "date": "2024-12-17T01:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "16",
+              "name": "Minnesota Vikings",
+              "abbreviation": "MIN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 8.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 3.0,
+              "rushingYards": 24.0,
+              "receptions": 8.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 46.0,
+              "touches": 11.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671489"
+          },
+          {
+            "label": "2024-12-22 · DET",
+            "eventId": "401671868",
+            "date": "2024-12-22T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "8",
+              "name": "Detroit Lions",
+              "abbreviation": "DET"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 7.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 2.0,
+              "receptions": 7.0,
+              "receivingTargets": 10.0,
+              "receivingYards": 68.0,
+              "touches": 8.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671868"
+          },
+          {
+            "label": "2024-12-27 · SEA",
+            "eventId": "401671876",
+            "date": "2024-12-27T01:15:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "26",
+              "name": "Seattle Seahawks",
+              "abbreviation": "SEA"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 6.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 8.0,
+              "receptions": 6.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 54.0,
+              "touches": 8.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671876"
+          },
+          {
+            "label": "2025-01-05 · GB",
+            "eventId": "401671844",
+            "date": "2025-01-05T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "9",
+              "name": "Green Bay Packers",
+              "abbreviation": "GB"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 9.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 5.0,
+              "receptions": 9.0,
+              "receivingTargets": 10.0,
+              "receivingYards": 86.0,
+              "touches": 10.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671844"
+          },
+          {
+            "label": "2025-09-09 · MIN",
+            "eventId": "401772810",
+            "date": "2025-09-09T00:15:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "16",
+              "name": "Minnesota Vikings",
+              "abbreviation": "MIN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 3.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 3.0,
+              "rushingYards": 8.0,
+              "receptions": 3.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 68.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772810"
+          },
+          {
+            "label": "2025-09-14 · DET",
+            "eventId": "401772835",
+            "date": "2025-09-14T17:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "8",
+              "name": "Detroit Lions",
+              "abbreviation": "DET"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 46.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772835"
+          },
+          {
+            "label": "2025-09-21 · DAL",
+            "eventId": "401772844",
+            "date": "2025-09-21T20:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "6",
+              "name": "Dallas Cowboys",
+              "abbreviation": "DAL"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 3.0,
+              "rushingYards": 7.0,
+              "receptions": 4.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 21.0,
+              "touches": 7.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772844"
+          },
+          {
+            "label": "2025-09-28 · LV",
+            "eventId": "401772742",
+            "date": "2025-09-28T20:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "13",
+              "name": "Las Vegas Raiders",
+              "abbreviation": "LV"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 38.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772742"
+          },
+          {
+            "label": "2025-10-14 · WSH",
+            "eventId": "401772717",
+            "date": "2025-10-14T00:15:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "28",
+              "name": "Washington Commanders",
+              "abbreviation": "WSH"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 3.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 10.0,
+              "receptions": 3.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 42.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772717"
+          },
+          {
+            "label": "2025-10-19 · NO",
+            "eventId": "401772861",
+            "date": "2025-10-19T17:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "18",
+              "name": "New Orleans Saints",
+              "abbreviation": "NO"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 3.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 9.0,
+              "receptions": 3.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 43.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772861"
+          },
+          {
+            "label": "2025-10-26 · BAL",
+            "eventId": "401772759",
+            "date": "2025-10-26T17:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "33",
+              "name": "Baltimore Ravens",
+              "abbreviation": "BAL"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 3.0,
+              "receptions": 4.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 73.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772759"
+          },
+          {
+            "label": "2025-11-02 · CIN",
+            "eventId": "401772765",
+            "date": "2025-11-02T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "4",
+              "name": "Cincinnati Bengals",
+              "abbreviation": "CIN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 17.0,
+              "receptions": 4.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 72.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772765"
+          },
+          {
+            "label": "2025-11-09 · NYG",
+            "eventId": "401772875",
+            "date": "2025-11-09T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "19",
+              "name": "New York Giants",
+              "abbreviation": "NYG"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 0.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 0.0,
+              "touches": 0.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772875"
+          },
+          {
+            "label": "2025-11-16 · MIN",
+            "eventId": "401772880",
+            "date": "2025-11-16T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "16",
+              "name": "Minnesota Vikings",
+              "abbreviation": "MIN"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 3.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 18.0,
+              "touches": 2.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772880"
+          },
+          {
+            "label": "2025-11-23 · PIT",
+            "eventId": "401772780",
+            "date": "2025-11-23T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "23",
+              "name": "Pittsburgh Steelers",
+              "abbreviation": "PIT"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 64.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772780"
+          },
+          {
+            "label": "2025-11-28 · PHI",
+            "eventId": "401772621",
+            "date": "2025-11-28T20:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "21",
+              "name": "Philadelphia Eagles",
+              "abbreviation": "PHI"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 10.0,
+              "receptions": 2.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 17.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772621"
+          },
+          {
+            "label": "2025-12-07 · GB",
+            "eventId": "401772897",
+            "date": "2025-12-07T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "9",
+              "name": "Green Bay Packers",
+              "abbreviation": "GB"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": -4.0,
+              "touches": 1.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772897"
+          },
+          {
+            "label": "2025-12-14 · CLE",
+            "eventId": "401772904",
+            "date": "2025-12-14T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "5",
+              "name": "Cleveland Browns",
+              "abbreviation": "CLE"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 4.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 69.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772904"
+          },
+          {
+            "label": "2025-12-21 · GB",
+            "eventId": "401772613",
+            "date": "2025-12-21T01:20:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "9",
+              "name": "Green Bay Packers",
+              "abbreviation": "GB"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 1.0,
+              "rushingYards": 12.0,
+              "receptions": 5.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 97.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772613"
+          },
+          {
+            "label": "2025-12-29 · SF",
+            "eventId": "401772935",
+            "date": "2025-12-29T01:20:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "25",
+              "name": "San Francisco 49ers",
+              "abbreviation": "SF"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 1.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 7.0,
+              "touches": 1.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772935"
+          },
+          {
+            "label": "2026-01-04 · DET",
+            "eventId": "401772965",
+            "date": "2026-01-04T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "8",
+              "name": "Detroit Lions",
+              "abbreviation": "DET"
+            },
+            "team": {
+              "id": "3",
+              "name": null,
+              "abbreviation": "CHI"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 11.0,
+              "touches": 1.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965"
+          },
+          {
+            "label": "2026-09-13 · HOU",
+            "eventId": "401872660",
+            "date": "2026-09-13T17:00:00Z",
+            "season": 2026,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 100.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+          }
+        ],
+        "sample": 10,
+        "vsOpponent": {
+          "opponentId": "8",
+          "games": [
+            {
+              "label": "2024-11-28 · DET",
+              "eventId": "401671492",
+              "date": "2024-11-28T17:30:00Z",
+              "season": 2024,
+              "seasonType": "regular",
+              "isHome": false,
+              "opponent": {
+                "id": "8",
+                "name": "Detroit Lions",
+                "abbreviation": "DET"
+              },
+              "team": {
+                "id": "3",
+                "name": null,
+                "abbreviation": "CHI"
+              },
+              "value": 8.0,
+              "hit": true,
+              "push": false,
+              "workload": {
+                "rushingAttempts": 0.0,
+                "rushingYards": 0.0,
+                "receptions": 8.0,
+                "receivingTargets": 16.0,
+                "receivingYards": 97.0,
+                "touches": 8.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671492"
+            },
+            {
+              "label": "2024-12-22 · DET",
+              "eventId": "401671868",
+              "date": "2024-12-22T18:00:00Z",
+              "season": 2024,
+              "seasonType": "regular",
+              "isHome": true,
+              "opponent": {
+                "id": "8",
+                "name": "Detroit Lions",
+                "abbreviation": "DET"
+              },
+              "team": {
+                "id": "3",
+                "name": null,
+                "abbreviation": "CHI"
+              },
+              "value": 7.0,
+              "hit": true,
+              "push": false,
+              "workload": {
+                "rushingAttempts": 1.0,
+                "rushingYards": 2.0,
+                "receptions": 7.0,
+                "receivingTargets": 10.0,
+                "receivingYards": 68.0,
+                "touches": 8.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671868"
+            },
+            {
+              "label": "2025-09-14 · DET",
+              "eventId": "401772835",
+              "date": "2025-09-14T17:00:00Z",
+              "season": 2025,
+              "seasonType": "regular",
+              "isHome": false,
+              "opponent": {
+                "id": "8",
+                "name": "Detroit Lions",
+                "abbreviation": "DET"
+              },
+              "team": {
+                "id": "3",
+                "name": null,
+                "abbreviation": "CHI"
+              },
+              "value": 5.0,
+              "hit": true,
+              "push": false,
+              "workload": {
+                "rushingAttempts": 0.0,
+                "rushingYards": 0.0,
+                "receptions": 5.0,
+                "receivingTargets": 6.0,
+                "receivingYards": 46.0,
+                "touches": 5.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772835"
+            },
+            {
+              "label": "2026-01-04 · DET",
+              "eventId": "401772965",
+              "date": "2026-01-04T21:25:00Z",
+              "season": 2025,
+              "seasonType": "regular",
+              "isHome": true,
+              "opponent": {
+                "id": "8",
+                "name": "Detroit Lions",
+                "abbreviation": "DET"
+              },
+              "team": {
+                "id": "3",
+                "name": null,
+                "abbreviation": "CHI"
+              },
+              "value": 1.0,
+              "hit": false,
+              "push": false,
+              "workload": {
+                "rushingAttempts": 0.0,
+                "rushingYards": 0.0,
+                "receptions": 1.0,
+                "receivingTargets": 3.0,
+                "receivingYards": 11.0,
+                "touches": 1.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965"
+            }
+          ],
+          "sample": 4
+        },
+        "coverage": {
+          "seasons": [
+            2024,
+            2025,
+            2026
+          ],
+          "seasonType": "regular",
+          "unavailableSeasons": [],
+          "availableGames": 35,
+          "missingStatsExcluded": true,
+          "note": "Verified games played before cutoff; no preseason, postseason, DNP or inferred zero. Opponent meetings cover the current and two previous seasons only."
+        },
+        "method": "Regular-season games played before this recommendation game and check time; exact published threshold and direction.",
+        "last5": {
+          "hits": 2,
+          "pushes": 0,
+          "misses": 3,
+          "sample": 5,
+          "decisions": 5
+        },
+        "last10": {
+          "hits": 3,
+          "pushes": 0,
+          "misses": 7,
+          "sample": 10,
+          "decisions": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 5.4,
+              "low": 3.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 4.9,
+              "low": 3.0,
+              "high": 8.0
+            }
+          }
+        ],
+        "lastVsOpponent": {
+          "value": 1.0,
+          "date": "2026-01-04",
+          "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965",
+          "eventId": "401772965",
+          "opponentId": "8"
+        }
+      }
+    },
+    "NFL-W2-menu-james-cook-receptions": {
+      "gameId": "NFL-401872932",
+      "athleteId": "4379399",
+      "position": "RB",
+      "marketTitle": "James Cook OVER 2.5 receptions",
+      "recentForm": {
+        "stat": "receptions",
+        "statKey": "receptions",
+        "line": 2.5,
+        "direction": "OVER",
+        "opponentId": "8",
+        "teamId": "2",
+        "cutoffAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "status": "ok",
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4379399",
+        "games": [
+          {
+            "label": "2025-11-09 · MIA",
+            "eventId": "401772771",
+            "date": "2025-11-09T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "15",
+              "name": "Miami Dolphins",
+              "abbreviation": "MIA"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 53.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 24.0,
+              "touches": 18.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772771"
+          },
+          {
+            "label": "2025-11-16 · TB",
+            "eventId": "401772776",
+            "date": "2025-11-16T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "27",
+              "name": "Tampa Bay Buccaneers",
+              "abbreviation": "TB"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 16.0,
+              "rushingYards": 48.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 66.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772776"
+          },
+          {
+            "label": "2025-11-21 · HOU",
+            "eventId": "401772946",
+            "date": "2025-11-21T01:15:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 17.0,
+              "rushingYards": 116.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 13.0,
+              "touches": 20.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772946"
+          },
+          {
+            "label": "2025-11-30 · PIT",
+            "eventId": "401772789",
+            "date": "2025-11-30T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "23",
+              "name": "Pittsburgh Steelers",
+              "abbreviation": "PIT"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 32.0,
+              "rushingYards": 144.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 33.0,
+              "touches": 35.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772789"
+          },
+          {
+            "label": "2025-12-07 · CIN",
+            "eventId": "401772902",
+            "date": "2025-12-07T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "4",
+              "name": "Cincinnati Bengals",
+              "abbreviation": "CIN"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 18.0,
+              "rushingYards": 80.0,
+              "receptions": 2.0,
+              "receivingTargets": 2.0,
+              "receivingYards": 31.0,
+              "touches": 20.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772902"
+          },
+          {
+            "label": "2025-12-14 · NE",
+            "eventId": "401772795",
+            "date": "2025-12-14T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 22.0,
+              "rushingYards": 107.0,
+              "receptions": 2.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 4.0,
+              "touches": 24.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772795"
+          },
+          {
+            "label": "2025-12-21 · CLE",
+            "eventId": "401772802",
+            "date": "2025-12-21T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "5",
+              "name": "Cleveland Browns",
+              "abbreviation": "CLE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 16.0,
+              "rushingYards": 117.0,
+              "receptions": 1.0,
+              "receivingTargets": 2.0,
+              "receivingYards": 17.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772802"
+          },
+          {
+            "label": "2025-12-28 · PHI",
+            "eventId": "401772917",
+            "date": "2025-12-28T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "21",
+              "name": "Philadelphia Eagles",
+              "abbreviation": "PHI"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 20.0,
+              "rushingYards": 74.0,
+              "receptions": 1.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 3.0,
+              "touches": 21.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772917"
+          },
+          {
+            "label": "2026-01-04 · NYJ",
+            "eventId": "401772967",
+            "date": "2026-01-04T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "20",
+              "name": "New York Jets",
+              "abbreviation": "NYJ"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 15.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 2.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772967"
+          },
+          {
+            "label": "2026-09-13 · HOU",
+            "eventId": "401872660",
+            "date": "2026-09-13T17:00:00Z",
+            "season": 2026,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 57.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 12.0,
+              "touches": 16.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+          }
+        ],
+        "historyGames": [
+          {
+            "label": "2024-09-08 · ARI",
+            "eventId": "401671617",
+            "date": "2024-09-08T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "22",
+              "name": "Arizona Cardinals",
+              "abbreviation": "ARI"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 19.0,
+              "rushingYards": 71.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 32.0,
+              "touches": 22.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671617"
+          },
+          {
+            "label": "2024-09-13 · MIA",
+            "eventId": "401671807",
+            "date": "2024-09-13T00:15:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "15",
+              "name": "Miami Dolphins",
+              "abbreviation": "MIA"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 11.0,
+              "rushingYards": 78.0,
+              "receptions": 1.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 17.0,
+              "touches": 12.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671807"
+          },
+          {
+            "label": "2024-09-23 · JAX",
+            "eventId": "401671682",
+            "date": "2024-09-23T23:30:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "30",
+              "name": "Jacksonville Jaguars",
+              "abbreviation": "JAX"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 4.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 11.0,
+              "rushingYards": 39.0,
+              "receptions": 4.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 48.0,
+              "touches": 15.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671682"
+          },
+          {
+            "label": "2024-09-30 · BAL",
+            "eventId": "401671783",
+            "date": "2024-09-30T00:20:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "33",
+              "name": "Baltimore Ravens",
+              "abbreviation": "BAL"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 9.0,
+              "rushingYards": 39.0,
+              "receptions": 1.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 9.0,
+              "touches": 10.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671783"
+          },
+          {
+            "label": "2024-10-06 · HOU",
+            "eventId": "401671859",
+            "date": "2024-10-06T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 20.0,
+              "rushingYards": 82.0,
+              "receptions": 2.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 17.0,
+              "touches": 22.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671859"
+          },
+          {
+            "label": "2024-10-20 · TEN",
+            "eventId": "401671616",
+            "date": "2024-10-20T17:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "10",
+              "name": "Tennessee Titans",
+              "abbreviation": "TEN"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 12.0,
+              "rushingYards": 32.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 12.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671616"
+          },
+          {
+            "label": "2024-10-27 · SEA",
+            "eventId": "401671760",
+            "date": "2024-10-27T20:05:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "26",
+              "name": "Seattle Seahawks",
+              "abbreviation": "SEA"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 17.0,
+              "rushingYards": 111.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 22.0,
+              "touches": 20.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671760"
+          },
+          {
+            "label": "2024-11-03 · MIA",
+            "eventId": "401671493",
+            "date": "2024-11-03T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "15",
+              "name": "Miami Dolphins",
+              "abbreviation": "MIA"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 10.0,
+              "rushingYards": 44.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 25.0,
+              "touches": 15.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671493"
+          },
+          {
+            "label": "2024-11-10 · IND",
+            "eventId": "401671863",
+            "date": "2024-11-10T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "11",
+              "name": "Indianapolis Colts",
+              "abbreviation": "IND"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 19.0,
+              "rushingYards": 80.0,
+              "receptions": 1.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 5.0,
+              "touches": 20.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671863"
+          },
+          {
+            "label": "2024-11-17 · KC",
+            "eventId": "401671665",
+            "date": "2024-11-17T21:25:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "12",
+              "name": "Kansas City Chiefs",
+              "abbreviation": "KC"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 9.0,
+              "rushingYards": 20.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 7.0,
+              "touches": 14.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671665"
+          },
+          {
+            "label": "2024-12-02 · SF",
+            "eventId": "401671781",
+            "date": "2024-12-02T01:20:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "25",
+              "name": "San Francisco 49ers",
+              "abbreviation": "SF"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 14.0,
+              "rushingYards": 107.0,
+              "receptions": 1.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 13.0,
+              "touches": 15.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671781"
+          },
+          {
+            "label": "2024-12-08 · LAR",
+            "eventId": "401671773",
+            "date": "2024-12-08T21:25:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "14",
+              "name": "Los Angeles Rams",
+              "abbreviation": "LAR"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 6.0,
+              "rushingYards": 20.0,
+              "receptions": 2.0,
+              "receivingTargets": 2.0,
+              "receivingYards": 9.0,
+              "touches": 8.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671773"
+          },
+          {
+            "label": "2024-12-15 · DET",
+            "eventId": "401671681",
+            "date": "2024-12-15T21:25:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "8",
+              "name": "Detroit Lions",
+              "abbreviation": "DET"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 14.0,
+              "rushingYards": 105.0,
+              "receptions": 1.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 28.0,
+              "touches": 15.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671681"
+          },
+          {
+            "label": "2024-12-22 · NE",
+            "eventId": "401671494",
+            "date": "2024-12-22T21:25:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 11.0,
+              "rushingYards": 100.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 26.0,
+              "touches": 14.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671494"
+          },
+          {
+            "label": "2024-12-29 · NYJ",
+            "eventId": "401671495",
+            "date": "2024-12-29T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "20",
+              "name": "New York Jets",
+              "abbreviation": "NYJ"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 15.0,
+              "rushingYards": 53.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 15.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671495"
+          },
+          {
+            "label": "2025-01-05 · NE",
+            "eventId": "401671831",
+            "date": "2025-01-05T18:00:00Z",
+            "season": 2024,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 10.0,
+              "rushingYards": 28.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 10.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671831"
+          },
+          {
+            "label": "2025-09-08 · BAL",
+            "eventId": "401772918",
+            "date": "2025-09-08T00:20:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "33",
+              "name": "Baltimore Ravens",
+              "abbreviation": "BAL"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 44.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 58.0,
+              "touches": 18.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772918"
+          },
+          {
+            "label": "2025-09-14 · NYJ",
+            "eventId": "401772727",
+            "date": "2025-09-14T17:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "20",
+              "name": "New York Jets",
+              "abbreviation": "NYJ"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 21.0,
+              "rushingYards": 132.0,
+              "receptions": 1.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 3.0,
+              "touches": 22.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772727"
+          },
+          {
+            "label": "2025-09-19 · MIA",
+            "eventId": "401772937",
+            "date": "2025-09-19T00:15:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "15",
+              "name": "Miami Dolphins",
+              "abbreviation": "MIA"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 19.0,
+              "rushingYards": 108.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 10.0,
+              "touches": 22.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772937"
+          },
+          {
+            "label": "2025-09-28 · NO",
+            "eventId": "401772740",
+            "date": "2025-09-28T17:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "18",
+              "name": "New Orleans Saints",
+              "abbreviation": "NO"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 22.0,
+              "rushingYards": 117.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 18.0,
+              "touches": 25.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772740"
+          },
+          {
+            "label": "2025-10-06 · NE",
+            "eventId": "401772922",
+            "date": "2025-10-06T00:20:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 15.0,
+              "rushingYards": 49.0,
+              "receptions": 0.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 0.0,
+              "touches": 15.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772922"
+          },
+          {
+            "label": "2025-10-13 · ATL",
+            "eventId": "401772815",
+            "date": "2025-10-13T23:15:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "1",
+              "name": "Atlanta Falcons",
+              "abbreviation": "ATL"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 17.0,
+              "rushingYards": 87.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772815"
+          },
+          {
+            "label": "2025-10-26 · CAR",
+            "eventId": "401772865",
+            "date": "2025-10-26T17:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "29",
+              "name": "Carolina Panthers",
+              "abbreviation": "CAR"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 19.0,
+              "rushingYards": 216.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772865"
+          },
+          {
+            "label": "2025-11-02 · KC",
+            "eventId": "401772768",
+            "date": "2025-11-02T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "12",
+              "name": "Kansas City Chiefs",
+              "abbreviation": "KC"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 27.0,
+              "rushingYards": 114.0,
+              "receptions": 1.0,
+              "receivingTargets": 1.0,
+              "receivingYards": 11.0,
+              "touches": 28.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772768"
+          },
+          {
+            "label": "2025-11-09 · MIA",
+            "eventId": "401772771",
+            "date": "2025-11-09T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "15",
+              "name": "Miami Dolphins",
+              "abbreviation": "MIA"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 5.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 53.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 24.0,
+              "touches": 18.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772771"
+          },
+          {
+            "label": "2025-11-16 · TB",
+            "eventId": "401772776",
+            "date": "2025-11-16T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "27",
+              "name": "Tampa Bay Buccaneers",
+              "abbreviation": "TB"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 16.0,
+              "rushingYards": 48.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 66.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772776"
+          },
+          {
+            "label": "2025-11-21 · HOU",
+            "eventId": "401772946",
+            "date": "2025-11-21T01:15:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 17.0,
+              "rushingYards": 116.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 13.0,
+              "touches": 20.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772946"
+          },
+          {
+            "label": "2025-11-30 · PIT",
+            "eventId": "401772789",
+            "date": "2025-11-30T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "23",
+              "name": "Pittsburgh Steelers",
+              "abbreviation": "PIT"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 32.0,
+              "rushingYards": 144.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 33.0,
+              "touches": 35.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772789"
+          },
+          {
+            "label": "2025-12-07 · CIN",
+            "eventId": "401772902",
+            "date": "2025-12-07T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "4",
+              "name": "Cincinnati Bengals",
+              "abbreviation": "CIN"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 18.0,
+              "rushingYards": 80.0,
+              "receptions": 2.0,
+              "receivingTargets": 2.0,
+              "receivingYards": 31.0,
+              "touches": 20.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772902"
+          },
+          {
+            "label": "2025-12-14 · NE",
+            "eventId": "401772795",
+            "date": "2025-12-14T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "17",
+              "name": "New England Patriots",
+              "abbreviation": "NE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 2.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 22.0,
+              "rushingYards": 107.0,
+              "receptions": 2.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 4.0,
+              "touches": 24.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772795"
+          },
+          {
+            "label": "2025-12-21 · CLE",
+            "eventId": "401772802",
+            "date": "2025-12-21T18:00:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "5",
+              "name": "Cleveland Browns",
+              "abbreviation": "CLE"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 16.0,
+              "rushingYards": 117.0,
+              "receptions": 1.0,
+              "receivingTargets": 2.0,
+              "receivingYards": 17.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772802"
+          },
+          {
+            "label": "2025-12-28 · PHI",
+            "eventId": "401772917",
+            "date": "2025-12-28T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "21",
+              "name": "Philadelphia Eagles",
+              "abbreviation": "PHI"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 1.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 20.0,
+              "rushingYards": 74.0,
+              "receptions": 1.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 3.0,
+              "touches": 21.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772917"
+          },
+          {
+            "label": "2026-01-04 · NYJ",
+            "eventId": "401772967",
+            "date": "2026-01-04T21:25:00Z",
+            "season": 2025,
+            "seasonType": "regular",
+            "isHome": true,
+            "opponent": {
+              "id": "20",
+              "name": "New York Jets",
+              "abbreviation": "NYJ"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 0.0,
+            "hit": false,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 2.0,
+              "rushingYards": 15.0,
+              "receptions": 0.0,
+              "receivingTargets": 0.0,
+              "receivingYards": 0.0,
+              "touches": 2.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772967"
+          },
+          {
+            "label": "2026-09-13 · HOU",
+            "eventId": "401872660",
+            "date": "2026-09-13T17:00:00Z",
+            "season": 2026,
+            "seasonType": "regular",
+            "isHome": false,
+            "opponent": {
+              "id": "34",
+              "name": "Houston Texans",
+              "abbreviation": "HOU"
+            },
+            "team": {
+              "id": "2",
+              "name": null,
+              "abbreviation": "BUF"
+            },
+            "value": 3.0,
+            "hit": true,
+            "push": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 57.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 12.0,
+              "touches": 16.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+          }
+        ],
+        "sample": 10,
+        "vsOpponent": {
+          "opponentId": "8",
+          "games": [
+            {
+              "label": "2024-12-15 · DET",
+              "eventId": "401671681",
+              "date": "2024-12-15T21:25:00Z",
+              "season": 2024,
+              "seasonType": "regular",
+              "isHome": false,
+              "opponent": {
+                "id": "8",
+                "name": "Detroit Lions",
+                "abbreviation": "DET"
+              },
+              "team": {
+                "id": "2",
+                "name": null,
+                "abbreviation": "BUF"
+              },
+              "value": 1.0,
+              "hit": false,
+              "push": false,
+              "workload": {
+                "rushingAttempts": 14.0,
+                "rushingYards": 105.0,
+                "receptions": 1.0,
+                "receivingTargets": 1.0,
+                "receivingYards": 28.0,
+                "touches": 15.0
+              },
+              "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671681"
+            }
+          ],
+          "sample": 1
+        },
+        "coverage": {
+          "seasons": [
+            2024,
+            2025,
+            2026
+          ],
+          "seasonType": "regular",
+          "unavailableSeasons": [],
+          "availableGames": 34,
+          "missingStatsExcluded": true,
+          "note": "Verified games played before cutoff; no preseason, postseason, DNP or inferred zero. Opponent meetings cover the current and two previous seasons only."
+        },
+        "method": "Regular-season games played before this recommendation game and check time; exact published threshold and direction.",
+        "last5": {
+          "hits": 1,
+          "pushes": 0,
+          "misses": 4,
+          "sample": 5,
+          "decisions": 5
+        },
+        "last10": {
+          "hits": 5,
+          "pushes": 0,
+          "misses": 5,
+          "sample": 10,
+          "decisions": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 2.6,
+              "low": 0.0,
+              "high": 4.0
+            },
+            "last10": {
+              "average": 2.9,
+              "low": 0.0,
+              "high": 5.0
+            }
+          }
+        ],
+        "lastVsOpponent": {
+          "value": 1.0,
+          "date": "2024-12-15",
+          "source": "https://www.espn.com/nfl/boxscore/_/gameId/401671681",
+          "eventId": "401671681",
+          "opponentId": "8"
+        }
+      }
     }
   },
   "defenses": {
@@ -44458,7 +47436,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
         "positions": {
@@ -44483,7 +47461,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -44644,7 +47622,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
         "positions": {
@@ -44669,7 +47647,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872933": {
@@ -44808,7 +47786,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -44833,7 +47811,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -44988,7 +47966,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -45013,7 +47991,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872937": {
@@ -45210,7 +48188,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -45235,7 +48213,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -45398,7 +48376,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -45423,7 +48401,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872939": {
@@ -45606,7 +48584,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -45631,7 +48609,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -45806,7 +48784,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -45831,7 +48809,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872946": {
@@ -45984,7 +48962,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -46009,7 +48987,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -46127,7 +49105,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -46152,7 +49130,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872936": {
@@ -46304,7 +49282,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -46329,7 +49307,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -46493,7 +49471,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -46518,7 +49496,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872935": {
@@ -46688,7 +49666,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -46713,7 +49691,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -46923,7 +49901,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -46948,7 +49926,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872938": {
@@ -47108,7 +50086,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -47133,7 +50111,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -47270,7 +50248,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
         "positions": {
@@ -47295,7 +50273,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872934": {
@@ -47453,7 +50431,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
         "positions": {
@@ -47478,7 +50456,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -47625,7 +50603,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -47650,7 +50628,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872940": {
@@ -47815,7 +50793,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -47840,7 +50818,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -47982,7 +50960,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -48007,7 +50985,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872941": {
@@ -48133,7 +51111,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -48158,7 +51136,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -48302,7 +51280,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -48327,7 +51305,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872944": {
@@ -48472,7 +51450,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -48497,7 +51475,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -48633,7 +51611,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -48658,7 +51636,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872943": {
@@ -48798,7 +51776,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -48821,7 +51799,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-10",
@@ -48978,7 +51956,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -49003,7 +51981,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872942": {
@@ -49213,7 +52191,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -49238,7 +52216,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -49387,7 +52365,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -49412,7 +52390,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872945": {
@@ -49563,7 +52541,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -49588,7 +52566,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -49764,7 +52742,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -49789,7 +52767,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872947": {
@@ -49933,7 +52911,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -49958,7 +52936,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-14",
@@ -50133,7 +53111,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -50158,7 +53136,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872948": {
@@ -50324,7 +53302,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -50349,7 +53327,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -50486,7 +53464,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -50511,7 +53489,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872953": {
@@ -50707,7 +53685,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
         "positions": {
@@ -50732,7 +53710,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -50856,7 +53834,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -50881,7 +53859,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872949": {
@@ -51093,7 +54071,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -51118,7 +54096,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -51273,7 +54251,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -51298,7 +54276,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872954": {
@@ -51461,7 +54439,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
         "positions": {
@@ -51486,7 +54464,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -51636,7 +54614,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -51661,7 +54639,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872951": {
@@ -51839,7 +54817,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -51864,7 +54842,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -52020,7 +54998,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
         "positions": {
@@ -52045,7 +55023,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872952": {
@@ -52196,7 +55174,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -52221,7 +55199,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-15",
@@ -52370,7 +55348,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -52395,7 +55373,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872956": {
@@ -52572,7 +55550,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -52597,7 +55575,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -52778,7 +55756,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -52803,7 +55781,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872950": {
@@ -52923,7 +55901,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -52948,7 +55926,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -53095,7 +56073,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -53120,7 +56098,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872955": {
@@ -53258,7 +56236,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -53283,7 +56261,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-10",
@@ -53440,7 +56418,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -53465,7 +56443,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872957": {
@@ -53609,7 +56587,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -53634,7 +56612,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-10",
@@ -53785,7 +56763,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -53810,7 +56788,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872958": {
@@ -54020,7 +56998,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -54045,7 +57023,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -54183,7 +57161,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -54206,7 +57184,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872959": {
@@ -54376,7 +57354,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -54401,7 +57379,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -54564,7 +57542,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -54589,7 +57567,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872960": {
@@ -54734,7 +57712,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -54759,7 +57737,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -54917,7 +57895,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -54942,7 +57920,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872961": {
@@ -55081,7 +58059,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
         "positions": {
@@ -55106,7 +58084,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -55250,7 +58228,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -55275,7 +58253,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872962": {
@@ -55440,7 +58418,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -55465,7 +58443,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-11",
@@ -55607,7 +58585,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -55632,7 +58610,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     },
     "NFL-401872963": {
@@ -55829,7 +58807,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -55854,7 +58832,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -56029,7 +59007,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T21:50:30Z",
+        "checkedAt": "2026-09-17T22:06:58Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -56054,14 +59032,14 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T21:50:30Z"
+        "lastAttemptAt": "2026-09-17T22:06:58Z"
       }
     }
   },
   "failures": [
     {
       "id": "w1-bowers-rec",
-      "attemptedAt": "2026-09-17T21:50:30Z",
+      "attemptedAt": "2026-09-17T22:06:58Z",
       "error": "History refresh incomplete",
       "sources": [
         {
@@ -56069,16 +59047,6 @@
           "error": "ValueError"
         }
       ]
-    },
-    {
-      "id": "NFL-W2-menu-d.j.-moore-receptions",
-      "error": "Player identity unavailable",
-      "attemptedAt": "2026-09-17T21:50:30Z"
-    },
-    {
-      "id": "NFL-W2-menu-james-cook-receptions",
-      "error": "Player identity unavailable",
-      "attemptedAt": "2026-09-17T21:50:30Z"
     }
   ]
 }
