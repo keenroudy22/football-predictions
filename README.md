@@ -1,8 +1,10 @@
 # KeenRoudy Sports
 
+Public site: https://keenroudy.com/sports/ · Source repository: `keenroudy22/sports`.
+
 NFL and FBS football forecasts, researched player props, and a public record of what was actually published before kickoff.
 
-NBA and MLB currently provide separate schedules and score snapshots, with Eastern date filters and source freshness. Their betting research and forecasts are not enabled. The existing football URL, game links, weeks and season records are preserved. See `SPORTS-ROADMAP.md` for the next coverage gates.
+NBA and MLB currently provide separate schedules and score snapshots, with Eastern date filters and source freshness. Their betting research and forecasts are not enabled. The old `/football-predictions/` address redirects to `/sports/`, preserving game/results fragments and query strings. Its redirect lives in the root portfolio repository, with a source copy in `deployment/legacy-redirect/`. Game IDs, football weeks and season records are preserved. See `SPORTS-ROADMAP.md` for the next coverage gates.
 
 Static website hosted on GitHub Pages. No paid API, account signup, tracking scripts, or betting transactions.
 

@@ -45,3 +45,6 @@ Recent-form charts must use the exact market and window. Show sample size and ro
 6. Design later scheduled research around each sport's start times and lineup-release patterns. Scope runs to upcoming games and meaningful changes to control usage. The initial read-only data refresh uses the existing hosted workflow and adds no schedule.
 
 Acceptance: football records unchanged; stable player/event identities; no doubleheader collisions; injury/scratch and postponement rules tested; duplicate revisions cannot double-count; missing prices never produce invented ROI; original pregame predictions remain auditable.
+
+## Public address
+The canonical site is https://keenroudy.com/sports/ in keenroudy22/sports. The original repository was renamed with its history intact. The root portfolio repository hosts the legacy /football-predictions/ redirect and preserves old game/results fragments. Keep this redirect when changing hosting; the local workspace folder retains its old name.
