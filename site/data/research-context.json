@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T13:37:27Z",
+  "updatedAt": "2026-09-17T13:38:57Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -7366,8 +7366,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T13:37:27Z",
-      "lastAttemptAt": "2026-09-17T13:37:27Z",
+      "checkedAt": "2026-09-17T13:38:57Z",
+      "lastAttemptAt": "2026-09-17T13:38:57Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7418,8 +7418,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T13:37:27Z",
-      "lastAttemptAt": "2026-09-17T13:37:27Z",
+      "checkedAt": "2026-09-17T13:38:57Z",
+      "lastAttemptAt": "2026-09-17T13:38:57Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
