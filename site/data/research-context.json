@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T19:00:37Z",
+  "updatedAt": "2026-09-17T19:50:07Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -237,6 +237,24 @@
           "name": "Atlanta Falcons",
           "players": [
             {
+              "id": "4595343",
+              "name": "Kendal Daniels",
+              "position": "LB",
+              "status": "Questionable",
+              "injury": "Achilles",
+              "reportedAt": "2026-09-17T19:34Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4595343/kendal-daniels"
+            },
+            {
+              "id": "4034961",
+              "name": "Jawaan Taylor",
+              "position": "OT",
+              "status": "Questionable",
+              "injury": "Knee",
+              "reportedAt": "2026-09-17T19:33Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4034961/jawaan-taylor"
+            },
+            {
               "id": "4241479",
               "name": "Tua Tagovailoa",
               "position": "QB",
@@ -267,8 +285,8 @@
               "id": "4431194",
               "name": "Billy Bowman Jr.",
               "position": "CB",
-              "status": "Active",
-              "injury": null,
+              "status": "Questionable",
+              "injury": "Achilles",
               "reportedAt": "2026-09-16T23:18Z",
               "source": "https://www.espn.com/nfl/player/_/id/4431194/billy-bowman-jr"
             },
@@ -276,8 +294,8 @@
               "id": "4239995",
               "name": "A.J. Terrell Jr.",
               "position": "CB",
-              "status": "Questionable",
-              "injury": "Shoulder",
+              "status": "Active",
+              "injury": null,
               "reportedAt": "2026-09-16T23:14Z",
               "source": "https://www.espn.com/nfl/player/_/id/4239995/aj-terrell-jr"
             },
@@ -433,24 +451,6 @@
               "injury": "Ankle",
               "reportedAt": "2026-09-12T20:59Z",
               "source": "https://www.espn.com/nfl/player/_/id/4685590/cameron-williams"
-            },
-            {
-              "id": "4034961",
-              "name": "Jawaan Taylor",
-              "position": "OT",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-11T18:00Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4034961/jawaan-taylor"
-            },
-            {
-              "id": "4595343",
-              "name": "Kendal Daniels",
-              "position": "LB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-11T17:59Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4595343/kendal-daniels"
             },
             {
               "id": "4427090",
@@ -1157,6 +1157,24 @@
           "name": "Chicago Bears",
           "players": [
             {
+              "id": "4259545",
+              "name": "D'Andre Swift",
+              "position": "RB",
+              "status": "Questionable",
+              "injury": "Ankle",
+              "reportedAt": "2026-09-17T19:44Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4259545/dandre-swift"
+            },
+            {
+              "id": "3892883",
+              "name": "Neville Gallimore",
+              "position": "DT",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-17T19:41Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3892883/neville-gallimore"
+            },
+            {
               "id": "4870953",
               "name": "Malik Muhammad II",
               "position": "CB",
@@ -1193,15 +1211,6 @@
               "source": "https://www.espn.com/nfl/player/_/id/4426358/darnell-wright"
             },
             {
-              "id": "3892883",
-              "name": "Neville Gallimore",
-              "position": "DT",
-              "status": "Questionable",
-              "injury": "Illness",
-              "reportedAt": "2026-09-16T20:20Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3892883/neville-gallimore"
-            },
-            {
               "id": "4434153",
               "name": "Tyson Bagent",
               "position": "QB",
@@ -1218,15 +1227,6 @@
               "injury": "Hamstring",
               "reportedAt": "2026-09-16T20:17Z",
               "source": "https://www.espn.com/nfl/player/_/id/4608686/kyle-monangai"
-            },
-            {
-              "id": "4259545",
-              "name": "D'Andre Swift",
-              "position": "RB",
-              "status": "Questionable",
-              "injury": "Ankle",
-              "reportedAt": "2026-09-16T20:11Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4259545/dandre-swift"
             },
             {
               "id": "3121544",
@@ -3692,7 +3692,7 @@
               "position": "TE",
               "status": "Questionable",
               "injury": "Knee - Meniscus",
-              "reportedAt": "2026-09-16T15:16Z",
+              "reportedAt": "2026-09-17T19:19Z",
               "source": "https://www.espn.com/nfl/player/_/id/4432665/brock-bowers"
             },
             {
@@ -4147,6 +4147,15 @@
           "name": "Los Angeles Rams",
           "players": [
             {
+              "id": "3122132",
+              "name": "Myles Garrett",
+              "position": "DE",
+              "status": "Injured Reserve",
+              "injury": "Knee",
+              "reportedAt": "2026-09-17T18:49Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3122132/myles-garrett"
+            },
+            {
               "id": "4596363",
               "name": "Kamren Kinchens",
               "position": "S",
@@ -4199,15 +4208,6 @@
               "injury": null,
               "reportedAt": "2026-09-14T23:29Z",
               "source": "https://www.espn.com/nfl/player/_/id/4426553/davis-allen"
-            },
-            {
-              "id": "3122132",
-              "name": "Myles Garrett",
-              "position": "DE",
-              "status": "Out",
-              "injury": "Knee",
-              "reportedAt": "2026-09-14T18:16Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3122132/myles-garrett"
             },
             {
               "id": "3912189",
@@ -7364,10 +7364,59 @@
           ]
         }
       },
-      "changes": [],
+      "changes": [
+        {
+          "teamId": "1",
+          "name": "Kendal Daniels",
+          "from": "Active",
+          "to": "Questionable",
+          "observedAt": "2026-09-17T19:50:07Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4595343/kendal-daniels"
+        },
+        {
+          "teamId": "1",
+          "name": "Jawaan Taylor",
+          "from": "Active",
+          "to": "Questionable",
+          "observedAt": "2026-09-17T19:50:07Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4034961/jawaan-taylor"
+        },
+        {
+          "teamId": "1",
+          "name": "Billy Bowman Jr.",
+          "from": "Active",
+          "to": "Questionable",
+          "observedAt": "2026-09-17T19:50:07Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4431194/billy-bowman-jr"
+        },
+        {
+          "teamId": "1",
+          "name": "A.J. Terrell Jr.",
+          "from": "Questionable",
+          "to": "Active",
+          "observedAt": "2026-09-17T19:50:07Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4239995/aj-terrell-jr"
+        },
+        {
+          "teamId": "3",
+          "name": "Neville Gallimore",
+          "from": "Questionable",
+          "to": "Active",
+          "observedAt": "2026-09-17T19:50:07Z",
+          "source": "https://www.espn.com/nfl/player/_/id/3892883/neville-gallimore"
+        },
+        {
+          "teamId": "14",
+          "name": "Myles Garrett",
+          "from": "Out",
+          "to": "Injured Reserve",
+          "observedAt": "2026-09-17T19:50:07Z",
+          "source": "https://www.espn.com/nfl/player/_/id/3122132/myles-garrett"
+        }
+      ],
       "status": "ok",
-      "checkedAt": "2026-09-17T19:00:37Z",
-      "lastAttemptAt": "2026-09-17T19:00:37Z",
+      "checkedAt": "2026-09-17T19:50:07Z",
+      "lastAttemptAt": "2026-09-17T19:50:07Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7418,8 +7467,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T19:00:37Z",
-      "lastAttemptAt": "2026-09-17T19:00:37Z",
+      "checkedAt": "2026-09-17T19:50:07Z",
+      "lastAttemptAt": "2026-09-17T19:50:07Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
