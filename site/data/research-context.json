@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T19:50:07Z",
+  "updatedAt": "2026-09-17T19:55:51Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -237,6 +237,15 @@
           "name": "Atlanta Falcons",
           "players": [
             {
+              "id": "4241479",
+              "name": "Tua Tagovailoa",
+              "position": "QB",
+              "status": "Questionable",
+              "injury": "Oblique",
+              "reportedAt": "2026-09-17T19:42Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4241479/tua-tagovailoa"
+            },
+            {
               "id": "4595343",
               "name": "Kendal Daniels",
               "position": "LB",
@@ -253,15 +262,6 @@
               "injury": "Knee",
               "reportedAt": "2026-09-17T19:33Z",
               "source": "https://www.espn.com/nfl/player/_/id/4034961/jawaan-taylor"
-            },
-            {
-              "id": "4241479",
-              "name": "Tua Tagovailoa",
-              "position": "QB",
-              "status": "Questionable",
-              "injury": "Oblique",
-              "reportedAt": "2026-09-17T17:26Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4241479/tua-tagovailoa"
             },
             {
               "id": "3126352",
@@ -2997,6 +2997,15 @@
           "name": "Indianapolis Colts",
           "players": [
             {
+              "id": "4360078",
+              "name": "Alec Pierce",
+              "position": "WR",
+              "status": "Questionable",
+              "injury": "Heel",
+              "reportedAt": "2026-09-17T19:47Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4360078/alec-pierce"
+            },
+            {
               "id": "4061956",
               "name": "Ashton Dulin",
               "position": "WR",
@@ -3013,15 +3022,6 @@
               "injury": "Groin",
               "reportedAt": "2026-09-16T23:41Z",
               "source": "https://www.espn.com/nfl/player/_/id/4429084/anthony-richardson-sr"
-            },
-            {
-              "id": "4360078",
-              "name": "Alec Pierce",
-              "position": "WR",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-16T21:03Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4360078/alec-pierce"
             },
             {
               "id": "15818",
@@ -3082,7 +3082,7 @@
               "name": "DJ Giddens",
               "position": "RB",
               "status": "Active",
-              "injury": null,
+              "injury": "Knee",
               "reportedAt": "2026-09-14T15:15Z",
               "source": "https://www.espn.com/nfl/player/_/id/4874509/dj-giddens"
             },
@@ -7412,11 +7412,19 @@
           "to": "Injured Reserve",
           "observedAt": "2026-09-17T19:50:07Z",
           "source": "https://www.espn.com/nfl/player/_/id/3122132/myles-garrett"
+        },
+        {
+          "teamId": "11",
+          "name": "Alec Pierce",
+          "from": "Active",
+          "to": "Questionable",
+          "observedAt": "2026-09-17T19:55:51Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4360078/alec-pierce"
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-17T19:50:07Z",
-      "lastAttemptAt": "2026-09-17T19:50:07Z",
+      "checkedAt": "2026-09-17T19:55:51Z",
+      "lastAttemptAt": "2026-09-17T19:55:51Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7467,8 +7475,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T19:50:07Z",
-      "lastAttemptAt": "2026-09-17T19:50:07Z",
+      "checkedAt": "2026-09-17T19:55:51Z",
+      "lastAttemptAt": "2026-09-17T19:55:51Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
