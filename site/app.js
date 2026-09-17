@@ -8,9 +8,8 @@ const day = date => fmt(date,{year:'numeric',month:'2-digit',day:'2-digit'}).spl
 const weekOf = date => {const d = new Date(day(date)+'T12:00:00Z'); d.setUTCDate(d.getUTCDate()-((d.getUTCDay()+5)%7));return d.toISOString().slice(0,10)};
 const pretty = date => fmt(date,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 const links = urls => `<div class="sources">${(urls||[]).filter(u=>/^https:\/\//.test(u)).map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">Source ${i+1} ↗</a>`).join('')}</div>`;
-let state={league:localStorage.getItem('football-league')||'NFL',view:'home',week:weekOf(new Date()),query:'',filter:'all',propGame:'all',propPosition:'all',recordScope:'favorites',recordLeague:'NFL',recordWeek:'total',slate:null,forecasts:[],reports:[],history:null,parlaySelected:new Set(),parlayTarget:200};
+let state={league:localStorage.getItem('football-league')||'NFL',view:'home',week:weekOf(new Date()),query:'',filter:'all',propGame:'all',propPosition:'all',recordScope:'favorites',recordLeague:'All',recordWeek:'total',slate:null,forecasts:[],reports:[],history:null,parlaySelected:new Set(),parlayTarget:200};
 if(!['NFL','CFB'].includes(state.league)) state.league='NFL';
-state.recordLeague=state.league;
 const gameMap = () => new Map(state.slate.games.map(g=>[g.id,g]));
 const games = () => state.slate.games.filter(g=>g.league===state.league && weekOf(g.kickoff)===state.week);
 const original = g => state.forecasts.find(p=>p.gameId===g.id);
@@ -198,7 +197,7 @@ function research(kind){
 }
 function render(){
   if(window.KeenSports?.matches(location.hash)){window.KeenSports.render({state});return;}
-  window.KeenSports?.syncNavigation(state.league);
+  window.KeenSports?.syncNavigation(state.league,state.recordLeague);
   if(state.footballError){
     $('#notice').textContent='Football data could not load. Other sports may still be available.';
     $('#notice').classList.add('warn');
@@ -210,7 +209,7 @@ function render(){
   const sameRoute=state.renderedRoute===routeKey;state.renderedRoute=routeKey;
   $('.week-label').hidden=state.view==='record';
   const opened=[...document.querySelectorAll('#content details')].map((d,i)=>d.open?i:-1).filter(i=>i>=0);
-  document.querySelectorAll('[data-league]').forEach(b=>{const selected=b.dataset.league===state.league;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',selected)});
+  document.querySelectorAll('[data-league]').forEach(b=>{const selected=b.dataset.league===(state.view==='record'?state.recordLeague:state.league);b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',selected)});
   document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view===(state.view==='game'?'scores':state.view==='parlays'?'props':state.view))b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
   const source=(state.slate.sources||[]).find(s=>s.league===state.league);
   const checkedAt=source?.retrievedAt||state.slate.updatedAt;
@@ -309,12 +308,12 @@ async function init(){
     await sportsReady;
     if(!location.hash)history.replaceState(null,'','#sports');
     setupWeeks();navigate();
-    document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;if(window.KeenSports?.matches(location.hash)){state.view='home';location.hash='home'}else if(state.view==='game'){state.view='scores';location.hash='scores'}state.recordLeague=state.league;state.query='';state.filter='all';state.propGame='all';state.propPosition='all';localStorage.setItem('football-league',state.league);setupWeeks();render()}));
+    document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;if(state.view==='record'){state.recordLeague=state.league;state.recordWeek='total'}else if(window.KeenSports?.matches(location.hash)){state.view='home';location.hash='home'}else if(state.view==='game'){state.view='scores';location.hash='scores'}state.query='';state.filter='all';state.propGame='all';state.propPosition='all';localStorage.setItem('football-league',state.league);setupWeeks();render()}));
     document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{location.hash=b.dataset.view;navigate()}));
     window.addEventListener('hashchange',navigate);
     document.addEventListener('click',async e=>{const jump=e.target.closest('[data-game-section]');if(jump){document.getElementById(jump.dataset.gameSection)?.scrollIntoView({behavior:'smooth',block:'start'});return}const resultTab=e.target.closest('[data-result-tab]');if(resultTab){state.resultTab=resultTab.dataset.resultTab;render();return}if(e.target.id==='copy-ticket'){try{await navigator.clipboard.writeText($('#gambly-ticket').value);$('#copy-status').textContent='Copied. Open Gambly and paste your ticket.'}catch(error){$('#gambly-ticket').select();$('#copy-status').textContent='Select and copy the ticket text above.'}return}const parlay=e.target.closest('[data-parlay-pick]');if(parlay){const id=parlay.dataset.parlayPick;state.parlaySelected.has(id)?state.parlaySelected.delete(id):state.parlaySelected.add(id);render();return}const load=e.target.closest('[data-parlay-ids]');if(load){state.parlaySelected=new Set(load.dataset.parlayIds.split(',').filter(Boolean));render();return}if(e.target.id==='clear-prop-filters'){state.propGame='all';state.propPosition='all';render();return}const a=e.target.closest('a[href^="#"]');if(!a)return;const route=a.getAttribute('href').slice(1);if(route.startsWith('game/')||['home','scores','props','parlays','record','research'].includes(route)){e.preventDefault();location.hash=route;navigate()}});
     $('#content').addEventListener('input',e=>{if(e.target.id==='team-search'){state.query=e.target.value;$('#game-list').innerHTML=gameList()}else if(e.target.closest('.calculator'))updateCalculator(e.target.closest('.calculator'))});
-    $('#content').addEventListener('change',e=>{if(e.target.id==='score-mode'){state.scoreMode=e.target.value;render();return}if(e.target.id==='parlay-target'){state.parlayTarget=Number(e.target.value)||200;render();return}if(e.target.id==='game-filter'){state.filter=e.target.value;$('#game-list').innerHTML=gameList()}else if(e.target.id==='prop-game'){state.propGame=e.target.value;render()}else if(e.target.id==='prop-position'){state.propPosition=e.target.value;render()}else if(['record-scope','record-league','record-week','record-evidence'].includes(e.target.id)){state[{"record-scope":"recordScope","record-league":"recordLeague","record-week":"recordWeek","record-evidence":"recordEvidence"}[e.target.id]]=e.target.value;render()}else if(e.target.closest('.calculator'))updateCalculator(e.target.closest('.calculator'))});
+    $('#content').addEventListener('change',e=>{if(e.target.id==='score-mode'){state.scoreMode=e.target.value;render();return}if(e.target.id==='parlay-target'){state.parlayTarget=Number(e.target.value)||200;render();return}if(e.target.id==='game-filter'){state.filter=e.target.value;$('#game-list').innerHTML=gameList()}else if(e.target.id==='prop-game'){state.propGame=e.target.value;render()}else if(e.target.id==='prop-position'){state.propPosition=e.target.value;render()}else if(['record-scope','record-league','record-week','record-evidence'].includes(e.target.id)){state[{"record-scope":"recordScope","record-league":"recordLeague","record-week":"recordWeek","record-evidence":"recordEvidence"}[e.target.id]]=e.target.value;if(e.target.id==='record-league')state.recordWeek='total';render()}else if(e.target.closest('.calculator'))updateCalculator(e.target.closest('.calculator'))});
     const setWeek=e=>{state.week=e.target.value;if(state.view==='game'){state.view='scores';location.hash='scores'}state.propGame='all';state.propPosition='all';render()};
     $('#week').addEventListener('change',setWeek);
     $('#week').addEventListener('input',setWeek);
