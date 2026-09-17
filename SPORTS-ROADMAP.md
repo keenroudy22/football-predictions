@@ -1,6 +1,6 @@
 # KeenRoudy Sports: league coverage and rollout
 
-Updated September 17, 2026. Kinnon approved the KeenRoudy Sports name and starting the broader sports site. FanDuel and DraftKings are the preferred sportsbooks. Betting jurisdiction has not been supplied; college-market availability must not be assumed.
+Updated September 17, 2026. The intended researched coverage is NFL, FBS college football, NBA and MLB under the KeenRoudy Sports name. Prioritize FanDuel and DraftKings with Indiana as the market-availability verification jurisdiction. Confirm current rules and each exact offered market; naming a jurisdiction alone does not verify availability.
 
 ## First implemented expansion
 
@@ -39,7 +39,7 @@ Recent-form charts must use the exact market and window. Show sample size and ro
 
 1. Keep the current football board and season history intact while introducing league navigation and NBA/MLB calendar slates. Test phone layouts and old links.
 2. Audit additional free-source coverage, permissions, update cadence and exact FanDuel/DraftKings market prices independently for NBA and MLB. No assumed comprehensive API coverage or paid subscriptions.
-3. Expand beyond the implemented read-only schedules and scores one sport at a time. Add researched game/market boards and tracked forecasts only when source coverage and sport-specific methods are ready.
+3. Expand researched coverage to all four leagues; NBA and MLB are both in scope and do not require another choice between them. Activate each league independently when source coverage, sport-specific methods and settlement checks are ready. Preserve truthful schedules/scores-only labels until then.
 4. Validate sport-specific settlement and original-price preservation before publishing official picks or parlays. Keep cross-sport tickets disabled until rules and genuine combined book prices are supported.
 5. Retain NFL/CFB week filters, including Monday games and college Week 0; use dates and season filters for daily sports. Do not reuse football week numbering for NBA/MLB.
 6. Design later scheduled research around each sport's start times and lineup-release patterns. Scope runs to upcoming games and meaningful changes to control usage. The initial read-only data refresh uses the existing hosted workflow and adds no schedule.
