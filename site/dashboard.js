@@ -1,6 +1,6 @@
 'use strict';
 const signed=n=>n==null?'Unavailable':`${n>0?'+':''}${n.toFixed(2)}u`;
-const metric=(label,value,note='')=>`<div class="metric"><span>${esc(label)}</span><strong>${esc(value)}</strong><small>${esc(note)}</small></div>`;
+const metric=(label,value,note='')=>`<div class="metric"><span>${esc(label)}</span><strong>${esc(value==='Unavailable'?'—':value)}</strong><small>${esc(note)}</small></div>`;
 const panel=(title,body)=>`<section class="dashboard-panel"><h3>${esc(title)}</h3>${body}</section>`;
 function resultGames(){return state.slate.games.filter(g=>(state.recordLeague==='All'||g.league===state.recordLeague)&&(state.recordWeek==='total'||`${g.season}-${FootballAnalytics.week(g)}`===state.recordWeek))}
 function recordFilters(){
@@ -19,7 +19,7 @@ function ledgerPage(marketOnly=false,archive=false){
   }).map(p=>({...p,title:p.originalTitle||p.title,confidence:p.originalConfidence}));
   const s=FootballAnalytics.recordSummary(picks);
   const groups=archive?['Straights','Risky lines','Parlays','Longshots','Spreads','Totals']:marketOnly?['Spreads','Totals']:['Straights','Risky lines','Parlays','Longshots'];
-  const rows=groups.map(label=>{
+  const rows=groups.filter(label=>picks.some(p=>FootballRecords.category(p)===label)).map(label=>{
     const sample=picks.filter(p=>FootballRecords.category(p)===label),x=FootballAnalytics.recordSummary(sample);
     return `<tr><th scope="row">${label}</th><td>${x.wins}–${x.losses}–${x.pushes}</td><td>${x.hitRate==null?'—':x.hitRate.toFixed(1)+'%'}</td><td>${x.voids}</td><td>${x.pending}</td><td>${signed(x.units)}</td><td>${x.roi==null?'Unavailable':x.roi.toFixed(1)+'%'}</td></tr>`;
   }).join('');
