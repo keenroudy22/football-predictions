@@ -238,7 +238,8 @@ function render(){
   window.KeenSports?.syncNavigation(state.league,state.recordLeague);
   if(window.KeenPlayers?.matches(location.hash)){
     document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view==='research')b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
-    $('#notice').textContent=state.history?.updatedAt?`Collected player history checked ${pretty(state.history.updatedAt)} ET. Each market has its own game window and quote time.`:'Player history is unavailable. Research coverage is labeled below.';
+    $('#freshness').textContent=state.history?.updatedAt?`History refresh ${pretty(state.history.updatedAt)} ET`:'Player history unavailable';
+    $('#notice').textContent=state.history?.updatedAt?'Each player shows its last successful history check. Market windows, quote times and incomplete coverage are labeled below.':'Player history is unavailable. Research coverage is labeled below.';
     $('#notice').classList.toggle('warn',!state.history?.updatedAt);
     window.KeenPlayers.render({state,helpers:{pickCard,formChart,workloadPanel,playerMovement,matchupPanel:window.KeenMatchups?.panel}});
     return;
