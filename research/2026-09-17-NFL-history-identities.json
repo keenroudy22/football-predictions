@@ -1,0 +1,272 @@
+{
+  "league": "NFL",
+  "targetWeek": 2,
+  "publishedAt": "2026-09-17T22:02:07Z",
+  "summary": "Evening card: one high-risk +360 fun SGP with no demonstrated edge; no new straight favorite. Gibbs remains beyond its cutoff and LaPorta entries are paused. DJ Moore and James Cook III histories now use their verified source names; quoted lines and times are unchanged.",
+  "props": [],
+  "riskyProps": [],
+  "parlays": [],
+  "gamePicks": [],
+  "gameWatch": [
+    {
+      "id": "NFL-W2-menu-d.j.-moore-receptions",
+      "gameId": "NFL-401872932",
+      "position": "WR",
+      "player": "DJ Moore",
+      "title": "D.J. Moore · receptions reviewed",
+      "lineLabel": "DraftKings: 4.5 receptions · OVER -108",
+      "quoteNote": "Direct sportsbook observation 17:34 ET. This is a reviewed market, not a new official pick. Quote expires 18:19 ET; the next scheduled review is after kickoff.",
+      "why": "The current sportsbook quote is captured for comparison and personal research. Verified route participation, matchup-adjusted opportunity and a robust exact-market probability are still insufficient to make this a favorite. No selection is promoted just because its price changed.",
+      "needs": "Evening pass as a straight: no independently stress-tested probability at this exact current price clears the favorite standard. Historical rates remain descriptive. Next scheduled check at 23:30 ET is for results; no extra pregame monitoring is promised.",
+      "nextReviewAt": "2026-09-18T03:30:00Z",
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.detroitlions.com/news/5-things-to-watch-lions-vs-bills-gibbs-goff-allen",
+        "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3915416"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": -107,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook"
+        },
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": -108,
+          "observedAt": "2026-09-17T21:34:06Z",
+          "expiresAt": "2026-09-17T22:19:06Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct Indiana sportsbook menu observation around 17:34 ET; provider last-change time unavailable."
+        }
+      ],
+      "athleteId": "3915416",
+      "marketTitle": "D.J. Moore OVER 4.5 receptions",
+      "lastCheckedAt": "2026-09-17T21:44:53Z",
+      "lineHealth": "Buffalo final report lists Cole Bishop, Ty Johnson and T.J. Sanders as questionable. Final inactives and the game-day offensive-line lineup were not verified; absence from the injury list is not proof of full health.",
+      "lineSkill": "Buffalo blocking grades and replacement quality were not independently verified; no unit-quality adjustment is applied. Detroit expects Borom at RT and Bartch at LG, but those opposing-team absences affect game script rather than Buffalo pass protection.",
+      "identityCheckedAt": "2026-09-17T22:02:07Z",
+      "identitySource": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3915416"
+    },
+    {
+      "id": "NFL-W2-menu-james-cook-receptions",
+      "gameId": "NFL-401872932",
+      "position": "RB",
+      "player": "James Cook III",
+      "title": "James Cook · receptions reviewed",
+      "lineLabel": "DraftKings: 2.5 receptions · OVER -115",
+      "quoteNote": "Direct sportsbook observation 17:34 ET. This is a reviewed market, not a new official pick. Quote expires 18:19 ET; the next scheduled review is after kickoff.",
+      "why": "The current sportsbook quote is captured for comparison and personal research. Verified route participation, matchup-adjusted opportunity and a robust exact-market probability are still insufficient to make this a favorite. No selection is promoted just because its price changed.",
+      "needs": "Evening pass as a straight: no independently stress-tested probability at this exact current price clears the favorite standard. Historical rates remain descriptive. Next scheduled check at 23:30 ET is for results; no extra pregame monitoring is promised.",
+      "nextReviewAt": "2026-09-18T03:30:00Z",
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.detroitlions.com/news/5-things-to-watch-lions-vs-bills-gibbs-goff-allen",
+        "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4379399"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 2.5,
+          "odds": 105,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook"
+        },
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 2.5,
+          "odds": -115,
+          "observedAt": "2026-09-17T21:34:06Z",
+          "expiresAt": "2026-09-17T22:19:06Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct Indiana sportsbook menu observation around 17:34 ET; provider last-change time unavailable."
+        }
+      ],
+      "athleteId": "4379399",
+      "marketTitle": "James Cook OVER 2.5 receptions",
+      "lastCheckedAt": "2026-09-17T21:44:53Z",
+      "lineHealth": "Buffalo final report lists Cole Bishop, Ty Johnson and T.J. Sanders as questionable. Final inactives and the game-day offensive-line lineup were not verified; absence from the injury list is not proof of full health.",
+      "lineSkill": "Buffalo blocking grades and replacement quality were not independently verified; no unit-quality adjustment is applied. Detroit expects Borom at RT and Bartch at LG, but those opposing-team absences affect game script rather than Buffalo pass protection.",
+      "identityCheckedAt": "2026-09-17T22:02:07Z",
+      "identitySource": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4379399"
+    },
+    {
+      "id": "NFL-W2-menu-dalton-kincaid-receptions",
+      "gameId": "NFL-401872932",
+      "position": "TE",
+      "player": "Dalton Kincaid",
+      "title": "Dalton Kincaid · receptions reviewed",
+      "lineLabel": "DraftKings: 4.5 receptions · OVER +126",
+      "quoteNote": "Direct sportsbook observation 17:34 ET. This is a reviewed market, not a new official pick. Quote expires 18:19 ET; the next scheduled review is after kickoff.",
+      "why": "The directly observed threshold is now 4.5, up from 3.5 this morning. Week 1 brought five catches on six targets, but his last ten regular-season played games reached four catches only four times. Do not treat one explosive receiving game as a stable five-catch role.",
+      "needs": "Evening pass as a straight: no independently stress-tested probability at this exact current price clears the favorite standard. Historical rates remain descriptive. Next scheduled check at 23:30 ET is for results; no extra pregame monitoring is promised.",
+      "nextReviewAt": "2026-09-18T03:30:00Z",
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.espn.com/nfl/player/gamelog/_/id/4385690",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.detroitlions.com/news/5-things-to-watch-lions-vs-bills-gibbs-goff-allen"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 3.5,
+          "odds": -164,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook"
+        },
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": 126,
+          "observedAt": "2026-09-17T21:34:06Z",
+          "expiresAt": "2026-09-17T22:19:06Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct Indiana sportsbook menu observation around 17:34 ET; provider last-change time unavailable."
+        }
+      ],
+      "athleteId": "4385690",
+      "marketTitle": "Dalton Kincaid OVER 4.5 receptions",
+      "lastCheckedAt": "2026-09-17T21:44:53Z",
+      "lineHealth": "Buffalo final report lists Cole Bishop, Ty Johnson and T.J. Sanders as questionable. Final inactives and the game-day offensive-line lineup were not verified; absence from the injury list is not proof of full health.",
+      "lineSkill": "Buffalo blocking grades and replacement quality were not independently verified; no unit-quality adjustment is applied. Detroit expects Borom at RT and Bartch at LG, but those opposing-team absences affect game script rather than Buffalo pass protection.",
+      "movementExplanation": {
+        "type": "Unknown",
+        "text": "DraftKings OVER receptions moved from 3.5 (-164) at the earlier observation to 4.5 (+126). Both threshold and price changed; cause unverified.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ]
+      }
+    },
+    {
+      "id": "NFL-W2-menu-khalil-shakir-receptions",
+      "gameId": "NFL-401872932",
+      "position": "WR",
+      "player": "Khalil Shakir",
+      "title": "Khalil Shakir · receptions reviewed",
+      "lineLabel": "DraftKings: 4.5 receptions · OVER +126",
+      "quoteNote": "Direct sportsbook observation 17:34 ET. This is a reviewed market, not a new official pick. Quote expires 18:19 ET; the next scheduled review is after kickoff.",
+      "why": "The current sportsbook quote is captured for comparison and personal research. Verified route participation, matchup-adjusted opportunity and a robust exact-market probability are still insufficient to make this a favorite. No selection is promoted just because its price changed.",
+      "needs": "Evening pass as a straight: no independently stress-tested probability at this exact current price clears the favorite standard. Historical rates remain descriptive. Next scheduled check at 23:30 ET is for results; no extra pregame monitoring is promised.",
+      "nextReviewAt": "2026-09-18T03:30:00Z",
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.detroitlions.com/news/5-things-to-watch-lions-vs-bills-gibbs-goff-allen"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": 115,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook"
+        },
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": 126,
+          "observedAt": "2026-09-17T21:34:06Z",
+          "expiresAt": "2026-09-17T22:19:06Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct Indiana sportsbook menu observation around 17:34 ET; provider last-change time unavailable."
+        }
+      ],
+      "athleteId": "4373678",
+      "marketTitle": "Khalil Shakir OVER 4.5 receptions",
+      "lastCheckedAt": "2026-09-17T21:44:53Z",
+      "lineHealth": "Buffalo final report lists Cole Bishop, Ty Johnson and T.J. Sanders as questionable. Final inactives and the game-day offensive-line lineup were not verified; absence from the injury list is not proof of full health.",
+      "lineSkill": "Buffalo blocking grades and replacement quality were not independently verified; no unit-quality adjustment is applied. Detroit expects Borom at RT and Bartch at LG, but those opposing-team absences affect game script rather than Buffalo pass protection."
+    },
+    {
+      "id": "NFL-W2-menu-dalton-kincaid-receiving-yards",
+      "gameId": "NFL-401872932",
+      "position": "TE",
+      "player": "Dalton Kincaid",
+      "title": "Dalton Kincaid · receiving yards reviewed",
+      "lineLabel": "DraftKings: 53.5 receiving yards · OVER -113",
+      "quoteNote": "Direct sportsbook observation 17:34 ET. This is a reviewed market, not a new official pick. Quote expires 18:19 ET; the next scheduled review is after kickoff.",
+      "why": "The current sportsbook quote is captured for comparison and personal research. Verified route participation, matchup-adjusted opportunity and a robust exact-market probability are still insufficient to make this a favorite. No selection is promoted just because its price changed.",
+      "needs": "Evening pass as a straight: no independently stress-tested probability at this exact current price clears the favorite standard. Historical rates remain descriptive. Next scheduled check at 23:30 ET is for results; no extra pregame monitoring is promised.",
+      "nextReviewAt": "2026-09-18T03:30:00Z",
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.espn.com/nfl/player/gamelog/_/id/4385690",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.detroitlions.com/news/5-things-to-watch-lions-vs-bills-gibbs-goff-allen"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receiving yards",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 52.5,
+          "odds": -112,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook"
+        },
+        {
+          "book": "DraftKings",
+          "market": "receiving yards",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 53.5,
+          "odds": -113,
+          "observedAt": "2026-09-17T21:34:06Z",
+          "expiresAt": "2026-09-17T22:19:06Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct Indiana sportsbook menu observation around 17:34 ET; provider last-change time unavailable."
+        }
+      ],
+      "athleteId": "4385690",
+      "marketTitle": "Dalton Kincaid OVER 53.5 receiving yards",
+      "lastCheckedAt": "2026-09-17T21:44:53Z",
+      "lineHealth": "Buffalo final report lists Cole Bishop, Ty Johnson and T.J. Sanders as questionable. Final inactives and the game-day offensive-line lineup were not verified; absence from the injury list is not proof of full health.",
+      "lineSkill": "Buffalo blocking grades and replacement quality were not independently verified; no unit-quality adjustment is applied. Detroit expects Borom at RT and Bartch at LG, but those opposing-team absences affect game script rather than Buffalo pass protection."
+    }
+  ]
+}
