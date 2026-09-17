@@ -1,0 +1,562 @@
+{
+  "league": "NFL",
+  "targetWeek": 2,
+  "publishedAt": "2026-09-17T15:58:22.254267+00:00",
+  "summary": "Tonight’s current favorite is Sam LaPorta OVER 4.5 receptions at DraftKings +116. The earlier Gibbs 29.5/-115 recommendation stays on the record, but new entries are paused after the available price moved outside its cutoff.",
+  "props": [
+    {
+      "id": "NFL-2026-W2-laporta-over-4-5-rec-dk",
+      "title": "Sam LaPorta OVER 4.5 receptions",
+      "status": "active",
+      "favorite": true,
+      "hot": true,
+      "position": "TE",
+      "athleteId": "4430027",
+      "gameIds": [
+        "NFL-401872932"
+      ],
+      "book": "DraftKings",
+      "odds": 116,
+      "quotedAt": "2026-09-17T15:58:08Z",
+      "expiresAt": "2026-09-17T16:58:08Z",
+      "projection": 4.9,
+      "confidence": 6,
+      "line": 4.5,
+      "direction": "over",
+      "modelVersion": "judgment-volume-v1",
+      "cutoff": "OVER 4.5 at +100 or better. Pass at 5.5 or any minus price; reverify after quote expiry.",
+      "edge": "Uncalibrated volume judgment: 6.5 targets times 75% catches gives 4.9 expected receptions, not a probability. Estimated 53% to reach five versus 46.30% break-even at +116: about +6.7 percentage points and +14.5% expected return if that estimate is right. Plausible 47–60% uncertainty and model error are substantial; this is not a calibrated forecast.",
+      "why": "A plus-money five-catch line fits a conservative 4.9-catch projection. LaPorta has reached five in four of his last five and six of his last ten played games, with last-five targets averaging six. Detroit confirmed his return before Week 1, and Petzing has a documented history of involving tight ends. His eight Week 1 targets support a role, but I trim that to 6.5 rather than extrapolate overtime. Buffalo favored by about 5.5 gives a plausible passing script; no unsupported defensive-funnel boost is applied.",
+      "risk": "His fifth Week 1 catch came in overtime; regulation was four catches for 39 yards. Most historical games precede his 2025 back injury and coordinator change. Missing Detroit linemen could create extra pass-blocking assignments, while St. Brown, Williams and Gibbs compete for targets. Routes remain unverified. This shares Detroit passing-volume exposure with the earlier Gibbs play, so they are not independent parlay legs.",
+      "recentForm": {
+        "stat": "receptions",
+        "line": 4.5,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
+        "games": [
+          {
+            "label": "2025-09-07 · GB",
+            "value": 6.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 9.0,
+              "receivingYards": 79.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772722"
+          },
+          {
+            "label": "2025-09-14 · CHI",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 26.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772835"
+          },
+          {
+            "label": "2025-09-23 · BAL",
+            "value": 4.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 33.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772812"
+          },
+          {
+            "label": "2025-09-28 · CLE",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 39.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772846"
+          },
+          {
+            "label": "2025-10-05 · CIN",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 92.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772854"
+          },
+          {
+            "label": "2025-10-13 · KC",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 55.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772923"
+          },
+          {
+            "label": "2025-10-20 · TB",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 15.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772816"
+          },
+          {
+            "label": "2025-11-02 · MIN",
+            "value": 6.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 97.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772871"
+          },
+          {
+            "label": "2025-11-09 · WSH",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 53.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772878"
+          },
+          {
+            "label": "2026-09-13 · NO",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 48.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 4,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 6,
+          "sample": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.0,
+              "low": 3.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 5.7,
+              "low": 3.0,
+              "high": 9.0
+            }
+          }
+        ]
+      },
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
+        "https://www.detroitlions.com/news/10-questions-with-twentyman-which-lions-rookie-could-make-a-week-1-impact-miller-abney-rolder",
+        "https://www.detroitlions.com/news/2026-detroit-lions-training-camp-preview-tight-end-laporta-wright-conklin",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": 116,
+          "observedAt": "2026-09-17T15:58:08Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct sportsbook viewing around 11:58 AM ET; provider last-change time unavailable."
+        }
+      ],
+      "movementExplanation": {
+        "type": "Unknown",
+        "text": "The same DraftKings OVER 4.5 price was +107 at 11:33 AM and +116 around 11:58 AM. The catch threshold stayed 4.5. No sourced cause for this price change is established.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ]
+      },
+      "quickWhy": "A plus-money five-catch line; projected 4.9 catches from a conservative 6.5-target workload."
+    },
+    {
+      "id": "NFL-2026-W2-gibbs-over-29-5-recyd-dk",
+      "title": "Jahmyr Gibbs OVER 29.5 receiving yards",
+      "status": "expired",
+      "favorite": true,
+      "hot": false,
+      "position": "RB",
+      "athleteId": "4429795",
+      "gameIds": [
+        "NFL-401872932"
+      ],
+      "book": "DraftKings",
+      "odds": -115,
+      "quotedAt": "2026-09-17T15:33:05Z",
+      "expiresAt": "2026-09-17T16:35:00Z",
+      "projection": 33,
+      "confidence": 6,
+      "line": 29.5,
+      "direction": "over",
+      "modelVersion": "judgment-volume-v1",
+      "cutoff": "OVER 29.5 at -115 or better only; pass at 30.5+ or -116 and worse. Reverify the live price after expiry.",
+      "edge": "Projected mean +3.5 yards, not a probability edge. Uncalibrated judgment: about 55% to clear, versus 53.49% break-even at -115 (about +1.5 percentage points; about +2.8% expected return if that estimate is right). Plausible 50–60% uncertainty includes negative value.",
+      "why": "The verified 29.5-yard number is below his 34.4 last-five and 44.9 last-ten averages. Five targets and 30 receiving yards in Week 1 support continuing receiving involvement; the team confirms an expanded lead-back role. My conservative 33-yard projection uses 5.5 targets × 75% catches × 8 yards per catch, below the recent target averages. Buffalo favored by 5.5 gives a plausible passing script. Detroit line absences may encourage outlets, but that is an inference, not the main reason.",
+      "risk": "Thin estimated edge and uncertain routes under a new coordinator. Missing Mahogany and Miller could require Gibbs to block instead. Buffalo held Houston RBs to four catches for 17 yards last week; that one game does not prove a favorable matchup. Overtime inflated Week 1 touches. Inactives and wind remain pregame checks; no unsupported weather or scheme boost.",
+      "recentForm": {
+        "stat": "receiving yards",
+        "line": 29.5,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
+        "games": [
+          {
+            "label": "2025-11-09 · WSH",
+            "value": 30.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 15.0,
+              "rushingYards": 142.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 30.0,
+              "touches": 18.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772878"
+          },
+          {
+            "label": "2025-11-17 · PHI",
+            "value": 107.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 12.0,
+              "rushingYards": 39.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 107.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772928"
+          },
+          {
+            "label": "2025-11-23 · NYG",
+            "value": 45.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 15.0,
+              "rushingYards": 219.0,
+              "receptions": 11.0,
+              "receivingTargets": 12.0,
+              "receivingYards": 45.0,
+              "touches": 26.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772888"
+          },
+          {
+            "label": "2025-11-27 · GB",
+            "value": 18.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 20.0,
+              "rushingYards": 68.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 18.0,
+              "touches": 23.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772891"
+          },
+          {
+            "label": "2025-12-05 · DAL",
+            "value": 77.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 12.0,
+              "rushingYards": 43.0,
+              "receptions": 7.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 77.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772947"
+          },
+          {
+            "label": "2025-12-14 · LAR",
+            "value": 20.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 13.0,
+              "rushingYards": 38.0,
+              "receptions": 4.0,
+              "receivingTargets": 7.0,
+              "receivingYards": 20.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772909"
+          },
+          {
+            "label": "2025-12-21 · PIT",
+            "value": 66.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 7.0,
+              "rushingYards": 2.0,
+              "receptions": 10.0,
+              "receivingTargets": 13.0,
+              "receivingYards": 66.0,
+              "touches": 17.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772806"
+          },
+          {
+            "label": "2025-12-25 · MIN",
+            "value": 23.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 17.0,
+              "rushingYards": 41.0,
+              "receptions": 2.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 23.0,
+              "touches": 19.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772711"
+          },
+          {
+            "label": "2026-01-04 · CHI",
+            "value": 33.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 19.0,
+              "rushingYards": 80.0,
+              "receptions": 3.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 33.0,
+              "touches": 22.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965"
+          },
+          {
+            "label": "2026-09-13 · NO",
+            "value": 30.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 29.0,
+              "rushingYards": 156.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 30.0,
+              "touches": 34.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 3,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 7,
+          "sample": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.6,
+              "low": 3.0,
+              "high": 13.0
+            },
+            "last10": {
+              "average": 6.8,
+              "low": 3.0,
+              "high": 13.0
+            }
+          },
+          {
+            "stat": "Receptions",
+            "last5": {
+              "average": 4.8,
+              "low": 2.0,
+              "high": 10.0
+            },
+            "last10": {
+              "average": 5.3,
+              "low": 2.0,
+              "high": 11.0
+            }
+          }
+        ]
+      },
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
+        "https://www.detroitlions.com/news/notebook-gibbs-ready-for-bigger-role-bartch-mahogany",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receiving yards",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 29.5,
+          "odds": -115,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Viewed directly at 11:33 AM ET; provider last-change time unavailable."
+        },
+        {
+          "book": "DraftKings",
+          "market": "receiving yards",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 29.5,
+          "odds": -116,
+          "observedAt": "2026-09-17T15:56:00Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct sportsbook viewing around 11:56 AM ET; provider last-change time unavailable."
+        }
+      ],
+      "quoteNote": "New entries paused: directly observed DraftKings 29.5 OVER -116 is beyond the original -115 cutoff; FanDuel 30.5 is above the original line ceiling. The original 29.5/-115 selection remains in the record and its projection is unchanged.",
+      "movementExplanation": {
+        "type": "Unknown",
+        "text": "DraftKings kept the 29.5-yard threshold but changed OVER from -115 to -116 between observations. This is price movement, not a yardage-line move. No sourced cause is established.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ]
+      },
+      "entryNote": "New entries paused outside the original cutoff. Preserve the original 29.5/-115 ticket for grading; do not chase -116 or a 30.5 line."
+    }
+  ],
+  "riskyProps": [],
+  "parlays": [],
+  "gameWatch": [
+    {
+      "id": "NFL-W2-menu-sam-laporta-receptions",
+      "gameId": "NFL-401872932",
+      "position": "TE",
+      "player": "Sam LaPorta",
+      "title": "Sam LaPorta receptions · official favorite",
+      "lineLabel": "DraftKings: 4.5 receptions · OVER +116",
+      "quoteNote": "Direct quote around Sep 17, 11:58 AM ET. Favorite at +100 or better; current quote expires 12:58 PM ET.",
+      "why": "A plus-money five-catch line fits a conservative 4.9-catch projection. LaPorta has reached five in four of his last five and six of his last ten played games, with last-five targets averaging six. Detroit confirmed his return before Week 1, and Petzing has a documented history of involving tight ends. His eight Week 1 targets support a role, but I trim that to 6.5 rather than extrapolate overtime. Buffalo favored by about 5.5 gives a plausible passing script; no unsupported defensive-funnel boost is applied.",
+      "needs": "Recheck exact line and price at the next scheduled run, together with any new participation or protection-role information.",
+      "nextReviewAt": "2026-09-17T21:30:00Z",
+      "sources": [
+        "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+        "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
+        "https://www.detroitlions.com/news/10-questions-with-twentyman-which-lions-rookie-could-make-a-week-1-impact-miller-abney-rolder",
+        "https://www.detroitlions.com/news/2026-detroit-lions-training-camp-preview-tight-end-laporta-wright-conklin",
+        "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+        "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872660"
+      ],
+      "marketSnapshots": [
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": 107,
+          "observedAt": "2026-09-17T15:33:05Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook"
+        },
+        {
+          "book": "DraftKings",
+          "market": "receptions",
+          "window": "Full game",
+          "direction": "OVER",
+          "line": 4.5,
+          "odds": 116,
+          "observedAt": "2026-09-17T15:58:08Z",
+          "source": "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving",
+          "quoteType": "sportsbook",
+          "sourceTimeNote": "Direct sportsbook viewing around 11:58 AM ET; provider last-change time unavailable."
+        }
+      ],
+      "athleteId": "4430027",
+      "marketTitle": "Sam LaPorta OVER 4.5 receptions",
+      "risk": "His fifth Week 1 catch came in overtime; regulation was four catches for 39 yards. Most historical games precede his 2025 back injury and coordinator change. Missing Detroit linemen could create extra pass-blocking assignments, while St. Brown, Williams and Gibbs compete for targets. Routes remain unverified. This shares Detroit passing-volume exposure with the earlier Gibbs play, so they are not independent parlay legs.",
+      "defense": "Buffalo allowed Houston tight ends eight catches on twelve targets in Week 1, led by Dalton Schultz at four on eight. That single-game aggregate is context, not an independent player projection.",
+      "lineHealth": "Christian Mahogany and Blake Miller are OUT. Juice Scruggs finished full participation without a game designation; final inactives remain to be confirmed.",
+      "lineSkill": "No new verified unit blocking-grade adjustment is applied. Missing starters can alter protection assignments as well as passing efficiency.",
+      "movementExplanation": {
+        "type": "Unknown",
+        "text": "The same DraftKings OVER 4.5 price was +107 at 11:33 AM and +116 around 11:58 AM. The catch threshold stayed 4.5. No sourced cause for this price change is established.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/det-lions-%40-buf-bills/34118219?category=odds&subcategory=receiving"
+        ]
+      }
+    }
+  ],
+  "watch": [
+    "Gibbs OVER 29.5 receiving yards becomes playable again only at -115 or better; do not chase FanDuel 30.5.",
+    "LaPorta OVER 4.5 receptions is playable through +100; pass at 5.5 or a minus price.",
+    "No official parlay at this review. The previously observed Buffalo scoring SGP needs a current combined quote; the 1Q comeback longshot lacks sufficient period-specific support."
+  ],
+  "takeaways": [
+    "Separate catch volume from scoring efficiency: LaPorta’s fifth catch and Gibbs’ fifth catch came in overtime in Week 1. Their published full-game histories correctly include overtime, while projections trim that extra workload.",
+    "LaPorta’s +107 to +116 change is a better price at the same 4.5-catch threshold. Its cause is unknown; it is not evidence of an injury or sharp-money move."
+  ]
+}
