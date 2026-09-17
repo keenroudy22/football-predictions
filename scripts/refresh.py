@@ -353,6 +353,7 @@ def main():
                 forecasts.append(model.predict(g, now))
                 known.add(g['id'])
     reports = [validate_report(read(p, {}), games) for p in sorted((ROOT / 'research').glob('*.json'))]
+    reports.sort(key=lambda report: datetime.fromisoformat(report['publishedAt'].replace('Z', '+00:00')))
     validate_ledger(reports)
     payload = {'updatedAt': stamp(now), 'sources': sources, 'games': sorted(games.values(), key=lambda g: g['kickoff'])}
     # All network reads and validation succeed before replacing any published data.

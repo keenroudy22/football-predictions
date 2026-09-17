@@ -195,6 +195,7 @@ def defense_context(game, previous, summary, positions):
 def main():
     slate = json.loads((DATA / 'slate.json').read_text(encoding='utf-8'))
     reports = json.loads((DATA / 'research.json').read_text(encoding='utf-8'))
+    reports.sort(key=lambda report: datetime.fromisoformat(report['publishedAt'].replace('Z', '+00:00')))
     games = {g['id']: g for g in slate['games']}
     summaries = {}
     histories = {}
