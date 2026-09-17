@@ -79,7 +79,7 @@
     document.querySelectorAll('[data-league]').forEach(button => { const selected = button.dataset.league === active; button.classList.toggle('selected', selected); button.setAttribute('aria-pressed', String(selected)); });
     const sections = document.querySelector('.sections'); if (sections) sections.hidden = sports;
     const week = document.querySelector('.week-label'); if (week && sports) week.hidden = true;
-    const text = active === 'all' ? ['THE SPORTS DESK', 'Your game. Your next read.', 'Games, researched picks and the story behind the numbers.'] : active === 'NBA' ? ['AROUND THE LEAGUE', 'Basketball is on the board.', 'Follow the schedule. Catch the score. See what comes next.'] : active === 'MLB' ? ['AROUND THE DIAMOND', 'A full view of the ballgame.', 'Your MLB schedule and scores, with the source a tap away.'] : ['THE FOOTBALL DESK', `${names[league]}. Know the number.`, 'Favorites, matchup research and a season record you can audit.'];
+    const text = active === 'all' ? ['KEENROUDY SPORTS', 'Today’s board', 'Games, picks and the latest research.'] : active === 'NBA' ? ['BASKETBALL', 'NBA scoreboard', 'Game times, scores and the upcoming schedule.'] : active === 'MLB' ? ['BASEBALL', 'MLB scoreboard', 'Game times, scores and the upcoming schedule.'] : ['FOOTBALL', `${names[league]} board`, 'Picks, matchup research and season results.'];
     ['hero-eyebrow', 'hero-title', 'hero-description'].forEach((id, i) => { const element = document.getElementById(id); if (element) element.textContent = text[i]; });
   }
   async function load() {
