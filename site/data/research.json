@@ -812,5 +812,37 @@
         ]
       }
     ]
+  },
+  {
+    "league": "NFL",
+    "publishedAt": "2026-09-17T13:49:09.971836+00:00",
+    "targetWeek": 2,
+    "summary": "Early player research now separates observed numbers, defensive questions and offensive-line health from verified official selections.",
+    "props": [],
+    "riskyProps": [],
+    "parlays": [],
+    "gameWatch": [
+      {
+        "id": "NFL-2026-W2-gibbs-receptions-early",
+        "gameId": "NFL-401872932",
+        "position": "RB",
+        "title": "Jahmyr Gibbs receptions \u00b7 OVER candidate",
+        "lineLabel": "Reference line: 3.5 receptions",
+        "quoteNote": "BetMGM article dated Sep 16, 11:10 AM; side price unavailable. Not a live sportsbook quote.",
+        "why": "Four catches is the number to investigate. Quick outlets could help if Detroit adjusts to its line absences, but route participation must confirm that story before an over is justified.",
+        "defense": "Compare Buffalo pressure with Detroit routes versus pass-blocking assignments. Buffalo lists Cole Bishop and T.J. Sanders questionable; their availability could change coverage and pressure. A favorable reception matchup is not established yet.",
+        "lineHealth": "Detroit ruled out Christian Mahogany (hip) and Blake Miller (knee) on Sep 16. Juice Scruggs finished full participation without a game designation. Confirm replacements and game-day inactives.",
+        "lineSkill": "Detroit\u2019s Sep 14 report described Ben Bartch\u2019s first game as uneven, citing one QB hit allowed and a 66.7 PFF run-block grade. One game does not establish unit quality; pass-block and run-block performance must be evaluated separately.",
+        "risk": "Protection problems could keep Gibbs blocking rather than running routes. A move to 4.5 changes the question materially; no playable cutoff has been established.",
+        "needs": "Verify current line AND price, last 5/10 exact-market logs, routes and target share, replacement linemen, Buffalo availability and a role-adjusted projection. Do not promote based on injuries alone.",
+        "nextReviewAt": "2026-09-17T15:30:00Z",
+        "sources": [
+          "https://sports.betmgm.com/en/blog/nfl/jahmyr-gibbs-props-odds-gaa/",
+          "https://www.detroitlions.com/news/lions-at-bills-injury-report-sept-16-mahogany-miller-reed",
+          "https://www.detroitlions.com/news/key-questions-dan-campbell-detroit-lions-buffalo-bills-miller-gibbs-bartch",
+          "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-lions-week-2"
+        ]
+      }
+    ]
   }
 ]
