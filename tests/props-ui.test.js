@@ -8,7 +8,7 @@ const root=path.resolve(__dirname,'..');
 const script=fs.readFileSync(path.join(root,'site','app.js'),'utf8').replace(/\binit\(\);\s*$/,'');
 const context={FootballRecords:require(path.join(root,'site','records.js')),localStorage:{getItem:()=>null},Intl,Date};
 vm.createContext(context);
-vm.runInContext(script+'\n globalThis.testAPI={pickCard,research,state};',context);
+vm.runInContext(script+'\n globalThis.testAPI={pickCard,research,state,builderEligible,compatibleTicket,ticketText,americanToDecimal,decimalToAmerican};',context);
 
 test('hot and fun market metadata is visible with an expiry check',()=>{
   const html=context.testAPI.pickCard({id:'early',title:'Player OVER 3.5 first-quarter carries',kind:'riskyProps',status:'active',hot:true,fun:true,marketWindow:'1Q',odds:-110,book:'Example',quotedAt:'2099-09-16T12:00:00Z',expiresAt:'2099-09-16T13:00:00Z',publishedAt:'2099-09-16T12:00:00Z',confidence:6,projection:4.4,cutoff:'Over 3.5 through -120',why:'Verified early role.',risk:'Small window.',sources:[],gameIds:[]});
@@ -57,3 +57,20 @@ test('player props can be filtered by game and position',()=>{
   assert.match(byGame,/Showing \d+ of 27 official player lines/);assert.match(byGame,/Jayden Daniels UNDER 200/);assert.doesNotMatch(byGame,/Lamar Jackson OVER 35/);
 });
 
+const leg=(extra={})=>({id:'a',title:'Player OVER 3.5 receptions',kind:'props',status:'active',book:'DraftKings',odds:-110,gameIds:['future-a'],quotedAt:new Date(Date.now()-1000).toISOString(),expiresAt:new Date(Date.now()+3600000).toISOString(),cutoff:'Through 4.5',...extra});
+test('ticket estimates require same book and distinct games',()=>{
+ const api=context.testAPI;api.state.slate.games.push(...['future-a','future-b'].map(id=>({id,state:'pre',kickoff:'2099-01-01',away:{abbreviation:'AWY'},home:{abbreviation:'HME'}}))); 
+ assert.equal(api.compatibleTicket([leg(),leg({id:'b',gameIds:['future-b']})]),true);
+ assert.equal(api.compatibleTicket([leg(),leg({id:'b'})]),false);
+ assert.equal(api.compatibleTicket([leg(),leg({id:'b',book:'FanDuel',gameIds:['future-b']})]),false);
+ assert.equal(api.compatibleTicket([leg()]),false);
+});
+test('stale, unpriced and invalid quotes cannot enter tickets',()=>{
+ for(const extra of [{expiresAt:null},{expiresAt:'2000-01-01'},{odds:null},{book:' '},{quotedAt:'2099-01-01'},{status:'historical'}]) assert.equal(context.testAPI.builderEligible(leg(extra)),false);
+});
+test('ticket text preserves price and cutoff and uses actual line breaks',()=>{
+ const text=context.testAPI.ticketText([leg()]);
+ assert.match(text,/DraftKings -110/);assert.match(text,/limit: Through 4.5/);assert.equal(text.split('\n').length,3);
+ assert.equal(context.testAPI.decimalToAmerican(2*2),300);
+ assert.equal(context.testAPI.americanToDecimal(-200),1.5);
+});
