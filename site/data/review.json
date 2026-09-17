@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T15:42:48.846Z",
+  "generatedAt": "2026-09-17T16:00:27.764Z",
   "method": "pregame-evaluation-v1",
   "scoreGroups": [
     {
@@ -14,12 +14,12 @@
     }
   ],
   "selections": {
-    "total": 1,
+    "total": 2,
     "wins": 0,
     "losses": 0,
     "pushes": 0,
     "voids": 0,
-    "pending": 1,
+    "pending": 2,
     "priced": 0,
     "units": null,
     "graded": 0,
@@ -32,6 +32,12 @@
     {
       "id": "NFL-2026-W2-gibbs-over-29-5-recyd-dk",
       "title": "Jahmyr Gibbs OVER 29.5 receiving yards",
+      "lastCheckedAt": null,
+      "nextReviewAt": null
+    },
+    {
+      "id": "NFL-2026-W2-laporta-over-4-5-rec-dk",
+      "title": "Sam LaPorta OVER 4.5 receptions",
       "lastCheckedAt": null,
       "nextReviewAt": null
     }

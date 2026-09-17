@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:42:48Z",
+  "updatedAt": "2026-09-17T16:00:27Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -5991,7 +5991,7 @@
               "name": "Joey Porter Jr.",
               "position": "CB",
               "status": "Questionable",
-              "injury": "Undisclosed",
+              "injury": "Back",
               "reportedAt": "2026-09-16T23:23Z",
               "source": "https://www.espn.com/nfl/player/_/id/4426506/joey-porter-jr"
             },
@@ -7366,8 +7366,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T15:42:48Z",
-      "lastAttemptAt": "2026-09-17T15:42:48Z",
+      "checkedAt": "2026-09-17T16:00:27Z",
+      "lastAttemptAt": "2026-09-17T16:00:27Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7418,8 +7418,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T15:42:48Z",
-      "lastAttemptAt": "2026-09-17T15:42:48Z",
+      "checkedAt": "2026-09-17T16:00:27Z",
+      "lastAttemptAt": "2026-09-17T16:00:27Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }

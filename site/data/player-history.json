@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T15:42:48Z",
+  "updatedAt": "2026-09-17T16:00:27Z",
   "provider": "ESPN public athlete game logs and official box scores",
   "picks": {
     "w1-loveland-rec": {
@@ -4766,6 +4766,183 @@
         ]
       },
       "athleteId": "4429795"
+    },
+    "NFL-2026-W2-laporta-over-4-5-rec-dk": {
+      "gameId": "NFL-401872932",
+      "position": "TE",
+      "recentForm": {
+        "stat": "receptions",
+        "line": 4.5,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
+        "games": [
+          {
+            "label": "2025-09-07 · GB",
+            "value": 6.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 9.0,
+              "receivingYards": 79.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772722"
+          },
+          {
+            "label": "2025-09-14 · CHI",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 26.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772835"
+          },
+          {
+            "label": "2025-09-23 · BAL",
+            "value": 4.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 33.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772812"
+          },
+          {
+            "label": "2025-09-28 · CLE",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 39.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772846"
+          },
+          {
+            "label": "2025-10-05 · CIN",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 92.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772854"
+          },
+          {
+            "label": "2025-10-13 · KC",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 55.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772923"
+          },
+          {
+            "label": "2025-10-20 · TB",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 15.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772816"
+          },
+          {
+            "label": "2025-11-02 · MIN",
+            "value": 6.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 97.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772871"
+          },
+          {
+            "label": "2025-11-09 · WSH",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 53.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772878"
+          },
+          {
+            "label": "2026-09-13 · NO",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 48.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 4,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 6,
+          "sample": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.0,
+              "low": 3.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 5.7,
+              "low": 3.0,
+              "high": 9.0
+            }
+          }
+        ]
+      },
+      "athleteId": "4430027"
     }
   },
   "watches": {
@@ -4940,6 +5117,182 @@
               "average": 6.8,
               "low": 3.0,
               "high": 13.0
+            }
+          }
+        ]
+      }
+    },
+    "NFL-W2-menu-sam-laporta-receptions": {
+      "gameId": "NFL-401872932",
+      "marketTitle": "Sam LaPorta OVER 4.5 receptions",
+      "recentForm": {
+        "stat": "receptions",
+        "line": 4.5,
+        "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
+        "games": [
+          {
+            "label": "2025-09-07 · GB",
+            "value": 6.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 9.0,
+              "receivingYards": 79.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772722"
+          },
+          {
+            "label": "2025-09-14 · CHI",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 26.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772835"
+          },
+          {
+            "label": "2025-09-23 · BAL",
+            "value": 4.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 4.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 33.0,
+              "touches": 4.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772812"
+          },
+          {
+            "label": "2025-09-28 · CLE",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 4.0,
+              "receivingYards": 39.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772846"
+          },
+          {
+            "label": "2025-10-05 · CIN",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 92.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772854"
+          },
+          {
+            "label": "2025-10-13 · KC",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 6.0,
+              "receivingYards": 55.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772923"
+          },
+          {
+            "label": "2025-10-20 · TB",
+            "value": 3.0,
+            "hit": false,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 3.0,
+              "receivingTargets": 3.0,
+              "receivingYards": 15.0,
+              "touches": 3.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772816"
+          },
+          {
+            "label": "2025-11-02 · MIN",
+            "value": 6.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 6.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 97.0,
+              "touches": 6.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772871"
+          },
+          {
+            "label": "2025-11-09 · WSH",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 5.0,
+              "receivingYards": 53.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772878"
+          },
+          {
+            "label": "2026-09-13 · NO",
+            "value": 5.0,
+            "hit": true,
+            "workload": {
+              "rushingAttempts": 0.0,
+              "rushingYards": 0.0,
+              "receptions": 5.0,
+              "receivingTargets": 8.0,
+              "receivingYards": 48.0,
+              "touches": 5.0
+            },
+            "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923"
+          }
+        ],
+        "sample": 10,
+        "method": "Games played before this recommendation game; exact published threshold and direction.",
+        "last5": {
+          "hits": 4,
+          "sample": 5
+        },
+        "last10": {
+          "hits": 6,
+          "sample": 10
+        },
+        "usage": [
+          {
+            "stat": "Targets",
+            "last5": {
+              "average": 6.0,
+              "low": 3.0,
+              "high": 8.0
+            },
+            "last10": {
+              "average": 5.7,
+              "low": 3.0,
+              "high": 9.0
             }
           }
         ]
