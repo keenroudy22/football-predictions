@@ -1,0 +1,236 @@
+{
+  "league": "CFB",
+  "targetWeek": 3,
+  "publishedAt": "2026-09-17T21:49:22Z",
+  "summary": "17:30 review: DraftKings Indiana game lines and offered parlays are confirmed. No official Syracuse-Pittsburgh selection: final availability and a robust edge estimate remain incomplete.",
+  "props": [],
+  "riskyProps": [],
+  "gamePicks": [],
+  "parlays": [],
+  "gameWatch": [
+    {
+      "id": "CFB-2026-W3-syr-pitt-1130",
+      "gameId": "CFB-401858225",
+      "title": "Syracuse at Pittsburgh · evening decision",
+      "status": "watch",
+      "reviewStatus": "verification_incomplete",
+      "lineLabel": "DraftKings Indiana: Syracuse +10 (-105), Pittsburgh -10 (-115); total 51.5 (over/under -110); moneylines Syracuse +320, Pittsburgh -410",
+      "quoteNote": "Observed directly in the normal Indiana DraftKings browser page at 17:48 ET (21:48:20Z). These are available-market observations, not recommendations; prices can change. Earlier ESPN comparison snapshots are retained separately.",
+      "why": "Syracuse's official projected chart lists Steve Angeli at QB and four running backs joined by OR; it does not establish a stable lead-back workload. Pitt's official preview supports Mason Heintschel's starting role, but two games of team statistics and the market prices alone do not establish a reliable betting edge. No spread, total or parlay clears the research requirements in this review.",
+      "needs": "No official play from this check. Automated DraftKings retrieval failed, but the normal Indiana browser fallback succeeded. The ACC availability embed did not expose a readable report, so final injuries, offensive-line availability and starters remain unconfirmed. A defensible projection and joint probability are still needed before recommending any of the offered parlays. College player-market availability and its jurisdiction gate remain unverified; game-market access does not establish that gate.",
+      "weather": "NWS Pittsburgh forecast updated 14:31 ET: 30% chance of showers/thunderstorms before 22:00, with west wind 3–6 mph. Rain risk adds uncertainty; the light forecast wind alone does not support an under.",
+      "sourceLimitations": "FanDuel Research contains priced spread, total and player references, but its widgets show September 18 while both schools confirm September 17. Its Hatcher explanation also incorrectly calls Syracuse receiver Umari Hatcher a Pitt receiver. Treat those article quotes as unverified references. The incomplete ESPN college injury feed cannot establish that either team is healthy. Do not interpret its provider opening-total field as a verified line-movement history.",
+      "reviewedMarkets": [
+        "Full-game spread, total and moneylines",
+        "Heintschel passing touchdowns (article reference only)",
+        "Turner rushing yards (article reference only)",
+        "Hatcher alternate receiving yards (article reference only)",
+        "Five directly observed prebuilt parlay prices, including a race-to-10 leg"
+      ],
+      "lastCheckedAt": "2026-09-17T21:48:20Z",
+      "nextReviewAt": "2026-09-18T03:30:00Z",
+      "nextReviewNote": "The next scheduled check is 23:30 ET, after the 19:30 ET kickoff; no additional pregame check is promised.",
+      "movementExplanation": {
+        "type": "Unknown",
+        "text": "The ESPN/DraftKings reference price changed from -110 to -105 with Pittsburgh still -10.5. The later direct DraftKings board shows Pittsburgh -10 (-115); these are different source types, not a verified same-source movement sequence. No confirmed cause was found.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660"
+        ]
+      },
+      "marketSnapshots": [
+        {
+          "book": "DraftKings via ESPN",
+          "market": "Pittsburgh spread",
+          "window": "Full game",
+          "direction": "Pittsburgh",
+          "line": -10.5,
+          "odds": -105,
+          "observedAt": "2026-09-17T21:07:10Z",
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "quoteType": "comparison",
+          "sourceTimeNote": "Hosted observation time; exact sportsbook quote time unavailable. Not a directly verified offer."
+        },
+        {
+          "book": "DraftKings via ESPN",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Over",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:07:10Z",
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "quoteType": "comparison",
+          "sourceTimeNote": "Hosted observation time; exact sportsbook quote time unavailable. Not a directly verified offer."
+        },
+        {
+          "book": "DraftKings via ESPN",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Under",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:07:10Z",
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "quoteType": "comparison",
+          "sourceTimeNote": "Hosted observation time; exact sportsbook quote time unavailable. Not a directly verified offer."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Syracuse spread",
+          "window": "Full game",
+          "direction": "Syracuse",
+          "line": 10,
+          "odds": -105,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Pittsburgh spread",
+          "window": "Full game",
+          "direction": "Pittsburgh",
+          "line": -10,
+          "odds": -115,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Over",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Under",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Moneyline",
+          "window": "Full game",
+          "direction": "Syracuse",
+          "line": null,
+          "odds": 320,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Moneyline",
+          "window": "Full game",
+          "direction": "Pittsburgh",
+          "line": null,
+          "odds": -410,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        }
+      ],
+      "sources": [
+        "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+        "https://www.espn.com/college-football/game/_/gameId/401858225",
+        "https://pittsburghpanthers.com/news/2026/9/14/football-game-week-pitt-commences-conference-play-with-syracuse-on-thursday-night",
+        "https://cuse.com/news/2026/9/16/football-syracuse-set-for-road-opener",
+        "https://cuse.com/documents/2026/9/14/3-Pittsburgh_Notes.pdf",
+        "https://theacc.com/sports/2025/8/28/availability-reporting-football.aspx",
+        "https://forecast.weather.gov/MapClick.php?lat=40.441885&lon=-79.955707",
+        "https://www.fanduel.com/research/3-best-bets-and-3-best-player-props-bets-tonight-syracuse-vs-pittsburgh-college-football"
+      ],
+      "parlayObservations": [
+        {
+          "legs": [
+            "Pittsburgh moneyline (full game)",
+            "Under 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 130,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Pittsburgh moneyline (full game)",
+            "Over 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 132,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Pittsburgh -10 spread (full game)",
+            "Over 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 234,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Syracuse +10 spread (full game)",
+            "Over 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 286,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Syracuse race to 10 points",
+            "Pittsburgh moneyline (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 360,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price. Race-to-10 research and settlement details are incomplete; not an official tracked ticket."
+        }
+      ]
+    }
+  ]
+}
