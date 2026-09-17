@@ -80,3 +80,19 @@ test('expired early picks never retain an actionable Hot Pick badge',()=>{
  const html=context.testAPI.pickCard({id:'old',title:'Old early line',kind:'props',hot:true,status:'active',expiresAt:'2000-01-01',publishedAt:'2000-01-01',gameIds:[],sources:[]},0);
  assert.doesNotMatch(html,/class="hot-badge"/);
 });
+
+test('early looks respect position and game filters without entering official counts',()=>{
+  const state=context.testAPI.state;
+  state.slate=JSON.parse(fs.readFileSync(path.join(root,'site/data/slate.json')));
+  state.reports=[JSON.parse(fs.readFileSync(path.join(root,'research/2026-09-17-NFL-week-2-early-player-look.json')))];
+  state.league='NFL';state.week='2026-09-15';state.propGame='NFL-401872932';state.propPosition='RB';
+  const html=context.testAPI.research('props');
+  assert.match(html,/0 official player lines/);
+  assert.match(html,/Reference line: 3.5 receptions/);
+  assert.match(html,/Offensive-line health/);
+  assert.match(html,/Blocking performance/);
+  assert.match(html,/Not a live sportsbook quote/);
+  assert.equal(context.FootballRecords.latest(state.reports).length,0);
+  state.propGame=state.slate.games.find(g=>g.league==='NFL'&&g.week===2&&g.id!=='NFL-401872932').id;
+  assert.doesNotMatch(context.testAPI.research('props'),/Reference line: 3.5 receptions/);
+});

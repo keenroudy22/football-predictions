@@ -30,3 +30,5 @@ body{line-height:1.6}button,input,select{font:inherit}a{color:var(--blue);text-u
 #game-lines,#game-props,#game-injuries,#game-history{scroll-margin-top:85px}
 
 .metric{display:block}.metric strong{margin:8px 0;grid-column:auto;grid-row:auto}
+
+.early-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}.early-watch{padding:20px;border:1px solid #cbd5e1;border-left:4px solid #256a66;background:#fff;border-radius:10px;min-width:0}.early-watch h4{font-size:1.15rem;margin:12px 0}.early-watch p{line-height:1.55}.early-watch small{display:block;color:#526274;line-height:1.5}.early-watch .early-number{font-size:1.2rem;font-weight:750;color:#183c4b}.early-watch details{margin:14px 0}.early-watch summary{cursor:pointer;font-weight:650}
