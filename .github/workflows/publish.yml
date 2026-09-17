@@ -29,6 +29,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -40,8 +42,20 @@ jobs:
           node --test tests/*.test.js
       - name: Refresh schedules and record original forecasts
         run: python scripts/refresh.py
+      - name: Check whether player history needs rebuilding
+        id: history
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import os, subprocess
+          changed = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD'], text=True).splitlines() if os.environ['EVENT_NAME'] == 'push' else []
+          needed = any(p.startswith('research/') or p in ('scripts/player_history.py', 'site/data/research.json') for p in changed)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('needed=' + str(needed).lower() + '\n')
+          PY
       - name: Refresh verified player and position history
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
         run: python scripts/player_history.py
       - name: Refresh injury context
         run: python scripts/research_context.py

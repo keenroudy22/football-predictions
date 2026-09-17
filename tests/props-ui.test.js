@@ -74,3 +74,9 @@ test('ticket text preserves price and cutoff and uses actual line breaks',()=>{
  assert.equal(context.testAPI.decimalToAmerican(2*2),300);
  assert.equal(context.testAPI.americanToDecimal(-200),1.5);
 });
+
+
+test('expired early picks never retain an actionable Hot Pick badge',()=>{
+ const html=context.testAPI.pickCard({id:'old',title:'Old early line',kind:'props',hot:true,status:'active',expiresAt:'2000-01-01',publishedAt:'2000-01-01',gameIds:[],sources:[]},0);
+ assert.doesNotMatch(html,/class="hot-badge"/);
+});
