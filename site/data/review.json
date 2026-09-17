@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-09-17T13:37:28.206Z",
+  "method": "pregame-evaluation-v1",
+  "scoreGroups": [
+    {
+      "key": "NFL/2026/1/elo-total-v1",
+      "n": 1,
+      "wins": 0,
+      "totalMAE": 0,
+      "marginMAE": 24,
+      "totalBias": 0,
+      "marginBias": -24,
+      "exact": 0
+    }
+  ],
+  "selections": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "pushes": 0,
+    "voids": 0,
+    "pending": 0,
+    "priced": 0,
+    "units": null,
+    "graded": 0,
+    "hitRate": null,
+    "roi": null,
+    "missing": 0
+  },
+  "workload": [],
+  "pending": [],
+  "interpretation": "Descriptive evidence, not a trained update. Compare workload, personnel and opponent strength; register changes before evaluating later games. Never retune to a single result."
+}
