@@ -80,3 +80,28 @@ test('changed draft displays old and new line, book and odds safely before appro
  const after=Board.rows(s)[0];saved.key=after.key;saved.snapshot.key=after.key;const html=Board.pageHTML(s,{saved:[saved]});
  assert.match(html,/saved Sample Player OVER 4.5 receptions/);assert.match(html,/latest Sample Player OVER 5.5 receptions/);assert.match(html,/DraftKings -110/);assert.match(html,/FanDuel \+125/);
 });
+test('sportsbook aliases share one filter name and spreads show their actual signed line',()=>{
+ const s=fixture();s.reports[0].props[0].book='Draft Kings';s.slate.games[0].market={provider:'DraftKings',spread:2.5,spreadOdds:-110};
+ const rows=Board.rows(s);assert.deepEqual([...new Set(rows.map(r=>r.book))],['DraftKings']);
+ const html=Board.pageHTML(s);assert.match(html,/>\+2.5 spread</);assert.doesNotMatch(html,/HOME 2.5 Spread|Draft Kings/);
+ assert.equal(Board.summarizeTicket([currentRow({book:'Draft Kings'}),currentRow({key:'b',gameId:'NFL-2',book:'DraftKings'})],1,'money',1,now).available,true);
+});
+test('exact source quote identity can merge missing-ID research while preserving reasoning and stale quote status',()=>{
+ const s=fixture();s.reports[0].props=[];
+ s.reports[0].gameWatch=[{id:'watch',player:'Sample Player',gameId:'NFL-1',title:'Sample Player OVER 4.5 receptions',marketTitle:'Sample Player OVER 4.5 receptions',why:'Verified role research.',risk:'Specific volume risk.',marketSnapshots:[{book:'Draft Kings',market:'receptions',window:'Full game',direction:'OVER',line:4.5,odds:-110,observedAt:'2026-09-17T15:30:00Z',source:'https://example.com/quote',quoteType:'sportsbook'}]}];
+ s.marketLines.lines=[{...currentRow(),id:'direct',player:'Sample Player',athleteId:'111',title:'Sample Player OVER 4.5 receptions',observedAt:'2026-09-17T15:30:00Z',quoteStatus:'stale'}];
+ let rows=Board.rows(s);assert.equal(rows.length,1);assert.equal(rows[0].athleteId,'111');assert.equal(rows[0].status,'stale');assert.equal(rows[0].sourceType,'market');assert.equal(rows[0].why,'Verified role research.');assert.equal(rows[0].risk,'Specific volume risk.');assert.equal(rows[0].hasResearch,true);
+ s.marketLines.lines.push({...s.marketLines.lines[0],id:'different-known-person',athleteId:'222'});rows=Board.rows(s);assert.equal(rows.length,3,'ambiguous same-name identities stay separate');
+});
+test('drawer save action reflects selection and player history appears before long analysis',()=>{
+ const s=fixture(),row=Board.rows(s)[0];s.reports[0].props[0].why='Long underlying analysis.';const initial=Board.pageHTML(s,{detail:row.key});
+ assert.match(initial,/aria-pressed="false">Save to draft/);assert.ok(initial.indexOf('kr-detail-history')<initial.indexOf('Long underlying analysis.'));
+ const saved=Board.pageHTML(s,{detail:row.key,saved:[Board.saveRow(row)]});assert.match(saved,/aria-pressed="true">✓ Saved · remove/);
+});
+test('team accents require verified metadata, a team in this game and a safe hex color',()=>{
+ const s=fixture();s.identities={players:{'NFL/111':{status:'ok',team:{id:'1',color:'0076B6'}}}};
+ assert.equal(Board.rows(s)[0].teamColor,'#0076B6');assert.match(Board.pageHTML(s),/style="--pick-team-color:#0076B6"/);
+ s.identities.players['NFL/111'].team.id='unrelated-team';assert.equal(Board.rows(s)[0].teamColor,null);assert.doesNotMatch(Board.pageHTML(s),/--pick-team-color:/);
+ s.identities.players['NFL/111'].team={id:'1',color:'red;display:none'};assert.equal(Board.rows(s)[0].teamColor,null);
+ s.identities.players['NFL/111'].team.color='#0076B6';s.identities.players['NFL/111'].status='stale';assert.equal(Board.rows(s)[0].teamColor,null);
+});
