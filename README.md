@@ -1,6 +1,8 @@
-# Football Forecast
+# KeenRoudy Sports
 
 NFL and FBS football forecasts, researched player props, and a public record of what was actually published before kickoff.
+
+NBA and MLB currently provide separate schedules and score snapshots, with Eastern date filters and source freshness. Their betting research and forecasts are not enabled. The existing football URL, game links, weeks and season records are preserved. See `SPORTS-ROADMAP.md` for the next coverage gates.
 
 Static website hosted on GitHub Pages. No paid API, account signup, tracking scripts, or betting transactions.
 
@@ -10,8 +12,10 @@ Python 3.11+ and Node 20+; no package install required.
 
 ```
 python scripts/refresh.py
+python scripts/sports_refresh.py
 python -m unittest discover -s tests
 node --check site/app.js
+node --test tests/*.test.js
 ```
 
 `site/` is the deployable directory. GitHub Actions refreshes schedules/results throughout the day plus Eastern postgame windows, including weekday college games. Actions can run late; the page displays source timestamps. Turn off the workflow in GitHub Actions to stop it. No local background process is required.

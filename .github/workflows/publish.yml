@@ -1,4 +1,4 @@
-name: Refresh and publish football board
+name: Refresh and publish KeenRoudy Sports
 on:
   push:
     branches: [main]
@@ -42,6 +42,8 @@ jobs:
           node --test tests/*.test.js
       - name: Refresh schedules and record original forecasts
         run: python scripts/refresh.py
+      - name: Refresh NBA and MLB scoreboards
+        run: python scripts/sports_refresh.py
       - name: Check whether player history needs rebuilding
         id: history
         env:

@@ -10,6 +10,19 @@ from io import BytesIO
 import json
 
 class PipelineTests(unittest.TestCase):
+    def test_priced_game_pick_does_not_require_parlay_legs(self):
+        g = self.game()
+        p = dict(id='spread-1', title='Home -3.5', why='Independent price review', risk='Uncertain game',
+                 sources=['https://example.com'], status='active', book='Book', odds=-110,
+                 quotedAt='2026-09-17T15:00:00Z', expiresAt='2026-09-17T17:00:00Z',
+                 gameIds=[g['id']], cutoff='-3.5 at -110', confidence=6, edge='Judgment',
+                 marketType='spread', line=-3.5, direction='home')
+        r = dict(league='NFL', publishedAt='2026-09-17T16:00:00Z', gamePicks=[p])
+        self.assertIs(validate_report(r, {g['id']: g}), r)
+        p['direction'] = 'over'
+        with self.assertRaises(AssertionError):
+            validate_report(r, {g['id']: g})
+
     def game(self):
         return dict(id='NFL-1', league='NFL', season=2026, kickoff='2099-09-14T20:00:00Z', neutral=False,
                     home={'id':'H','score':30}, away={'id':'A','score':10}, source='https://www.espn.com')

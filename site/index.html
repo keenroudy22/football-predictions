@@ -1,8 +1,58 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="NFL and college football score forecasts, researched player props, and an honest public results record."><title>Football Forecast · NFL & CFB</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="readable.css?v=17"><script src="records.js?v=4" defer></script><script src="analytics.js?v=1" defer></script><script src="dashboard.js?v=3" defer></script><script src="app.js?v=30" defer></script></head>
-<body><a class="skip" href="#main">Skip to games</a><header><a class="brand" href="./"><span class="mark">F<span>F</span></span>FOOTBALL<br>FORECAST</a><div class="mast-note">EVERY GAME. EVERY WEEK.<br><span>The number matters.</span></div><a class="repo" href="#record">View results →</a></header>
-<main id="main"><div class="intro"><div><p class="eyebrow">THE WEEKLY BOARD</p><h1>Football. Research. Results.</h1><p>Your weekly picks, matchup research and a record you can audit.</p></div><div class="edition"><span id="today"></span><span class="dot">●</span> <span id="freshness">Loading source status</span></div></div>
-<div class="toolbar"><div class="league-tabs" role="group" aria-label="League"><button data-league="NFL" class="selected" aria-pressed="true">NFL</button><button data-league="CFB" aria-pressed="false">College football</button></div><label class="week-label">Football week <select id="week" aria-label="Football week"></select></label></div>
-<nav class="sections" aria-label="Sections"><button data-view="home" aria-current="page">This week</button><button data-view="scores">Games</button><button data-view="props">Picks</button><button data-view="research">Research</button><button data-view="record">Results</button></nav>
-<div id="notice" class="notice" role="status">Loading the latest slate…</div><section id="content" aria-live="polite"></section>
-<footer><strong>Good research includes a pass.</strong><p>For entertainment only. Picks are opinions, not guarantees. You are responsible for your own betting decisions and any losses.</p><p>Every published play is tracked at one unit risked. Missing original prices mean unavailable profit and ROI. Personal ticket drafts do not enter the official record.</p><details class="update-plan"><summary>When does this update?</summary><p>Schedules, scores, and available game lines refresh three times daily, with extra checks after common afternoon, evening, and late-night game windows. Research and player-result checks are scheduled throughout the day and after games, including weekday college games. Runs may be delayed and are not continuous live monitoring.</p></details><div><span>All game times Eastern · NFL + FBS</span><a href="#record">Results & methodology</a></div></footer></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="KeenRoudy Sports: games, researched football picks, player trends, and an honest results record. Follow NFL, college football, NBA, and MLB in one place.">
+  <meta name="theme-color" content="#112638">
+  <title>KeenRoudy Sports · Games, Picks & Results</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="readable.css?v=18">
+  <script src="records.js?v=4" defer></script>
+  <script src="analytics.js?v=1" defer></script>
+  <script src="dashboard.js?v=3" defer></script>
+  <script src="sports.js?v=1" defer></script>
+  <script src="app.js?v=31" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="#sports" aria-label="KeenRoudy Sports home"><span class="mark" aria-hidden="true">KR</span><span>KEENROUDY<span class="brand-sports">SPORTS</span></span></a>
+    <div class="mast-note">LOVE THE GAME. KNOW THE NUMBER.<br><span>Follow the research. Track the results.</span></div>
+    <a class="repo" href="#record">Our record ↗</a>
+  </header>
+  <main id="main">
+    <div class="intro">
+      <div><p class="eyebrow" id="hero-eyebrow">THE SPORTS DESK</p><h1 id="hero-title">Your game. Your next read.</h1><p id="hero-description">Games, researched picks and the story behind the numbers.</p></div>
+      <div class="edition"><span id="today"></span><span class="dot" aria-hidden="true">●</span> <span id="freshness">Loading source status</span></div>
+    </div>
+    <div class="toolbar">
+      <nav class="league-tabs sport-nav" aria-label="Sport">
+        <a href="#sports" data-sport="all">All sports</a>
+        <button data-league="NFL" aria-pressed="false">NFL</button>
+        <button data-league="CFB" aria-pressed="false">College football</button>
+        <a href="#sport/NBA" data-sport="NBA">NBA</a>
+        <a href="#sport/MLB" data-sport="MLB">MLB</a>
+      </nav>
+      <label class="week-label">Football week <select id="week" aria-label="Football week"></select></label>
+    </div>
+    <nav class="sections" aria-label="Football sections">
+      <button data-view="home" aria-current="page">Overview</button>
+      <button data-view="scores">Games</button>
+      <button data-view="props">Picks</button>
+      <button data-view="research">Research</button>
+      <button data-view="record">Results</button>
+    </nav>
+    <div id="notice" class="notice" role="status">Loading the latest board…</div>
+    <section id="content" aria-live="polite"></section>
+    <footer>
+      <strong>Enjoy the game. Keep the record honest.</strong>
+      <p>For entertainment only. Picks are opinions, not guarantees. You are responsible for your own betting decisions and any losses.</p>
+      <p>Every published play is tracked at one unit risked. Missing original prices mean unavailable profit and ROI. Personal ticket drafts do not enter the official record.</p>
+      <details class="update-plan"><summary>When does this update?</summary><p>Football research checks are scheduled for 8:30 a.m., 11:30 a.m., 5:30 p.m. and 11:30 p.m. Eastern, including weekday college games. Schedules and scores have separate hosted refreshes. Source timestamps show the latest successful check. Runs can be delayed; this is not a continuous live feed.</p></details>
+      <div><span>All game times Eastern · NFL · College football · NBA · MLB</span><a href="#record">Results & methodology</a></div>
+    </footer>
+  </main>
+</body>
+</html>

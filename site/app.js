@@ -158,7 +158,7 @@ function pickCard(p,i){
   const window=p.marketWindow?`<span class="tag market-window">${esc(p.marketWindow)}</span>`:'';
   const selectButton=builderEligible(p)?`<button class="parlay-select ${state.parlaySelected.has(p.id)?'selected':''}" type="button" data-parlay-pick="${esc(p.id)}">${state.parlaySelected.has(p.id)?'Remove from ticket':'Add to ticket'}</button>${state.parlaySelected.has(p.id)?'<a class="ticket-link" href="#parlays">View ticket →</a>':''}`:'';
   const urgency=p.hot===true?`<div class="hot-clock"><strong>Early value</strong><span>${status==='active'&&p.expiresAt?`Recheck by ${pretty(p.expiresAt)} ET`:'The original number is no longer marked current'}</span></div>`:'';
-  return `<article class="pick ${p.kind==='riskyProps'?'risky-pick':''} ${p.hot===true?'hot-pick':''}"><span class="number">${String(i+1).padStart(2,'0')}</span> <span class="tag">${esc(result)}</span>${p.hot===true&&status==='active'?'<span class="hot-badge">HOT PICK</span>':''}${FootballRecords.favorite(p)?'<span class="tag favorite-label">DAILY FAVORITE</span>':''}${p.fun===true?'<span class="fun-badge">FUN MARKET</span>':''}${p.kind==='riskyProps'?'<span class="risk-badge">RISKY LINE</span>':''}${window}${tier?`<span class="tag">${tier.label}</span>`:''}<h3>${esc(p.title)}</h3>${urgency}<p><strong>${esc(p.book||'Book not verified')} ${p.odds>0?'+':''}${esc(p.odds||'')}</strong> · Confidence ${esc(p.confidence??'—')}/10</p>${priceNote}${p.projection!=null?`<p>Projected: <strong>${esc(p.projection)}</strong></p>`:''}${form}${gameLink}${selectButton}<details class="pick-details"><summary>Reasoning, workload & price details</summary>${workloadPanel(p.recentForm)}${playerMovement(p)}${usageNote}${formDetail}${priorNote}${closeNote}${moveNote}<p><strong>Why:</strong> ${esc(p.why)}</p><p><strong>Risk:</strong> ${esc(p.risk)}</p>${p.edge?`<p><strong>Estimated edge:</strong> ${esc(p.edge)}</p>`:''}${p.legs?`<p><strong>Legs:</strong> ${p.legs.map(esc).join(' + ')}</p>`:''}${p.correlation?`<p><strong>Correlation:</strong> ${esc(p.correlation)}</p>`:''}<p><strong>Price limit:</strong> ${esc(p.cutoff||'Not actionable')}</p><p>Quote: ${p.quotedAt?pretty(p.quotedAt)+' ET':'Not verified'} · Recorded ${pretty(p.publishedAt)} ET</p>${p.bookLink&&status==='active'?`<p><a href="${esc(p.bookLink)}" target="_blank" rel="noopener noreferrer"><strong>Open verified bet slip at ${esc(p.book)} ↗</strong></a></p>`:''}${p.result?`<p><strong>Result: ${esc(result)}</strong> · Actual ${esc(p.actual)}</p>${p.lastCheckedAt?`<p>Checked ${pretty(p.lastCheckedAt)} ET${p.nextReviewAt?` · Next review ${pretty(p.nextReviewAt)} ET`:''}</p>`:''}${links([p.resultSource])}`:''}${calc}${links(p.sources)}</details></article>`;
+  return `<article class="pick ${p.kind==='riskyProps'?'risky-pick':''} ${p.hot===true?'hot-pick':''}"><span class="number">${String(i+1).padStart(2,'0')}</span> <span class="tag">${esc(result)}</span>${p.hot===true&&status==='active'?'<span class="hot-badge">HOT PICK</span>':''}${FootballRecords.favorite(p)?'<span class="tag favorite-label">DAILY FAVORITE</span>':''}${p.fun===true?'<span class="fun-badge">FUN MARKET</span>':''}${p.kind==='riskyProps'?'<span class="risk-badge">RISKY LINE</span>':''}${window}${tier?`<span class="tag">${tier.label}</span>`:''}<h3>${esc(p.title)}</h3>${urgency}<p><strong>${esc(p.book||'Book not verified')} ${p.odds>0?'+':''}${esc(p.odds||'')}</strong> · Confidence ${esc(p.confidence??'—')}/10</p>${p.entryNote?`<p class="entry-note"><strong>Entry update:</strong> ${esc(p.entryNote)}</p>`:''}${p.quickWhy?`<p class="pick-quick-why">${esc(p.quickWhy)}</p>`:''}<p class="pick-cutoff"><strong>Take it through:</strong> ${esc(p.cutoff||'Recheck the exact price')}</p>${priceNote}${p.projection!=null?`<p>Projected: <strong>${esc(p.projection)}</strong></p>`:''}${form}${gameLink}${selectButton}<details class="pick-details"><summary>Reasoning, workload & price details</summary>${workloadPanel(p.recentForm)}${playerMovement(p)}${usageNote}${formDetail}${priorNote}${closeNote}${moveNote}<p><strong>Why:</strong> ${esc(p.why)}</p><p><strong>Risk:</strong> ${esc(p.risk)}</p>${p.edge?`<p><strong>Estimated edge:</strong> ${esc(p.edge)}</p>`:''}${p.legs?`<p><strong>Legs:</strong> ${p.legs.map(esc).join(' + ')}</p>`:''}${p.correlation?`<p><strong>Correlation:</strong> ${esc(p.correlation)}</p>`:''}<p><strong>Price limit:</strong> ${esc(p.cutoff||'Not actionable')}</p><p>Quote: ${p.quotedAt?pretty(p.quotedAt)+' ET':'Not verified'} · Recorded ${pretty(p.publishedAt)} ET</p>${p.bookLink&&status==='active'?`<p><a href="${esc(p.bookLink)}" target="_blank" rel="noopener noreferrer"><strong>Open verified bet slip at ${esc(p.book)} ↗</strong></a></p>`:''}${p.result?`<p><strong>Result: ${esc(result)}</strong> · Actual ${esc(p.actual)}</p>${p.lastCheckedAt?`<p>Checked ${pretty(p.lastCheckedAt)} ET${p.nextReviewAt?` · Next review ${pretty(p.nextReviewAt)} ET`:''}</p>`:''}${links([p.resultSource])}`:''}${calc}${links(p.sources)}</details></article>`;
 }
 function research(kind){
   const allUnfiltered=latestPicks(kind);
@@ -172,13 +172,13 @@ function research(kind){
   const active=all.filter(p=>pickStatus(p)==='active');
   const title=kind==='props'?'Player props':'Parlays & ticket builder';
   const text=kind==='props'?'Favorites first. Filter the full published card by game or position.':'Published tickets ordered by relative risk, then your personal builder. Lower risk still carries a chance of losing; tiers are qualitative.';
-  const no=kind==='props'?'No active prop card.':'No qualifying parlay published.';
-  const reason=kind==='props'?'Live sportsbook quotes and full player research have not been verified for this slate. Baseline score forecasts do not establish a player-prop edge.':'The research desk has not verified a combined sportsbook price and defensible joint assumptions. Adding legs to fill a ticket would not make it a smart parlay.';
+  const no=kind==='props'?(all.length?'Published picks · quotes need rechecking':'No active prop card.'):'No qualifying parlay published.';
+  const reason=kind==='props'?(all.length?'The original selections remain below and in the record. A closed or expired quote is not a current entry price.':'Game research is available below. An official pick needs a verified price and completed review.'):'The research desk has not verified a combined sportsbook price and defensible joint assumptions. Adding legs to fill a ticket would not make it a smart parlay.';
   const selectedOfficialWeek=[...new Set(games().map(footballWeek))][0];
   const selectedReports=state.reports.filter(r=>r.league===state.league&&(Number.isInteger(r.targetWeek)?r.targetWeek===selectedOfficialWeek:weekOf(r.publishedAt)===state.week));
   const watch=selectedReports.flatMap(r=>r.watch||[]);
   const history=all.filter(p=>p.status==='historical'),core=all.filter(p=>p.kind!=='riskyProps'),risky=all.filter(p=>p.kind==='riskyProps');
-  const favorites=core.filter(FootballRecords.favorite),hot=core.filter(p=>p.hot===true&&pickStatus(p)==='active'&&!FootballRecords.favorite(p)),otherCore=core.filter(p=>!FootballRecords.favorite(p)&&!hot.includes(p));
+  const favorites=core.filter(FootballRecords.favorite).sort((a,b)=>Number(pickStatus(b)==='active')-Number(pickStatus(a)==='active')),hot=core.filter(p=>p.hot===true&&pickStatus(p)==='active'&&!FootballRecords.favorite(p)),otherCore=core.filter(p=>!FootballRecords.favorite(p)&&!hot.includes(p));
   const fun=risky.filter(p=>p.fun===true),otherRisky=risky.filter(p=>p.fun!==true);
   const watchItems=new Map();selectedReports.forEach(r=>(r.gameWatch||[]).filter(w=>(state.propGame==='all'||w.gameId===state.propGame)&&(state.propPosition==='all'||w.position===state.propPosition)).forEach(w=>watchItems.set(w.id,{...w,publishedAt:r.publishedAt})));
   const coreActive=core.filter(p=>pickStatus(p)==='active'),riskyActive=risky.filter(p=>pickStatus(p)==='active');
@@ -197,6 +197,15 @@ function research(kind){
   return `<div class="subnav"><a href="#props">Player props</a><a href="#parlays">Parlays & ticket builder →</a></div><div class="section-head"><div><h2>${title}</h2><p>${text}</p>${kind==='props'?`<p>${filterSummary} · ${favorites.length} daily favorite${favorites.length===1?'':'s'} shown · ${coreActive.length+riskyActive.length} currently active. Position groups and exact-market logs appear below when verified.</p>`:''}</div><span class="count">${kind==='props'?coreActive.length:active.length} ACTIVE</span></div>`+propFilters+(kind==='props'&&!all.length?empty(allUnfiltered.length?'No props match these filters.':'No official picks published yet.',allUnfiltered.length?'Try another game or position.':'Game research is available below. Qualified picks will appear here when verified.'):kind==='props'&&!coreActive.length?empty(no,reason):kind!=='props'&&!active.length?empty(no,reason):'')+cards+watchCards+(kind==='parlays'?parlayBuilder(): '')+takeawayBlock+(history.length?`<div class="method"><h3>Week 1 imported card</h3><p>These are screenshot-derived historical lines. Original prices and exact posting times were not supplied. Missing original prices mean unavailable profit and ROI.</p></div>`:'')+(watch.length?`<details class="watch-summary"><summary>Additional market notes · ${watch.length}</summary><div><p class="eyebrow">MARKET WATCH</p><h3>Lines to watch</h3><p>Research notes, not available wagers.</p></div><div class="watch-summary-grid">${watch.map(w=>{const parts=String(w).split(' — ');return `<article><span class="tag">WATCH</span><h4>${esc(parts.shift()||'Market note')}</h4><p>${esc(parts.join(' — '))}</p></article>`}).join('')}</div></details>`:'');
 }
 function render(){
+  if(window.KeenSports?.matches(location.hash)){window.KeenSports.render({state});return;}
+  window.KeenSports?.syncNavigation(state.league);
+  if(state.footballError){
+    $('#notice').textContent='Football data could not load. Other sports may still be available.';
+    $('#notice').classList.add('warn');
+    $('#freshness').textContent='Football source unavailable';
+    $('#content').innerHTML=empty('Football board temporarily unavailable.','Refresh to try again, or open another sport. No football records or recommendations are displayed from incomplete files.');
+    return;
+  }
   const routeKey=[state.view,state.week,state.league,state.propGame,state.propPosition].join('|');
   const sameRoute=state.renderedRoute===routeKey;state.renderedRoute=routeKey;
   $('.week-label').hidden=state.view==='record';
@@ -241,7 +250,7 @@ function compatibleTicket(items){
     new Set(items.map(p=>p.gameIds[0])).size===items.length;
 }
 function ticketText(items){
-  return ['Football Forecast - draft ticket',...items.map(p=>{
+  return ['KeenRoudy Sports - draft ticket',...items.map(p=>{
     const g=gameMap().get(p.gameIds[0]);
     return `${p.title} | ${p.marketWindow||'Full game'} | ${g?g.away.abbreviation+' @ '+g.home.abbreviation+' '+pretty(g.kickoff)+' ET':''} | ${p.book} ${p.odds>0?'+':''}${p.odds} | quoted ${p.quotedAt} | limit: ${p.cutoff||'Recheck price'}`;
   }),'Please verify exact markets and current odds before preparing the slip.'].join('\n');
@@ -273,9 +282,16 @@ function updateCalculator(box){
 function navigate(){const changed=state.navigationHash!==location.hash;state.navigationHash=location.hash;const view=location.hash.slice(1);state.view=view.startsWith('game/')?'game':['home','scores','props','parlays','record','research'].includes(view)?view:'home';if(state.view==='game'){const g=gameMap().get(decodeURIComponent(view.slice(5)));if(g){state.league=g.league;state.week=weekOf(g.kickoff);setupWeeks()}}else if($('#week')?.value&&state.week!==$('#week').value){state.week=$('#week').value}if(state.slate)render();if(changed)window.scrollTo({top:0,behavior:'instant'})}
 async function init(){
   $('#today').textContent=fmt(new Date(),{weekday:'short',month:'short',day:'numeric',year:'numeric'}).toUpperCase();
+  const sportsReady=window.KeenSports?.load();
   try{
-    const values=await Promise.all(['slate','forecasts','research'].map(async f=>{const r=await fetch(`data/${f}.json?refresh=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error('Data unavailable');return r.json()}));
-    [state.slate,state.forecasts,state.reports]=values;
+    try{
+      const values=await Promise.all(['slate','forecasts','research'].map(async f=>{const r=await fetch(`data/${f}.json?refresh=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error('Data unavailable');return r.json()}));
+      [state.slate,state.forecasts,state.reports]=values;
+      state.footballError=false;
+    }catch(error){
+      state.footballError=true;
+      state.slate={games:[],sources:[]};state.forecasts=[];state.reports=[];
+    }
     // Optional enrichment never blocks the official ledger or scoreboard.
     try{
       const response=await fetch(`data/player-history.json?refresh=${Date.now()}`,{cache:'no-store'});
@@ -290,8 +306,10 @@ async function init(){
       }
     }catch(e){state.history=null}
     try{const c=await fetch('data/research-context.json?refresh='+Date.now(),{cache:'no-store'});if(c.ok)state.context=await c.json()}catch(e){state.context=null}
+    await sportsReady;
+    if(!location.hash)history.replaceState(null,'','#sports');
     setupWeeks();navigate();
-    document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;if(state.view==='game'){state.view='scores';location.hash='scores'}state.recordLeague=state.league;state.query='';state.filter='all';state.propGame='all';state.propPosition='all';localStorage.setItem('football-league',state.league);setupWeeks();render()}));
+    document.querySelectorAll('[data-league]').forEach(b=>b.addEventListener('click',()=>{state.league=b.dataset.league;if(window.KeenSports?.matches(location.hash)){state.view='home';location.hash='home'}else if(state.view==='game'){state.view='scores';location.hash='scores'}state.recordLeague=state.league;state.query='';state.filter='all';state.propGame='all';state.propPosition='all';localStorage.setItem('football-league',state.league);setupWeeks();render()}));
     document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{location.hash=b.dataset.view;navigate()}));
     window.addEventListener('hashchange',navigate);
     document.addEventListener('click',async e=>{const jump=e.target.closest('[data-game-section]');if(jump){document.getElementById(jump.dataset.gameSection)?.scrollIntoView({behavior:'smooth',block:'start'});return}const resultTab=e.target.closest('[data-result-tab]');if(resultTab){state.resultTab=resultTab.dataset.resultTab;render();return}if(e.target.id==='copy-ticket'){try{await navigator.clipboard.writeText($('#gambly-ticket').value);$('#copy-status').textContent='Copied. Open Gambly and paste your ticket.'}catch(error){$('#gambly-ticket').select();$('#copy-status').textContent='Select and copy the ticket text above.'}return}const parlay=e.target.closest('[data-parlay-pick]');if(parlay){const id=parlay.dataset.parlayPick;state.parlaySelected.has(id)?state.parlaySelected.delete(id):state.parlaySelected.add(id);render();return}const load=e.target.closest('[data-parlay-ids]');if(load){state.parlaySelected=new Set(load.dataset.parlayIds.split(',').filter(Boolean));render();return}if(e.target.id==='clear-prop-filters'){state.propGame='all';state.propPosition='all';render();return}const a=e.target.closest('a[href^="#"]');if(!a)return;const route=a.getAttribute('href').slice(1);if(route.startsWith('game/')||['home','scores','props','parlays','record','research'].includes(route)){e.preventDefault();location.hash=route;navigate()}});
