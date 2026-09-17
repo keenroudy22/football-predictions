@@ -34,5 +34,7 @@
       "nextReviewAt": null
     }
   ],
-  "parlays": []
+  "parlays": [],
+  "historicalImport": true,
+  "auditNote": "Metadata correction: this report explicitly imported a prior conversation pick whose exact original publication time was not verified. Preserve its outcome and quoted price in the historical archive; exclude from verified pregame performance."
 }

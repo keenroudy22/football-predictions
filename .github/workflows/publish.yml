@@ -37,12 +37,16 @@ jobs:
       - name: Check browser script
         run: |
           node --check site/app.js
-          node --test tests/records.test.js tests/props-ui.test.js
+          node --test tests/*.test.js
       - name: Refresh schedules and record original forecasts
         run: python scripts/refresh.py
       - name: Refresh verified player and position history
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
         run: python scripts/player_history.py
+      - name: Refresh injury context
+        run: python scripts/research_context.py
+      - name: Build research review evidence
+        run: node scripts/review.cjs
       - name: Preserve the public record
         run: |
           git config user.name 'football-forecast[bot]'

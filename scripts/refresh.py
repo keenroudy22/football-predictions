@@ -212,7 +212,7 @@ def validate_report(report, games):
         assert score.get('why') and score.get('sources')
         assert all(s.startswith('https://') for s in score['sources'])
         assert historical and score.get('confidence') is None or 1 <= score['confidence'] <= 10
-    for pick in report.get('props', []) + report.get('riskyProps', []) + report.get('parlays', []):
+    for pick in report.get('props', []) + report.get('riskyProps', []) + report.get('parlays', []) + report.get('gamePicks', []):
         for key in ('id', 'title', 'why', 'risk', 'sources', 'status'):
             assert pick.get(key), f'Missing {key}'
         assert all(s.startswith('https://') for s in pick['sources'])
@@ -260,8 +260,14 @@ def validate_report(report, games):
             assert 1 <= pick['confidence'] <= 10
             assert isinstance(pick['odds'], (int, float)) and abs(pick['odds']) >= 100
             assert pick['gameIds'], 'No games attached'
-            if pick in report.get('parlays', []):
+            if pick in report.get('parlays', []) + report.get('gamePicks', []):
                 assert len(pick.get('legs', [])) >= 2 and pick.get('correlation')
+            elif pick in report.get('gamePicks', []):
+                assert pick.get('marketType') in ('spread', 'total')
+                assert isinstance(pick.get('line'), (int, float))
+                assert pick.get('direction') in ('over', 'under', 'home', 'away')
+                assert (pick['marketType'] == 'total') == (pick['direction'] in ('over', 'under'))
+                assert len(pick['gameIds']) == 1
             else:
                 assert pick.get('projection') is not None
                 assert pick.get('position'), 'Active prop missing position'
@@ -272,6 +278,25 @@ def validate_report(report, games):
                 assert games[gid]['league'] == report['league']
                 assert historical or published < datetime.fromisoformat(games[gid]['kickoff'].replace('Z', '+00:00')), 'Late recommendation'
     return report
+
+
+def validate_ledger(reports):
+    originals = {}
+    for report in sorted(reports, key=lambda r: r['publishedAt']):
+        for kind in ('props', 'riskyProps', 'parlays', 'gamePicks'):
+            for pick in report.get(kind, []):
+                if pick['id'] not in originals:
+                    originals[pick['id']] = (report['league'], kind, pick)
+                    continue
+                league, original_kind, original = originals[pick['id']]
+                assert league == report['league'] and original_kind == kind, 'Pick ID changed league/category'
+                for field in ('title', 'gameIds', 'line', 'direction', 'marketType', 'legs'):
+                    if original.get(field) is not None and pick.get(field) is not None:
+                        assert original[field] == pick[field], f'Original {field} changed; publish a new pick ID'
+                if 'favorite' in pick:
+                    assert bool(original.get('favorite')) == bool(pick['favorite']), 'Favorite changed after publication'
+    return reports
+
 
 def main():
     now = datetime.now(timezone.utc)
@@ -328,6 +353,7 @@ def main():
                 forecasts.append(model.predict(g, now))
                 known.add(g['id'])
     reports = [validate_report(read(p, {}), games) for p in sorted((ROOT / 'research').glob('*.json'))]
+    validate_ledger(reports)
     payload = {'updatedAt': stamp(now), 'sources': sources, 'games': sorted(games.values(), key=lambda g: g['kickoff'])}
     # All network reads and validation succeed before replacing any published data.
     for name, value in [('slate.json', payload), ('forecasts.json', forecasts), ('research.json', reports)]:
