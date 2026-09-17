@@ -1,0 +1,469 @@
+{
+  "updatedAt": "2026-09-17T19:43:08Z",
+  "provider": "ESPN public athlete/team detail",
+  "coverage": "Followed NFL/CFB athletes only. Team affiliation does not establish health, participation, or starter status.",
+  "attempted": 27,
+  "deferred": 0,
+  "players": {
+    "NFL/4430027": {
+      "athleteId": "4430027",
+      "league": "NFL",
+      "name": "Sam LaPorta",
+      "position": "TE",
+      "team": {
+        "id": "8",
+        "name": "Detroit Lions",
+        "abbreviation": "DET",
+        "color": "0076B6",
+        "alternateColor": "BBBBBB"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4430027",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4429795": {
+      "athleteId": "4429795",
+      "league": "NFL",
+      "name": "Jahmyr Gibbs",
+      "position": "RB",
+      "team": {
+        "id": "8",
+        "name": "Detroit Lions",
+        "abbreviation": "DET",
+        "color": "0076B6",
+        "alternateColor": "BBBBBB"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4429795",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3139477": {
+      "athleteId": "3139477",
+      "league": "NFL",
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "team": {
+        "id": "12",
+        "name": "Kansas City Chiefs",
+        "abbreviation": "KC",
+        "color": "E31837",
+        "alternateColor": "FFB612"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3139477",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4723086": {
+      "athleteId": "4723086",
+      "league": "NFL",
+      "name": "Colston Loveland",
+      "position": "TE",
+      "team": {
+        "id": "3",
+        "name": "Chicago Bears",
+        "abbreviation": "CHI",
+        "color": "0B1C3A",
+        "alternateColor": "E64100"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4723086",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3052587": {
+      "athleteId": "3052587",
+      "league": "NFL",
+      "name": "Baker Mayfield",
+      "position": "QB",
+      "team": {
+        "id": "27",
+        "name": "Tampa Bay Buccaneers",
+        "abbreviation": "TB",
+        "color": "BD1C36",
+        "alternateColor": "3E3A35"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3052587",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4243331": {
+      "athleteId": "4243331",
+      "league": "NFL",
+      "name": "Cade Otton",
+      "position": "TE",
+      "team": {
+        "id": "27",
+        "name": "Tampa Bay Buccaneers",
+        "abbreviation": "TB",
+        "color": "BD1C36",
+        "alternateColor": "3E3A35"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4243331",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3916148": {
+      "athleteId": "3916148",
+      "league": "NFL",
+      "name": "Tony Pollard",
+      "position": "RB",
+      "team": {
+        "id": "10",
+        "name": "Tennessee Titans",
+        "abbreviation": "TEN",
+        "color": "4495D2",
+        "alternateColor": "001532"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3916148",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4360939": {
+      "athleteId": "4360939",
+      "league": "NFL",
+      "name": "Rashod Bateman",
+      "position": "WR",
+      "team": {
+        "id": "33",
+        "name": "Baltimore Ravens",
+        "abbreviation": "BAL",
+        "color": "29126F",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4360939",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4890973": {
+      "athleteId": "4890973",
+      "league": "NFL",
+      "name": "Ashton Jeanty",
+      "position": "RB",
+      "team": {
+        "id": "13",
+        "name": "Las Vegas Raiders",
+        "abbreviation": "LV",
+        "color": "000000",
+        "alternateColor": "A5ACAF"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4890973",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3116165": {
+      "athleteId": "3116165",
+      "league": "NFL",
+      "name": "Chris Godwin Jr.",
+      "position": "WR",
+      "team": {
+        "id": "27",
+        "name": "Tampa Bay Buccaneers",
+        "abbreviation": "TB",
+        "color": "BD1C36",
+        "alternateColor": "3E3A35"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3116165",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4248528": {
+      "athleteId": "4248528",
+      "league": "NFL",
+      "name": "Christian Watson",
+      "position": "WR",
+      "team": {
+        "id": "9",
+        "name": "Green Bay Packers",
+        "abbreviation": "GB",
+        "color": "204E32",
+        "alternateColor": "FFB612"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4248528",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3929645": {
+      "athleteId": "3929645",
+      "league": "NFL",
+      "name": "Juwan Johnson",
+      "position": "TE",
+      "team": {
+        "id": "18",
+        "name": "New Orleans Saints",
+        "abbreviation": "NO",
+        "color": "D3BC8D",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3929645",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4362238": {
+      "athleteId": "4362238",
+      "league": "NFL",
+      "name": "Chase Brown",
+      "position": "RB",
+      "team": {
+        "id": "4",
+        "name": "Cincinnati Bengals",
+        "abbreviation": "CIN",
+        "color": "FB4F14",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4362238",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4695883": {
+      "athleteId": "4695883",
+      "league": "NFL",
+      "name": "Jalen Coker",
+      "position": "WR",
+      "team": {
+        "id": "29",
+        "name": "Carolina Panthers",
+        "abbreviation": "CAR",
+        "color": "0085CA",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4695883",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3916387": {
+      "athleteId": "3916387",
+      "league": "NFL",
+      "name": "Lamar Jackson",
+      "position": "QB",
+      "team": {
+        "id": "33",
+        "name": "Baltimore Ravens",
+        "abbreviation": "BAL",
+        "color": "29126F",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3916387",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/3929630": {
+      "athleteId": "3929630",
+      "league": "NFL",
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "team": {
+        "id": "21",
+        "name": "Philadelphia Eagles",
+        "abbreviation": "PHI",
+        "color": "06424D",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/3929630",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4241389": {
+      "athleteId": "4241389",
+      "league": "NFL",
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "team": {
+        "id": "6",
+        "name": "Dallas Cowboys",
+        "abbreviation": "DAL",
+        "color": "002A5C",
+        "alternateColor": "B0B7BC"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4241389",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4432665": {
+      "athleteId": "4432665",
+      "league": "NFL",
+      "name": "Brock Bowers",
+      "position": "TE",
+      "team": {
+        "id": "13",
+        "name": "Las Vegas Raiders",
+        "abbreviation": "LV",
+        "color": "000000",
+        "alternateColor": "A5ACAF"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4432665",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4595348": {
+      "athleteId": "4595348",
+      "league": "NFL",
+      "name": "Malik Nabers",
+      "position": "WR",
+      "team": {
+        "id": "19",
+        "name": "New York Giants",
+        "abbreviation": "NYG",
+        "color": "003C7F",
+        "alternateColor": "C9243F"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4595348",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/8439": {
+      "athleteId": "8439",
+      "league": "NFL",
+      "name": "Aaron Rodgers",
+      "position": "QB",
+      "team": {
+        "id": "23",
+        "name": "Pittsburgh Steelers",
+        "abbreviation": "PIT",
+        "color": "000000",
+        "alternateColor": "FFB612"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/8439",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4038941": {
+      "athleteId": "4038941",
+      "league": "NFL",
+      "name": "Justin Herbert",
+      "position": "QB",
+      "team": {
+        "id": "24",
+        "name": "Los Angeles Chargers",
+        "abbreviation": "LAC",
+        "color": "0080C6",
+        "alternateColor": "FFC20E"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4038941",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4426348": {
+      "athleteId": "4426348",
+      "league": "NFL",
+      "name": "Jayden Daniels",
+      "position": "QB",
+      "team": {
+        "id": "28",
+        "name": "Washington Commanders",
+        "abbreviation": "WSH",
+        "color": "5A1414",
+        "alternateColor": "FFB612"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4426348",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4360689": {
+      "athleteId": "4360689",
+      "league": "NFL",
+      "name": "Tyler Shough",
+      "position": "QB",
+      "team": {
+        "id": "18",
+        "name": "New Orleans Saints",
+        "abbreviation": "NO",
+        "color": "D3BC8D",
+        "alternateColor": "000000"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4360689",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4036378": {
+      "athleteId": "4036378",
+      "league": "NFL",
+      "name": "Jordan Love",
+      "position": "QB",
+      "team": {
+        "id": "9",
+        "name": "Green Bay Packers",
+        "abbreviation": "GB",
+        "color": "204E32",
+        "alternateColor": "FFB612"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4036378",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4427366": {
+      "athleteId": "4427366",
+      "league": "NFL",
+      "name": "Breece Hall",
+      "position": "RB",
+      "team": {
+        "id": "20",
+        "name": "New York Jets",
+        "abbreviation": "NYJ",
+        "color": "115740",
+        "alternateColor": "FFFFFF"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4427366",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4262921": {
+      "athleteId": "4262921",
+      "league": "NFL",
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "team": {
+        "id": "16",
+        "name": "Minnesota Vikings",
+        "abbreviation": "MIN",
+        "color": "4F2683",
+        "alternateColor": "FFC62F"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4262921",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    },
+    "NFL/4361307": {
+      "athleteId": "4361307",
+      "league": "NFL",
+      "name": "Trey McBride",
+      "position": "TE",
+      "team": {
+        "id": "22",
+        "name": "Arizona Cardinals",
+        "abbreviation": "ARI",
+        "color": "A40227",
+        "alternateColor": "FFFFFF"
+      },
+      "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4361307",
+      "checkedAt": "2026-09-17T19:43:08Z",
+      "lastAttemptAt": "2026-09-17T19:43:08Z",
+      "status": "ok"
+    }
+  },
+  "failures": []
+}

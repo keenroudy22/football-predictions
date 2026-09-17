@@ -73,13 +73,14 @@
   }
   function syncNavigation(league = 'NFL', recordLeague = 'All') {
     if (typeof document === 'undefined') return;
-    const route = typeof location === 'undefined' ? '' : location.hash, sports = matches(route), results = route === '#record', active = results ? (recordLeague === 'All' ? 'all' : recordLeague) : route.startsWith('#sport/') ? route.slice(7) : sports ? 'all' : league;
+    const route = typeof location === 'undefined' ? '' : location.hash, sports = matches(route), results = route === '#record', players = route === '#players' || route.startsWith('#player/'), active = results ? (recordLeague === 'All' ? 'all' : recordLeague) : players ? (route.startsWith('#player/') ? route.split('/')[1] : 'all') : route.startsWith('#sport/') ? route.slice(7) : sports ? 'all' : league;
     document.body.dataset.activeSport = active;
+    document.body.dataset.pageView = route === '#props' ? 'props' : players ? 'players' : route === '#parlays' ? 'parlays' : '';
     document.querySelectorAll('[data-sport]').forEach(a => { const selected = a.dataset.sport === active; a.classList.toggle('selected', selected); selected ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
     document.querySelectorAll('[data-league]').forEach(button => { const selected = button.dataset.league === active; button.classList.toggle('selected', selected); button.setAttribute('aria-pressed', String(selected)); });
     const sections = document.querySelector('.sections'); if (sections) sections.hidden = sports;
-    const week = document.querySelector('.week-label'); if (week) week.hidden = sports || results;
-    const text = results ? ['RESULTS', 'Results', 'Picks, score accuracy and performance by league.'] : active === 'all' ? ['KEENROUDY SPORTS', 'Today’s board', 'Games, picks and the latest research.'] : active === 'NBA' ? ['BASKETBALL', 'NBA scoreboard', 'Game times, scores and the upcoming schedule.'] : active === 'MLB' ? ['BASEBALL', 'MLB scoreboard', 'Game times, scores and the upcoming schedule.'] : ['FOOTBALL', `${names[league]} board`, 'Picks, matchup research and season results.'];
+    const week = document.querySelector('.week-label'); if (week) week.hidden = sports || results || players;
+    const text = results ? ['RESULTS', 'Results', 'Picks, score accuracy and performance by league.'] : players ? ['RESEARCH', 'Player research', 'Explore the players, markets and data we follow.'] : route === '#props' ? ['PICKS', `${names[league]} picks`, 'Official selections, with favorites first.'] : active === 'all' ? ['KEENROUDY SPORTS', 'Today’s board', 'Games, picks and the latest research.'] : active === 'NBA' ? ['BASKETBALL', 'NBA scoreboard', 'Game times, scores and the upcoming schedule.'] : active === 'MLB' ? ['BASEBALL', 'MLB scoreboard', 'Game times, scores and the upcoming schedule.'] : ['FOOTBALL', `${names[league]} board`, 'Picks, matchup research and season results.'];
     ['hero-eyebrow', 'hero-title', 'hero-description'].forEach((id, i) => { const element = document.getElementById(id); if (element) element.textContent = text[i]; });
   }
   async function load() {

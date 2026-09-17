@@ -59,6 +59,9 @@ jobs:
       - name: Refresh verified player and position history
         if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
         run: python scripts/player_history.py
+      - name: Refresh followed player identities and team colors
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        run: python scripts/player_identity.py
       - name: Refresh injury context
         run: python scripts/research_context.py
       - name: Build research review evidence

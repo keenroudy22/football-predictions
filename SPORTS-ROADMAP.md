@@ -16,6 +16,8 @@ Validation: `python -m unittest discover -s tests -p test_sports_refresh.py` cov
 
 ## Shared foundation
 
+Player research now has a searchable directory at #players and separate #player/<league>/<athleteId> pages. It indexes only verified identities already present in gathered research, preserving separate market thresholds, game windows and source dates. Sourced identity snapshots add team names and colors without implying health or starter status. Picks remain short and link to those pages for graphs, logs, workload and line-history detail. NBA/MLB player research remains unavailable until its independent activation gates pass.
+
 - Use sport, league, season and provider event IDs on games, players, markets, quotes, predictions and results. Preserve all existing football IDs and links.
 - Reuse favorites, broad watch boards, original-price ledgers, one-unit tracking, parlay tiers, calculators, research notes and pregame quote history.
 - Separate market definition, period, direction, threshold, price, book, source, observation time and settlement rules. Do not assume every market is a full-game football stat.
