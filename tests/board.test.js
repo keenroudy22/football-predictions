@@ -105,3 +105,30 @@ test('team accents require verified metadata, a team in this game and a safe hex
  s.identities.players['NFL/111'].team={id:'1',color:'red;display:none'};assert.equal(Board.rows(s)[0].teamColor,null);
  s.identities.players['NFL/111'].team.color='#0076B6';s.identities.players['NFL/111'].status='stale';assert.equal(Board.rows(s)[0].teamColor,null);
 });
+
+
+test('parlay builder opens as a dedicated workspace without hiding draft controls in a mobile rail',()=>{
+ const html=Board.pageHTML(fixture(),{route:'parlays'});
+ assert.match(html,/kr-board kr-ticket-page/);
+ assert.match(html,/data-kr-action="shuffle"/);
+ assert.match(html,/data-kr-field="shuffleCount"/);
+ assert.match(html,/data-kr-field="shuffleBook"/);
+ assert.match(html,/data-kr-field="shuffleGame"/);
+ assert.doesNotMatch(html,/class="kr-slip-dock"|id="kr-slip-dialog"/);
+ assert.match(html,/<details class="kr-ticket-pool"><summary>Add your own lines/);
+ assert.doesNotMatch(html,/data-kr-field="stake"/,'empty drafts choose legs before asking for stake');
+});
+
+test('published tickets and shuffled drafts are separate page states',()=>{
+ const html=Board.pageHTML(fixture(),{route:'parlays',ticketTab:'published'});
+ assert.match(html,/Our published tickets/);assert.match(html,/No verified parlay published/);
+ assert.doesNotMatch(html,/data-kr-action="shuffle"|Add your own lines/);
+});
+
+test('draft locks persist only for existing saved rows and locked controls are accessible',()=>{
+ const s=fixture(),row=Board.rows(s)[0],view={saved:[Board.saveRow(row)],locked:[row.key],route:'parlays',stake:1,unitValue:1};
+ const memory=new Map(),storage={getItem:k=>memory.get(k),setItem:(k,v)=>memory.set(k,v)};
+ Board.persist(storage,{...view,locked:[row.key,'nonexistent']});assert.deepEqual(Board.readSaved(storage).locked,[row.key]);
+ const html=Board.pageHTML(s,view);assert.match(html,/data-kr-action="lock"[^>]*aria-pressed="true"/);
+ assert.match(html,/Research for Sample Player/);assert.match(html,/Personal picks · separate from our record/);
+});
