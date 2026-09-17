@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T20:34:03Z",
+  "updatedAt": "2026-09-17T21:50:51Z",
   "provider": "ESPN public team schedules and final box scores",
   "coverage": "Up to four upcoming followed NFL games; last five regular-season games across the current and previous season. Position labels are provider classifications, not historical snap alignments.",
   "failures": [],
@@ -204,7 +204,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
             "positions": {
@@ -371,7 +371,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772967",
             "positions": {
@@ -548,7 +548,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772917",
             "positions": {
@@ -771,7 +771,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772802",
             "positions": {
@@ -932,7 +932,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772795",
             "positions": {
@@ -961,8 +961,8 @@
           }
         ],
         "status": "ok",
-        "checkedAt": "2026-09-17T20:34:03Z",
-        "lastAttemptAt": "2026-09-17T20:34:03Z",
+        "checkedAt": "2026-09-17T21:50:51Z",
+        "lastAttemptAt": "2026-09-17T21:50:51Z",
         "sources": [
           "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/2/schedule?season=2025&seasontype=2",
           "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/2/schedule?season=2026&seasontype=2"
@@ -1134,7 +1134,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
             "positions": {
@@ -1301,7 +1301,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772965",
             "positions": {
@@ -1462,7 +1462,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772711",
             "positions": {
@@ -1668,7 +1668,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772806",
             "positions": {
@@ -1868,7 +1868,7 @@
                 }
               }
             ],
-            "checkedAt": "2026-09-17T20:34:03Z",
+            "checkedAt": "2026-09-17T21:50:51Z",
             "status": "ok",
             "source": "https://www.espn.com/nfl/boxscore/_/gameId/401772909",
             "positions": {
@@ -1897,8 +1897,8 @@
           }
         ],
         "status": "ok",
-        "checkedAt": "2026-09-17T20:34:03Z",
-        "lastAttemptAt": "2026-09-17T20:34:03Z",
+        "checkedAt": "2026-09-17T21:50:51Z",
+        "lastAttemptAt": "2026-09-17T21:50:51Z",
         "sources": [
           "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule?season=2025&seasontype=2",
           "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule?season=2026&seasontype=2"
