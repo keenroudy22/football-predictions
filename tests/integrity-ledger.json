@@ -1,0 +1,780 @@
+{
+ "forecasts": {
+  "CFB-401856685": {
+   "digest": "fc2d2087d1d95fd0"
+  },
+  "CFB-401856686": {
+   "digest": "356e31e6efc610f0"
+  },
+  "CFB-401856687": {
+   "digest": "5ac8e0f16bc610f0"
+  },
+  "CFB-401856688": {
+   "digest": "46116972d2ed34f7"
+  },
+  "CFB-401856689": {
+   "digest": "866eb172af81eb4a"
+  },
+  "CFB-401856690": {
+   "digest": "55b8574e59722cea"
+  },
+  "CFB-401856691": {
+   "digest": "417bf10c5ababc8e"
+  },
+  "CFB-401856692": {
+   "digest": "4a974626ba66153c"
+  },
+  "CFB-401856693": {
+   "digest": "6fbf2dadd3412044"
+  },
+  "CFB-401856694": {
+   "digest": "0db2f559f7eee7b5"
+  },
+  "CFB-401856695": {
+   "digest": "ccd43f47fceed300"
+  },
+  "CFB-401856696": {
+   "digest": "e42f6cbde7acc441"
+  },
+  "CFB-401856697": {
+   "digest": "5cd23482a623aad8"
+  },
+  "CFB-401856698": {
+   "digest": "bc5ccb28643286bb"
+  },
+  "CFB-401856699": {
+   "digest": "9400505709b2bd95"
+  },
+  "CFB-401856700": {
+   "digest": "d96ec79c7c12b8ec"
+  },
+  "CFB-401856702": {
+   "digest": "fcfd29fac75ff328"
+  },
+  "CFB-401856703": {
+   "digest": "4876d2ae7d640684"
+  },
+  "CFB-401856704": {
+   "digest": "a0330d6c8bff9ca2"
+  },
+  "CFB-401856792": {
+   "digest": "86900b217076ae8d"
+  },
+  "CFB-401856793": {
+   "digest": "4dee82ef15a56204"
+  },
+  "CFB-401856795": {
+   "digest": "1c9e6b65cd38c667"
+  },
+  "CFB-401856796": {
+   "digest": "7744df9e5a6d17b2"
+  },
+  "CFB-401856797": {
+   "digest": "3bae1e7ec3e525d5"
+  },
+  "CFB-401856798": {
+   "digest": "bbdf3dfee29ab79c"
+  },
+  "CFB-401856799": {
+   "digest": "09ea668bdd0cf42a"
+  },
+  "CFB-401856800": {
+   "digest": "814319894a39982e"
+  },
+  "CFB-401856801": {
+   "digest": "a1702f754cc4ed94"
+  },
+  "CFB-401856802": {
+   "digest": "c65efdc62bb209bd"
+  },
+  "CFB-401856803": {
+   "digest": "4963ad514055ec17"
+  },
+  "CFB-401856804": {
+   "digest": "17b4475dea677a5c"
+  },
+  "CFB-401856805": {
+   "digest": "cf348e3b89400562"
+  },
+  "CFB-401856811": {
+   "digest": "750c9979e5605a1e"
+  },
+  "CFB-401856812": {
+   "digest": "f3d048dd35f6dfbf"
+  },
+  "CFB-401856813": {
+   "digest": "d06bf5c4e934802c"
+  },
+  "CFB-401856814": {
+   "digest": "8df65c77b80116c5"
+  },
+  "CFB-401856815": {
+   "digest": "59f15e241c6ad040"
+  },
+  "CFB-401856816": {
+   "digest": "e8f6c25ac47fed4c"
+  },
+  "CFB-401856881": {
+   "digest": "2ce9636bf9ce9d23"
+  },
+  "CFB-401858225": {
+   "digest": "4515331f6df06312"
+  },
+  "CFB-401858226": {
+   "digest": "442f197c7485871e"
+  },
+  "CFB-401858227": {
+   "digest": "a59078046787f170"
+  },
+  "CFB-401858228": {
+   "digest": "bc29d071d3f45cbb"
+  },
+  "CFB-401858229": {
+   "digest": "f08d98791ff6fb3c"
+  },
+  "CFB-401858230": {
+   "digest": "b92b67df36844387"
+  },
+  "CFB-401858231": {
+   "digest": "496f13208e7766a3"
+  },
+  "CFB-401858232": {
+   "digest": "7f1c9e346b5c2b75"
+  },
+  "CFB-401858233": {
+   "digest": "cfb550c52e3ac413"
+  },
+  "CFB-401858234": {
+   "digest": "c89d1429e963e9b9"
+  },
+  "CFB-401858236": {
+   "digest": "c4a60c55ba18cfdf"
+  },
+  "CFB-401858237": {
+   "digest": "3e06ee465731c330"
+  },
+  "CFB-401858238": {
+   "digest": "1fb081ec752836cb"
+  },
+  "CFB-401858239": {
+   "digest": "77d34ab5ba5bc037"
+  },
+  "CFB-401858240": {
+   "digest": "37bfb2c7bcc77cad"
+  },
+  "CFB-401858241": {
+   "digest": "6e6f2561ef05dc4d"
+  },
+  "CFB-401858242": {
+   "digest": "b4c7d22b86ec4c04"
+  },
+  "CFB-401858243": {
+   "digest": "750328460f87e5fc"
+  },
+  "CFB-401858244": {
+   "digest": "0318e53371e5d261"
+  },
+  "CFB-401858448": {
+   "digest": "bde910895d70fe7b"
+  },
+  "CFB-401858449": {
+   "digest": "b4b547b464b40811"
+  },
+  "CFB-401858450": {
+   "digest": "211141b381d2da2a"
+  },
+  "CFB-401858451": {
+   "digest": "bfe486853cfde389"
+  },
+  "CFB-401858452": {
+   "digest": "c6a4445142e695fd"
+  },
+  "CFB-401858453": {
+   "digest": "e83c7b10403a9e1b"
+  },
+  "CFB-401858454": {
+   "digest": "20533a01d2ec0fa1"
+  },
+  "CFB-401858455": {
+   "digest": "9e34dce0f632846d"
+  },
+  "CFB-401858456": {
+   "digest": "96532f1c6aac6f50"
+  },
+  "CFB-401858457": {
+   "digest": "89bd29e19f46d813"
+  },
+  "CFB-401858458": {
+   "digest": "86801750c6ab8202"
+  },
+  "CFB-401858459": {
+   "digest": "7ee8b83e8b54de54"
+  },
+  "CFB-401858460": {
+   "digest": "77d60ad0818e42e6"
+  },
+  "CFB-401858461": {
+   "digest": "014e0eb228652cac"
+  },
+  "CFB-401858462": {
+   "digest": "09dc1c0432bb430b"
+  },
+  "CFB-401858463": {
+   "digest": "1141cf7b6b28bfb2"
+  },
+  "CFB-401858464": {
+   "digest": "c417d373fc92f02f"
+  },
+  "CFB-401858465": {
+   "digest": "64cda64364827b45"
+  },
+  "CFB-401858466": {
+   "digest": "81e9712f36924603"
+  },
+  "CFB-401858467": {
+   "digest": "2a3e4925dbd3b9db"
+  },
+  "CFB-401858468": {
+   "digest": "d7597b7afbe12988"
+  },
+  "CFB-401858469": {
+   "digest": "cdb718d32841488a"
+  },
+  "CFB-401858470": {
+   "digest": "002084a049e44bb9"
+  },
+  "CFB-401858471": {
+   "digest": "2d0eb6cc398b423b"
+  },
+  "CFB-401860885": {
+   "digest": "f19f03303ef157cc"
+  },
+  "CFB-401860886": {
+   "digest": "024cc572b2292491"
+  },
+  "CFB-401860887": {
+   "digest": "d21df5c3c2a54513"
+  },
+  "CFB-401860888": {
+   "digest": "e48ac202e3810505"
+  },
+  "CFB-401860889": {
+   "digest": "bad650ecfe3d8157"
+  },
+  "CFB-401860890": {
+   "digest": "c87819e8249ad63f"
+  },
+  "CFB-401860891": {
+   "digest": "241e41710de44888"
+  },
+  "CFB-401860892": {
+   "digest": "0d08e3015bd4cc56"
+  },
+  "CFB-401860893": {
+   "digest": "509fd6b4614f4951"
+  },
+  "CFB-401860894": {
+   "digest": "619ad84e0a430861"
+  },
+  "CFB-401860895": {
+   "digest": "68df379e99fb74e3"
+  },
+  "CFB-401860896": {
+   "digest": "e50a55d632362ccd"
+  },
+  "CFB-401861963": {
+   "digest": "a7e43b3658c7cc23"
+  },
+  "CFB-401861970": {
+   "digest": "c9be6f729f897bca"
+  },
+  "CFB-401862710": {
+   "digest": "99048bfd3cbc7982"
+  },
+  "CFB-401862771": {
+   "digest": "bf871915bdc22850"
+  },
+  "CFB-401862772": {
+   "digest": "5eeeb5e0eaf3d3bd"
+  },
+  "CFB-401862773": {
+   "digest": "522a161f37ceeb8f"
+  },
+  "CFB-401862774": {
+   "digest": "0926f7b8d40ee3f0"
+  },
+  "CFB-401862775": {
+   "digest": "3f35ca79dd53d534"
+  },
+  "CFB-401862776": {
+   "digest": "f0de75956dd8677f"
+  },
+  "CFB-401862777": {
+   "digest": "cce1d92ddab274fd"
+  },
+  "CFB-401862778": {
+   "digest": "fe5eb42488ac667f"
+  },
+  "CFB-401862779": {
+   "digest": "b4abf38b9a70f19e"
+  },
+  "CFB-401862780": {
+   "digest": "9d239b36d005eee3"
+  },
+  "CFB-401862781": {
+   "digest": "f74e5c1005d72ef4"
+  },
+  "CFB-401862782": {
+   "digest": "ff76afc08902ce3c"
+  },
+  "CFB-401862783": {
+   "digest": "52c35e97f9cc70a4"
+  },
+  "CFB-401862784": {
+   "digest": "9d1f7d97502513a3"
+  },
+  "CFB-401862785": {
+   "digest": "aa018da00b30ab2f"
+  },
+  "CFB-401864443": {
+   "digest": "8deb8abb8e99eda9"
+  },
+  "CFB-401864507": {
+   "digest": "27cb24375dd08a9b"
+  },
+  "CFB-401864508": {
+   "digest": "a6974e2a586dd7cf"
+  },
+  "CFB-401864509": {
+   "digest": "b849cb28696820d7"
+  },
+  "CFB-401864510": {
+   "digest": "30d24ad967b95a0d"
+  },
+  "CFB-401864511": {
+   "digest": "19a60bb01620d47d"
+  },
+  "CFB-401864512": {
+   "digest": "69f1a8f4b66a3854"
+  },
+  "CFB-401864572": {
+   "digest": "b16a809055fd54c9"
+  },
+  "CFB-401864574": {
+   "digest": "340f2efac2f3b0ae"
+  },
+  "CFB-401864576": {
+   "digest": "4bc3f918681046c2"
+  },
+  "CFB-401864579": {
+   "digest": "aecd8e4c4e853355"
+  },
+  "CFB-401866422": {
+   "digest": "51cdc450e585faaa"
+  },
+  "CFB-401866423": {
+   "digest": "a5345862b2bbc25d"
+  },
+  "CFB-401866424": {
+   "digest": "9feb057ff461152f"
+  },
+  "CFB-401866425": {
+   "digest": "f0f3b57bec5a02ef"
+  },
+  "CFB-401866426": {
+   "digest": "d2c289f2fcf417c4"
+  },
+  "CFB-401866427": {
+   "digest": "9160219e5c8fb7d2"
+  },
+  "CFB-401866428": {
+   "digest": "970cfdb8cd9bef41"
+  },
+  "CFB-401866429": {
+   "digest": "58fd8c5adc7efb14"
+  },
+  "CFB-401867804": {
+   "digest": "c535dae0e3fadf34"
+  },
+  "CFB-401867909": {
+   "digest": "b1d2c0f90cf85c7d"
+  },
+  "CFB-401868188": {
+   "digest": "057241ee1846f25a"
+  },
+  "CFB-401868317": {
+   "digest": "bc6301df5f06a80b"
+  },
+  "CFB-401869931": {
+   "digest": "351b8de0665582f2"
+  },
+  "CFB-401869940": {
+   "digest": "891d4963955c161d"
+  },
+  "CFB-401869941": {
+   "digest": "efed7ecd646542e0"
+  },
+  "CFB-401869948": {
+   "digest": "d117d927a3a8ca39"
+  },
+  "CFB-401869961": {
+   "digest": "71429780e6175893"
+  },
+  "CFB-401870745": {
+   "digest": "b345bacdda3ae547"
+  },
+  "CFB-401870764": {
+   "digest": "2854cfd378089ad2"
+  },
+  "CFB-401871047": {
+   "digest": "248ad0c869b248e2"
+  },
+  "CFB-401871048": {
+   "digest": "236ef942747bf9d8"
+  },
+  "NFL-401872931": {
+   "digest": "9a6c06276bd31fd9"
+  },
+  "NFL-401872932": {
+   "digest": "240dd377d8de107a"
+  },
+  "NFL-401872933": {
+   "digest": "d72100c38b6a7a76"
+  },
+  "NFL-401872934": {
+   "digest": "c2190089069a0d8a"
+  },
+  "NFL-401872935": {
+   "digest": "471864c05da645b5"
+  },
+  "NFL-401872936": {
+   "digest": "b6ceec85def9639c"
+  },
+  "NFL-401872937": {
+   "digest": "dccdc766a98dd13b"
+  },
+  "NFL-401872938": {
+   "digest": "dab54f77abe0d4ec"
+  },
+  "NFL-401872939": {
+   "digest": "89e12655eec5d166"
+  },
+  "NFL-401872940": {
+   "digest": "0f837fbeadf80747"
+  },
+  "NFL-401872941": {
+   "digest": "7f2b20e806313600"
+  },
+  "NFL-401872942": {
+   "digest": "b3460201feaa57ed"
+  },
+  "NFL-401872943": {
+   "digest": "279832ca37ca26f9"
+  },
+  "NFL-401872944": {
+   "digest": "ba28b34a45cbc36d"
+  },
+  "NFL-401872945": {
+   "digest": "c5c3f8221698d19d"
+  },
+  "NFL-401872946": {
+   "digest": "f84bb4ec128ca3fe"
+  },
+  "NFL-401872947": {
+   "digest": "422ac357fb447c32"
+  },
+  "NFL-401872948": {
+   "digest": "6a738b92dce9d861"
+  },
+  "NFL-401872949": {
+   "digest": "6404079b98430773"
+  },
+  "NFL-401872950": {
+   "digest": "823f26d29d3cafef"
+  },
+  "NFL-401872951": {
+   "digest": "2d6fb816c775efb9"
+  },
+  "NFL-401872952": {
+   "digest": "c4a7f294cb0a7929"
+  },
+  "NFL-401872953": {
+   "digest": "e96bb6db9f75a40d"
+  },
+  "NFL-401872954": {
+   "digest": "5bb7dd5e9da09d06"
+  },
+  "NFL-401872955": {
+   "digest": "c68c682a93fe6194"
+  },
+  "NFL-401872956": {
+   "digest": "5ae034cc90093ec0"
+  },
+  "NFL-401872957": {
+   "digest": "ca893048967e8a22"
+  },
+  "NFL-401872958": {
+   "digest": "998e521fcff41f89"
+  },
+  "NFL-401872959": {
+   "digest": "269df5aef0b41cfe"
+  },
+  "NFL-401872960": {
+   "digest": "39bb260f91e0d4ae"
+  },
+  "NFL-401872961": {
+   "digest": "b6d95fdec972401e"
+  },
+  "NFL-401872962": {
+   "digest": "48504c679e244c77"
+  },
+  "NFL-401872963": {
+   "digest": "f6018a77cfd0eeda"
+  }
+ },
+ "picks": {
+  "NFL:parlays:NFL-2026-W2-det-buf-volume-fun-sgp-dk": {
+   "digest": "0c82b9b479abb279",
+   "firstReport": "2026-09-17-NFL-1730-review.json"
+  },
+  "NFL:props:2026-w1-mahomes-completions": {
+   "digest": "91df03e2a87483d8",
+   "firstReport": "2026-09-14-NFL-archive.json"
+  },
+  "NFL:props:NFL-2026-W2-gibbs-over-29-5-recyd-dk": {
+   "digest": "7d1376d1ad559881",
+   "firstReport": "2026-09-17-NFL-1130-official-card.json"
+  },
+  "NFL:props:NFL-2026-W2-laporta-over-4-5-rec-dk": {
+   "digest": "15abf7e5b6a926d9",
+   "firstReport": "2026-09-17-NFL-midday-decision.json"
+  },
+  "NFL:props:w1-barkley-rush": {
+   "digest": "527086b3144db5f0",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-bateman-rec": {
+   "digest": "b825df286be7e13d",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-bowers-rec": {
+   "digest": "7128b8076da6ccf5",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-brown-rec": {
+   "digest": "a587ccb2d74ecd27",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-coker-rec": {
+   "digest": "73bd63b4636d9243",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-daniels-pass": {
+   "digest": "d13221268edb0ac2",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-godwin-rec": {
+   "digest": "8768e3b777f7ca52",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-hall-rush": {
+   "digest": "94519d54e85c7b00",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-hampton-td": {
+   "digest": "0b3d821ca8ac1d0c",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-herbert-pass": {
+   "digest": "da2f70dce08394b8",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-jeanty-rush": {
+   "digest": "cfe47ab8d02b3652",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-jefferson-rec": {
+   "digest": "b097bd3808570aa4",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-johnson-rec": {
+   "digest": "fc2b65060d6e55a0",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-lamar-rush": {
+   "digest": "41c2f16fa0b1f520",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-lamb-rec": {
+   "digest": "970f4cd21e45f2df",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-love-pass": {
+   "digest": "4840ee2ef32f6617",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-loveland-rec": {
+   "digest": "8f2f7c366101c93f",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-mayfield-pass": {
+   "digest": "81facc8cab9830c6",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-mcbride-rec": {
+   "digest": "fb4ba825d4076638",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-nabers-rec": {
+   "digest": "a2c227e9f2cf09f3",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-otton-rec": {
+   "digest": "557669c064084466",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-pollard-carries": {
+   "digest": "c336ea53f67cbb7a",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-pollard-rush": {
+   "digest": "970cbba0f0b8abfa",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-rodgers-pass": {
+   "digest": "db20f75f60f99d3c",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-shough-rush": {
+   "digest": "4aff085603c0eaab",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-watson-rec": {
+   "digest": "5d316b52b3d6702e",
+   "firstReport": "2026-09-14-NFL-week-1-import.json"
+  }
+ },
+ "results": {
+  "NFL:parlays:NFL-2026-W2-det-buf-volume-fun-sgp-dk": {
+   "digest": "cbf9af3e51b2a7ed",
+   "settledIn": "2026-09-17-NFL-2330-settlement.json"
+  },
+  "NFL:props:2026-w1-mahomes-completions": {
+   "digest": "46484b2092bd2012",
+   "settledIn": "2026-09-14-NFL-archive.json"
+  },
+  "NFL:props:NFL-2026-W2-gibbs-over-29-5-recyd-dk": {
+   "digest": "5c46880683dbfa1c",
+   "settledIn": "2026-09-17-NFL-2330-settlement.json"
+  },
+  "NFL:props:NFL-2026-W2-laporta-over-4-5-rec-dk": {
+   "digest": "c05ec11efe5ce55a",
+   "settledIn": "2026-09-17-NFL-2330-settlement.json"
+  },
+  "NFL:props:w1-barkley-rush": {
+   "digest": "83f57794929dbcbb",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-bateman-rec": {
+   "digest": "22d490d33d60d943",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-bowers-rec": {
+   "digest": "737ce17c9c2da0b9",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-brown-rec": {
+   "digest": "bb20e4c8280a5c77",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-coker-rec": {
+   "digest": "5e422a37b1913b5c",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-daniels-pass": {
+   "digest": "46184fc479fbf562",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-godwin-rec": {
+   "digest": "32cbb90e4b372713",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-hall-rush": {
+   "digest": "5f58de114a85291c",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-hampton-td": {
+   "digest": "7be212b9787250ff",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-herbert-pass": {
+   "digest": "44c8b00295e753b5",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-jeanty-rush": {
+   "digest": "94fbf91300bcc3a2",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-jefferson-rec": {
+   "digest": "bb0de49e5ed2ee77",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-johnson-rec": {
+   "digest": "0f25345aa1bc85a6",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-lamar-rush": {
+   "digest": "bc07ac20b978dc97",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-lamb-rec": {
+   "digest": "ac26f1ea50bfb794",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-love-pass": {
+   "digest": "002a6944c38578b6",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-loveland-rec": {
+   "digest": "01951e45bbcc7b5e",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-mayfield-pass": {
+   "digest": "43939be00666ebee",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-mcbride-rec": {
+   "digest": "4b1126ee4cb7c904",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-nabers-rec": {
+   "digest": "35dafb43e7c645c5",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-otton-rec": {
+   "digest": "e5eab2d565732d29",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-pollard-carries": {
+   "digest": "d37cf63cdad463f1",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-pollard-rush": {
+   "digest": "b54960212286f7cf",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-rodgers-pass": {
+   "digest": "954e30b2d8b16a79",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-shough-rush": {
+   "digest": "539a00656900f7d9",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  },
+  "NFL:props:w1-watson-rec": {
+   "digest": "19b95f2384a35bdf",
+   "settledIn": "2026-09-14-NFL-week-1-import.json"
+  }
+ },
+ "version": 1
+}
