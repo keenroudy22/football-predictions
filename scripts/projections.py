@@ -173,9 +173,10 @@ def spread(league, stat, mean):
 def project_team(history, league, team, rival, cutoff, season, margin, slope, league_priors, unavailable=()):
     """Team volume and player projections for one side of one game."""
     games = history.team_games(team, cutoff, WINDOW)
-    games = [g for g in games if g['season'] == season] or games[:WINDOW // 2]
+    # Recent games across seasons: early in a season one game must not set a role.
     if not games:
         return None
+    this_season = any(g['season'] == season for g in games)
     team_weights = weights(len(games), TEAM_HALF_LIFE)
     lines = [team_line(g, team, league) for g in games]
     allowed_games = history.team_games(rival, cutoff, WINDOW)
@@ -201,7 +202,11 @@ def project_team(history, league, team, rival, cutoff, season, margin, slope, le
         share = {}
         for stat, team_key in (('targets', 'targets'), ('car', 'carries'), ('att', 'att')):
             numerator = denominator = 0.0
-            for game, w, line in zip(games, team_weights, lines):
+            # Quarterbacks change between seasons more than anyone: once this
+            # season has a game, passing shares come from this season alone.
+            usable = [(g, w, l) for g, w, l in zip(games, team_weights, lines)
+                      if stat != 'att' or g['season'] == season or not this_season]
+            for game, w, line in usable:
                 if line[team_key] is None or not played(game, pid, history.snaps):
                     continue
                 own = next((p for p in game['players'] if p['id'] == pid), {})
@@ -209,7 +214,7 @@ def project_team(history, league, team, rival, cutoff, season, margin, slope, le
                     if stat == 'targets' else own.get(stat, 0)
                 numerator += w * (value or 0)
                 denominator += w * line[team_key]
-            typical = average((l[team_key], w) for l, w in zip(lines, team_weights)) or 0.0
+            typical = average((l[team_key], w) for _, w, l in usable) or 0.0
             share[stat] = numerator / (denominator + PSEUDO_GAMES * typical) if denominator else 0.0
             raw[stat] += numerator / denominator if denominator else 0.0
         shares[pid] = share
