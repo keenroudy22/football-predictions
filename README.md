@@ -57,7 +57,7 @@ ESPN's public scoreboard feed is an unofficial integration without a service gua
 
 ## Box-score store
 
-`data/boxscores/<league>-<season>.jsonl` holds one line per completed NFL and FBS game: team stats, every player with an offensive or kicking line, play-derived red-zone work and success rates, points by quarter, and the provider's open and close spread, total and moneyline. Each line names its ESPN event ID, the three source URLs and its retrieval time. Coverage starts with the 2023 season. It is not deployed; the site will read small derived files instead.
+`data/boxscores/<league>-<season>.jsonl` holds one line per completed NFL and FBS game: team stats, every player with an offensive or kicking line, play-derived red-zone work and success rates, points by quarter, and the provider's open and close spread, total and moneyline. Each line names its ESPN event ID, the three source URLs and its retrieval time. Coverage starts with the 2023 season. It is not deployed; `scripts/build_site.py` derives the small files the site reads.
 
 - **Append-only.** A line is never edited. A later read with different content, such as an official stat correction four days after the game, appends a revision; the last line for an event is current. `data/boxscores/ledger.json` hashes the lines each file holds and `tests/test_boxscores.py` fails if one changes. Never regenerate the ledger to make that test pass.
 - **Sources.** Box score from the ESPN `summary` endpoint; play-by-play participants and closing lines from ESPN's core API. Closing lines are DraftKings for 2026 and ESPN BET for 2024 and 2025. In-game odds are never used. A game with no pregame provider has no line, not an estimate.
@@ -75,6 +75,14 @@ python scripts/features.py                     coverage and agreement with offic
 
 ## Publishing research
 
-Read `RESEARCH.md`. Add a dated JSON report to `research/`, run validation and refresh, commit and push. GitHub history preserves changes; original score forecasts live in `site/data/forecasts.json`. Do not edit past predictions or outcomes to improve results. A correction must be a separate timestamped revision.
+`PROMPT.md` is the scheduled research run (8:30, 11:30, 17:30 and 23:30 Eastern) and `RESEARCH.md` holds the rules it follows. A run settles finished picks, closes picks whose line has moved past the entry rules, screens where v2 and the market disagree, researches and prices a few candidates, and publishes a dated JSON report to `research/`. Every number in a pick comes from `scripts/desk.py` or a linked source:
+
+```
+python scripts/desk.py slate NFL                                  where v2 and the market differ most
+python scripts/desk.py price NFL-401872933 recYds over 45.5 -110 --player 4429795
+python scripts/desk.py moves                                      open picks against the latest line
+```
+
+GitHub history preserves every change. Do not edit past predictions or outcomes to improve results; a correction is a separate, dated revision.
 
 The Codex research automation is separate from GitHub's data/deployment workflow and depends on its host being available. No hosted LLM research or paid odds API is configured.
