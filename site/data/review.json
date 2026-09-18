@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T00:45:38.307Z",
+  "generatedAt": "2026-09-18T03:41:30.375Z",
   "method": "pregame-evaluation-v1",
   "scoreGroups": [
     {
@@ -11,42 +11,60 @@
       "totalBias": 0,
       "marginBias": -24,
       "exact": 0
+    },
+    {
+      "key": "CFB/2026/3/elo-total-v1",
+      "n": 1,
+      "wins": 1,
+      "totalMAE": 11,
+      "marginMAE": 1,
+      "totalBias": 11,
+      "marginBias": -1,
+      "exact": 0
+    },
+    {
+      "key": "NFL/2026/2/elo-total-v1",
+      "n": 1,
+      "wins": 1,
+      "totalMAE": 21,
+      "marginMAE": 5,
+      "totalBias": -21,
+      "marginBias": -5,
+      "exact": 0
     }
   ],
   "selections": {
     "total": 3,
-    "wins": 0,
+    "wins": 3,
     "losses": 0,
     "pushes": 0,
     "voids": 0,
-    "pending": 3,
-    "priced": 0,
-    "units": null,
-    "graded": 0,
-    "hitRate": null,
-    "roi": null,
+    "pending": 0,
+    "priced": 3,
+    "units": 5.629565217391304,
+    "graded": 3,
+    "hitRate": 100,
+    "roi": 187.6521739130435,
     "missing": 0
   },
-  "workload": [],
-  "pending": [
+  "workload": [
     {
       "id": "NFL-2026-W2-gibbs-over-29-5-recyd-dk",
       "title": "Jahmyr Gibbs OVER 29.5 receiving yards",
-      "lastCheckedAt": "2026-09-17T21:44:53Z",
-      "nextReviewAt": "2026-09-18T03:30:00Z"
+      "projected": 33,
+      "actual": 61,
+      "error": -28,
+      "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872932"
     },
     {
       "id": "NFL-2026-W2-laporta-over-4-5-rec-dk",
       "title": "Sam LaPorta OVER 4.5 receptions",
-      "lastCheckedAt": "2026-09-17T21:44:53Z",
-      "nextReviewAt": "2026-09-18T03:30:00Z"
-    },
-    {
-      "id": "NFL-2026-W2-det-buf-volume-fun-sgp-dk",
-      "title": "Four-player volume SGP · full game",
-      "lastCheckedAt": "2026-09-17T21:46:37Z",
-      "nextReviewAt": "2026-09-18T03:30:00Z"
+      "projected": 4.9,
+      "actual": 6,
+      "error": -1.0999999999999996,
+      "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872932"
     }
   ],
+  "pending": [],
   "interpretation": "Descriptive evidence, not a trained update. Compare workload, personnel and opponent strength; register changes before evaluating later games. Never retune to a single result."
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T22:06:58Z",
+  "updatedAt": "2026-09-18T03:40:02Z",
   "provider": "ESPN public athlete game logs and official box scores",
   "coverage": "NFL regular-season player logs across the current and two previous seasons; defense context is one sourced prior game. Per-record checkedAt is the last successful history check.",
   "picks": {
@@ -14,8 +14,8 @@
         "opponentId": "29",
         "teamId": "3",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4723086",
         "games": [
@@ -883,8 +883,8 @@
         "opponentId": "4",
         "teamId": "27",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3052587",
         "games": [
@@ -2242,8 +2242,8 @@
         "opponentId": "4",
         "teamId": "27",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4243331",
         "games": [
@@ -3525,8 +3525,8 @@
         "opponentId": "20",
         "teamId": "10",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3916148",
         "games": [
@@ -4908,8 +4908,8 @@
         "opponentId": "11",
         "teamId": "33",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4360939",
         "games": [
@@ -6191,8 +6191,8 @@
         "opponentId": "15",
         "teamId": "13",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4890973",
         "games": [
@@ -7077,8 +7077,8 @@
         "opponentId": "4",
         "teamId": "27",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3116165",
         "games": [
@@ -7940,8 +7940,8 @@
         "opponentId": "16",
         "teamId": "9",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4248528",
         "games": [
@@ -9141,8 +9141,8 @@
         "opponentId": "8",
         "teamId": "18",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3929645",
         "games": [
@@ -10544,8 +10544,8 @@
         "opponentId": "27",
         "teamId": "4",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4362238",
         "games": [
@@ -11917,8 +11917,8 @@
         "opponentId": "3",
         "teamId": "29",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4695883",
         "games": [
@@ -12998,8 +12998,8 @@
         "opponentId": "11",
         "teamId": "33",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3916387",
         "games": [
@@ -14228,8 +14228,8 @@
         "opponentId": "20",
         "teamId": "10",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3916148",
         "games": [
@@ -15626,8 +15626,8 @@
         "opponentId": "28",
         "teamId": "21",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3929630",
         "games": [
@@ -17054,8 +17054,8 @@
         "opponentId": "19",
         "teamId": "6",
         "cutoffAt": "2026-09-14T00:20:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4241389",
         "games": [
@@ -18612,7 +18612,7 @@
           }
         ],
         "status": "stale",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "sourceFailures": [
           {
             "source": "https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4432665/gamelog?season=2026",
@@ -18633,8 +18633,8 @@
         "opponentId": "6",
         "teamId": "19",
         "cutoffAt": "2026-09-14T00:20:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4595348",
         "games": [
@@ -19684,8 +19684,8 @@
         "opponentId": "1",
         "teamId": "23",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/8439",
         "games": [
@@ -21014,8 +21014,8 @@
         "opponentId": "22",
         "teamId": "24",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4038941",
         "games": [
@@ -22381,8 +22381,8 @@
         "opponentId": "21",
         "teamId": "28",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4426348",
         "games": [
@@ -23516,8 +23516,8 @@
         "opponentId": "8",
         "teamId": "18",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4360689",
         "games": [
@@ -24201,8 +24201,8 @@
         "opponentId": "16",
         "teamId": "9",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4036378",
         "games": [
@@ -25539,8 +25539,8 @@
         "opponentId": "10",
         "teamId": "20",
         "cutoffAt": "2026-09-13T17:00:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4427366",
         "games": [
@@ -26907,8 +26907,8 @@
         "opponentId": "9",
         "teamId": "16",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4262921",
         "games": [
@@ -28438,8 +28438,8 @@
         "opponentId": "24",
         "teamId": "22",
         "cutoffAt": "2026-09-13T20:25:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4361307",
         "games": [
@@ -29849,8 +29849,8 @@
         "opponentId": "7",
         "teamId": "12",
         "cutoffAt": "2026-09-15T00:15:00Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3139477",
         "games": [
@@ -31144,9 +31144,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
         "games": [
@@ -32615,9 +32615,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
         "games": [
@@ -33807,9 +33807,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4429795",
         "games": [
@@ -35266,9 +35266,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
         "games": [
@@ -36455,9 +36455,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4385690",
         "games": [
@@ -37644,9 +37644,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4374302",
         "games": [
@@ -39103,9 +39103,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4373678",
         "games": [
@@ -40472,9 +40472,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4426388",
         "games": [
@@ -41871,9 +41871,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4385690",
         "games": [
@@ -43073,9 +43073,9 @@
         "direction": "OVER",
         "opponentId": "2",
         "teamId": "8",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4430027",
         "games": [
@@ -44275,9 +44275,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/3915416",
         "games": [
@@ -45824,9 +45824,9 @@
         "direction": "OVER",
         "opponentId": "8",
         "teamId": "2",
-        "cutoffAt": "2026-09-17T22:06:58Z",
-        "checkedAt": "2026-09-17T22:06:58Z",
-        "lastAttemptAt": "2026-09-17T22:06:58Z",
+        "cutoffAt": "2026-09-18T00:15:00Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
+        "lastAttemptAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/player/gamelog/_/id/4379399",
         "games": [
@@ -47786,7 +47786,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -47811,7 +47811,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -47966,7 +47966,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -47991,7 +47991,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872937": {
@@ -48188,7 +48188,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -48213,7 +48213,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -48376,7 +48376,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -48401,7 +48401,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872939": {
@@ -48584,7 +48584,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -48609,7 +48609,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -48784,7 +48784,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -48809,7 +48809,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872946": {
@@ -48962,7 +48962,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -48987,7 +48987,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -49105,7 +49105,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -49130,7 +49130,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872936": {
@@ -49282,7 +49282,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -49307,7 +49307,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -49471,7 +49471,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -49496,7 +49496,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872935": {
@@ -49666,7 +49666,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -49691,7 +49691,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -49901,7 +49901,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -49926,7 +49926,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872938": {
@@ -50086,7 +50086,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -50111,7 +50111,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -50248,7 +50248,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
         "positions": {
@@ -50273,7 +50273,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872934": {
@@ -50431,7 +50431,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
         "positions": {
@@ -50456,7 +50456,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -50603,7 +50603,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -50628,7 +50628,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872940": {
@@ -50793,7 +50793,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -50818,7 +50818,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -50960,7 +50960,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -50985,7 +50985,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872941": {
@@ -51111,7 +51111,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -51136,7 +51136,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -51280,7 +51280,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -51305,7 +51305,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872944": {
@@ -51450,7 +51450,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -51475,7 +51475,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -51611,7 +51611,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -51636,7 +51636,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872943": {
@@ -51776,7 +51776,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -51799,7 +51799,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-10",
@@ -51956,7 +51956,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -51981,7 +51981,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872942": {
@@ -52191,7 +52191,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -52216,7 +52216,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -52365,7 +52365,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -52390,7 +52390,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872945": {
@@ -52541,7 +52541,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -52566,7 +52566,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -52742,7 +52742,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -52767,7 +52767,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872947": {
@@ -52911,7 +52911,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -52936,7 +52936,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-14",
@@ -53111,7 +53111,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -53136,7 +53136,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872948": {
@@ -53302,7 +53302,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -53327,7 +53327,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -53464,7 +53464,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -53489,228 +53489,157 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872953": {
       "home": {
-        "date": "2026-09-13",
-        "opponent": "Houston Texans",
+        "date": "2026-09-18",
+        "opponent": "Detroit Lions",
         "defenseId": "2",
-        "eventId": "401872660",
-        "kickoff": "2026-09-13T17:00:00Z",
+        "eventId": "401872932",
+        "kickoff": "2026-09-18T00:15:00Z",
         "sample": 1,
         "opponentTeam": {
-          "id": "34",
-          "name": "Houston Texans",
-          "abbreviation": "HOU"
+          "id": "8",
+          "name": "Detroit Lions",
+          "abbreviation": "DET"
         },
         "players": [
           {
-            "athleteId": "4432577",
-            "name": "C.J. Stroud",
+            "athleteId": "3046779",
+            "name": "Jared Goff",
             "position": "QB",
             "stats": {
               "completions": 26,
               "passingAttempts": 38,
-              "passingYards": 274.0,
-              "yardsPerPassAttempt": 7.2,
-              "passingTouchdowns": 2.0,
+              "passingYards": 327.0,
+              "yardsPerPassAttempt": 8.6,
+              "passingTouchdowns": 4.0,
               "interceptions": 0.0,
-              "adjQBR": 68.3,
-              "QBRating": 106.7,
-              "rushingAttempts": 2.0,
-              "rushingYards": 15.0,
-              "yardsPerRushAttempt": 7.5,
+              "adjQBR": 130.0,
+              "rushingAttempts": 3.0,
+              "rushingYards": 7.0,
+              "yardsPerRushAttempt": 2.3,
               "rushingTouchdowns": 0.0,
-              "longRushing": 15.0
+              "longRushing": 4.0
             }
           },
           {
-            "athleteId": "4035538",
-            "name": "David Montgomery",
+            "athleteId": "4429795",
+            "name": "Jahmyr Gibbs",
             "position": "RB",
             "stats": {
-              "rushingAttempts": 20.0,
-              "rushingYards": 60.0,
-              "yardsPerRushAttempt": 3.0,
-              "rushingTouchdowns": 2.0,
-              "longRushing": 18.0,
-              "receptions": 3.0,
-              "receivingYards": 19.0,
-              "yardsPerReception": 6.3,
+              "rushingAttempts": 16.0,
+              "rushingYards": 52.0,
+              "yardsPerRushAttempt": 3.3,
+              "rushingTouchdowns": 0.0,
+              "longRushing": 16.0,
+              "receptions": 6.0,
+              "receivingYards": 61.0,
+              "yardsPerReception": 10.2,
               "receivingTouchdowns": 1.0,
-              "longReception": 9.0,
-              "receivingTargets": 3.0
-            }
-          },
-          {
-            "athleteId": "4429059",
-            "name": "Woody Marks",
-            "position": "RB",
-            "stats": {
-              "rushingAttempts": 9.0,
-              "rushingYards": 42.0,
-              "yardsPerRushAttempt": 4.7,
-              "rushingTouchdowns": 0.0,
-              "longRushing": 12.0,
-              "receptions": 1.0,
-              "receivingYards": -2.0,
-              "yardsPerReception": -2.0,
-              "receivingTouchdowns": 0.0,
-              "longReception": -2.0,
-              "receivingTargets": 1.0
-            }
-          },
-          {
-            "athleteId": "4426496",
-            "name": "Cade Stover",
-            "position": "TE",
-            "stats": {
-              "receptions": 1.0,
-              "receivingYards": -2.0,
-              "yardsPerReception": -2.0,
-              "receivingTouchdowns": 0.0,
-              "longReception": -2.0,
-              "receivingTargets": 1.0
-            }
-          },
-          {
-            "athleteId": "3117256",
-            "name": "Dalton Schultz",
-            "position": "TE",
-            "stats": {
-              "receptions": 4.0,
-              "receivingYards": 35.0,
-              "yardsPerReception": 8.8,
-              "receivingTouchdowns": 0.0,
-              "longReception": 18.0,
+              "longReception": 12.0,
               "receivingTargets": 8.0
             }
           },
           {
-            "athleteId": "3843945",
-            "name": "Foster Moreau",
-            "position": "TE",
-            "stats": {
-              "receptions": 2.0,
-              "receivingYards": 15.0,
-              "yardsPerReception": 7.5,
-              "receivingTouchdowns": 0.0,
-              "longReception": 9.0,
-              "receivingTargets": 2.0
-            }
-          },
-          {
-            "athleteId": "4695705",
-            "name": "Marlin Klein",
-            "position": "TE",
-            "stats": {
-              "receptions": 1.0,
-              "receivingYards": 16.0,
-              "yardsPerReception": 16.0,
-              "receivingTouchdowns": 0.0,
-              "longReception": 16.0,
-              "receivingTargets": 1.0
-            }
-          },
-          {
-            "athleteId": "4430681",
-            "name": "Jared Wayne",
-            "position": "WR",
-            "stats": {
-              "receptions": 1.0,
-              "receivingYards": 12.0,
-              "yardsPerReception": 12.0,
-              "receivingTouchdowns": 0.0,
-              "longReception": 12.0,
-              "receivingTargets": 1.0
-            }
-          },
-          {
-            "athleteId": "4586312",
-            "name": "Jaylin Noel",
-            "position": "WR",
-            "stats": {
-              "receptions": 2.0,
-              "receivingYards": 53.0,
-              "yardsPerReception": 26.5,
-              "receivingTouchdowns": 0.0,
-              "longReception": 35.0,
-              "receivingTargets": 2.0
-            }
-          },
-          {
-            "athleteId": "4429022",
-            "name": "Kayshon Boutte",
-            "position": "WR",
-            "stats": {
-              "receptions": 1.0,
-              "receivingYards": 21.0,
-              "yardsPerReception": 21.0,
-              "receivingTouchdowns": 0.0,
-              "longReception": 21.0,
-              "receivingTargets": 2.0
-            }
-          },
-          {
-            "athleteId": "4258173",
-            "name": "Nico Collins",
-            "position": "WR",
+            "athleteId": "4912274",
+            "name": "Sione Vaki",
+            "position": "RB",
             "stats": {
               "rushingAttempts": 1.0,
               "rushingYards": 7.0,
               "yardsPerRushAttempt": 7.0,
               "rushingTouchdowns": 0.0,
               "longRushing": 7.0,
-              "receptions": 7.0,
-              "receivingYards": 75.0,
-              "yardsPerReception": 10.7,
-              "receivingTouchdowns": 1.0,
-              "longReception": 25.0,
-              "receivingTargets": 10.0
+              "receptions": 1.0,
+              "receivingYards": 13.0,
+              "yardsPerReception": 13.0,
+              "receivingTouchdowns": 0.0,
+              "longReception": 13.0,
+              "receivingTargets": 1.0
             }
           },
           {
-            "athleteId": "4686422",
-            "name": "Xavier Hutchinson",
+            "athleteId": "4430027",
+            "name": "Sam LaPorta",
+            "position": "TE",
+            "stats": {
+              "receptions": 6.0,
+              "receivingYards": 52.0,
+              "yardsPerReception": 8.7,
+              "receivingTouchdowns": 1.0,
+              "longReception": 18.0,
+              "receivingTargets": 7.0
+            }
+          },
+          {
+            "athleteId": "4374302",
+            "name": "Amon-Ra St. Brown",
             "position": "WR",
             "stats": {
-              "receptions": 3.0,
-              "receivingYards": 32.0,
-              "yardsPerReception": 10.7,
+              "receptions": 9.0,
+              "receivingYards": 142.0,
+              "yardsPerReception": 15.8,
+              "receivingTouchdowns": 2.0,
+              "longReception": 34.0,
+              "receivingTargets": 13.0
+            }
+          },
+          {
+            "athleteId": "5123663",
+            "name": "Isaac TeSlaa",
+            "position": "WR",
+            "stats": {
+              "receptions": 2.0,
+              "receivingYards": 26.0,
+              "yardsPerReception": 13.0,
               "receivingTouchdowns": 0.0,
               "longReception": 20.0,
-              "receivingTargets": 6.0
+              "receivingTargets": 5.0
+            }
+          },
+          {
+            "athleteId": "4426388",
+            "name": "Jameson Williams",
+            "position": "WR",
+            "stats": {
+              "receptions": 2.0,
+              "receivingYards": 33.0,
+              "yardsPerReception": 16.5,
+              "receivingTouchdowns": 0.0,
+              "longReception": 17.0,
+              "receivingTargets": 4.0
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
-        "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
+        "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872932",
         "positions": {
           "QB": {
-            "passingYards": 274.0,
+            "passingYards": 327.0,
             "completions": 26,
             "passingAttempts": 38
           },
           "RB": {
-            "rushingAttempts": 29.0,
-            "rushingYards": 102.0,
-            "receptions": 4.0,
-            "receivingYards": 17.0
+            "rushingAttempts": 17.0,
+            "rushingYards": 59.0,
+            "receptions": 7.0,
+            "receivingYards": 74.0
           },
           "WR": {
-            "receptions": 14.0,
-            "receivingYards": 193.0
+            "receptions": 13.0,
+            "receivingYards": 201.0
           },
           "TE": {
-            "receptions": 8.0,
-            "receivingYards": 64.0
+            "receptions": 6.0,
+            "receivingYards": 52.0
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -53834,7 +53763,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -53859,7 +53788,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872949": {
@@ -54071,7 +54000,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -54096,7 +54025,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -54251,7 +54180,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -54276,195 +54205,164 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872954": {
       "home": {
-        "date": "2026-09-13",
-        "opponent": "New Orleans Saints",
+        "date": "2026-09-18",
+        "opponent": "Buffalo Bills",
         "defenseId": "8",
-        "eventId": "401872923",
-        "kickoff": "2026-09-13T17:00:00Z",
+        "eventId": "401872932",
+        "kickoff": "2026-09-18T00:15:00Z",
         "sample": 1,
         "opponentTeam": {
-          "id": "18",
-          "name": "New Orleans Saints",
-          "abbreviation": "NO"
+          "id": "2",
+          "name": "Buffalo Bills",
+          "abbreviation": "BUF"
         },
         "players": [
           {
-            "athleteId": "4360689",
-            "name": "Tyler Shough",
+            "athleteId": "3918298",
+            "name": "Josh Allen",
             "position": "QB",
             "stats": {
-              "completions": 35,
-              "passingAttempts": 56,
-              "passingYards": 410.0,
-              "yardsPerPassAttempt": 7.3,
+              "completions": 20,
+              "passingAttempts": 31,
+              "passingYards": 248.0,
+              "yardsPerPassAttempt": 8.0,
               "passingTouchdowns": 3.0,
-              "interceptions": 2.0,
-              "adjQBR": 51.1,
-              "QBRating": 87.6,
-              "rushingAttempts": 4.0,
-              "rushingYards": 8.0,
-              "yardsPerRushAttempt": 2.0,
-              "rushingTouchdowns": 0.0,
-              "longRushing": 4.0
+              "interceptions": 0.0,
+              "adjQBR": 121.4,
+              "rushingAttempts": 14.0,
+              "rushingYards": 69.0,
+              "yardsPerRushAttempt": 4.9,
+              "rushingTouchdowns": 2.0,
+              "longRushing": 14.0
             }
           },
           {
-            "athleteId": "5081999",
-            "name": "CJ Donaldson",
+            "athleteId": "4379399",
+            "name": "James Cook III",
             "position": "RB",
             "stats": {
-              "rushingAttempts": 2.0,
-              "rushingYards": 4.0,
-              "yardsPerRushAttempt": 2.0,
-              "rushingTouchdowns": 0.0,
-              "longRushing": 3.0,
-              "receptions": 1.0,
-              "receivingYards": -2.0,
-              "yardsPerReception": -2.0,
-              "receivingTouchdowns": 0.0,
-              "longReception": -2.0,
-              "receivingTargets": 2.0
-            }
-          },
-          {
-            "athleteId": "4599739",
-            "name": "Kendre Miller",
-            "position": "RB",
-            "stats": {
-              "rushingAttempts": 9.0,
-              "rushingYards": 30.0,
-              "yardsPerRushAttempt": 3.3,
+              "rushingAttempts": 21.0,
+              "rushingYards": 135.0,
+              "yardsPerRushAttempt": 6.4,
               "rushingTouchdowns": 1.0,
-              "longRushing": 8.0
-            }
-          },
-          {
-            "athleteId": "4239996",
-            "name": "Travis Etienne Jr.",
-            "position": "RB",
-            "stats": {
-              "rushingAttempts": 9.0,
-              "rushingYards": 46.0,
-              "yardsPerRushAttempt": 5.1,
-              "rushingTouchdowns": 0.0,
-              "longRushing": 18.0,
-              "receptions": 7.0,
-              "receivingYards": 32.0,
-              "yardsPerReception": 4.6,
+              "longRushing": 35.0,
+              "receptions": 1.0,
+              "receivingYards": 4.0,
+              "yardsPerReception": 4.0,
               "receivingTouchdowns": 0.0,
-              "longReception": 16.0,
-              "receivingTargets": 9.0
+              "longReception": 4.0,
+              "receivingTargets": 3.0
             }
           },
           {
-            "athleteId": "3929645",
-            "name": "Juwan Johnson",
+            "athleteId": "4385690",
+            "name": "Dalton Kincaid",
             "position": "TE",
             "stats": {
-              "receptions": 3.0,
-              "receivingYards": 54.0,
-              "yardsPerReception": 18.0,
+              "receptions": 7.0,
+              "receivingYards": 95.0,
+              "yardsPerReception": 13.6,
               "receivingTouchdowns": 1.0,
-              "longReception": 27.0,
-              "receivingTargets": 7.0
-            }
-          },
-          {
-            "athleteId": "4036131",
-            "name": "Noah Fant",
-            "position": "TE",
-            "stats": {
-              "receptions": 4.0,
-              "receivingYards": 33.0,
-              "yardsPerReception": 8.3,
-              "receivingTouchdowns": 1.0,
-              "longReception": 10.0,
+              "longReception": 25.0,
               "receivingTargets": 8.0
             }
           },
           {
-            "athleteId": "4698597",
-            "name": "Barion Brown",
+            "athleteId": "3930086",
+            "name": "Dawson Knox",
+            "position": "TE",
+            "stats": {
+              "receptions": 2.0,
+              "receivingYards": 5.0,
+              "yardsPerReception": 2.5,
+              "receivingTouchdowns": 1.0,
+              "longReception": 4.0,
+              "receivingTargets": 2.0
+            }
+          },
+          {
+            "athleteId": "3915416",
+            "name": "DJ Moore",
             "position": "WR",
             "stats": {
               "rushingAttempts": 1.0,
-              "rushingYards": 3.0,
-              "yardsPerRushAttempt": 3.0,
+              "rushingYards": -1.0,
+              "yardsPerRushAttempt": -1.0,
               "rushingTouchdowns": 0.0,
-              "longRushing": 3.0
+              "longRushing": -1.0
             }
           },
           {
-            "athleteId": "4879276",
-            "name": "Bryce Lance",
+            "athleteId": "4242433",
+            "name": "Joshua Palmer",
+            "position": "WR",
+            "stats": {
+              "receptions": 1.0,
+              "receivingYards": 43.0,
+              "yardsPerReception": 43.0,
+              "receivingTouchdowns": 1.0,
+              "longReception": 43.0,
+              "receivingTargets": 3.0
+            }
+          },
+          {
+            "athleteId": "4635008",
+            "name": "Keon Coleman",
+            "position": "WR",
+            "stats": {
+              "receptions": 6.0,
+              "receivingYards": 63.0,
+              "yardsPerReception": 10.5,
+              "receivingTouchdowns": 0.0,
+              "longReception": 22.0,
+              "receivingTargets": 6.0
+            }
+          },
+          {
+            "athleteId": "4373678",
+            "name": "Khalil Shakir",
             "position": "WR",
             "stats": {
               "receptions": 3.0,
-              "receivingYards": 42.0,
-              "yardsPerReception": 14.0,
+              "receivingYards": 38.0,
+              "yardsPerReception": 12.7,
               "receivingTouchdowns": 0.0,
-              "longReception": 19.0,
-              "receivingTargets": 4.0
-            }
-          },
-          {
-            "athleteId": "4361370",
-            "name": "Chris Olave",
-            "position": "WR",
-            "stats": {
-              "receptions": 10.0,
-              "receivingYards": 182.0,
-              "yardsPerReception": 18.2,
-              "receivingTouchdowns": 0.0,
-              "longReception": 47.0,
-              "receivingTargets": 13.0
-            }
-          },
-          {
-            "athleteId": "4569559",
-            "name": "Devaughn Vele",
-            "position": "WR",
-            "stats": {
-              "receptions": 7.0,
-              "receivingYards": 69.0,
-              "yardsPerReception": 9.9,
-              "receivingTouchdowns": 1.0,
-              "longReception": 31.0,
-              "receivingTargets": 9.0
+              "longReception": 16.0,
+              "receivingTargets": 6.0
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
-        "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
+        "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872932",
         "positions": {
           "QB": {
-            "passingYards": 410.0,
-            "completions": 35,
-            "passingAttempts": 56
+            "passingYards": 248.0,
+            "completions": 20,
+            "passingAttempts": 31
           },
           "RB": {
-            "rushingAttempts": 20.0,
-            "rushingYards": 80.0,
-            "receptions": 8.0,
-            "receivingYards": 30.0
+            "rushingAttempts": 21.0,
+            "rushingYards": 135.0,
+            "receptions": 1.0,
+            "receivingYards": 4.0
           },
           "WR": {
-            "receptions": 20.0,
-            "receivingYards": 293.0
+            "receptions": 10.0,
+            "receivingYards": 144.0
           },
           "TE": {
-            "receptions": 7.0,
-            "receivingYards": 87.0
+            "receptions": 9.0,
+            "receivingYards": 100.0
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -54614,7 +54512,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -54639,7 +54537,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872951": {
@@ -54817,7 +54715,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -54842,7 +54740,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -54998,7 +54896,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872660",
         "positions": {
@@ -55023,7 +54921,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872952": {
@@ -55174,7 +55072,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -55199,7 +55097,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-15",
@@ -55348,7 +55246,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -55373,7 +55271,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872956": {
@@ -55550,7 +55448,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -55575,7 +55473,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -55756,7 +55654,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872924",
         "positions": {
@@ -55781,7 +55679,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872950": {
@@ -55901,7 +55799,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872658",
         "positions": {
@@ -55926,7 +55824,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -56073,7 +55971,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -56098,7 +55996,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872955": {
@@ -56236,7 +56134,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -56261,7 +56159,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-10",
@@ -56418,7 +56316,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -56443,7 +56341,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872957": {
@@ -56587,7 +56485,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872922",
         "positions": {
@@ -56612,7 +56510,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-10",
@@ -56763,7 +56661,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872656",
         "positions": {
@@ -56788,7 +56686,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872958": {
@@ -56998,7 +56896,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -57023,7 +56921,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -57161,7 +57059,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872926",
         "positions": {
@@ -57184,7 +57082,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872959": {
@@ -57354,7 +57252,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872925",
         "positions": {
@@ -57379,7 +57277,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -57542,7 +57440,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872927",
         "positions": {
@@ -57567,7 +57465,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872960": {
@@ -57712,7 +57610,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872930",
         "positions": {
@@ -57737,7 +57635,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -57895,7 +57793,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872659",
         "positions": {
@@ -57920,7 +57818,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872961": {
@@ -58059,7 +57957,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872923",
         "positions": {
@@ -58084,7 +57982,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -58228,7 +58126,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872928",
         "positions": {
@@ -58253,7 +58151,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872962": {
@@ -58418,7 +58316,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872931",
         "positions": {
@@ -58443,7 +58341,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-11",
@@ -58585,7 +58483,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872657",
         "positions": {
@@ -58610,7 +58508,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     },
     "NFL-401872963": {
@@ -58807,7 +58705,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872661",
         "positions": {
@@ -58832,7 +58730,7 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       },
       "away": {
         "date": "2026-09-13",
@@ -59007,7 +58905,7 @@
             }
           }
         ],
-        "checkedAt": "2026-09-17T22:06:58Z",
+        "checkedAt": "2026-09-18T03:40:02Z",
         "status": "ok",
         "source": "https://www.espn.com/nfl/boxscore/_/gameId/401872929",
         "positions": {
@@ -59032,14 +58930,14 @@
           }
         },
         "note": "One prior game against this defense; opponent personnel and game script differ.",
-        "lastAttemptAt": "2026-09-17T22:06:58Z"
+        "lastAttemptAt": "2026-09-18T03:40:02Z"
       }
     }
   },
   "failures": [
     {
       "id": "w1-bowers-rec",
-      "attemptedAt": "2026-09-17T22:06:58Z",
+      "attemptedAt": "2026-09-18T03:40:02Z",
       "error": "History refresh incomplete",
       "sources": [
         {
