@@ -1,11 +1,13 @@
 {
-  "generatedAt": "2026-09-18T11:58:35.116Z",
+  "generatedAt": "2026-09-18T13:10:29.472Z",
   "method": "pregame-evaluation-v1",
   "scoreGroups": [
     {
       "key": "NFL/2026/1/elo-total-v1",
       "n": 1,
       "wins": 0,
+      "totalDirectionN": 0,
+      "totalDirectionWins": 0,
       "totalMAE": 0,
       "marginMAE": 24,
       "totalBias": 0,
@@ -16,6 +18,8 @@
       "key": "CFB/2026/3/elo-total-v1",
       "n": 1,
       "wins": 1,
+      "totalDirectionN": 0,
+      "totalDirectionWins": 0,
       "totalMAE": 11,
       "marginMAE": 1,
       "totalBias": 11,
@@ -26,6 +30,8 @@
       "key": "NFL/2026/2/elo-total-v1",
       "n": 1,
       "wins": 1,
+      "totalDirectionN": 0,
+      "totalDirectionWins": 0,
       "totalMAE": 21,
       "marginMAE": 5,
       "totalBias": -21,

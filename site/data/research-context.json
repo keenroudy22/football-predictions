@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T11:58:34Z",
+  "updatedAt": "2026-09-18T13:10:28Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -508,7 +508,7 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Hamstring",
-              "reportedAt": "2026-09-17T20:33Z",
+              "reportedAt": "2026-09-17T17:07Z",
               "source": "https://www.espn.com/nfl/player/_/id/4429615/zay-flowers"
             },
             {
@@ -697,6 +697,15 @@
           "name": "Buffalo Bills",
           "players": [
             {
+              "id": "3915416",
+              "name": "DJ Moore",
+              "position": "WR",
+              "status": "Questionable",
+              "injury": "Shoulder",
+              "reportedAt": "2026-09-18T12:26Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3915416/dj-moore"
+            },
+            {
               "id": "4242433",
               "name": "Joshua Palmer",
               "position": "WR",
@@ -758,15 +767,6 @@
               "injury": null,
               "reportedAt": "2026-09-18T03:47Z",
               "source": "https://www.espn.com/nfl/player/_/id/3918298/josh-allen"
-            },
-            {
-              "id": "3915416",
-              "name": "DJ Moore",
-              "position": "WR",
-              "status": "Questionable",
-              "injury": "Shoulder",
-              "reportedAt": "2026-09-18T02:12Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3915416/dj-moore"
             },
             {
               "id": "4683153",
@@ -1396,15 +1396,6 @@
               "source": "https://www.espn.com/nfl/player/_/id/3116389/samaje-perine"
             },
             {
-              "id": "3915511",
-              "name": "Joe Burrow",
-              "position": "QB",
-              "status": "Questionable",
-              "injury": "Back",
-              "reportedAt": "2026-09-17T21:23Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3915511/joe-burrow"
-            },
-            {
               "id": "4362628",
               "name": "Ja'Marr Chase",
               "position": "WR",
@@ -1412,6 +1403,15 @@
               "injury": null,
               "reportedAt": "2026-09-17T20:25Z",
               "source": "https://www.espn.com/nfl/player/_/id/4362628/jamarr-chase"
+            },
+            {
+              "id": "3915511",
+              "name": "Joe Burrow",
+              "position": "QB",
+              "status": "Questionable",
+              "injury": "Back",
+              "reportedAt": "2026-09-17T17:58Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3915511/joe-burrow"
             },
             {
               "id": "4685562",
@@ -7695,8 +7695,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-18T11:58:34Z",
-      "lastAttemptAt": "2026-09-18T11:58:34Z",
+      "checkedAt": "2026-09-18T13:10:28Z",
+      "lastAttemptAt": "2026-09-18T13:10:28Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7747,8 +7747,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-18T11:58:34Z",
-      "lastAttemptAt": "2026-09-18T11:58:34Z",
+      "checkedAt": "2026-09-18T13:10:28Z",
+      "lastAttemptAt": "2026-09-18T13:10:28Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
