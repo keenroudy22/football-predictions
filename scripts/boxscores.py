@@ -587,7 +587,7 @@ def run(games, status, now, fetch=fetch_json, workers=4, limit=None, log=print, 
         league, eid, _, season, reason = item
         try:
             return item, fetch_game(league, eid, fetch, clock), None
-        except (OSError, ValueError, KeyError, TypeError) as error:
+        except Exception as error:  # one malformed game is recorded, never fatal to the run
             return item, None, f'{type(error).__name__}: {error}'[:160]
 
     written = Counter()

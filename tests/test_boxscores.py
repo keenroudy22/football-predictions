@@ -353,6 +353,12 @@ class RunTests(unittest.TestCase):
         self.assertEqual(self.go(feed, status, NOW + timedelta(hours=27)), ({'nfl-2026.jsonl': 1}, 1))
         self.assertNotIn('401872656', status['failures'])
 
+    def test_an_unexpected_payload_is_recorded_as_a_failure_not_a_crash(self):
+        feed, status = FakeFeed(), {}
+        feed.data['summary']['header']['competitions'] = [None]
+        self.assertEqual(self.go(feed, status, NOW), ({}, 1))
+        self.assertTrue(status['failures']['401872656']['lastError'].startswith('AttributeError'))
+
     def test_odds_the_provider_does_not_have_are_empty_and_not_retried(self):
         feed, status = FakeFeed(), {}
         feed.errors['odds'] = self.error(404)
