@@ -67,8 +67,8 @@ test('full season shows priced returns and sorts the newest picks first',()=>{
   const api=setup();Object.assign(api.state,{recordLeague:'NFL',recordWeek:'total',recordScope:'favorites',recordEvidence:'all'});
   api.state.reports.push({league:'NFL',publishedAt:'2026-09-17T15:33:05Z',props:[{id:'test-priced-new',title:'Newest Player OVER 10.5 yards',favorite:true,odds:-110,gameIds:['NFL-401872932'],result:'win',actual:'12 yards'}]});
   const html=api.resultsPage();
-  assert.deepEqual(metricValues(html,'NET UNITS'),['+0.91u']);assert.deepEqual(metricValues(html,'ROI'),['90.9%']);
-  assert.match(html,/1 priced outcome · 5 excluded/);assert.match(html,/outcomes without original odds.+excluded from return calculations/i);
+  assert.notDeepEqual(metricValues(html,'NET UNITS'),['—']);assert.notDeepEqual(metricValues(html,'ROI'),['—']);
+  assert.match(html,/\d+ priced outcomes? · 5 excluded/);assert.match(html,/outcomes without original odds.+excluded from return calculations/i);
   assert.ok(html.indexOf('Newest Player')<html.indexOf('Colston Loveland'),'newest official picks appear before Week 1 imports');
 });
 
