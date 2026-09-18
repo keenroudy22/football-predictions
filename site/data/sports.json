@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-18T18:17:18Z",
+  "updatedAt": "2026-09-18T19:10:28Z",
   "timeZone": "America/Indianapolis",
   "leagues": {
     "NBA": {
@@ -13,15 +13,15 @@
         "picks": false
       },
       "coverageNote": "Schedules and scores only. Researched picks and forecasts are not yet available.",
-      "lastAttemptAt": "2026-09-18T18:17:18Z",
+      "lastAttemptAt": "2026-09-18T19:10:28Z",
       "requestedWindow": {
         "from": "2026-09-18",
         "through": "2026-09-20",
         "timeZone": "America/Indianapolis"
       },
       "status": "ok",
-      "checkedAt": "2026-09-18T18:17:18Z",
-      "lastSuccessfulAt": "2026-09-18T18:17:18Z",
+      "checkedAt": "2026-09-18T19:10:28Z",
+      "lastSuccessfulAt": "2026-09-18T19:10:28Z",
       "error": null,
       "window": {
         "from": "2026-09-18",
@@ -49,15 +49,15 @@
         "picks": false
       },
       "coverageNote": "Schedules and scores only. Researched picks and forecasts are not yet available.",
-      "lastAttemptAt": "2026-09-18T18:17:18Z",
+      "lastAttemptAt": "2026-09-18T19:10:28Z",
       "requestedWindow": {
         "from": "2026-09-18",
         "through": "2026-09-20",
         "timeZone": "America/Indianapolis"
       },
       "status": "ok",
-      "checkedAt": "2026-09-18T18:17:18Z",
-      "lastSuccessfulAt": "2026-09-18T18:17:18Z",
+      "checkedAt": "2026-09-18T19:10:28Z",
+      "lastSuccessfulAt": "2026-09-18T19:10:28Z",
       "error": null,
       "window": {
         "from": "2026-09-18",
@@ -112,7 +112,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816984/cubs-reds"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816985",
@@ -152,7 +152,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816985/royals-pirates"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816986",
@@ -192,7 +192,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816986/brewers-orioles"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816982",
@@ -232,7 +232,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816982/athletics-guardians"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816983",
@@ -272,7 +272,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816983/red-sox-rays"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816987",
@@ -312,7 +312,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816987/phillies-mets"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816989",
@@ -352,7 +352,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816989/tigers-white-sox"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816990",
@@ -392,7 +392,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816990/blue-jays-rangers"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816988",
@@ -432,7 +432,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816988/braves-astros"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816992",
@@ -472,7 +472,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816992/mariners-rockies"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816991",
@@ -512,7 +512,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816991/nationals-cardinals"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816994",
@@ -552,7 +552,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816994/twins-angels"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816993",
@@ -592,7 +592,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816993/marlins-padres"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816995",
@@ -632,7 +632,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816995/yankees-diamondbacks"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816996",
@@ -672,7 +672,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816996/giants-dodgers"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817001",
@@ -712,7 +712,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817001/brewers-orioles"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816998",
@@ -752,7 +752,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816998/red-sox-rays"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817002",
@@ -792,7 +792,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817002/phillies-mets"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816997",
@@ -832,7 +832,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816997/athletics-guardians"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401816999",
@@ -872,7 +872,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401816999/cubs-reds"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817000",
@@ -912,7 +912,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817000/royals-pirates"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817005",
@@ -952,7 +952,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817005/blue-jays-rangers"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817003",
@@ -992,7 +992,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817003/braves-astros"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817004",
@@ -1032,7 +1032,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817004/tigers-white-sox"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817006",
@@ -1072,7 +1072,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817006/nationals-cardinals"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817007",
@@ -1112,7 +1112,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817007/mariners-rockies"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817010",
@@ -1152,7 +1152,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817010/yankees-diamondbacks"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817008",
@@ -1192,7 +1192,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817008/marlins-padres"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817011",
@@ -1232,7 +1232,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817011/giants-dodgers"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817009",
@@ -1272,7 +1272,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817009/twins-angels"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817017",
@@ -1312,7 +1312,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817017/phillies-mets"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817015",
@@ -1352,7 +1352,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817015/royals-pirates"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817012",
@@ -1392,7 +1392,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817012/athletics-guardians"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817013",
@@ -1432,7 +1432,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817013/red-sox-rays"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817014",
@@ -1472,7 +1472,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817014/cubs-reds"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817018",
@@ -1512,7 +1512,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817018/braves-astros"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817019",
@@ -1552,7 +1552,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817019/tigers-white-sox"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817021",
@@ -1592,7 +1592,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817021/nationals-cardinals"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817020",
@@ -1632,7 +1632,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817020/blue-jays-rangers"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817022",
@@ -1672,7 +1672,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817022/mariners-rockies"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817024",
@@ -1712,7 +1712,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817024/twins-angels"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817023",
@@ -1752,7 +1752,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817023/marlins-padres"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817025",
@@ -1792,7 +1792,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817025/yankees-diamondbacks"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817026",
@@ -1832,7 +1832,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817026/giants-dodgers"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         },
         {
           "id": "MLB-401817016",
@@ -1872,7 +1872,7 @@
             "name": "ESPN",
             "url": "https://www.espn.com/mlb/game/_/gameId/401817016/brewers-orioles"
           },
-          "updatedAt": "2026-09-18T18:17:18Z"
+          "updatedAt": "2026-09-18T19:10:28Z"
         }
       ]
     }
