@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T00:00:22Z",
+  "updatedAt": "2026-09-18T00:04:51Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -2307,6 +2307,15 @@
           "name": "Detroit Lions",
           "players": [
             {
+              "id": "4039020",
+              "name": "Levi Onwuzurike",
+              "position": "DE",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-17T23:55Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4039020/levi-onwuzurike"
+            },
+            {
               "id": "3139387",
               "name": "D.J. Reed",
               "position": "CB",
@@ -2521,15 +2530,6 @@
               "injury": null,
               "reportedAt": "2026-09-12T17:21Z",
               "source": "https://www.espn.com/nfl/player/_/id/4373825/penei-sewell"
-            },
-            {
-              "id": "4685461",
-              "name": "Derrick Moore",
-              "position": "DE",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-11T23:56Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4685461/derrick-moore"
             }
           ]
         },
@@ -4842,7 +4842,7 @@
               "position": "LB",
               "status": "Active",
               "injury": null,
-              "reportedAt": "2026-09-17T21:30Z",
+              "reportedAt": "2026-09-17T23:50Z",
               "source": "https://www.espn.com/nfl/player/_/id/3129446/robert-spillane"
             },
             {
@@ -7687,8 +7687,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-18T00:00:22Z",
-      "lastAttemptAt": "2026-09-18T00:00:22Z",
+      "checkedAt": "2026-09-18T00:04:51Z",
+      "lastAttemptAt": "2026-09-18T00:04:51Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7739,8 +7739,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-18T00:00:22Z",
-      "lastAttemptAt": "2026-09-18T00:00:22Z",
+      "checkedAt": "2026-09-18T00:04:51Z",
+      "lastAttemptAt": "2026-09-18T00:04:51Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
