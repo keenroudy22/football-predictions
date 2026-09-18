@@ -46,6 +46,8 @@ jobs:
         run: python scripts/refresh.py
       - name: Refresh NBA and MLB scoreboards
         run: python scripts/sports_refresh.py
+      - name: Store box scores, play-by-play and closing lines for new finals
+        run: python scripts/boxscores.py
       - name: Check whether player history needs rebuilding
         id: history
         env:
@@ -80,7 +82,7 @@ jobs:
           python scripts/integrity.py
           git config user.name 'football-forecast[bot]'
           git config user.email 'football-forecast[bot]@users.noreply.github.com'
-          git add site/data tests/integrity-ledger.json
+          git add site/data tests/integrity-ledger.json data/boxscores
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh schedules, finals and pregame forecasts'
             git push
