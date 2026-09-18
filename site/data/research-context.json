@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T23:34:19Z",
+  "updatedAt": "2026-09-18T00:00:22Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -927,6 +927,15 @@
           "name": "Carolina Panthers",
           "players": [
             {
+              "id": "4372518",
+              "name": "Bobby Brown III",
+              "position": "DT",
+              "status": "Questionable",
+              "injury": "Back",
+              "reportedAt": "2026-09-17T23:28Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4372518/bobby-brown-iii"
+            },
+            {
               "id": "4036063",
               "name": "Patrick Jones II",
               "position": "LB",
@@ -943,15 +952,6 @@
               "injury": "Ankle",
               "reportedAt": "2026-09-17T19:52Z",
               "source": "https://www.espn.com/nfl/player/_/id/4695883/jalen-coker"
-            },
-            {
-              "id": "4372518",
-              "name": "Bobby Brown III",
-              "position": "DT",
-              "status": "Questionable",
-              "injury": "Back",
-              "reportedAt": "2026-09-16T19:42Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4372518/bobby-brown-iii"
             },
             {
               "id": "4567096",
@@ -1392,7 +1392,7 @@
               "position": "RB",
               "status": "Questionable",
               "injury": "Knee",
-              "reportedAt": "2026-09-17T22:38Z",
+              "reportedAt": "2026-09-17T23:39Z",
               "source": "https://www.espn.com/nfl/player/_/id/3116389/samaje-perine"
             },
             {
@@ -5297,6 +5297,15 @@
           "name": "New York Giants",
           "players": [
             {
+              "id": "4360516",
+              "name": "Tyrone Tracy Jr.",
+              "position": "RB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-17T23:34Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4360516/tyrone-tracy-jr"
+            },
+            {
               "id": "4259566",
               "name": "Andrew Thomas",
               "position": "OT",
@@ -5358,15 +5367,6 @@
               "injury": "Calf",
               "reportedAt": "2026-09-17T21:33Z",
               "source": "https://www.espn.com/nfl/player/_/id/4428328/deonte-banks"
-            },
-            {
-              "id": "4360516",
-              "name": "Tyrone Tracy Jr.",
-              "position": "RB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-17T21:32Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4360516/tyrone-tracy-jr"
             },
             {
               "id": "3929950",
@@ -5527,22 +5527,31 @@
           "name": "New York Jets",
           "players": [
             {
-              "id": "4361767",
-              "name": "Will McDonald IV",
-              "position": "DE",
-              "status": "Questionable",
-              "injury": "Ankle",
-              "reportedAt": "2026-09-17T21:25Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4361767/will-mcdonald-iv"
-            },
-            {
               "id": "5118340",
               "name": "D'Angelo Ponds",
               "position": "CB",
               "status": "Active",
               "injury": null,
-              "reportedAt": "2026-09-17T21:25Z",
+              "reportedAt": "2026-09-17T23:47Z",
               "source": "https://www.espn.com/nfl/player/_/id/5118340/dangelo-ponds"
+            },
+            {
+              "id": "4362094",
+              "name": "Joseph Ossai",
+              "position": "DE",
+              "status": "Questionable",
+              "injury": "Foot",
+              "reportedAt": "2026-09-17T23:42Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4362094/joseph-ossai"
+            },
+            {
+              "id": "4361767",
+              "name": "Will McDonald IV",
+              "position": "DE",
+              "status": "Questionable",
+              "injury": "Ankle",
+              "reportedAt": "2026-09-17T23:38Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4361767/will-mcdonald-iv"
             },
             {
               "id": "4361331",
@@ -5550,7 +5559,7 @@
               "position": "LB",
               "status": "Active",
               "injury": null,
-              "reportedAt": "2026-09-17T21:25Z",
+              "reportedAt": "2026-09-17T23:35Z",
               "source": "https://www.espn.com/nfl/player/_/id/4361331/jamien-sherwood"
             },
             {
@@ -5588,15 +5597,6 @@
               "injury": null,
               "reportedAt": "2026-09-16T02:34Z",
               "source": "https://www.espn.com/nfl/player/_/id/14958/demario-davis"
-            },
-            {
-              "id": "4362094",
-              "name": "Joseph Ossai",
-              "position": "DE",
-              "status": "Questionable",
-              "injury": "Foot",
-              "reportedAt": "2026-09-15T15:39Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4362094/joseph-ossai"
             },
             {
               "id": "3124679",
@@ -5987,6 +5987,15 @@
           "name": "Pittsburgh Steelers",
           "players": [
             {
+              "id": "4426506",
+              "name": "Joey Porter Jr.",
+              "position": "CB",
+              "status": "Questionable",
+              "injury": "Back",
+              "reportedAt": "2026-09-17T23:36Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4426506/joey-porter-jr"
+            },
+            {
               "id": "4035687",
               "name": "Michael Pittman Jr.",
               "position": "WR",
@@ -5994,15 +6003,6 @@
               "injury": "Foot",
               "reportedAt": "2026-09-17T20:10Z",
               "source": "https://www.espn.com/nfl/player/_/id/4035687/michael-pittman-jr"
-            },
-            {
-              "id": "4426506",
-              "name": "Joey Porter Jr.",
-              "position": "CB",
-              "status": "Questionable",
-              "injury": "Back",
-              "reportedAt": "2026-09-16T23:23Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4426506/joey-porter-jr"
             },
             {
               "id": "4427170",
@@ -6468,8 +6468,8 @@
               "id": "2977187",
               "name": "Cooper Kupp",
               "position": "WR",
-              "status": "Questionable",
-              "injury": "Back",
+              "status": "Active",
+              "injury": null,
               "reportedAt": "2026-09-17T00:33Z",
               "source": "https://www.espn.com/nfl/player/_/id/2977187/cooper-kupp"
             },
@@ -7676,11 +7676,19 @@
           "to": "Questionable",
           "observedAt": "2026-09-17T23:34:19Z",
           "source": "https://www.espn.com/nfl/player/_/id/4696044/kaelon-black"
+        },
+        {
+          "teamId": "26",
+          "name": "Cooper Kupp",
+          "from": "Questionable",
+          "to": "Active",
+          "observedAt": "2026-09-18T00:00:22Z",
+          "source": "https://www.espn.com/nfl/player/_/id/2977187/cooper-kupp"
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-17T23:34:19Z",
-      "lastAttemptAt": "2026-09-17T23:34:19Z",
+      "checkedAt": "2026-09-18T00:00:22Z",
+      "lastAttemptAt": "2026-09-18T00:00:22Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7731,8 +7739,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-17T23:34:19Z",
-      "lastAttemptAt": "2026-09-17T23:34:19Z",
+      "checkedAt": "2026-09-18T00:00:22Z",
+      "lastAttemptAt": "2026-09-18T00:00:22Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
