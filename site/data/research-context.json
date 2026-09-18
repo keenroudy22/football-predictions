@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T00:06:26Z",
+  "updatedAt": "2026-09-18T00:45:37Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -467,6 +467,15 @@
           "name": "Baltimore Ravens",
           "players": [
             {
+              "id": "3052743",
+              "name": "Trey Hendrickson",
+              "position": "LB",
+              "status": "Questionable",
+              "injury": "Finger",
+              "reportedAt": "2026-09-18T00:10Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3052743/trey-hendrickson"
+            },
+            {
               "id": "4878287",
               "name": "Keondre Jackson",
               "position": "S",
@@ -501,15 +510,6 @@
               "injury": "Knee - ACL",
               "reportedAt": "2026-09-16T23:55Z",
               "source": "https://www.espn.com/nfl/player/_/id/4698244/teddye-buchanan"
-            },
-            {
-              "id": "3052743",
-              "name": "Trey Hendrickson",
-              "position": "LB",
-              "status": "Questionable",
-              "injury": "Finger",
-              "reportedAt": "2026-09-16T23:51Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3052743/trey-hendrickson"
             },
             {
               "id": "4696882",
@@ -2542,7 +2542,7 @@
               "position": "DT",
               "status": "Questionable",
               "injury": "Concussion",
-              "reportedAt": "2026-09-16T23:49Z",
+              "reportedAt": "2026-09-18T00:02Z",
               "source": "https://www.espn.com/nfl/player/_/id/2983055/javon-hargrave"
             },
             {
@@ -3227,6 +3227,15 @@
           "name": "Jacksonville Jaguars",
           "players": [
             {
+              "id": "3050073",
+              "name": "Foyesade Oluokun",
+              "position": "LB",
+              "status": "Questionable",
+              "injury": "Wrist",
+              "reportedAt": "2026-09-18T00:20Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3050073/foyesade-oluokun"
+            },
+            {
               "id": "3916433",
               "name": "Jakobi Meyers",
               "position": "WR",
@@ -3270,15 +3279,6 @@
               "injury": "Hip",
               "reportedAt": "2026-09-16T23:25Z",
               "source": "https://www.espn.com/nfl/player/_/id/4911851/lequint-allen-jr"
-            },
-            {
-              "id": "3050073",
-              "name": "Foyesade Oluokun",
-              "position": "LB",
-              "status": "Questionable",
-              "injury": "Wrist",
-              "reportedAt": "2026-09-16T23:15Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3050073/foyesade-oluokun"
             },
             {
               "id": "4035791",
@@ -4377,6 +4377,15 @@
           "name": "Miami Dolphins",
           "players": [
             {
+              "id": "4431586",
+              "name": "Chop Robinson",
+              "position": "LB",
+              "status": "Questionable",
+              "injury": "Concussion",
+              "reportedAt": "2026-09-18T00:32Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4431586/chop-robinson"
+            },
+            {
               "id": "4880273",
               "name": "Kyle Louis",
               "position": "LB",
@@ -4384,15 +4393,6 @@
               "injury": "Knee",
               "reportedAt": "2026-09-17T00:25Z",
               "source": "https://www.espn.com/nfl/player/_/id/4880273/kyle-louis"
-            },
-            {
-              "id": "4431586",
-              "name": "Chop Robinson",
-              "position": "LB",
-              "status": "Questionable",
-              "injury": "Concussion",
-              "reportedAt": "2026-09-17T00:05Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4431586/chop-robinson"
             },
             {
               "id": "4714379",
@@ -4607,6 +4607,15 @@
           "name": "Minnesota Vikings",
           "players": [
             {
+              "id": "3728281",
+              "name": "Blake Cashman",
+              "position": "LB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-18T00:17Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3728281/blake-cashman"
+            },
+            {
               "id": "3917315",
               "name": "Kyler Murray",
               "position": "QB",
@@ -4632,15 +4641,6 @@
               "injury": "Chest",
               "reportedAt": "2026-09-16T23:59Z",
               "source": "https://www.espn.com/nfl/player/_/id/3133487/andrew-van-ginkel"
-            },
-            {
-              "id": "3728281",
-              "name": "Blake Cashman",
-              "position": "LB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-16T23:52Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3728281/blake-cashman"
             },
             {
               "id": "4240631",
@@ -5072,8 +5072,26 @@
               "position": "DE",
               "status": "Questionable",
               "injury": "Calf",
-              "reportedAt": "2026-09-17T21:44Z",
+              "reportedAt": "2026-09-18T00:32Z",
               "source": "https://www.espn.com/nfl/player/_/id/4241986/chase-young"
+            },
+            {
+              "id": "13971",
+              "name": "Cameron Jordan",
+              "position": "DE",
+              "status": "Questionable",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-18T00:26Z",
+              "source": "https://www.espn.com/nfl/player/_/id/13971/cameron-jordan"
+            },
+            {
+              "id": "4702559",
+              "name": "Oscar Delp",
+              "position": "TE",
+              "status": "Questionable",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-18T00:18Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4702559/oscar-delp"
             },
             {
               "id": "3929645",
@@ -5112,15 +5130,6 @@
               "source": "https://www.espn.com/nfl/player/_/id/2575788/zach-wood"
             },
             {
-              "id": "4702559",
-              "name": "Oscar Delp",
-              "position": "TE",
-              "status": "Questionable",
-              "injury": "Hamstring",
-              "reportedAt": "2026-09-16T23:48Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4702559/oscar-delp"
-            },
-            {
               "id": "4361194",
               "name": "Isaiah Stalbird",
               "position": "LB",
@@ -5146,15 +5155,6 @@
               "injury": null,
               "reportedAt": "2026-09-16T01:46Z",
               "source": "https://www.espn.com/nfl/player/_/id/4683813/jonas-sanker"
-            },
-            {
-              "id": "13971",
-              "name": "Cameron Jordan",
-              "position": "DE",
-              "status": "Questionable",
-              "injury": "Hamstring",
-              "reportedAt": "2026-09-15T15:39Z",
-              "source": "https://www.espn.com/nfl/player/_/id/13971/cameron-jordan"
             },
             {
               "id": "3051909",
@@ -5757,6 +5757,15 @@
           "name": "Philadelphia Eagles",
           "players": [
             {
+              "id": "4682618",
+              "name": "Cooper DeJean",
+              "position": "CB",
+              "status": "Questionable",
+              "injury": "Calf",
+              "reportedAt": "2026-09-18T00:32Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4682618/cooper-dejean"
+            },
+            {
               "id": "4602197",
               "name": "Andrew Mukuba",
               "position": "S",
@@ -5782,15 +5791,6 @@
               "injury": "Pectoral",
               "reportedAt": "2026-09-17T00:13Z",
               "source": "https://www.espn.com/nfl/player/_/id/3916409/jonathan-greenard"
-            },
-            {
-              "id": "4682618",
-              "name": "Cooper DeJean",
-              "position": "CB",
-              "status": "Questionable",
-              "injury": "Calf",
-              "reportedAt": "2026-09-17T00:09Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4682618/cooper-dejean"
             },
             {
               "id": "4035624",
@@ -7687,8 +7687,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-18T00:06:26Z",
-      "lastAttemptAt": "2026-09-18T00:06:26Z",
+      "checkedAt": "2026-09-18T00:45:37Z",
+      "lastAttemptAt": "2026-09-18T00:45:37Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7739,8 +7739,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-18T00:06:26Z",
-      "lastAttemptAt": "2026-09-18T00:06:26Z",
+      "checkedAt": "2026-09-18T00:45:37Z",
+      "lastAttemptAt": "2026-09-18T00:45:37Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
