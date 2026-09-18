@@ -91,6 +91,14 @@
 .kr-badge.reference { background: #edf1f4; color: #556b79; }
 .kr-favorites .kr-list { border-color: #b5cfc6; }
 .kr-favorites .kr-row { background: #fbfdfb; }
+.kr-row.kr-lean-green { border-left-color: #218060; background: #f4fbf7; }
+.kr-row.kr-lean-yellow { border-left-color: #d49a24; background: #fffaf0; }
+.kr-row.kr-lean-red { border-left-color: #b9424e; background: #fff7f8; }
+.kr-lean-guide { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 12px; }
+.kr-lean-guide span { padding: 4px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; }
+.kr-lean-guide .green { color: #176047; background: #e8f4ed; }
+.kr-lean-guide .yellow { color: #795618; background: #fff1d9; }
+.kr-lean-guide .red { color: #8f2935; background: #f8e1e4; }
 .kr-note { margin: 10px 0; padding: 9px 11px; border-radius: 5px; background: var(--kr-wash); color: var(--kr-muted); font-size: 11px; line-height: 1.6; }
 .kr-empty { padding: 24px 18px; border: 1px dashed #c5d5dd; border-radius: var(--kr-radius); background: #f8fafb; color: var(--kr-muted); }
 .kr-empty h3 { margin: 0 0 5px; color: var(--kr-ink); font-size: 16px; }
@@ -371,3 +379,4 @@ body[data-page-view="parlays"] .intro { margin: 18px 0 14px; gap: 12px; }
 body[data-page-view="parlays"] .intro .eyebrow, body[data-page-view="parlays"] #hero-description { display: none; }
 body[data-page-view="parlays"] .intro h1 { margin: 0; }
 @media (max-width: 760px) { body[data-page-view="parlays"] .intro { margin: 14px 0 12px; display: block; } body[data-page-view="parlays"] .intro > .edition { display: none; } }
+
