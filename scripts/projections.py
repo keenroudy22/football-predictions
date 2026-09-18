@@ -9,7 +9,7 @@ For each team in a game, from games before the cutoff:
   volume     dropbacks, rushes, targets, pass attempts and sacks from those
 
 Each player's share of targets, carries and pass attempts comes from recent
-games he played for that team, with NFL snap counts marking who was on the
+games the player played for that team, with NFL snap counts marking who was on the
 field. A pseudo-game at zero share keeps one big game from setting a role.
 Catch rate and yards per target, carry and attempt are shrunk toward position
 averages learned from the same games. Players listed out are removed live and
@@ -287,7 +287,7 @@ def candidates(history, league, team, games, cutoff):
 
 
 def efficiency(history, pid, cutoff, league, prior):
-    """Player rates shrunk toward his position group's league rates."""
+    """Player rates shrunk toward the position group's league rates."""
     totals = defaultdict(float)
     for game, line in history.player_lines(pid, cutoff)[:EFFICIENCY_GAMES]:
         values = {**line, **features.unified(line, league, game['quality'].get('plays') == 'ok')}

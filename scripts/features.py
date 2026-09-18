@@ -191,8 +191,8 @@ def summarize(values):
 def value(row, stat):
     """A stat from any log row: player stats, allowed-by-position ('WR.recYds') or team fields.
 
-    ESPN lists a player under a category only when he recorded something
-    there, so a player row without a counting stat means zero. Longest-play
+    ESPN lists a player under a category only when the player recorded
+    something there, so a player row without a counting stat means zero. Longest-play
     stats have no zero, and team stats a league does not report stay missing.
     """
     if '.' in stat:
