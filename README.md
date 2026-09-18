@@ -22,9 +22,18 @@ node --test tests/*.test.js
 
 `site/` is the deployable directory. GitHub Actions refreshes schedules/results throughout the day plus Eastern postgame windows, including weekday college games. Actions can run late; the page displays source timestamps. Turn off the workflow in GitHub Actions to stop it. No local background process is required.
 
-## Two different kinds of forecasts
+## Three kinds of forecasts
 
 **Baseline score forecast:** automatic, opponent-adjusted Elo margin and smoothed team game totals from ESPN completed games. A transparent starting point, not a researched betting edge. Prior-season ratings regress 35% toward average. Newly observed teams start at league average. No roster, injuries, transfers, weather, or market inputs. Sparse-history games are flagged. Scores are rounded estimates, not exact-score bets. Model v1 is uncalibrated and has not demonstrated profitability.
+
+**Model v2 (`scripts/model_v2.py`, `scripts/projections.py`):** team scores and player volume from the box-score store, refit on every run and published by `scripts/forecast.py` as append-only snapshots in `data/forecasts/` with their inputs, version and an 80% range. Margin and total ratings are recency-weighted ridge regressions of points on offense, defense and home field; totals blend in efficiency-implied points, NFL margins blend in the v1 Elo, and college FCS opponents share a group rating. Player targets, carries and pass attempts come from each player's recent share of his team's projected volume; NFL snap counts mark who played and the ESPN injury report removes ruled-out players. No market, weather or betting input. Tuned on 2024, then scored once on the untouched 2025 season (average miss against the final result, points):
+
+| 2025 walk-forward | Closing line | v1 Elo | v2 |
+|---|---|---|---|
+| NFL margin / total | 9.71 / 10.49 | 10.22 / 10.88 | 10.21 / 10.60 |
+| FBS margin / total | 11.91 / 12.47 | 14.83 / 12.78 | 12.48 / 12.66 |
+
+v2 does not beat the closing line and makes no claim to. Its 80% ranges held 78 to 82% of 2025 results. Early-season college mismatches are compressed toward the middle while teams have few games. A forecast counts from the moment the hosted workflow publishes it; nothing generated elsewhere is backfilled into the store.
 
 **Analyst card:** source-backed score revisions, player props, and parlays published by the research task. The automatic schedule collector does not perform that research or invent recommendations. No card is shown as actionable after kickoff or when its quote expires. College prop jurisdiction availability must be verified before publication as actionable.
 
@@ -32,7 +41,7 @@ ESPN's public scoreboard feed is an unofficial integration without a service gua
 
 ## Box-score store
 
-`data/boxscores/<league>-<season>.jsonl` holds one line per completed NFL and FBS game: team stats, every player with an offensive or kicking line, play-derived red-zone work and success rates, points by quarter, and the provider's open and close spread, total and moneyline. Each line names its ESPN event ID, the three source URLs and its retrieval time. Coverage starts with the 2024 season. It is not deployed; the site will read small derived files instead.
+`data/boxscores/<league>-<season>.jsonl` holds one line per completed NFL and FBS game: team stats, every player with an offensive or kicking line, play-derived red-zone work and success rates, points by quarter, and the provider's open and close spread, total and moneyline. Each line names its ESPN event ID, the three source URLs and its retrieval time. Coverage starts with the 2023 season. It is not deployed; the site will read small derived files instead.
 
 - **Append-only.** A line is never edited. A later read with different content, such as an official stat correction four days after the game, appends a revision; the last line for an event is current. `data/boxscores/ledger.json` hashes the lines each file holds and `tests/test_boxscores.py` fails if one changes. Never regenerate the ledger to make that test pass.
 - **Sources.** Box score from the ESPN `summary` endpoint; play-by-play participants and closing lines from ESPN's core API. Closing lines are DraftKings for 2026 and ESPN BET for 2024 and 2025. In-game odds are never used. A game with no pregame provider has no line, not an estimate.
@@ -43,6 +52,8 @@ python scripts/boxscores.py                    new finals in site/data/slate.jso
 python scripts/boxscores.py --backfill NFL 2025
 python scripts/features.py                     coverage and agreement with official box scores
 ```
+
+`data/nflverse/nfl-<season>.jsonl` adds NFL snap counts (skill players) and game context (roof, surface, temperature, wind, rest, starting quarterbacks) from nflverse's free CSVs, sourced from Pro Football Reference and joined to ESPN IDs; `python scripts/nflverse.py`.
 
 `scripts/features.py` derives player logs, team logs, defense-versus-position logs, last 5/10/20 and home/away/opponent splits from the store without network access. Every function that feeds a forecast takes a cutoff and uses only earlier games.
 

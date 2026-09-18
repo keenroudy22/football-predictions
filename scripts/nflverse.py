@@ -18,7 +18,6 @@ Stdlib only. Data attribution: nflverse (github.com/nflverse), Pro Football Refe
 import argparse
 import csv
 import io
-import json
 import re
 import sys
 from collections import defaultdict
