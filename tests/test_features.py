@@ -52,6 +52,17 @@ class LogTests(unittest.TestCase):
         self.assertEqual(logs['10'][0]['stats']['targets'], 5)
         self.assertNotIn('targets', logs['11'][0]['stats'], 'an NFL line without official targets stays unknown')
 
+    def test_sacks_are_official_in_the_nfl_and_play_by_play_in_college(self):
+        college_qb = {'id': '1', 'team': '1', 'pos': 'QB', 'att': 20, 'car': 8, 'pbpSacked': 2, 'pbpSackYds': 11}
+        pro_qb = {'id': '2', 'team': '1', 'pos': 'QB', 'att': 30, 'sacked': 3, 'sackYds': 10, 'pbpSacked': 3}
+        college = ft.player_logs([game('1', '2025-09-06T16:00Z', league='CFB', players=[college_qb, wr('10', '1', 3, 30)])])
+        pro = ft.player_logs([game('2', '2025-09-07T17:00Z', players=[pro_qb])])
+        self.assertEqual((college['1'][0]['stats']['sacks'], college['1'][0]['stats']['sackYds']), (2, 11))
+        self.assertNotIn('sacks', college['10'][0]['stats'], 'a receiver has no sack line')
+        self.assertEqual(pro['2'][0]['stats']['sacks'], 3)
+        allowed = ft.defense_logs([game('1', '2025-09-06T16:00Z', league='CFB', home='2', away='1', players=[college_qb])])['2'][0]
+        self.assertEqual(allowed['allowed']['QB']['sacks'], 2)
+
     def test_team_log_pairs_own_and_opponent_stats_with_the_close(self):
         close = {'spread': -3.0, 'total': 44.5}
         rows = ft.team_logs([game('1', '2025-09-07T17:00Z', market={'close': close})])

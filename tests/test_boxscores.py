@@ -95,10 +95,21 @@ class RealGameTests(unittest.TestCase):
         self.assertNotIn('targets', rec['quality']['check'])
         gillespie = player(rec, 'Chase Gillespie')
         self.assertEqual((gillespie['pbpTgt'], gillespie['rec']), (4, 3))
-        # NCAA scoring counts sacks as quarterback rushes; dropbacks include them.
+        # NCAA scoring counts sacks as quarterback rushes. The college box score
+        # lists no sacks, so play-by-play supplies them and the check adds them back.
         famu = rec['teams']['50']
         self.assertEqual(famu['pbp']['dropbacks'], famu['att'] + 2)
-        self.assertEqual(rec['quality']['check']['carries']['box'] - rec['quality']['check']['carries']['pbp'], 2)
+        fletcher = player(rec, 'Dustin Fletcher')
+        self.assertEqual((fletcher['car'], fletcher['pbpCar'], fletcher['pbpSacked'], fletcher['pbpSackYds']), (8, 6, 2, 11))
+        carries = rec['quality']['check']['carries']
+        self.assertEqual(carries['box'], carries['pbp'])
+        self.assertEqual(carries['exact'], carries['players'])
+
+    def test_nfl_play_by_play_sacks_match_the_box_score(self):
+        rec = record()
+        for name in ('Drake Maye', 'Sam Darnold', 'Drew Lock'):
+            qb = player(rec, name)
+            self.assertEqual((qb.get('pbpSacked', 0), qb.get('pbpSackYds', 0)), (qb['sacked'], qb['sackYds']), name)
 
     def test_record_names_its_sources_and_retrieval_time(self):
         rec = record()

@@ -12,9 +12,10 @@ stat correction, or a feed that was unavailable the first time) appends a new
 revision, and the last line for an event wins. ledger.json hashes the lines each
 file already holds; tests fail if any of them change.
 
-Play-derived counts (red-zone work, college targets) come from the provider's
-participant tags, never from parsing play text. Positions are the provider's
-per-game tags. Snap counts are not in any of these feeds and are not recorded.
+Play-derived counts (red-zone work, college targets and sacks) come from the
+provider's participant tags. The one exception is scrambles, which the play
+text names ("scrambles"). Positions are the provider's per-game tags. Snap
+counts are not in any of these feeds and are not recorded.
 
 Usage:
   python scripts/boxscores.py                   completed games in site/data/slate.json
@@ -281,7 +282,11 @@ def play_features(payload, team_ids):
                 affiliation[athlete][team] += 1
         if passer:
             stats['dropbacks'] += 1
-            if 'sack' not in kind:
+            if 'sack' in kind:
+                # College box scores list no sacks per quarterback; this is the source there.
+                players[passer]['pbpSacked'] += 1
+                players[passer]['pbpSackYds'] += -gained if gained is not None and gained < 0 else 0
+            else:
                 players[passer]['pbpAtt'] += 1
                 players[passer]['rzAtt'] += red_zone
             for receiver in roles.get('receiver', []):
@@ -402,14 +407,17 @@ def build_record(league, event_id, summary, plays, odds, retrieved_at, failures=
                 player['posId'] = tags[athlete]
                 if tags[athlete] in POSITIONS:
                     player['pos'] = POSITIONS[tags[athlete]]
+        # NCAA scoring counts sacks as rushes, so college carries compare with both.
+        derived = {'carries': (lambda p: p.get('pbpCar', 0) + p.get('pbpSacked', 0)) if league == 'CFB'
+                   else (lambda p: p.get('pbpCar', 0)),
+                   'receptions': lambda p: p.get('pbpRec', 0), 'targets': lambda p: p.get('pbpTgt', 0)}
         quality['check'] = {}
-        for key, box, pbp in (('carries', 'car', 'pbpCar'), ('receptions', 'rec', 'pbpRec'),
-                              ('targets', 'tgt', 'pbpTgt')):
+        for key, box in (('carries', 'car'), ('receptions', 'rec'), ('targets', 'tgt')):
             compared = [p for p in players.values() if box in p]
             if compared:
                 quality['check'][key] = {
-                    'box': sum(p[box] for p in compared), 'pbp': sum(p.get(pbp, 0) for p in players.values()),
-                    'players': len(compared), 'exact': sum(p[box] == p.get(pbp, 0) for p in compared)}
+                    'box': sum(p[box] for p in compared), 'pbp': sum(derived[key](p) for p in players.values()),
+                    'players': len(compared), 'exact': sum(p[box] == derived[key](p) for p in compared)}
     season = header.get('season', {})
     venue = summary.get('gameInfo', {}).get('venue') or {}
     record = {'extractor': EXTRACTOR, 'league': league, 'eventId': str(event_id),

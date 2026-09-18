@@ -28,7 +28,7 @@ PLAYER_KEYS = ('cmp', 'att', 'passYds', 'passTD', 'int', 'sacked', 'car', 'rushY
                'rec', 'recYds', 'recTD', 'recLong', 'tgt', 'pbpTgt', 'rzTgt', 'i10Tgt', 'rzCar', 'i10Car',
                'i5Car', 'rzAtt', 'scrambles', 'fum', 'fumLost', 'fgm', 'fga', 'fgLong', 'xpm', 'xpa', 'kPts')
 # What a defense allows to each position group, summed over that group's players.
-ALLOWED = {'QB': ('cmp', 'att', 'passYds', 'passTD', 'int', 'sacked', 'car', 'rushYds', 'rushTD'),
+ALLOWED = {'QB': ('cmp', 'att', 'passYds', 'passTD', 'int', 'sacks', 'car', 'rushYds', 'rushTD'),
            'RB': ('car', 'rushYds', 'rushTD', 'targets', 'rec', 'recYds', 'recTD'),
            'WR': ('targets', 'rec', 'recYds', 'recTD'),
            'TE': ('targets', 'rec', 'recYds', 'recTD')}
@@ -78,11 +78,23 @@ def played_before(records, before):
     return [g for g in records if when(g['kickoff']) < cutoff]
 
 
-def targets(player, league):
-    """Official targets where the box score has them (NFL); play-by-play otherwise."""
+def unified(player, league):
+    """Targets and sacks with one meaning in both leagues.
+
+    The official box-score count wherever it exists (NFL). College box scores
+    list neither, so college values come from play-by-play. An NFL line with
+    no official count stays unknown rather than borrowing the derived one.
+    """
+    out = {}
     if 'tgt' in player:
-        return player['tgt']
-    return player.get('pbpTgt', 0) if league == 'CFB' else None
+        out['targets'] = player['tgt']
+    elif league == 'CFB':
+        out['targets'] = player.get('pbpTgt', 0)
+    if 'sacked' in player:
+        out['sacks'], out['sackYds'] = player['sacked'], player.get('sackYds', 0)
+    elif league == 'CFB' and any(k in player for k in ('att', 'pbpAtt', 'pbpSacked')):
+        out['sacks'], out['sackYds'] = player.get('pbpSacked', 0), player.get('pbpSackYds', 0)
+    return out
 
 
 def sides(game):
@@ -111,9 +123,7 @@ def player_logs(records, before=None):
             row.update(name=player.get('name'), pos=pos, stats={k: player[k] for k in PLAYER_KEYS if k in player})
             if source == 'other games':
                 row['posSource'] = source
-            target_count = targets(player, game['league'])
-            if target_count is not None:
-                row['stats']['targets'] = target_count
+            row['stats'].update(unified(player, game['league']))
             logs[player['id']].append(row)
     return dict(logs)
 
@@ -154,10 +164,8 @@ def defense_logs(records, before=None):
                 if not group:
                     untagged += pos is None and any(k in player for k in ALLOWED['RB'] + ('att',))
                     continue
-                line = {k: player[k] for k in ALLOWED[group] if k in player}
-                target_count = targets(player, game['league'])
-                if target_count is not None and 'targets' in ALLOWED[group]:
-                    line['targets'] = target_count
+                values = {**player, **unified(player, game['league'])}
+                line = {k: values[k] for k in ALLOWED[group] if k in values}
                 if not line:
                     continue
                 groups[group].update(line)
