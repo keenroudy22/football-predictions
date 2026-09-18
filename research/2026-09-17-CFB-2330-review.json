@@ -1,0 +1,353 @@
+{
+  "league": "CFB",
+  "targetWeek": 3,
+  "publishedAt": "2026-09-18T03:37:46Z",
+  "summary": "23:30 review: Pittsburgh 27, Syracuse 13 is final. The original score forecast is evaluated below; all watched markets remained observations, with no official CFB ticket to settle.",
+  "props": [],
+  "riskyProps": [],
+  "gamePicks": [],
+  "parlays": [],
+  "takeaways": [
+    "Final: Pittsburgh 27, Syracuse 13. The frozen September 14 baseline was Pittsburgh 32, Syracuse 19: correct winner, 1-point margin error and an 11-point overprediction of total scoring. This evaluates the score forecast, not a betting win.",
+    "Syracuse used both Steve Angeli and Amari Odom, and running-back carries were shared among Ahmad Miller, Shavane Anderson Jr. and Ju'Juan Johnson. Check subsequent team reports before treating this as an injury, a permanent quarterback change or a stable lead-back role.",
+    "One game is not enough to retune the model or claim a new defensive pattern. Keep workload, efficiency and scoring errors separate. Conflicting player yardage remains flagged for a morning source check.",
+    "Friday morning priorities: Miami at Wake Forest (7:30 p.m. ET), Houston at Texas Tech (8 p.m.) and Portland State at Oregon (10:30 p.m.). Start with current availability, offensive lines and direct FanDuel/DraftKings prices; these are research assignments, not picks."
+  ],
+  "weeklyReview": [
+    "CFB Week 3, elo-total-v1, one completed game: original Pitt 32-19 versus actual 27-13. Predicted total 51 versus actual 40; predicted home margin 13 versus actual 14. Absolute team-score errors were 5 and 6 points (mean 5.5). Preserve the original forecast and evaluate any proposed adjustment on later games before claiming improvement.",
+    "This game illustrates uncertainty in scoring and player opportunity, not a proven formula change. The original baseline had no injury, weather or market adjustment. The watched props and offered parlay prices were never official recommendations and must not enter the betting record."
+  ],
+  "gameWatch": [
+    {
+      "id": "CFB-early-0",
+      "gameId": "CFB-401858225",
+      "title": "Angeli full game, 1Q and 1H - observation closed",
+      "why": "Pittsburgh won 27-13, confirmed final by both schools and ESPN. This candidate remained research only before kickoff; no pick, parlay win, units or ROI is credited.",
+      "needs": "No further entry review: the game is final. Preserve all pregame observations as history. A conflicting Ferguson rushing-yard figure will be checked at the next scheduled morning review.",
+      "sources": [
+        "https://cuse.com/sports/football/stats/2026/pittsburgh/boxscore/18833",
+        "https://cuse.com/news/2026/9/17/football-orange-drop-road-opener-at-pitt",
+        "https://pittsburghpanthers.com/news/2026/9/17/football-pitt-runs-past-syracuse-to-improve-to-3-0",
+        "https://www.espn.com/college-football/game/_/gameId/401858225",
+        "https://www.syracuse.com/betting/2026/09/syracuse-vs-pitt-prediction-and-picks-plus-angeli-underdog-pickem-props.html",
+        "https://cuse.com/game-center/18833?Live=8378"
+      ],
+      "pregameWhy": "Underdog lines reported Sep 15: Angeli 250.5 passing yards, 61.5 first-quarter passing yards and 127.5 first-half passing yards. These give the research screen exact thresholds for multiple windows.",
+      "pregameNeeds": "Verify current jurisdiction availability and selection terms, build exact-window history, compare a defensible projection and confirm the price. These are watched lines, not official picks.",
+      "status": "observed_only",
+      "reviewStatus": "completed",
+      "lastCheckedAt": "2026-09-18T03:37:46Z",
+      "completedAt": "2026-09-18T03:37:46Z",
+      "nextReviewAt": "2026-09-18T12:30:00Z",
+      "nextReviewNote": "08:30 ET review of the source discrepancy only; this completed game is closed to new recommendations."
+    },
+    {
+      "id": "CFB-2026-W3-syr-pitt-1130",
+      "gameId": "CFB-401858225",
+      "title": "Syracuse at Pittsburgh - completed game, no official play",
+      "status": "observed_only",
+      "reviewStatus": "completed",
+      "lineLabel": "DraftKings Indiana: Syracuse +10 (-105), Pittsburgh -10 (-115); total 51.5 (over/under -110); moneylines Syracuse +320, Pittsburgh -410",
+      "quoteNote": "Historical pregame observation; expired for new entries. Observed directly in the normal Indiana DraftKings browser page at 17:48 ET (21:48:20Z). These are available-market observations, not recommendations; prices can change. Earlier ESPN comparison snapshots are retained separately.",
+      "why": "Pittsburgh won 27-13, confirmed final by both schools and ESPN. This candidate remained research only before kickoff; no pick, parlay win, units or ROI is credited.",
+      "needs": "No further entry review: the game is final. Preserve all pregame observations as history. A conflicting Ferguson rushing-yard figure will be checked at the next scheduled morning review.",
+      "weather": "NWS Pittsburgh forecast updated 14:31 ET: 30% chance of showers/thunderstorms before 22:00, with west wind 3–6 mph. Rain risk adds uncertainty; the light forecast wind alone does not support an under.",
+      "sourceLimitations": "FanDuel Research contains priced spread, total and player references, but its widgets show September 18 while both schools confirm September 17. Its Hatcher explanation also incorrectly calls Syracuse receiver Umari Hatcher a Pitt receiver. Treat those article quotes as unverified references. The incomplete ESPN college injury feed cannot establish that either team is healthy. Do not interpret its provider opening-total field as a verified line-movement history.",
+      "reviewedMarkets": [
+        "Full-game spread, total and moneylines",
+        "Heintschel passing touchdowns (article reference only)",
+        "Turner rushing yards (article reference only)",
+        "Hatcher alternate receiving yards (article reference only)",
+        "Five directly observed prebuilt parlay prices, including a race-to-10 leg"
+      ],
+      "lastCheckedAt": "2026-09-18T03:37:46Z",
+      "nextReviewAt": "2026-09-18T12:30:00Z",
+      "nextReviewNote": "08:30 ET review of the source discrepancy only; this completed game is closed to new recommendations.",
+      "movementExplanation": {
+        "type": "Unknown",
+        "text": "The ESPN/DraftKings reference price changed from -110 to -105 with Pittsburgh still -10.5. The later direct DraftKings board shows Pittsburgh -10 (-115); these are different source types, not a verified same-source movement sequence. No confirmed cause was found.",
+        "sources": [
+          "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660"
+        ]
+      },
+      "marketSnapshots": [
+        {
+          "book": "DraftKings via ESPN",
+          "market": "Pittsburgh spread",
+          "window": "Full game",
+          "direction": "Pittsburgh",
+          "line": -10.5,
+          "odds": -105,
+          "observedAt": "2026-09-17T21:07:10Z",
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "quoteType": "comparison",
+          "sourceTimeNote": "Hosted observation time; exact sportsbook quote time unavailable. Not a directly verified offer."
+        },
+        {
+          "book": "DraftKings via ESPN",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Over",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:07:10Z",
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "quoteType": "comparison",
+          "sourceTimeNote": "Hosted observation time; exact sportsbook quote time unavailable. Not a directly verified offer."
+        },
+        {
+          "book": "DraftKings via ESPN",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Under",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:07:10Z",
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225",
+          "quoteType": "comparison",
+          "sourceTimeNote": "Hosted observation time; exact sportsbook quote time unavailable. Not a directly verified offer."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Syracuse spread",
+          "window": "Full game",
+          "direction": "Syracuse",
+          "line": 10,
+          "odds": -105,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Pittsburgh spread",
+          "window": "Full game",
+          "direction": "Pittsburgh",
+          "line": -10,
+          "odds": -115,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Over",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Game total points",
+          "window": "Full game",
+          "direction": "Under",
+          "line": 51.5,
+          "odds": -110,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Moneyline",
+          "window": "Full game",
+          "direction": "Syracuse",
+          "line": null,
+          "odds": 320,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        },
+        {
+          "book": "DraftKings",
+          "market": "Moneyline",
+          "window": "Full game",
+          "direction": "Pittsburgh",
+          "line": null,
+          "odds": -410,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "expiresAt": "2026-09-17T22:18:20Z",
+          "sourceTimeNote": "Direct browser observation on Indiana sportsbook page; publisher quote time unavailable. Observation only, not an official selection."
+        }
+      ],
+      "sources": [
+        "https://cuse.com/sports/football/stats/2026/pittsburgh/boxscore/18833",
+        "https://cuse.com/news/2026/9/17/football-orange-drop-road-opener-at-pitt",
+        "https://pittsburghpanthers.com/news/2026/9/17/football-pitt-runs-past-syracuse-to-improve-to-3-0",
+        "https://www.espn.com/college-football/game/_/gameId/401858225",
+        "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+        "https://pittsburghpanthers.com/news/2026/9/14/football-game-week-pitt-commences-conference-play-with-syracuse-on-thursday-night",
+        "https://cuse.com/news/2026/9/16/football-syracuse-set-for-road-opener",
+        "https://cuse.com/documents/2026/9/14/3-Pittsburgh_Notes.pdf",
+        "https://theacc.com/sports/2025/8/28/availability-reporting-football.aspx",
+        "https://forecast.weather.gov/MapClick.php?lat=40.441885&lon=-79.955707",
+        "https://www.fanduel.com/research/3-best-bets-and-3-best-player-props-bets-tonight-syracuse-vs-pittsburgh-college-football"
+      ],
+      "parlayObservations": [
+        {
+          "legs": [
+            "Pittsburgh moneyline (full game)",
+            "Under 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 130,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Pittsburgh moneyline (full game)",
+            "Over 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 132,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Pittsburgh -10 spread (full game)",
+            "Over 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 234,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Syracuse +10 spread (full game)",
+            "Over 51.5 total points (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 286,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price, not multiplied leg odds. No verified joint probability or final availability; not an official tracked ticket."
+        },
+        {
+          "legs": [
+            "Syracuse race to 10 points",
+            "Pittsburgh moneyline (full game)"
+          ],
+          "book": "DraftKings",
+          "odds": 360,
+          "observedAt": "2026-09-17T21:48:20Z",
+          "source": "https://sportsbook.draftkings.com/event/syracuse-%40-pittsburgh/34633660",
+          "quoteType": "sportsbook",
+          "status": "observed_only",
+          "reason": "Offered combined price. Race-to-10 research and settlement details are incomplete; not an official tracked ticket."
+        }
+      ],
+      "pregameWhy": "Syracuse's official projected chart lists Steve Angeli at QB and four running backs joined by OR; it does not establish a stable lead-back workload. Pitt's official preview supports Mason Heintschel's starting role, but two games of team statistics and the market prices alone do not establish a reliable betting edge. No spread, total or parlay clears the research requirements in this review.",
+      "pregameNeeds": "No official play from this check. Automated DraftKings retrieval failed, but the normal Indiana browser fallback succeeded. The ACC availability embed did not expose a readable report, so final injuries, offensive-line availability and starters remain unconfirmed. A defensible projection and joint probability are still needed before recommending any of the offered parlays. College player-market availability and its jurisdiction gate remain unverified; game-market access does not establish that gate.",
+      "completedAt": "2026-09-18T03:37:46Z"
+    }
+  ],
+  "dataConflicts": [
+    {
+      "id": "CFB-401858225-ferguson-rushing-yards",
+      "gameId": "CFB-401858225",
+      "player": "Damon Ferguson Jr.",
+      "stat": "Rushing yards",
+      "status": "needs_review",
+      "reason": "The official Syracuse boxscore and ESPN list 102 rushing yards; the Pitt recap lists 106. Omit the disputed exact value from published takeaways until the discrepancy is resolved. No official player ticket depends on this value.",
+      "observations": [
+        {
+          "value": 102,
+          "source": "https://cuse.com/sports/football/stats/2026/pittsburgh/boxscore/18833"
+        },
+        {
+          "value": 102,
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858225"
+        },
+        {
+          "value": 106,
+          "source": "https://pittsburghpanthers.com/news/2026/9/17/football-pitt-runs-past-syracuse-to-improve-to-3-0"
+        }
+      ],
+      "lastCheckedAt": "2026-09-18T03:37:46Z",
+      "nextReviewAt": "2026-09-18T12:30:00Z",
+      "nextReview": "Recheck the official boxscore and any corrected Pitt recap; retain source disagreement if unresolved."
+    }
+  ],
+  "researchQueue": [
+    {
+      "gameId": "CFB-401858226",
+      "title": "Miami at Wake Forest",
+      "kickoff": "2026-09-18T23:30:00Z",
+      "nextReviewAt": "2026-09-18T12:30:00Z",
+      "source": "https://godeacs.com/news/2026/9/16/football-know-before-you-go-no-5-miami"
+    },
+    {
+      "gameId": "CFB-401856811",
+      "title": "Houston at Texas Tech",
+      "kickoff": "2026-09-19T00:00:00Z",
+      "nextReviewAt": "2026-09-18T12:30:00Z",
+      "source": "https://www.espn.com/college-football/game/_/gameId/401856811"
+    },
+    {
+      "gameId": "CFB-401858455",
+      "title": "Portland State at Oregon",
+      "kickoff": "2026-09-19T02:30:00Z",
+      "nextReviewAt": "2026-09-18T12:30:00Z",
+      "source": "https://www.espn.com/college-football/game/_/gameId/401858455"
+    }
+  ],
+  "sources": [
+    "https://cuse.com/sports/football/stats/2026/pittsburgh/boxscore/18833",
+    "https://cuse.com/news/2026/9/17/football-orange-drop-road-opener-at-pitt",
+    "https://pittsburghpanthers.com/news/2026/9/17/football-pitt-runs-past-syracuse-to-improve-to-3-0",
+    "https://www.espn.com/college-football/game/_/gameId/401858225",
+    "https://godeacs.com/news/2026/9/16/football-know-before-you-go-no-5-miami",
+    "https://www.espn.com/college-football/game/_/gameId/401856811",
+    "https://www.espn.com/college-football/game/_/gameId/401858455"
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://cuse.com/sports/football/stats/2026/pittsburgh/boxscore/18833",
+      "checkedAt": "2026-09-18T03:37:46Z"
+    },
+    {
+      "url": "https://cuse.com/news/2026/9/17/football-orange-drop-road-opener-at-pitt",
+      "checkedAt": "2026-09-18T03:37:46Z"
+    },
+    {
+      "url": "https://pittsburghpanthers.com/news/2026/9/17/football-pitt-runs-past-syracuse-to-improve-to-3-0",
+      "checkedAt": "2026-09-18T03:37:46Z"
+    },
+    {
+      "url": "https://www.espn.com/college-football/game/_/gameId/401858225",
+      "checkedAt": "2026-09-18T03:37:46Z"
+    }
+  ],
+  "nextReviewAt": "2026-09-18T12:30:00Z"
+}
