@@ -1,0 +1,26 @@
+{
+ "cfb-2024.jsonl": {
+  "lines": 919,
+  "sha256": "145b537c9f848ff3bb7d69cf7cbab50ce275163da9ec9b69f398df37f07cc508"
+ },
+ "cfb-2025.jsonl": {
+  "lines": 934,
+  "sha256": "baad3f2d0e28aba37268e6e870ecd04a7a3c560a58aa0ea06894f0c309a48061"
+ },
+ "cfb-2026.jsonl": {
+  "lines": 186,
+  "sha256": "f69404d560d9a2576293e667018dfc230a6fdf46fac9a44e0aab45a4cc5f21b9"
+ },
+ "nfl-2024.jsonl": {
+  "lines": 285,
+  "sha256": "8bfc3efc6315c91ec7778c087d843c803303453015d1270421ba7b584017fd96"
+ },
+ "nfl-2025.jsonl": {
+  "lines": 285,
+  "sha256": "f9cb567cc65d811545cc91db61b3cefffaa8744194cbc97363a23f6a9c5c3c73"
+ },
+ "nfl-2026.jsonl": {
+  "lines": 17,
+  "sha256": "549e87919a3c21c23ad19938c38357eb24061840fa74613f0b4d854632c8dcab"
+ }
+}
