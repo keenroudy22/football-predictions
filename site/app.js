@@ -157,6 +157,7 @@ function parlayLegHistory(p){
 }
 function pickCard(p,i=0,options){
   const status=pickStatus(p);
+  const leanClass=status!=='active'?'lean-red':p.kind==='riskyProps'||Number(p.confidence)<7?'lean-yellow':'lean-green';
   const tier=p.kind==='parlays'?parlayTier(p):null;
   const result=p.result==='unverified'?(p.settlementState==='checking_rules'?'Checking original book rules':'Awaiting verified settlement'):p.result||status;
   const calc=FootballRecords.validOdds(p.odds)?`<div class="calculator" data-odds="${esc(p.odds)}"><strong>Payout preview · quoted ${p.quotedAt?pretty(p.quotedAt)+' ET':'time unknown'}</strong><label>Amount <input class="calc-amount" type="number" min="0.01" step="0.01" value="1"></label><label>Risk as <select class="calc-mode"><option value="units">Units</option><option value="money">Dollars</option></select></label><label>Dollar value of 1 unit <input class="calc-unit" type="number" min="0.01" step="0.01" value="10"></label><p class="calc-output" aria-live="polite"></p></div>`:'';
@@ -198,7 +199,7 @@ function pickCard(p,i=0,options){
     const team=identity?.status==='ok'&&game&&[game.home.id,game.away.id].some(id=>String(id)===String(identity.team?.id))?identity.team:null;
     const color=typeof team?.color==='string'?team.color.replace(/^#/,''):'';
     const accent=/^[0-9a-f]{6}$/i.test(color)?` style="--pick-team-color:#${color}"`:'';
-    return `<article class="pick pick-compact ${p.kind==='riskyProps'?'risky-pick':''}"${accent}>
+    return `<article class="pick pick-compact ${leanClass} ${p.kind==='riskyProps'?'risky-pick':''}"${accent}>
       <div class="pick-card-top">${designation}<span class="pick-availability ${availabilityClass}">${availability}</span></div>
       <h3 aria-label="${esc(p.title)}">${compactTitle}</h3>${matchup}
       <div class="pick-facts"><span>${current?'Quoted price':'Original price'}<strong>${esc(p.book||'Book not verified')} ${p.odds>0?'+':''}${esc(p.odds||'')}</strong></span>${p.projection!=null?`<span>Projection<strong>${esc(p.projection)}</strong></span>`:''}<span>Confidence<strong>${esc(p.confidence??'—')}/10</strong></span></div>
@@ -250,7 +251,7 @@ function research(kind){
     const filtered=state.propGame!=='all'||state.propPosition!=='all';
     const currentCount=all.filter(builderEligible).length;
     const availability=!all.length?(allUnfiltered.length?'No picks match these filters. Try another game or position.':'No official picks published yet. Early research is below.') : currentCount?`${currentCount} current quote${currentCount===1?'':'s'} · check each price and limit before entry.`:'Published picks below; no current entry quotes. Original lines stay in the record.';
-    return `<div class="picks-page"><div class="picks-heading"><div><h2>Official picks</h2><p class="picks-count">${filterSummary} · ${favorites.length} daily favorite${favorites.length===1?'':'s'}</p></div><div class="picks-tools"><a href="#players">Player research →</a><a href="#parlays">Parlays →</a></div></div><p class="picks-availability">${availability}</p><details class="pick-filters" ${filtered?'open':''}><summary>Filter by game or position${filtered?' · filters applied':''}</summary>${propFilters}</details>${cards}${watchCards}${supportingNotes}</div>`;
+    return `<div class="picks-page"><div class="picks-heading"><div><h2>Official picks</h2><p class="picks-count">${filterSummary} · ${favorites.length} daily favorite${favorites.length===1?'':'s'}</p></div><div class="picks-tools"><a href="#players">Player research →</a><a href="#parlays">Parlays →</a></div></div><div class="lean-legend" aria-label="Pick color guide"><span class="green">Strong lean · 7–10</span><span class="yellow">Qualified / caution · 6</span><span class="red">No current entry</span></div><p class="picks-availability">${availability}</p><details class="pick-filters" ${filtered?'open':''}><summary>Filter by game or position${filtered?' · filters applied':''}</summary>${propFilters}</details>${cards}${watchCards}${supportingNotes}</div>`;
   }
   return `<div class="subnav"><a href="#props">Player props</a><a href="#parlays">Parlays & ticket builder →</a></div><div class="section-head"><div><h2>${title}</h2><p>${text}</p>${kind==='props'?`<p>${filterSummary} · ${favorites.length} daily favorite${favorites.length===1?'':'s'} shown · ${coreActive.length+riskyActive.length} currently active. Position groups and exact-market logs appear below when verified.</p>`:''}</div><span class="count">${kind==='props'?coreActive.length:active.length} ACTIVE</span></div>`+propFilters+(kind==='props'&&!all.length?empty(allUnfiltered.length?'No props match these filters.':'No official picks published yet.',allUnfiltered.length?'Try another game or position.':'Game research is available below. Qualified picks will appear here when verified.'):kind==='props'&&!coreActive.length?empty(no,reason):kind!=='props'&&!active.length?empty(no,reason):'')+cards+watchCards+(kind==='parlays'?parlayBuilder(): '')+takeawayBlock+(history.length?`<div class="method"><h3>Week 1 imported card</h3><p>These are screenshot-derived historical lines. Original prices and exact posting times were not supplied. Missing original prices mean unavailable profit and ROI.</p></div>`:'')+(watch.length?`<details class="watch-summary"><summary>Additional market notes · ${watch.length}</summary><div><p class="eyebrow">MARKET WATCH</p><h3>Lines to watch</h3><p>Research notes, not available wagers.</p></div><div class="watch-summary-grid">${watch.map(w=>{const parts=String(w).split(' — ');return `<article><span class="tag">WATCH</span><h4>${esc(parts.shift()||'Market note')}</h4><p>${esc(parts.join(' — '))}</p></article>`}).join('')}</div></details>`:'');
 }
@@ -403,3 +404,4 @@ async function init(){
   }catch(e){$('#notice').textContent='The latest board could not load. Please refresh and try again.';$('#notice').classList.add('warn');$('#content').innerHTML=empty('Data temporarily unavailable.','No recommendations are displayed while the source files are unavailable.');}
 }
 init();
+

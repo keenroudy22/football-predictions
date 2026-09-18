@@ -29,7 +29,8 @@ const FootballAnalytics=(()=>{
     const s=Records.summarize(picks);
     const settled=picks.filter(p=>['win','loss','push'].includes(p.result));
     const missing=settled.filter(p=>!Records.validOdds(p.originalOdds)).length;
-    return {...s,missing,units:missing||!settled.length?null:s.units,roi:missing||!settled.length?null:s.roi};
+    const pricedSettled=settled.length-missing;
+    return {...s,missing,pricedSettled,pricedUnits:pricedSettled?s.units:null,pricedRoi:pricedSettled?100*s.units/pricedSettled:null,units:missing||!settled.length?null:s.units,roi:missing||!settled.length?null:s.roi};
   }
   function historical(p,games){
     return p.historicalImport||p.status==='historical'||!(p.originalGameIds||p.gameIds||[]).length||(p.originalGameIds||p.gameIds).some(id=>!games.has(id)||!before(p.originalPublishedAt||p.publishedAt,games.get(id).kickoff));
@@ -37,3 +38,4 @@ const FootballAnalytics=(()=>{
   return {score,scores,scoreSummary,recordSummary,historical,week};
 })();
 if(typeof module!=='undefined')module.exports=FootballAnalytics;
+

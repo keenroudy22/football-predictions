@@ -15,7 +15,7 @@ test('imports stay separate and missing or postgame forecasts never create wins'
  assert.equal(A.scores([{...g,home:{score:null}}],[base],[]).length,0);
 });
 test('aggregate profit unavailable if any settled original price is missing',()=>{
- const s=A.recordSummary([{result:'win',originalOdds:null},{result:'loss',originalOdds:-110}]);assert.equal(s.units,null);assert.equal(s.roi,null);assert.equal(s.wins,1);
+ const s=A.recordSummary([{result:'win',originalOdds:null},{result:'loss',originalOdds:-110}]);assert.equal(s.units,null);assert.equal(s.roi,null);assert.equal(s.wins,1);assert.equal(s.pricedUnits,-1);assert.equal(s.pricedRoi,-100);assert.equal(s.pricedSettled,1);
  const priced=A.recordSummary([{result:'win',originalOdds:150},{result:'push',originalOdds:-110},{result:'void',originalOdds:-110}]);assert.equal(priced.units,1.5);assert.equal(priced.roi,75);
 });
 test('revisions preserve original title, projection, favorite and market',()=>{
@@ -28,3 +28,4 @@ test('score errors distinguish total and margin; Monday remains provider Week 1'
  const rows=A.scores([g],[base],[]),s=A.scoreSummary(rows);assert.equal(s.totalMAE,3);assert.equal(s.marginMAE,3);assert.equal(s.totalBias,3);assert.equal(s.wins,1);assert.equal(A.week(g),1);
  assert.equal(A.week({...g,league:'CFB',kickoff:'2026-08-29T12:00Z'}),0);
 });
+
