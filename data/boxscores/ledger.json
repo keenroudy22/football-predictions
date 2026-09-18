@@ -1,4 +1,8 @@
 {
+ "cfb-2023.jsonl": {
+  "lines": 910,
+  "sha256": "dc3d9b5213144c41541f1886828ac66ac86f437bb4b2d1b88fcffeda86c32fb6"
+ },
  "cfb-2024.jsonl": {
   "lines": 919,
   "sha256": "145b537c9f848ff3bb7d69cf7cbab50ce275163da9ec9b69f398df37f07cc508"
@@ -10,6 +14,10 @@
  "cfb-2026.jsonl": {
   "lines": 186,
   "sha256": "f69404d560d9a2576293e667018dfc230a6fdf46fac9a44e0aab45a4cc5f21b9"
+ },
+ "nfl-2023.jsonl": {
+  "lines": 285,
+  "sha256": "5abbf9376a96451deaf8a328cfbc9a610043d2f01b98b88d3ed5c42e1e317e4b"
  },
  "nfl-2024.jsonl": {
   "lines": 285,

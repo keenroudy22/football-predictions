@@ -1,4 +1,8 @@
 {
+ "nfl-2023.jsonl": {
+  "lines": 285,
+  "sha256": "7753af0bab252bf0609e373a0517483f2509aeb1a0cc220e7b6e260c563db6b4"
+ },
  "nfl-2024.jsonl": {
   "lines": 285,
   "sha256": "936d447b9511b27477f4408a0580c1a23246aedacc545d1e5dc5efcee1a9f391"
