@@ -362,3 +362,12 @@
 .kr-shuffle-advanced label { display: grid; gap: 6px; color: var(--kr-muted); font-size: 12px; }
 .kr-shuffle-advanced input { min-height: 44px; width: 100%; padding: 10px; border: 1px solid #b9cbd4; border-radius: 5px; font: 16px DM Sans, Arial, sans-serif; }
 .kr-draft-workspace .kr-slip-leg { border-left: 3px solid var(--pick-team-color, #c5d8d0); }
+
+/* On the dedicated builder, the page title and tabs already establish context. */
+body[data-page-view="parlays"] #notice:not(.warn) { display: none; }
+.kr-ticket-page .kr-board-heading { display: none; }
+
+body[data-page-view="parlays"] .intro { margin: 18px 0 14px; gap: 12px; }
+body[data-page-view="parlays"] .intro .eyebrow, body[data-page-view="parlays"] #hero-description { display: none; }
+body[data-page-view="parlays"] .intro h1 { margin: 0; }
+@media (max-width: 760px) { body[data-page-view="parlays"] .intro { margin: 14px 0 12px; display: block; } body[data-page-view="parlays"] .intro > .edition { display: none; } }

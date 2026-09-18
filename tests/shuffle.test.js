@@ -50,6 +50,17 @@ test('same athlete, aliases and opposing team/game markets cannot be combined', 
   assert.equal(Shuffle.generate([row('a'), row('b', { book: 'FanDuel' })], { book: 'all' }, now, stable).available, false);
 });
 
+test('mutually exclusive first or last touchdown scorers cannot share one game', () => {
+  const td = (key, market, extra = {}) => row(key, { title: `${key} ${market}`, market, line: null, direction: 'YES', odds: 500, ...extra });
+  for (const market of ['first touchdown', 'first_touchdown_scorer', '1st TD scorer', 'last touchdown scorer']) {
+    assert.equal(Shuffle.generate([td('a', market), td('b', market)], {}, now, stable).available, false, market);
+  }
+  assert.equal(Shuffle.generate([td('a', 'anytime touchdown'), td('b', 'anytime touchdown')], {}, now, stable).available, true);
+  assert.equal(Shuffle.generate([td('a', 'first touchdown'), row('b')], {}, now, stable).available, true);
+  assert.equal(Shuffle.generate([td('a', 'first touchdown'), td('b', 'last touchdown')], {}, now, stable).available, true);
+  assert.equal(Shuffle.generate([td('a', 'first touchdown'), td('b', 'first touchdown', { gameId: 'NFL-2' })], {}, now, stable).available, true);
+});
+
 test('locked rows survive a successful shuffle and previous combination is avoided', () => {
   const a = row('a'), b = row('b'), c = row('c');
   const result = Shuffle.generate([a, b, c], { locked: [a], previous: [a, b] }, now, stable);

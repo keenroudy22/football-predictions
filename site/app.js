@@ -273,7 +273,7 @@ function render(){
     return;
   }
   if(window.KeenBoard&&['props','parlays'].includes(state.view)){
-    document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view==='props')b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+    document.querySelectorAll('[data-view]').forEach(b=>{if(b.dataset.view===state.view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
     $('.week-label').hidden=false;
     const source=(state.slate.sources||[]).find(s=>s.league===state.league);
     const failed=source?.fetchStatus==='failed';

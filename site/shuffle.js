@@ -15,6 +15,10 @@
   const personName = value => normalize(value).replace(/[^a-z0-9 ]/g, '').replace(/\s+(?:jr|sr|ii|iii|iv)$/, '').replace(/\s+/g, '');
   const combination = rows => rows.map(row => row.key).sort().join('\n');
   const participant = row => row.athleteId != null ? `${row.league}:${row.athleteId}` : null;
+  const exclusiveScorer = row => {
+    const match = normalize(`${row.market || ''} ${row.title || ''}`).replace(/[_-]+/g, ' ').match(/\b(first|1st|last)\s+(?:touchdown|td)\b/);
+    return match ? (match[1] === '1st' ? 'first' : match[1]) : null;
+  };
   const gameMarket = row => row.position === 'Game' || row.sourceType === 'game-market' || row.kind === 'gamePicks' || /\b(?:spread|total points|moneyline|team total)\b/.test(normalize(row.market));
   const filterValue = value => value != null && value !== '' && normalize(value) !== 'all';
 
@@ -40,6 +44,8 @@
       if (distinctGames && row.gameId === other.gameId) return false;
       if (row.league === other.league && participant(row) && participant(row) === participant(other)) return false;
       if (row.gameId !== other.gameId || row.league !== other.league) return true;
+      // Only one player can score the game's first (or last) touchdown.
+      if (exclusiveScorer(row) && exclusiveScorer(row) === exclusiveScorer(other)) return false;
       // Do not double up on a player through aliases or opposing/alternate markets.
       if (!gameMarket(row) && !gameMarket(other) && personName(row.subject) === personName(other.subject)) return false;
       // One team/game market per event avoids opposing totals, sides and team props.
