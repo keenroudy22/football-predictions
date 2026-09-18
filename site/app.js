@@ -89,7 +89,8 @@
       <span class="row-rail" style="background:${pick.result ? tone : esc(pick.color || 'var(--mint)')}"></span>
       <span class="row-main"><span class="row-top"><span class="row-name">${esc(pick.title || pick.player)}</span>
         ${pick.favorite ? '<span class="pill pill-ours">Favorite</span>' : ''}${pick.historicalImport ? '<span class="pill pill-reference">Import</span>' : ''}
-        ${pick.result ? `<span class="pill pill-${pick.result === 'win' ? 'win' : pick.result === 'loss' ? 'loss' : 'closed'}">${esc(pick.result)}</span>` : ''}</span>
+        ${pick.result ? `<span class="pill pill-${pick.result === 'win' ? 'win' : pick.result === 'loss' ? 'loss' : 'closed'}">${esc(pick.result)}</span>`
+          : pick.historicalImport ? '' : C.isOpen(pick) ? '<span class="pill pill-open">Open</span>' : '<span class="pill pill-closed">Closed</span>'}</span>
         <span class="row-market">${pick.actual ? esc(pick.actual) : pick.projection != null ? 'Our number ' + esc(pick.projection) : esc(pick.kind || '')}</span>
         <span class="row-meta">${esc(whenShort(pick.kickoff || pick.publishedAt))}${pick.quotedAt ? ' · quoted ' + esc(ago(pick.quotedAt)) : ''}</span></span>
       <span class="row-price"><span class="row-odds num">${odds(pick.odds)}</span><span class="row-book">${esc(pick.book || 'No book')}</span></span>
@@ -114,7 +115,8 @@
     const first = now[0];
     const gaps = now.filter(g => g.v2 && g.lean).sort((a, b) => disagreement(b) - disagreement(a)).slice(0, 8);
     const picks = data.picks.filter(inLeague);
-    const live = picks.filter(p => !p.result && !p.historicalImport && p.status !== 'expired' && p.status !== 'withdrawn');
+    const live = picks.filter(p => !p.result && !p.historicalImport)
+      .sort((a, b) => (C.isOpen(b) - C.isOpen(a)) || String(a.kickoff).localeCompare(String(b.kickoff)));
     const forecasts = now.filter(g => g.v2).length;
     return `${head(first ? dayLabel(first.kickoff) : 'No games scheduled',
       first ? `${now.length} games on this slate · ${forecasts} with a v2 forecast · market lines from ${esc((first.market || {}).book || 'the book')}` : 'Nothing kicks off in the next eight days in this league.')}
@@ -122,7 +124,7 @@
         ${section('Where the model and the market disagree', gaps.length ? `<p class="row-meta" style="margin:0 0 8px">A lean is how many points v2 sits from the current line, and on which side. It is not a pick.</p><div class="card">${gaps.map(gameRow).join('')}</div>`
           : empty('No model calls yet', 'The model publishes after the hosted refresh runs. Every game still shows the market number.'), '<a href="#games">All games →</a>')}
         ${section('Our picks', live.length ? `<div class="card"><div class="rows">${live.map(pickRow).join('')}</div></div>`
-          : empty('No live picks right now', 'Nothing has cleared the bar for this slate. Fewer picks, or none, is part of the process.', '<a class="btn" href="#board">Open the board</a>'), '<a href="#record">Record →</a>')}
+          : empty('No picks waiting to settle', 'Nothing has cleared the bar for this slate. Fewer picks, or none, is part of the process.', '<a class="btn" href="#board">Open the board</a>'), '<a href="#record">Record →</a>')}
       </div><div>
         ${section('The record', recordCard(C.recordOf(picks), true), '<a href="#record">Details →</a>')}
         ${section('How the model is doing', modelCard(data.model), '<a href="#model">Scoreboard →</a>')}
@@ -665,11 +667,12 @@
     const prose = v => v == null ? '' : typeof v === 'string' ? v : Array.isArray(v) ? v.map(prose).join(' · ')
       : typeof v === 'object' ? Object.entries(v).map(([k, x]) => `${k}: ${prose(x)}`).join(' · ') : String(v);
     const leg = l => typeof l === 'string' ? l : l.title || [l.player, l.direction, l.line, l.market].filter(x => x != null && x !== '').join(' ');
-    const closed = !p.result && (p.entryNote || p.status === 'expired' || p.status === 'withdrawn');
+    const closed = !p.result && !p.historicalImport && !C.isOpen(p);
+    const started = p.kickoff && Date.parse(p.kickoff) <= Date.now();
     dialog.innerHTML = `<div class="detail-inner"><div class="detail-head"><div><div class="row-top">${p.result ? `<span class="pill pill-${p.result === 'win' ? 'win' : p.result === 'loss' ? 'loss' : 'closed'}">${esc(p.result)}</span>` : '<span class="pill pill-ours">Our pick</span>'}</div>
       <h3 style="margin:7px 0 0;font-size:17px">${esc(p.title)}</h3><p class="row-meta" style="margin:4px 0 0">${esc(when(p.kickoff || p.publishedAt))}</p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
       <div class="detail-body"><div class="kv"><div><span>Price</span><strong>${esc(p.book || 'No book')} ${odds(p.odds)}</strong></div><div><span>Our number</span><strong>${p.projection ?? DASH}</strong></div><div><span>Confidence</span><strong>${p.confidence != null ? p.confidence + '/10' : DASH}</strong></div><div><span>Quoted</span><strong style="font-size:12px">${esc(ago(p.quotedAt))}</strong></div></div>
-      ${closed ? `<div class="notice" style="margin-top:12px"><strong>Closed to new entries.</strong> ${esc(prose(p.entryNote) || (p.status === 'withdrawn' ? 'Withdrawn before kickoff.' : 'The quote expired or the line moved past the cutoff.'))} The original is still graded at its published price.</div>` : ''}
+      ${closed ? `<div class="notice" style="margin-top:12px"><strong>Closed to new entries.</strong> ${esc(prose(p.entryNote) || (p.status === 'withdrawn' ? 'Withdrawn before kickoff.' : started ? 'The game has started.' : 'The quote has expired.'))} The original is still graded at its published price.</div>` : ''}
       ${(p.legs || []).length ? `<h4>Legs</h4><ul style="margin:0;padding-left:18px">${p.legs.map(l => `<li>${esc(leg(l))}</li>`).join('')}</ul>` : ''}${p.correlation ? `<h4>How the legs relate</h4><p>${esc(prose(p.correlation))}</p>` : ''}
       ${p.cutoff ? `<h4>Worst number we would take</h4><p>${esc(prose(p.cutoff))}</p>` : ''}${p.why ? `<h4>Why</h4><p>${esc(prose(p.why))}</p>` : ''}${p.risk ? `<h4>What could go wrong</h4><p>${esc(prose(p.risk))}</p>` : ''}${p.edge ? `<h4>Edge estimate</h4><p>${esc(prose(p.edge))}</p>` : ''}
       ${p.actual ? `<h4>Result</h4><p>${esc(prose(p.actual))}</p>` : ''}${p.settlementReason ? `<p>${esc(prose(p.settlementReason))}</p>` : ''}

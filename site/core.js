@@ -26,7 +26,8 @@
   const pct = (value, places = 0) => value == null ? DASH : (100 * value).toFixed(places) + '%';
 
   const ET = 'America/New_York';
-  const date = iso => { const d = new Date(iso); return Number.isNaN(d.getTime()) ? null : d; };
+  /* new Date(null) is 1970, not missing. */
+  const date = iso => { if (iso == null || iso === '') return null; const d = new Date(iso); return Number.isNaN(d.getTime()) ? null : d; };
   const when = iso => {
     const d = date(iso);
     return d ? d.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: ET }) + ' ET' : '';
@@ -209,6 +210,9 @@
   };
   /* Units and ROI use recorded original prices only; a result without one stays in the win-loss
      record and out of returns. No price is ever assumed. ROI waits for ten priced picks. */
+  /* Open to new entries: unsettled, not closed by a revision, quote unexpired, game not started. */
+  const isOpen = (p, now = Date.now()) => !p.result && p.status !== 'expired' && p.status !== 'withdrawn'
+    && !p.historicalImport && !(p.expiresAt && Date.parse(p.expiresAt) <= now) && !(p.kickoff && Date.parse(p.kickoff) <= now);
   const category = p => p.kind === 'gamePicks' ? (p.marketType === 'total' ? 'Totals' : 'Spreads')
     : p.kind === 'props' ? 'Straights' : p.kind === 'riskyProps' ? 'Risky lines'
       : p.parlayType === 'longshot' ? 'Longshots' : 'Parlays';
@@ -251,5 +255,5 @@
   return { esc, DASH, odds, signed, fixed, pct, when, whenShort, dayLabel, ago, spreadText, modelSpread, leanText,
     column, cell, summarize, windows, splits, hits, POSITION_STATS, LABEL, PROJECTION_MARKET,
     rankDefenses, rankOf, rankTone, decimal, american, eligible, summarizeTicket, ticketText,
-    unitsFor, recordOf, category, parseRoute, shardOf, BASE };
+    unitsFor, recordOf, isOpen, category, parseRoute, shardOf, BASE };
 });

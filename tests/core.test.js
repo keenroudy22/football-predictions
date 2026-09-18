@@ -22,6 +22,8 @@ test('text helpers escape markup and format numbers without claiming precision',
   assert.equal(C.modelSpread('ATL', 'CAR', 4.3), 'ATL -4.3');
   assert.equal(C.modelSpread('ATL', 'CAR', -2), 'CAR -2.0');
   assert.equal(C.modelSpread('ATL', 'CAR', 0.01), 'Even');
+  assert.equal(C.ago(null), 'time not recorded', 'a missing time is not January 1970');
+  assert.equal(C.when(null), '');
 });
 
 test('leans name the team and the total direction the model prefers', () => {
@@ -122,6 +124,16 @@ test('the Week 1 import counts in the win-loss record but claims no units', () =
   assert.equal(all.units, null, 'no price was recorded, so no return is claimed');
   assert.equal(all.unpriced, all.wins + all.losses + all.pushes);
   assert.deepEqual([favorites.wins, favorites.losses], [1, 4]);
+});
+
+test('a pick is open only until its quote expires, its entries close or its game starts', () => {
+  const now = Date.parse('2026-09-20T12:00:00Z');
+  const pick = { status: 'active', expiresAt: '2026-09-20T15:30:00Z', kickoff: '2026-09-20T17:00:00Z' };
+  assert.equal(C.isOpen(pick, now), true);
+  assert.equal(C.isOpen({ ...pick, expiresAt: '2026-09-20T11:30:00Z' }, now), false);
+  assert.equal(C.isOpen({ ...pick, kickoff: '2026-09-20T11:00:00Z' }, now), false);
+  assert.equal(C.isOpen({ ...pick, status: 'expired' }, now), false);
+  assert.equal(C.isOpen({ ...pick, result: 'win' }, now), false);
 });
 
 test('pick types match the old results page', () => {
