@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T19:10:29Z",
+  "updatedAt": "2026-09-18T19:14:29Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -3701,7 +3701,7 @@
               "position": "TE",
               "status": "Questionable",
               "injury": "Knee - Meniscus",
-              "reportedAt": "2026-09-18T18:55Z",
+              "reportedAt": "2026-09-18T18:56Z",
               "source": "https://www.espn.com/nfl/player/_/id/4432665/brock-bowers"
             },
             {
@@ -3922,7 +3922,7 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Ribs",
-              "reportedAt": "2026-09-17T22:17Z",
+              "reportedAt": "2026-09-18T18:59Z",
               "source": "https://www.espn.com/nfl/player/_/id/4612826/ladd-mcconkey"
             },
             {
@@ -4607,12 +4607,21 @@
           "name": "Minnesota Vikings",
           "players": [
             {
+              "id": "2573079",
+              "name": "Carson Wentz",
+              "position": "QB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-18T19:02Z",
+              "source": "https://www.espn.com/nfl/player/_/id/2573079/carson-wentz"
+            },
+            {
               "id": "3886598",
               "name": "Jauan Jennings",
               "position": "WR",
               "status": "Out",
               "injury": "Personal",
-              "reportedAt": "2026-09-18T18:52Z",
+              "reportedAt": "2026-09-18T18:55Z",
               "source": "https://www.espn.com/nfl/player/_/id/3886598/jauan-jennings"
             },
             {
@@ -4686,15 +4695,6 @@
               "injury": "Thumb",
               "reportedAt": "2026-09-16T18:55Z",
               "source": "https://www.espn.com/nfl/player/_/id/4360569/jordan-mason"
-            },
-            {
-              "id": "2573079",
-              "name": "Carson Wentz",
-              "position": "QB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-16T15:11Z",
-              "source": "https://www.espn.com/nfl/player/_/id/2573079/carson-wentz"
             },
             {
               "id": "4430656",
@@ -7767,8 +7767,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-18T19:10:29Z",
-      "lastAttemptAt": "2026-09-18T19:10:29Z",
+      "checkedAt": "2026-09-18T19:14:29Z",
+      "lastAttemptAt": "2026-09-18T19:14:29Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7819,8 +7819,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-18T19:10:29Z",
-      "lastAttemptAt": "2026-09-18T19:10:29Z",
+      "checkedAt": "2026-09-18T19:14:29Z",
+      "lastAttemptAt": "2026-09-18T19:14:29Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
