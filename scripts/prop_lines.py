@@ -62,8 +62,13 @@ def parse(payload):
     return lines
 
 
-def capture(slate, now, fetch=boxscores.fetch_json, root=STORE):
-    """Append changed boards for NFL games kicking off within the window."""
+def capture(slate, now, fetch=boxscores.fetch_json, root=STORE, clock=None):
+    """Append changed boards for NFL games kicking off within the window.
+
+    Each board is stamped when it was fetched, and a board fetched at or after
+    kickoff is dropped: a late run can never record a live line as pregame.
+    """
+    clock = clock or (lambda: now)
     latest = {}
     for path in sorted(root.glob('*.jsonl')):
         for line in boxscores.read_store(path):
@@ -82,11 +87,15 @@ def capture(slate, now, fetch=boxscores.fetch_json, root=STORE):
         except Exception as error:  # a missing board is reported, never fatal
             problems.append(f'{game["id"]}: {type(error).__name__}')
             continue
+        fetched = clock()
+        if fetched >= kickoff:
+            problems.append(f'{game["id"]}: kicked off before the board was read')
+            continue
         if not lines or (event in latest and latest[event]['lines'] == lines):
             continue
         record = {'league': 'NFL', 'eventId': event, 'gameId': game['id'], 'season': game['season'],
                   'kickoff': game['kickoff'], 'provider': 'DraftKings', 'source': url,
-                  'retrievedAt': boxscores.stamp(now), 'lines': lines}
+                  'retrievedAt': boxscores.stamp(fetched), 'lines': lines}
         record['hash'] = boxscores.content_hash(record)
         boxscores.append(boxscores.store_path('NFL', game['season'], root), [record])
         written[game['id']] = sum(len(markets) for markets in lines.values())
@@ -99,7 +108,7 @@ def main():
         sys.exit('Refusing to append to a prop store whose recorded lines changed:\n  ' + '\n  '.join(problems))
     STORE.mkdir(parents=True, exist_ok=True)
     slate = json.loads((ROOT / 'site' / 'data' / 'slate.json').read_text(encoding='utf-8'))
-    written, problems = capture(slate, datetime.now(timezone.utc))
+    written, problems = capture(slate, datetime.now(timezone.utc), clock=lambda: datetime.now(timezone.utc))
     boxscores.write_json(STORE / 'ledger.json', boxscores.ledger(STORE))
     print(f'Captured {len(written)} changed boards ({sum(written.values())} lines); {len(problems)} unavailable.')
 
