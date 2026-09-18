@@ -67,9 +67,28 @@ test('full season shows priced returns and sorts the newest picks first',()=>{
   const api=setup();Object.assign(api.state,{recordLeague:'NFL',recordWeek:'total',recordScope:'favorites',recordEvidence:'all'});
   api.state.reports.push({league:'NFL',publishedAt:'2026-09-17T15:33:05Z',props:[{id:'test-priced-new',title:'Newest Player OVER 10.5 yards',favorite:true,odds:-110,gameIds:['NFL-401872932'],result:'win',actual:'12 yards'}]});
   const html=api.resultsPage();
-  assert.notDeepEqual(metricValues(html,'NET UNITS'),['—']);assert.notDeepEqual(metricValues(html,'ROI'),['—']);
+  assert.notDeepEqual(metricValues(html,'NET UNITS'),['—']);
+  assert.deepEqual(metricValues(html,'ROI'),['—'],'one priced pick is too small a sample to report a return');
+  assert.match(html,/Hidden until 10 priced picks · \d+ so far/);
+  assert.match(html,/is noise, not a track record/);
   assert.match(html,/\d+ priced outcomes? · 5 excluded/);assert.match(html,/outcomes without original odds.+excluded from return calculations/i);
   assert.ok(html.indexOf('Newest Player')<html.indexOf('Colston Loveland'),'newest official picks appear before Week 1 imports');
+});
+
+test('ROI appears once ten priced outcomes exist and stays hidden below that',()=>{
+  const priced=n=>{
+    const api=setup();Object.assign(api.state,{recordLeague:'NFL',recordWeek:'total',recordScope:'favorites',recordEvidence:'all'});
+    api.state.reports.push({league:'NFL',publishedAt:'2026-09-17T15:33:05Z',props:Array.from({length:n},(_,i)=>({
+      id:'priced-'+i,title:'Player '+i+' OVER 10.5 yards',favorite:true,odds:-110,
+      gameIds:['NFL-401872932'],result:'win',actual:'12 yards'}))});
+    return api.resultsPage();
+  };
+  assert.deepEqual(metricValues(priced(5),'ROI'),['—'],'a small priced sample still hides ROI');
+  assert.match(priced(5),/Hidden until 10 priced picks/);
+  const ten=priced(12);
+  assert.notDeepEqual(metricValues(ten,'ROI'),['—'],'a sample at or above the threshold reports ROI');
+  assert.match(ten,/Priced picks only/);
+  assert.doesNotMatch(ten,/is noise, not a track record/);
 });
 
 function syntheticScores(api){
