@@ -58,7 +58,7 @@ class ProjectionTests(unittest.TestCase):
         self.assertAlmostEqual(players['A-qb']['att']['mean'], 30, delta=0.15)
         self.assertEqual(players['A-w1']['pos'], 'WR')
 
-    def test_a_ruled_out_player_gives_his_share_to_the_rest(self):
+    def test_a_ruled_out_players_share_goes_to_the_rest(self):
         players = {p['id']: p for p in self.project(league(), unavailable={'A-w1'})['players']}
         self.assertNotIn('A-w1', players)
         self.assertAlmostEqual(sum(p.get('targets', {}).get('mean', 0) for p in players.values()), 22, delta=0.3)
@@ -74,6 +74,39 @@ class ProjectionTests(unittest.TestCase):
     def test_a_player_whose_latest_game_was_for_another_team_is_not_projected(self):
         games = league(moved=True)
         self.assertNotIn('A-w1', {p['id'] for p in self.project(games)['players']})
+
+    def next_season(self, games, lineups):
+        """Append 2026 games for A against B, one lineup (list of player lines) per game."""
+        start = pj.features.when(games[-1]['kickoff'])
+        for week, lineup in enumerate(lineups, 1):
+            game = fakegames.game(2000 + week, start + timedelta(days=200 + 7 * week), 'A', 'B', 20, 17, season=2026,
+                                  week=week, players=[{'team': 'A', 'name': f"A {p['id']}", **p} for p in lineup])
+            for team in ('A', 'B'):
+                game['teams'][team].update(rushAtt=15, att=30, sacked=2)
+                game['teams'][team]['pbp'].update(plays=47, dropbacks=32, rushes=15)
+            games.append(game)
+        return games
+
+    def test_a_player_who_has_not_played_for_the_team_this_season_is_not_projected(self):
+        new_back = {'id': 'A-rb2', 'pos': 'RB', 'car': 15, 'rushYds': 70}
+        games = self.next_season(league(), [[{'id': 'A-qb', **ROLE['qb']}, new_back]])
+        result = pj.project_team(pj.History(games), 'NFL', 'A', 'B', cutoff(games), 2026, 0.0, 0.0, PRIORS)
+        players = {p['id']: p for p in result['players']}
+        self.assertNotIn('A-rb', players, "last season's back has not played for A this season")
+        self.assertAlmostEqual(players['A-rb2']['carries']['mean'], 15, delta=0.3)
+
+    def test_the_nfl_starter_is_whoever_threw_in_the_latest_game(self):
+        first, benched = {'id': 'A-qb', **ROLE['qb']}, {'id': 'A-qb2', 'pos': 'QB', 'att': 30, 'cmp': 19, 'passYds': 220}
+        games = self.next_season(league(), [[first], [benched]])
+        for league_name, starter_share in (('NFL', 1.0), ('CFB', None)):
+            result = pj.project_team(pj.History(games), league_name, 'A', 'B', cutoff(games), 2026, 0.0, 0.0, PRIORS)
+            players = {p['id']: p for p in result['players']}
+            if starter_share:
+                self.assertAlmostEqual(players['A-qb2']['share']['att'], starter_share, places=3)
+                self.assertNotIn('att', players.get('A-qb', {}), 'the benched passer keeps no attempts')
+            else:
+                self.assertGreater(players['A-qb2']['share']['att'], players['A-qb']['share']['att'],
+                                   'college weights the latest game most but keeps some memory')
 
     def test_efficiency_is_shrunk_toward_the_position(self):
         games = league(weeks=1)

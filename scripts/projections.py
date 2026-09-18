@@ -40,6 +40,12 @@ SHRINK = {'catchRate': 20, 'yardsPerTarget': 40, 'yardsPerCarry': 50, 'completio
 OUT = {'out', 'injured reserve', 'doubtful', 'suspension', 'physically unable to perform', 'reserve-ret'}
 STATS = ('targets', 'receptions', 'recYds', 'carries', 'rushYds', 'att', 'cmp', 'passYds')
 Z80 = model_v2.Z80
+# Who throws. An NFL starter is whoever threw in the team's latest game; college
+# quarterbacks rotate more, so recent games count with a one-game half-life. A
+# benched passer is on no injury report, so a longer memory kept that share alive:
+# on 2025 without the known-out proxy (the live case), passing yards miss went
+# from 73.1 to 64.8 in the NFL (last-5 average: 67.1) and 75.7 to 74.7 in college.
+PASSER_HALF_LIFE = {'NFL': None, 'CFB': 1.0}
 # Residual spread by stat, sd = a + b * projection, fit on 2024 walk-forward
 # residuals with availability known (`python scripts/projections.py calibrate
 # NFL 2024 --known-out`) and checked on 2025.
@@ -196,16 +202,21 @@ def project_team(history, league, team, rival, cutoff, season, margin, slope, le
     volume = {'plays': plays, 'passRate': rate, 'dropbacks': dropbacks, 'rushes': plays - dropbacks,
               'targets': dropbacks * (per['targets'] or 0.0), 'att': dropbacks * (per['att'] or 0.0),
               'carries': (plays - dropbacks) * (carries_per_rush or 1.0)}
-    roster = candidates(history, league, team, games, cutoff)
+    roster = candidates(history, league, team, games, cutoff, season)
     shares, raw = {}, defaultdict(float)
     for pid, info in roster.items():
         share = {}
         for stat, team_key in (('targets', 'targets'), ('car', 'carries'), ('att', 'att')):
             numerator = denominator = 0.0
             # Quarterbacks change between seasons more than anyone: once this
-            # season has a game, passing shares come from this season alone.
+            # season has a game, passing shares come from this season alone,
+            # weighted by PASSER_HALF_LIFE.
             usable = [(g, w, l) for g, w, l in zip(games, team_weights, lines)
                       if stat != 'att' or g['season'] == season or not this_season]
+            if stat == 'att' and this_season:
+                half_life = PASSER_HALF_LIFE[league]
+                usable = usable[:1] if half_life is None else [
+                    (g, 0.5 ** (i / half_life), l) for i, (g, _, l) in enumerate(usable)]
             for game, w, line in usable:
                 if line[team_key] is None or not played(game, pid, history.snaps):
                     continue
@@ -267,8 +278,16 @@ def project_team(history, league, team, rival, cutoff, season, margin, slope, le
             'games': len(games), 'players': players}
 
 
-def candidates(history, league, team, games, cutoff):
-    """Players whose latest stored game before the cutoff was for this team, within its recent games."""
+def candidates(history, league, team, games, cutoff, season=None):
+    """Players whose latest stored game before the cutoff was for this team, within its recent games.
+
+    Once the team has played this season, a player must have taken part in one
+    of those games. Box scores do not record who left in the offseason, so
+    without this a departed starter's old share crowds out the player who
+    replaced them: Kenneth Walker III had 23 of Kansas City's 38 carries in
+    Week 1 and was projected for 6.7, behind five 2025 backs.
+    """
+    current = [g for g in games if g['season'] == season]
     seen = {}
     for game in games:  # newest first
         for player in game['players']:
@@ -279,6 +298,8 @@ def candidates(history, league, team, games, cutoff):
     for pid, info in seen.items():
         latest = history.player_lines(pid, cutoff)
         if not latest or latest[0][1].get('team') != team:
+            continue
+        if current and not any(played(g, pid, history.snaps) for g in current):
             continue
         pos = info['pos'] or fallback.get(pid)
         if features.GROUP.get(pos):
@@ -350,8 +371,9 @@ def backtest(league, season, from_week=2, known_out=False):
             team = game[side]['id']
             out = set()
             if known_out:
-                recent = [g for g in history.team_games(team, cutoff, WINDOW) if g['season'] == season]                     or history.team_games(team, cutoff, WINDOW // 2)
-                out = {pid for pid in candidates(history, league, team, recent, cutoff)
+                recent = [g for g in history.team_games(team, cutoff, WINDOW) if g['season'] == season] \
+                    or history.team_games(team, cutoff, WINDOW // 2)
+                out = {pid for pid in candidates(history, league, team, recent, cutoff, season)
                        if not played(game, pid, history.snaps)}
             projected = project_team(history, league, team, game[rival]['id'], cutoff, season, margin, slope,
                                      league_priors, out)
