@@ -38,8 +38,9 @@ jobs:
         run: python -m unittest discover -s tests
       - name: Verify no published record was rewritten
         run: python -m unittest tests.test_integrity -v
-      - name: Check browser script
+      - name: Check browser scripts
         run: |
+          node --check site/core.js
           node --check site/app.js
           node --test tests/*.test.js
       - name: Refresh schedules and record original forecasts
@@ -84,8 +85,8 @@ jobs:
         run: python scripts/market_lines.py
       - name: Build research review evidence
         run: node scripts/review.cjs
-      - name: Build the board payload for the new front end
-        run: python scripts/build_next_data.py
+      - name: Build the page payloads (site/data/app, not committed)
+        run: python scripts/build_site.py
       - name: Preserve the public record
         run: |
           python scripts/integrity.py

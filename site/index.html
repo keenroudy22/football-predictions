@@ -1,73 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="KeenRoudy Sports: games, researched football picks, player trends, and an honest results record. Follow NFL, college football, NBA, and MLB in one place.">
-  <meta name="theme-color" content="#0A0D13">
-  <title>KeenRoudy Sports · Games, Picks & Results</title>
-  <link rel="canonical" href="https://keenroudy.com/sports/">
-  <meta property="og:title" content="KeenRoudy Sports · Games, Picks & Results">
-  <meta property="og:description" content="Follow the games, understand the picks, and track the season record.">
-  <meta property="og:url" content="https://keenroudy.com/sports/">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="style.css?v=2">
-  <link rel="stylesheet" href="readable.css?v=24">
-  <link rel="stylesheet" href="board.css?v=4">
-  <link rel="stylesheet" href="hub.css?v=1">
-  <link rel="stylesheet" href="night.css?v=1">
-  <script src="records.js?v=4" defer></script>
-  <script src="analytics.js?v=2" defer></script>
-  <script src="dashboard.js?v=7" defer></script>
-  <script src="sports.js?v=6" defer></script>
-  <script src="matchups.js?v=1" defer></script>
-  <script src="players.js?v=3" defer></script>
-  <script src="board.js?v=6" defer></script>
-  <script src="shuffle.js?v=2" defer></script>
-  <script src="app.js?v=40" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="KeenRoudy Sports: NFL and college football stats, model projections next to the market, researched picks, and an honest scoreboard of how the model does against the closing line.">
+<meta name="theme-color" content="#0A0D13">
+<title>KeenRoudy Sports</title>
+<link rel="canonical" href="https://keenroudy.com/sports/">
+<meta property="og:title" content="KeenRoudy Sports">
+<meta property="og:description" content="Stats, model projections against the market, and an honest record.">
+<meta property="og:url" content="https://keenroudy.com/sports/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="app.css?v=8">
+<script src="core.js?v=8" defer></script>
+<script src="app.js?v=9" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header>
-    <a class="brand" href="#sports" aria-label="KeenRoudy Sports home"><span class="mark" aria-hidden="true">KR</span><span>KEENROUDY<span class="brand-sports">SPORTS</span></span></a>
-    <div class="mast-note">LOVE THE GAME. KNOW THE NUMBER.<br><span>Follow the research. Track the results.</span></div>
-    <a class="repo" href="#record">Our record ↗</a>
-  </header>
-  <main id="main">
-    <div class="intro">
-      <div><p class="eyebrow" id="hero-eyebrow">KEENROUDY SPORTS</p><h1 id="hero-title">Today’s board</h1><p id="hero-description">Games, picks and the latest research.</p></div>
-      <div class="edition"><span id="today"></span><span class="dot" aria-hidden="true">●</span> <span id="freshness">Loading source status</span></div>
-    </div>
-    <div class="toolbar">
-      <nav class="league-tabs sport-nav" aria-label="Sport">
-        <a href="#sports" data-sport="all">All sports</a>
-        <button data-league="NFL" aria-pressed="false">NFL</button>
-        <button data-league="CFB" aria-pressed="false">College football</button>
-        <a href="#sport/NBA" data-sport="NBA">NBA</a>
-        <a href="#sport/MLB" data-sport="MLB">MLB</a>
-      </nav>
-      <label class="week-label">Football week <select id="week" aria-label="Football week"></select></label>
-    </div>
-    <nav class="sections" aria-label="Football sections">
-      <button data-view="home" aria-current="page">Overview</button>
-      <button data-view="scores">Games</button>
-      <button data-view="props">Picks & lines</button>
-      <button data-view="parlays">Parlays</button>
-      <button data-view="players">Players</button>
-      <button data-view="research">Research</button>
-      <button data-view="record">Results</button>
-    </nav>
-    <div id="notice" class="notice" role="status">Loading the latest board…</div>
-    <section id="content" aria-live="polite"></section>
-    <footer>
-      <strong>Enjoy the game. Keep the record honest.</strong>
-      <p>For entertainment only. Picks are opinions, not guarantees. You are responsible for your own betting decisions and any losses.</p>
-      <p>Every published play is tracked at one unit risked. Missing original prices mean unavailable profit and ROI. Personal ticket drafts do not enter the official record.</p>
-      <details class="update-plan"><summary>When does this update?</summary><p>Football research checks are scheduled for 8:30 a.m., 11:30 a.m., 5:30 p.m. and 11:30 p.m. Eastern, including weekday college games. Schedules and scores have separate hosted refreshes. Source timestamps show the latest successful check. Runs can be delayed; this is not a continuous live feed.</p></details>
-      <div><span>All game times Eastern · NFL · College football · NBA · MLB</span><a href="#record">Results & methodology</a></div>
-    </footer>
-  </main>
+<a class="skip" href="#view">Skip to content</a>
+<div class="top">
+  <span class="mark" aria-hidden="true">KR</span>
+  <span class="wordmark">KEENROUDY</span>
+  <span class="top-right"><span class="leagues" id="leagues" role="group" aria-label="League"></span></span>
+</div>
+<nav class="tabbar" id="tabs" aria-label="Sections"></nav>
+<main>
+  <div id="view" tabindex="-1"><div class="loading">Loading the slate…</div></div>
+  <footer>
+    <strong>For entertainment only.</strong> Picks are opinions, not guarantees, and nothing here is betting advice. You are responsible for your own decisions.<br>
+    Every published pick is tracked at one unit. Units and ROI use recorded original prices only; no price is ever assumed. Stats: ESPN public feeds and nflverse. All times Eastern.
+  </footer>
+</main>
+<a class="ticket-bar" id="ticket-bar" href="#ticket" hidden></a>
+<dialog class="detail" id="detail"></dialog>
+<noscript><main style="padding:40px 16px"><h1>KeenRoudy Sports</h1><p>This site needs JavaScript.</p></main></noscript>
 </body>
 </html>
-

@@ -15,18 +15,32 @@ Python 3.11+ and Node 20+; no package install required.
 ```
 python scripts/refresh.py
 python scripts/sports_refresh.py
+python scripts/build_site.py
 python -m unittest discover -s tests
+node --check site/core.js
 node --check site/app.js
 node --test tests/*.test.js
+python -m http.server 8000 --directory site
 ```
 
 `site/` is the deployable directory. GitHub Actions refreshes schedules/results throughout the day plus Eastern postgame windows, including weekday college games. Actions can run late; the page displays source timestamps. Turn off the workflow in GitHub Actions to stop it. No local background process is required.
+
+## The site
+
+One page, hash-routed, no framework: `site/index.html`, `site/app.css`, `site/core.js` (formatting, stat windows, defense ranks, ticket and record rules; unit-tested in Node) and `site/app.js` (views).
+
+- **Today:** the slate, where v2 and the market disagree most, live picks, the record, how the model is doing, and how fresh each source is.
+- **Games:** every NFL and FBS game in the window with the market spread and total, v1 and v2. A game page adds the v2 forecast with its inputs and range, player projections next to the DraftKings line, both teams' last five, defense-vs-position ranks, injuries, line movement, published picks, and after the final, leaders and grades against the close.
+- **Stats:** every player with a line in the last two seasons, with last 5/10/20, season, home/away/neutral, head-to-head and a hit-rate chart against any line; defense vs position (season or last five, sortable); teams.
+- **Model:** the scoreboard. **Record:** every published pick at one unit, with closing-line value. **More:** the line board, the illustrative ticket builder, the research desk, and NBA/MLB scores.
+
+`scripts/build_site.py` writes the page payloads to `site/data/app/` (today, lines, one file per game, player logs sharded by athlete ID, teams, research). They are derived from committed data, so they are not committed; the hosted workflow rebuilds them before every deploy. Old links (`#record`, `#scores`, `#props`, `#parlays`, `#players`, `#game/<id>`, `#player/<league>/<id>`, `#sport/<league>`) land on the matching new page.
 
 ## Three kinds of forecasts
 
 **Baseline score forecast:** automatic, opponent-adjusted Elo margin and smoothed team game totals from ESPN completed games. A transparent starting point, not a researched betting edge. Prior-season ratings regress 35% toward average. Newly observed teams start at league average. No roster, injuries, transfers, weather, or market inputs. Sparse-history games are flagged. Scores are rounded estimates, not exact-score bets. Model v1 is uncalibrated and has not demonstrated profitability.
 
-**Model v2 (`scripts/model_v2.py`, `scripts/projections.py`):** team scores and player volume from the box-score store, refit on every run and published by `scripts/forecast.py` as append-only snapshots in `data/forecasts/` with their inputs, version and an 80% range. Margin and total ratings are recency-weighted ridge regressions of points on offense, defense and home field; totals blend in efficiency-implied points, NFL margins blend in the v1 Elo, and college FCS opponents share a group rating. Player targets, carries and pass attempts come from each player's recent share of his team's projected volume; NFL snap counts mark who played and the ESPN injury report removes ruled-out players. No market, weather or betting input. Tuned on 2024, then scored once on the untouched 2025 season (average miss against the final result, points):
+**Model v2 (`scripts/model_v2.py`, `scripts/projections.py`):** team scores and player volume from the box-score store, refit on every run and published by `scripts/forecast.py` as append-only snapshots in `data/forecasts/` with their inputs, version and an 80% range. Margin and total ratings are recency-weighted ridge regressions of points on offense, defense and home field; totals blend in efficiency-implied points, NFL margins blend in the v1 Elo, and college FCS opponents share a group rating. Player targets, carries and pass attempts come from the player's recent share of the team's projected volume; NFL snap counts mark who played and the ESPN injury report removes ruled-out players. No market, weather or betting input. Tuned on 2024, then scored once on the untouched 2025 season (average miss against the final result, points):
 
 | 2025 walk-forward | Closing line | v1 Elo | v2 |
 |---|---|---|---|
