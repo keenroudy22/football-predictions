@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T03:41:30.375Z",
+  "generatedAt": "2026-09-18T11:48:17.037Z",
   "method": "pregame-evaluation-v1",
   "scoreGroups": [
     {
@@ -45,7 +45,10 @@
     "graded": 3,
     "hitRate": 100,
     "roi": 187.6521739130435,
-    "missing": 0
+    "missing": 0,
+    "pricedSettled": 3,
+    "pricedUnits": 5.629565217391304,
+    "pricedRoi": 187.6521739130435
   },
   "workload": [
     {
