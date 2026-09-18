@@ -26,6 +26,7 @@ import boxscores
 import features
 import model_v2
 import projections
+from sports_refresh import eastern_date
 
 ROOT = Path(__file__).resolve().parents[1]
 STORE = ROOT / 'data' / 'forecasts'
@@ -101,7 +102,8 @@ def material(record, previous):
 def why(model, forecast, home, away, league):
     """Plain-language inputs, filled in from numbers the code computed."""
     margin_ratings = {side: model.margin.team(team) for side, team in (('home', home), ('away', away))}
-    parts = [f"Ratings from {model.games} stored {league} games through {model.through[:10] if model.through else 'none'}.",
+    through = eastern_date(model.through).isoformat() if model.through else 'none'
+    parts = [f"Ratings from {model.games} stored {league} games through {through} (kickoff date, Eastern).",
              f"Margin ratings (points vs average): home offense {margin_ratings['home']['off']:+.1f}, "
              f"defense {margin_ratings['home']['def']:+.1f}; away offense {margin_ratings['away']['off']:+.1f}, "
              f"defense {margin_ratings['away']['def']:+.1f}."]
