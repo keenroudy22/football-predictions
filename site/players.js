@@ -107,7 +107,10 @@
         player.team = meta.team || null;
       }
     }
-    return [...players.values()].sort((a, b) => a.name.localeCompare(b.name) || a.league.localeCompare(b.league));
+    return [...players.values()].sort((a, b) => {
+      const aOfficial=a.records.some(r=>r.official),bOfficial=b.records.some(r=>r.official);
+      return Number(bOfficial)-Number(aOfficial)||(Date.parse(b.lastUpdatedAt)||0)-(Date.parse(a.lastUpdatedAt)||0)||b.records.length-a.records.length||a.name.localeCompare(b.name);
+    });
   }
   function select(id, label, options, value) { return `<label>${esc(label)}<select id="${id}">${options.map(([key, text]) => `<option value="${esc(key)}"${key === value ? ' selected' : ''}>${esc(text)}</option>`).join('')}</select></label>`; }
   function identityNote(player) {
@@ -251,3 +254,4 @@
   }
   return { matches, hrefFor, index, pageHTML, historyView, render };
 });
+

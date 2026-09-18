@@ -18,12 +18,15 @@ const FootballAnalytics=(()=>{
       const p=score(g,forecasts,reports,mode);if(!p||!g.completed||!valid(g.home.score)||!valid(g.away.score))return [];
       const predictedTotal=p.home+p.away,actualTotal=g.home.score+g.away.score;
       const predictedMargin=p.home-p.away,actualMargin=g.home.score-g.away.score;
-      return [{g,p,predictedTotal,actualTotal,totalError:predictedTotal-actualTotal,marginError:predictedMargin-actualMargin,winnerCorrect:Math.sign(predictedMargin)===Math.sign(actualMargin),exact:p.home===g.home.score&&p.away===g.away.score}];
+      const marketTotal=Number(g.market?.total),hasMarketTotal=Number.isFinite(marketTotal)&&predictedTotal!==marketTotal&&actualTotal!==marketTotal;
+      const totalDirectionCorrect=hasMarketTotal?Math.sign(predictedTotal-marketTotal)===Math.sign(actualTotal-marketTotal):null;
+      return [{g,p,predictedTotal,actualTotal,totalError:predictedTotal-actualTotal,marginError:predictedMargin-actualMargin,winnerCorrect:Math.sign(predictedMargin)===Math.sign(actualMargin),marketTotal:Number.isFinite(marketTotal)?marketTotal:null,totalDirectionCorrect,exact:p.home===g.home.score&&p.away===g.away.score}];
     });
   }
   function scoreSummary(rows){
     const n=rows.length,mean=fn=>n?rows.reduce((s,r)=>s+fn(r),0)/n:null;
-    return {n,wins:rows.filter(r=>r.winnerCorrect).length,totalMAE:mean(r=>Math.abs(r.totalError)),marginMAE:mean(r=>Math.abs(r.marginError)),totalBias:mean(r=>r.totalError),marginBias:mean(r=>r.marginError),exact:rows.filter(r=>r.exact).length};
+    const totalRows=rows.filter(r=>typeof r.totalDirectionCorrect==='boolean');
+    return {n,wins:rows.filter(r=>r.winnerCorrect).length,totalDirectionN:totalRows.length,totalDirectionWins:totalRows.filter(r=>r.totalDirectionCorrect).length,totalMAE:mean(r=>Math.abs(r.totalError)),marginMAE:mean(r=>Math.abs(r.marginError)),totalBias:mean(r=>r.totalError),marginBias:mean(r=>r.marginError),exact:rows.filter(r=>r.exact).length};
   }
   function recordSummary(picks){
     const s=Records.summarize(picks);
