@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T00:04:51Z",
+  "updatedAt": "2026-09-18T00:06:26Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -5297,6 +5297,24 @@
           "name": "New York Giants",
           "players": [
             {
+              "id": "4361266",
+              "name": "Greg Newsome II",
+              "position": "CB",
+              "status": "Questionable",
+              "injury": "Ribs",
+              "reportedAt": "2026-09-17T23:58Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4361266/greg-newsome-ii"
+            },
+            {
+              "id": "4428328",
+              "name": "Deonte Banks",
+              "position": "CB",
+              "status": "Questionable",
+              "injury": "Calf",
+              "reportedAt": "2026-09-17T23:55Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4428328/deonte-banks"
+            },
+            {
               "id": "4360516",
               "name": "Tyrone Tracy Jr.",
               "position": "RB",
@@ -5324,15 +5342,6 @@
               "source": "https://www.espn.com/nfl/player/_/id/4371961/micah-mcfadden"
             },
             {
-              "id": "4361266",
-              "name": "Greg Newsome II",
-              "position": "CB",
-              "status": "Questionable",
-              "injury": "Ribs",
-              "reportedAt": "2026-09-17T21:35Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4361266/greg-newsome-ii"
-            },
-            {
               "id": "4036132",
               "name": "Chauncey Golston",
               "position": "DE",
@@ -5358,15 +5367,6 @@
               "injury": "Knee",
               "reportedAt": "2026-09-17T21:33Z",
               "source": "https://www.espn.com/nfl/player/_/id/4242547/paulson-adebo"
-            },
-            {
-              "id": "4428328",
-              "name": "Deonte Banks",
-              "position": "CB",
-              "status": "Questionable",
-              "injury": "Calf",
-              "reportedAt": "2026-09-17T21:33Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4428328/deonte-banks"
             },
             {
               "id": "3929950",
@@ -7687,8 +7687,8 @@
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-18T00:04:51Z",
-      "lastAttemptAt": "2026-09-18T00:04:51Z",
+      "checkedAt": "2026-09-18T00:06:26Z",
+      "lastAttemptAt": "2026-09-18T00:06:26Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7739,8 +7739,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-18T00:04:51Z",
-      "lastAttemptAt": "2026-09-18T00:04:51Z",
+      "checkedAt": "2026-09-18T00:06:26Z",
+      "lastAttemptAt": "2026-09-18T00:06:26Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
