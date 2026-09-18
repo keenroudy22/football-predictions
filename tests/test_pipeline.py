@@ -81,6 +81,7 @@ class PipelineTests(unittest.TestCase):
         at=datetime(2026,9,16,0,30,tzinfo=timezone.utc)
         source={'league':'NFL','retrievedAt':'2026-09-15T19:20:00Z','url':'https://example.com','fetchStatus':'ok'}
         error=HTTPError(source['url'],400,'Bad Request',{},None)
+        self.addCleanup(error.close)
         retained=retained_source('NFL',error,{'NFL':source},{'NFL-1':self.game()},at)
         self.assertEqual(retained['retrievedAt'],source['retrievedAt'])
         self.assertEqual(retained['lastAttemptAt'],'2026-09-16T00:30:00Z')
