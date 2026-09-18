@@ -236,7 +236,7 @@
       const advanced = content.querySelector('.kr-shuffle-advanced'); if (advanced) currentView.advancedOpen = advanced.open;
       const previousDialog = content.querySelector('dialog[open]'), dialogScroll = previousDialog?.scrollTop || 0, pageScroll = window.scrollY, active = document.activeElement;
       const activeAction = previousDialog?.contains(active) ? active?.dataset?.krAction : null;
-      const builderFocus = !previousDialog && active?.dataset?.krAction ? {action:active.dataset.krAction,key:active.dataset.krKey} : null;
+      const builderFocus = !previousDialog && active?.dataset?.krAction ? {action:active.dataset.krAction,key:active.dataset.krKey,tab:active.dataset.krTab,scope:active.dataset.krScope} : null;
       content.innerHTML = pageHTML(state, currentView, helpers);
       const dialog = currentView.detail ? content.querySelector('#kr-detail') : currentView.slipOpen ? content.querySelector('#kr-slip-dialog') : null;
       if (dialog) { dialog.showModal(); if (previousDialog?.id === dialog.id) { dialog.scrollTop = dialogScroll; if (activeAction) [...dialog.querySelectorAll('[data-kr-action]')].find(button => button.dataset.krAction === activeAction)?.focus({ preventScroll: true }); } }
@@ -244,7 +244,7 @@
         const target = returnFocus.kind === 'slip' ? content.querySelector('[data-kr-action="open-slip"]') : [...content.querySelectorAll('.kr-draft-workspace [data-kr-action="detail"], .kr-row [data-kr-action="detail"]')].find(button => button.dataset.krKey === returnFocus.key);
         target?.focus({ preventScroll: true }); returnFocus = null;
       }
-      if (!dialog && builderFocus) [...content.querySelectorAll('[data-kr-action]')].find(button => button.dataset.krAction === builderFocus.action && button.dataset.krKey === builderFocus.key)?.focus({preventScroll:true});
+      if (!dialog && builderFocus) [...content.querySelectorAll('[data-kr-action]')].find(button => button.dataset.krAction === builderFocus.action && button.dataset.krKey === builderFocus.key && button.dataset.krTab === builderFocus.tab && button.dataset.krScope === builderFocus.scope)?.focus({preventScroll:true});
       if (previousDialog) window.scrollTo({ top: pageScroll, behavior: 'instant' });
     };
     rendering = { state, helpers, draw };
