@@ -73,6 +73,8 @@ jobs:
         run: python scripts/market_lines.py
       - name: Build research review evidence
         run: node scripts/review.cjs
+      - name: Build the board payload for the new front end
+        run: python scripts/build_next_data.py
       - name: Preserve the public record
         run: |
           python scripts/integrity.py
