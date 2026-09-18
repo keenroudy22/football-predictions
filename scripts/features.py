@@ -24,6 +24,8 @@ import boxscores
 GROUP = {'QB': 'QB', 'RB': 'RB', 'FB': 'RB', 'WR': 'WR', 'TE': 'TE'}
 WINDOWS = (5, 10, 20)
 LONGEST = {'rushLong', 'recLong', 'fgLong'}
+# Counted from play-by-play; unknown, not zero, when a game's feed was unavailable.
+FROM_PLAYS = {'pbpTgt', 'rzTgt', 'i10Tgt', 'rzCar', 'i10Car', 'i5Car', 'rzAtt', 'scrambles'}
 PLAYER_KEYS = ('cmp', 'att', 'passYds', 'passTD', 'int', 'sacked', 'car', 'rushYds', 'rushTD', 'rushLong',
                'rec', 'recYds', 'recTD', 'recLong', 'tgt', 'pbpTgt', 'rzTgt', 'i10Tgt', 'rzCar', 'i10Car',
                'i5Car', 'rzAtt', 'scrambles', 'fum', 'fumLost', 'fgm', 'fga', 'fgLong', 'xpm', 'xpa', 'kPts')
@@ -78,7 +80,7 @@ def played_before(records, before):
     return [g for g in records if when(g['kickoff']) < cutoff]
 
 
-def unified(player, league):
+def unified(player, league, has_plays=True):
     """Targets and sacks with one meaning in both leagues.
 
     The official box-score count wherever it exists (NFL). College box scores
@@ -88,11 +90,11 @@ def unified(player, league):
     out = {}
     if 'tgt' in player:
         out['targets'] = player['tgt']
-    elif league == 'CFB':
+    elif league == 'CFB' and has_plays:
         out['targets'] = player.get('pbpTgt', 0)
     if 'sacked' in player:
         out['sacks'], out['sackYds'] = player['sacked'], player.get('sackYds', 0)
-    elif league == 'CFB' and any(k in player for k in ('att', 'pbpAtt', 'pbpSacked')):
+    elif league == 'CFB' and has_plays and any(k in player for k in ('att', 'pbpAtt', 'pbpSacked')):
         out['sacks'], out['sackYds'] = player.get('pbpSacked', 0), player.get('pbpSackYds', 0)
     return out
 
@@ -107,7 +109,8 @@ def sides(game):
 def context(game, team, opponent, is_home):
     return {'eventId': game['eventId'], 'league': game['league'], 'kickoff': game['kickoff'],
             'season': game['season'], 'seasonType': game['seasonType'], 'week': game['week'],
-            'team': team, 'opp': opponent, 'home': is_home, 'source': game['sources']['page']}
+            'team': team, 'opp': opponent, 'home': is_home, 'source': game['sources']['page'],
+            'plays': game.get('quality', {}).get('plays') == 'ok'}
 
 
 def player_logs(records, before=None):
@@ -123,7 +126,7 @@ def player_logs(records, before=None):
             row.update(name=player.get('name'), pos=pos, stats={k: player[k] for k in PLAYER_KEYS if k in player})
             if source == 'other games':
                 row['posSource'] = source
-            row['stats'].update(unified(player, game['league']))
+            row['stats'].update(unified(player, game['league'], row['plays']))
             logs[player['id']].append(row)
     return dict(logs)
 
@@ -164,7 +167,7 @@ def defense_logs(records, before=None):
                 if not group:
                     untagged += pos is None and any(k in player for k in ALLOWED['RB'] + ('att',))
                     continue
-                values = {**player, **unified(player, game['league'])}
+                values = {**player, **unified(player, game['league'], game.get('quality', {}).get('plays') == 'ok')}
                 line = {k: values[k] for k in ALLOWED[group] if k in values}
                 if not line:
                     continue
@@ -196,6 +199,8 @@ def value(row, stat):
         group, key = stat.split('.', 1)
         return (row.get('allowed', {}).get(group) or {}).get(key, 0 if group in row.get('allowed', {}) else None)
     if 'stats' in row:
+        if stat in FROM_PLAYS and row.get('plays') is False:
+            return None
         return row['stats'].get(stat, None if stat in LONGEST else 0)
     return row.get(stat, (row.get('offense') or {}).get(stat))
 

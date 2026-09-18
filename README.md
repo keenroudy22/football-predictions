@@ -36,7 +36,7 @@ ESPN's public scoreboard feed is an unofficial integration without a service gua
 
 - **Append-only.** A line is never edited. A later read with different content, such as an official stat correction four days after the game, appends a revision; the last line for an event is current. `data/boxscores/ledger.json` hashes the lines each file holds and `tests/test_boxscores.py` fails if one changes. Never regenerate the ledger to make that test pass.
 - **Sources.** Box score from the ESPN `summary` endpoint; play-by-play participants and closing lines from ESPN's core API. Closing lines are DraftKings for 2026 and ESPN BET for 2024 and 2025. In-game odds are never used. A game with no pregame provider has no line, not an estimate.
-- **Limits.** ESPN publishes no snap counts, so none are recorded. College box scores have no targets; college targets come from play-by-play. Intercepted passes carry no receiver tag, so play-derived targets run slightly under official NFL targets. NCAA scoring counts sacks as quarterback rushes. A player with no recorded stat in a game has no line for it.
+- **Limits.** ESPN publishes no snap counts, so none are recorded. College box scores list no targets and no sacks per quarterback; both come from play-by-play. NCAA scoring counts sacks as quarterback rushes, so official college rushing lines include them. Intercepted passes carry no receiver tag, so play-derived targets run slightly under official NFL targets; the official number is used wherever it exists. A player with no recorded stat in a game has no line for it.
 
 ```
 python scripts/boxscores.py                    new finals in site/data/slate.json (the hosted workflow runs this)

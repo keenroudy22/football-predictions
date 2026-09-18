@@ -63,6 +63,14 @@ class LogTests(unittest.TestCase):
         allowed = ft.defense_logs([game('1', '2025-09-06T16:00Z', league='CFB', home='2', away='1', players=[college_qb])])['2'][0]
         self.assertEqual(allowed['allowed']['QB']['sacks'], 2)
 
+    def test_a_game_without_play_by_play_leaves_derived_stats_unknown(self):
+        record = game('1', '2025-09-06T16:00Z', league='CFB', players=[wr('10', '1', 3, 30, pbpTgt=5, rzTgt=2)])
+        record['quality'] = {'plays': 'error: HTTP 500'}
+        row = ft.player_logs([record])['10'][0]
+        self.assertNotIn('targets', row['stats'])
+        self.assertIsNone(ft.value(row, 'rzTgt'))
+        self.assertEqual(ft.value(row, 'recYds'), 30)
+
     def test_team_log_pairs_own_and_opponent_stats_with_the_close(self):
         close = {'spread': -3.0, 'total': 44.5}
         rows = ft.team_logs([game('1', '2025-09-07T17:00Z', market={'close': close})])
