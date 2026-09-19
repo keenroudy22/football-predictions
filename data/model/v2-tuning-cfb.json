@@ -1,0 +1,1535 @@
+{
+ "league": "CFB",
+ "version": "v2.0",
+ "tuneSeason": 2024,
+ "holdoutSeason": 2025,
+ "chosen": {
+  "margin": {
+   "halfLife": 90,
+   "ridge": 1.0,
+   "priorWeight": 0.3,
+   "eloWeight": 0.0
+  },
+  "total": {
+   "halfLife": 90,
+   "ridge": 10.0,
+   "priorWeight": 0.6,
+   "blend": 1.0
+  },
+  "sdMargin": 16.31,
+  "sdTotal": 16.18,
+  "pace": 70.0
+ },
+ "tuning": {
+  "games": 919,
+  "priced": 871,
+  "marginMiss": 12.95,
+  "closeMarginMiss": 11.87,
+  "totalMiss": 12.79,
+  "closeTotalMiss": 12.7,
+  "sideVsClose": [
+   429,
+   442
+  ],
+  "totalVsClose": [
+   472,
+   399
+  ],
+  "within80": {
+   "margin": 0.78,
+   "total": 0.78
+  },
+  "residualSd": {
+   "margin": 16.31,
+   "total": 16.18
+  }
+ },
+ "holdout": {
+  "games": 934,
+  "priced": 914,
+  "marginMiss": 12.48,
+  "closeMarginMiss": 11.91,
+  "totalMiss": 12.66,
+  "closeTotalMiss": 12.47,
+  "sideVsClose": [
+   470,
+   441
+  ],
+  "totalVsClose": [
+   483,
+   431
+  ],
+  "within80": {
+   "margin": 0.81,
+   "total": 0.8
+  },
+  "residualSd": {
+   "margin": 15.87,
+   "total": 15.69
+  }
+ },
+ "trials": {
+  "margin": [
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 13.07
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.29
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.6
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 12.99
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.23
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.55
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.0
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.23
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.54
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 13.39
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.53
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.77
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 13.27
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.47
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.72
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.22
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.44
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.7
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 14.11
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.97
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 14.04
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 14.0
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.89
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.98
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.93
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.85
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.95
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 12.95
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.19
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.52
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 12.99
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.2
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.51
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.12
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.26
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.53
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 13.2
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.41
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.68
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 13.16
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.37
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.65
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.22
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.39
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.65
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 13.87
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.81
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.93
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 13.75
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.73
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.88
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.68
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.7
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.85
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 12.95
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.17
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.5
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 13.08
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.23
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.52
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.29
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.32
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.55
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 13.14
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.36
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.64
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 13.17
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.37
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.63
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.32
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.41
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.64
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.0
+    },
+    "miss": 13.73
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.3
+    },
+    "miss": 13.72
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "eloWeight": 0.5
+    },
+    "miss": 13.88
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.0
+    },
+    "miss": 13.63
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.3
+    },
+    "miss": 13.66
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "eloWeight": 0.5
+    },
+    "miss": 13.83
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.0
+    },
+    "miss": 13.62
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.3
+    },
+    "miss": 13.65
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "eloWeight": 0.5
+    },
+    "miss": 13.82
+   }
+  ],
+  "total": [
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 13.1
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 13.01
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 13.19
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 13.07
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.99
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 13.15
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 13.07
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.99
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 13.15
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 12.94
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.86
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 12.88
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 12.94
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.85
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 12.86
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 12.95
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.86
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 12.88
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 12.94
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.87
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 12.85
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 12.93
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.86
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 12.82
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 12.92
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.85
+   },
+   {
+    "params": {
+     "halfLife": 45,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 12.81
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 13.04
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.97
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 13.13
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 13.05
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.98
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 13.13
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 13.1
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 13.07
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 13.19
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 12.91
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.83
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 12.86
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 12.93
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.85
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 12.87
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 12.97
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.91
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 12.95
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 12.9
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.83
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 12.8
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 12.89
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.82
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 12.79
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 12.89
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.82
+   },
+   {
+    "params": {
+     "halfLife": 90,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 12.8
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 13.03
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.96
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 13.11
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 13.08
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 13.04
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 13.17
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 13.15
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 13.15
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 1.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 13.29
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 12.91
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.83
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 12.86
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 12.95
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.88
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 12.93
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 13.02
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.99
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 3.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 13.06
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 0.3
+    },
+    "miss": 12.88
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 0.6
+    },
+    "miss": 12.81
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.3,
+     "blend": 1.0
+    },
+    "miss": 12.79
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 0.3
+    },
+    "miss": 12.87
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 0.6
+    },
+    "miss": 12.8
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 0.6,
+     "blend": 1.0
+    },
+    "miss": 12.79
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 0.3
+    },
+    "miss": 12.89
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 0.6
+    },
+    "miss": 12.83
+   },
+   {
+    "params": {
+     "halfLife": 180,
+     "ridge": 10.0,
+     "priorWeight": 1.0,
+     "blend": 1.0
+    },
+    "miss": 12.84
+   }
+  ]
+ }
+}

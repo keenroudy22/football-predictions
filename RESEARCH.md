@@ -1,137 +1,115 @@
-# Publication standards
+# Research standards
 
-Coverage: NFL and all FBS games, including FBS versus FCS, on every day of the week. Five props is a maximum, never a quota. Baseline scores are visibly separate from analyst research.
+The rules for published picks and the record. `PROMPT.md` is the scheduled run that follows them, in order. `scripts/refresh.py` enforces the format on every run and `tests/test_integrity.py` freezes what has been published; when this file and the validator disagree, the validator wins and this file is wrong.
 
-Research current teams, starters, injuries and official inactives, line availability, weather, pace, market spreads/totals, roles, usage and matchup. Check independent projections and provider overlap. Distinguish projected mean gap from probability edge and expected value. Label judgment estimates as uncalibrated. No stale roster assumptions or invented missing college data.
+KeenRoudy Sports is entertainment for the owner, their brothers and friends. A pick is an opinion tracked at one unit so the record means something, not advice and not a wager anyone placed.
 
-## File format
+## The record
 
-Create `research/YYYY-MM-DD-NFL.json` or `research/YYYY-MM-DD-CFB.json`. Files are public: no private user details, credentials, or actual wager information. Report fields:
+- **Immutable:** `research/*.json` (every published pick and settlement), `site/data/forecasts.json` (v1 baselines), `market-observations/*.json` (hand-recorded prices), `data/forecasts/` (v2 snapshots), every `ledger.json` and `tests/integrity-ledger.json`. Append new files; never edit, delete or regenerate one.
+- **Revisions** are new report files that reuse the pick ID. The validator rejects a revision that changes a pick's league, kind, `title`, `gameIds`, `line`, `direction`, `marketType`, `legs` or `favorite`. A different number is a different pick with a new ID; withdraw the old one explicitly if it is replaced.
+- **One unit.** Every pick risks one unit at its first published price. Units and ROI count recorded prices only; a pick without one stays in the win-loss record and out of returns. Never assume -110. ROI is shown once ten priced picks have settled.
+- **Settlement:** `result` (`win`, `loss`, `push`, `void`), `actual` (what happened, in words), `actualValue` (the number, when the market has one), `settledAt` and `resultSource` (the ESPN box score). `void` only when the sportsbook's own rule voids the bet (a prop on a player who did not play, a cancelled game), with the rule cited. A player missing from a box score is not automatically a loss or a void: check participation and the book's rule. Unclear stays unsettled, with `settlementState` and `nextReviewAt`.
+- **Favorites** are marked `favorite: true` when first published and can never change.
 
-- `league`: NFL or CFB
-- `publishedAt`: actual ISO UTC publication time, never backdated
-- `summary`: a short league research update
-- `props`: zero to five core picks
-- `riskyProps`: optional zero to three higher-variance player props, tracked separately from the core card and never used to fill the five-pick quota
-- `parlays`: zero to three cards per report, using the three relative-risk tiers below
-- `watch`: optional array of text thresholds, explicitly conditional
-- `gameWatch`: game-specific research candidates with stable `id`, `gameId`, `title`, `why`, `needs`, and HTTPS `sources`. Maintain these each research run so game breakdowns show the latest candidate rationale and missing checks. Revisions reuse candidate IDs; preserve the original report.
-- `targetWeek`: optional official football week for an early-look report published before that Tuesday-through-Monday slate begins
-- `takeaways`: optional short, sourced slate-level observations
-- `weeklyReview`: optional array of settled-week lessons about workload, efficiency, matchup and injury assumptions
+## Line moves
 
-Official props may also include `hot: true` when a verified early number should be published before the full card, `marketWindow` such as `Full game`, `1Q`, `1H`, or `ATTD`, and `fun: true` for a deliberately higher-variance market. A hot pick is still an official one-unit selection: it requires the same evidence, exact book/price, cutoff and settlement record as every other pick. Use a short `expiresAt`, publish immediately after qualification, and never keep the HOT label on an unverified or stale quote. Fun picks belong in `riskyProps`; they are tracked separately and are never used to pad the core five.
+A published number is only available until the market leaves it. A pick closes to new entries when, at the book it was published at:
 
-Each pick: `id`, `title`, `why`, `risk`, `sources` (HTTPS source links), `status` (active/withdrawn/watch/expired/settled). An active pick also requires `book`, American `odds`, `quotedAt`, `expiresAt`, `gameIds` matching slate IDs, `cutoff` (worst line and max juice), `confidence` 1–10 and `edge` (method, uncertainty, probability or EV if defensible). Props also include `projection` and `position` so the site can group QB, RB, WR, TE and other markets. College active picks require `jurisdictionVerified: true` following actual verification. No location guessing.
+| Market | Closes when the number moves against the pick by |
+|---|---|
+| Player prop | 0.5 or more |
+| Total | 1.5 or more |
+| Spread | onto or across 3 or 7 |
+| Price, same number | 15 cents or more (-110 to -125; +105 to -110) |
 
-For a published prop, optionally include a verified `recentForm` object to show its market-specific hit rate: `stat`, an HTTPS `source` linking to the game log, plus `last5` and/or `last10` in the form `{ "hits": 3, "sample": 5 }`. A hit rate must use the same line direction and market as the published prop. Do not use a player’s generic stat average, a different prop threshold, or an unlinked memory-based count. If that verification is unavailable, omit the field and the live card will say that recent-form verification is pending. To render the visual game-by-game chart, include the same-market `line` and up to ten chronological `games`, each `{ "label": "Wk 1", "value": 64, "hit": true }`; `hit` must reflect that prop's actual direction at the stated line.
+Moves toward the pick keep it open. `python scripts/desk.py moves` checks every open pick against the latest captured line.
 
-Screen the broader menu when offered: carries, receptions, targets, rush/receiving/pass attempts and yards, completions, longest markets, combined rush+receiving yards, RB touches (verified carries plus receptions), first-quarter and first-half player/team markets, anytime touchdowns and alternate lines. Match every historical rate to the exact market definition and settlement window. Full-game workload does not establish a 1Q/1H edge, and touchdown frequency does not establish a fairly priced ATTD bet. Treat derivative markets as higher variance unless the evidence supports otherwise.
+When a pick closes, publish a revision with `status: "expired"` and an `entryNote` quoting the rule and the numbers. The original stays in the record at its published price and is graded as posted; the move is also its closing-line value. It is never re-priced, and never voided because the line moved. Voiding moved picks would remove exactly the picks the market disagreed with, which are the ones most likely to lose, and the record would flatter itself.
 
-Game pages use a stable `#game/<gameId>` link. Publish player-specific last-opponent history only as `recentForm.lastVsOpponent` with `value`, `date`, and an HTTPS `source` that verifies the actual game box score. An opponent's prior defensive roster may differ; treat a single meeting as context, not an independent reason for a pick. The separate recent-team-meetings list is derived from verified final games in the public feed.
+## Numbers come from code or a source
 
-`python scripts/player_history.py` builds a separate sourced `site/data/player-history.json` snapshot from ESPN public athlete game logs and box scores. It enriches existing NFL props without editing immutable original recommendation files. It excludes the recommendation's own event ID even when ESPN's local game date precedes UTC kickoff. Five- and ten-game hit counts exist only when that many played-game rows are available; unsupported TD markets and missing values are omitted. A scratch never becomes a zero-game result; previously played games can appear only when the player identity is verified separately. Where the same played-game rows supply targets, receptions, carries or pass attempts, the snapshot adds five/ten-game average and range as descriptive workload context, without calling them snap share or a projected role. Future active picks can supply a verified ESPN `athleteId` with `gameIds`; the script checks player name and current team before attaching a form. Each upcoming NFL game page also shows QB/RB/WR/TE aggregate box-score totals from each defense's most recent completed game. These single-game references are context, not independent projections. College position history remains pending until reliable player and position mapping is verified.
+- **Model numbers:** `python scripts/desk.py price GAME MARKET SIDE LINE ODDS [--player ATHLETE_ID]` returns the v2 `projection` and 80% range, the chance at the line, the break-even of the price, the `edge` text and the `cutoff`. Copy them into the pick. Set `modelVersion` and `snapshotAt` from the output.
+- **Stats:** last 5/10/20, splits, head-to-head, defense vs position and snap counts are on the site and in `site/data/app/` after `python scripts/build_site.py`. Cite them; do not recount by hand.
+- **Prices:** the book's own page, read directly, with the URL and the time seen. ESPN's feed carries DraftKings' main prop lines without prices; that is a line, not a quote. Articles, widgets and screenshots are references. No price, no pick.
+- **Where v2 is weak:** the closing line beats it on average (2025: NFL margin miss 9.71 against 10.21, FBS 11.91 against 12.48). It compresses FBS-FCS blowouts, early-season college ratings are thin, a player new to a team has a role set by one or two games, and college quarterback projections trail a plain last-5 average. `desk.py slate` flags these. A gap there is a question for research, not an edge.
 
-Use `books` for verified comparison quotes in the form `{ "book": "Book", "odds": -110, "line": 50.5, "quotedAt": "..." }`. Use `movementReason` only when a sourced injury, role, weather or market event plausibly explains a change. After kickoff, `closingLine`, `closingOdds` and `closingValue` may record a comparable pregame closing observation; never use a post-start feed as the close.
+## Timing
 
-When a sportsbook, Playbook, GamblyBot, or another authorized provider returns a canonical share/deep link for the exact active market, add it as `bookLink`. The site shows it as “Open verified bet slip.” Do not manufacture a URL, scrape/deep-link a provider that prohibits automated access, or imply that opening the link places a wager. The user reviews and submits any wager in their sportsbook.
+- Runs are at 8:30, 11:30, 17:30 and 23:30 Eastern. GitHub's hosted refresh runs late, so v2 snapshots and prop captures are whatever the last hosted run published; pull before working.
+- Publish only before kickoff, checked against the clock when you publish. A game that will start before you finish is skipped.
+- `quotedAt` is when you saw the price; it must not be after `publishedAt`. `expiresAt` is the next scheduled run or kickoff, whichever comes first, and it is never extended.
+- A source that failed is reported as unavailable, never as "no value found".
 
-Parlays require `legs`, actual sportsbook combined `odds`, and `correlation` explaining the joint assumptions. Do not multiply individual probabilities while ignoring dependence. Pass if actual combined price is unavailable or no defensible value exists. Longshots are speculative, never the best bet by default. `riskyProps` must state the specific variance driver in `risk`; they are official one-unit tracked selections, but are shown separately and cannot be Daily Favorites unless explicitly marked.
+## Report format
 
-Mark each published daily favorite with `favorite: true` at publication time. Keep its ID in the all-picks ledger too; the UI counts it once. Mark speculative parlays with `parlayType: "longshot"`. Every ticket is a hypothetical 1-unit risk at its first published sportsbook price. Record a fresh line/price snapshot with retrieval and source quote times when available. Never replace the original price during a revision. A score call is not a spread or total pick unless separately published as a priced selection.
+One file per run: `research/YYYY-MM-DD-<LEAGUE>-<HHMM>-<slug>.json`, dated and timed in Eastern. Files are public: no personal details, credentials or wager information.
 
-Use short expiration windows for quotes. Expiry isn't a claim of continuous monitoring. Preserve original cards; publish changes in new timestamped report files with the same pick ID so the newest status supersedes the previous card. No silent deletion of losses, withdrawals or old prices.
+| Field | |
+|---|---|
+| `league` | `NFL` or `CFB` |
+| `publishedAt` | actual publication time, ISO UTC, never backdated |
+| `summary` | a few sentences on the run |
+| `props` | up to five core player props |
+| `riskyProps` | up to three higher-variance props, tracked separately |
+| `gamePicks` | spread and total picks |
+| `parlays` | up to three, each at the book's actual combined price |
+| `takeaways`, `weeklyReview` | optional short, sourced notes |
+| `gameWatch` | optional candidates still being researched, each with `id`, `gameId`, `title`, `why`, `needs` and HTTPS `sources` |
 
-## Analyst score revisions
+Every pick has `id`, `title`, `why`, `risk`, HTTPS `sources` and `status` (`active`, `withdrawn`, `watch`, `expired`, `settled`). An active pick also has:
 
-Optional `scores` array: `gameId`, `home`, `away`, `why`, `confidence`, `sources`. Publication must precede kickoff. Original automatic forecasts remain untouched. The UI displays the latest published analyst forecast with a link to the original baseline. Results explicitly distinguish model baseline from analyst revisions.
+- `book`, American `odds`, `quotedAt`, `expiresAt`;
+- `gameIds` from `site/data/slate.json`;
+- `cutoff`;
+- `confidence` 1 to 10 (research confidence, not a probability);
+- `edge`.
 
-## Results
+Some kinds need more:
 
-Only forecasts published before kickoff count. Automatic scoreboard finals are ESPN-reported and not a substitute for official player-stat verification. Prop settlements must include `result` (win/loss/push/void), `settledAt`, `actual`, `resultSource` and original odds. Unknown outcomes stay unsettled. Flat hypothetical one-unit profits: win at positive odds = odds/100; negative = 100/abs(odds); loss = -1; push/void = 0. Do not infer real wagers.
+- **Props:** `projection`, `position`, `athleteId`, `market` (`recYds`, `rec`, `rushYds`, `car`, `passYds`, `cmp`, `att`), `line` and `direction` (`over` or `under`).
+- **Game picks:** `marketType` (`spread` or `total`), `line` (the number for the side picked, so an away +3.5 pick has line 3.5) and `direction` (`home`, `away`, `over` or `under`). Exactly one game.
+- **Parlays:** `legs` (two or more, each with its own market window) and `correlation`, explaining how the legs depend on each other.
+- **College:** `jurisdictionVerified: true`, only after checking that the market is offered in Indiana.
 
-At every research check, revisit unsettled results. Give each a specific `settlementState`, `lastCheckedAt`, `nextReviewAt` and reason. After 24 hours, consult an alternate reliable source and flag discrepancies. A player missing from a box score is not automatically a loss or void: check participation, official inactives and the original sportsbook rule. Historical imports with missing odds may show a hit rate but cannot show units or ROI.
+```json
+{
+  "id": "NFL-2026-W2-gibbs-over-29-5-recyd-dk",
+  "title": "Jahmyr Gibbs OVER 29.5 receiving yards",
+  "status": "active",
+  "favorite": true,
+  "position": "RB",
+  "athleteId": "4429795",
+  "market": "recYds",
+  "line": 29.5,
+  "direction": "over",
+  "gameIds": ["NFL-401872932"],
+  "book": "DraftKings",
+  "odds": -115,
+  "quotedAt": "2026-09-17T15:33:05Z",
+  "expiresAt": "2026-09-17T21:30:00Z",
+  "projection": 33.0,
+  "modelVersion": "v2.0",
+  "snapshotAt": "2026-09-17T15:07:12Z",
+  "edge": "(copied from desk.py price)",
+  "cutoff": "(copied from desk.py price)",
+  "confidence": 6,
+  "why": "Why the market may be wrong, with each claim sourced.",
+  "risk": "What would make this lose.",
+  "sources": ["https://sportsbook.draftkings.com/...", "https://www.detroitlions.com/..."]
+}
+```
 
-After each week, record a short review of projected versus actual workload, target/carry mix, efficiency, positional defense and injury assumptions. Compare opponent strength and personnel before carrying a trend forward. Assign a version to changed score/prop methods and evaluate later games independently before claiming improvement. Keep the original forecast and its assumptions intact.
+Older reports also carry `recentForm`, `marketSnapshots`, `books` and `hot`. The validator still accepts them, but new reports do not need them: the site computes form from the box-score store, and the book observation is `book`, `odds`, `quotedAt` and the source URL.
+
+## Parlays
+
+`legs` and the book's actual combined price, never multiplied single prices; `correlation` explains the joint assumption. Same-game legs need the book's own same-game price. Longshots are marked `parlayType: "longshot"` and are never a favorite by default. Pass if no combined price exists.
+
+## Analyst score calls
+
+Optional `scores` entries (`gameId`, whole-number `home` and `away`, `why`, `confidence`, `sources`) published before kickoff. They sit beside v1 and v2 on the scoreboard as "analyst" and never replace either.
 
 ## Operations
 
-Run `python scripts/refresh.py`, `python -m unittest discover -s tests`, and `node --check site/app.js` before pushing. Commit only this repository. GitHub Actions refreshes schedules/results throughout the day and after common game-end windows; research runs in the separate Codex task. For every qualified prop, obtain sourced exact-market last-five/last-ten form; when individual verified game values are available, populate the `recentForm.games` chart data. Missing data means pass/pending, not fabricated recommendations. No paid API services or autonomous hosted LLM research are configured.
-
-ESPN currently rejects long historical scoreboard date ranges. The baseline refresh reads the prior NFL season by season identifier, the prior college season by individual weeks, and tries the current season in calendar-month windows. If a current date-range endpoint fails, it queries NFL games by week or unions college games across FBS conferences by week. This fallback must contain every previously saved game in the covered window before being marked successful; original forecasts are never rewritten. If both sources fail or coverage is incomplete, retain the last verified slate and show the league-specific source failure and its last successful time instead of marking stale games as refreshed. ESPN can cap a single college historical weekly response at 25 games; `slate.json` records this as `trainingCoverage: limited weekly provider sample`. That training set is incomplete and should never be presented as a full census or proof of model accuracy.
-
-
-## Research and record redesign (2026-09-17)
-
-Start every research run with `site/data/review.json`, `research-context.json`, the latest slate, and prior report notes. Hosted refreshes now retrieve ESPN injury listings for both leagues and preserve the last good snapshot on source failure. College injury coverage is incomplete. These listings are NOT official starters or game-day inactives. Compare with official team reports, verify offensive-line availability, and cite report dates. Never infer health from a missing listing. Check actual weather and venue before a weather adjustment; no weather automation is configured.
-
-The public navigation is This week / Games / Picks / Research / Results. Parlays and the personal ticket builder live under Picks. Personal drafts never enter the official record. Gambly uses explicit Copy ticket / Open Gambly / paste-and-review, not an invented API or automatic betting.
-
-Results have Pick results, Score accuracy, Spreads & totals, Weekly review, and Historical archive. A historical import or missing verified pregame timestamp cannot enter the verified record. The September 14 conversation import has been reclassified as historical evidence; its original selection, odds and result remain intact. NEVER assume -110. Any missing original settled price makes the combined units and ROI unavailable. Score accuracy uses the same last eligible pregame researched revision shown on the game page, falling back to the original baseline. Historical score imports and original baselines can be inspected separately.
-
-Publish official game bets in `gamePicks`, using all normal active-pick requirements plus `marketType` (spread/total), numeric `line`, `direction` (home/away for spread or over/under for total), and exactly one `gameId` in `gameIds`. They need actual book odds, explicit reasoning, a price cutoff, and later sourced settlement. A score difference is never silently converted into a betting recommendation. Core official recommendations should meet the user's minimum 6/10 research confidence; this is NOT a win probability. Record the method/version and uncertainty.
-
-A pick ID identifies its original market, direction, threshold, game and favorite designation. New thresholds need new IDs; explicitly withdraw the old selection if appropriate. Updates may carry new quote snapshots and settlement evidence but never rewrite the original recommendation. Include numeric `actualValue` at settlement when a sourced exact-market result is available, so the review packet can compare it with `originalProjection`; do not parse ambiguous injury notes as numbers.
-
-After each settled week, publish sourced takeaways separating workload from efficiency, opponent/personnel differences and injury assumptions. Read the evidence packet's sample sizes and signed biases. Maintain unchanged comparison baselines; a proposed model adjustment needs a version, rationale, effective date and later-game comparison before claiming improvement. Small samples remain hypotheses. Missing data means a named gap, not an invented edge. The current automatic score model is still uncalibrated and does not incorporate injuries or betting markets; data collection alone does not change that.
-
-## Early player looks and offensive lines
-Publish useful player-specific gameWatch candidates during the first scheduled run after next-week games and supporting evidence are available; do not wait for a complete favorites card. Monday/Tuesday: screen next-week roles and defense matchups. Wednesday and later: revise against official practice reports, posted player markets and personnel changes. Apply the same rolling process to weekday college games.
-Each structured gameWatch uses position, lineLabel, quoteNote, defense, lineHealth, lineSkill, risk, nextReviewAt plus the existing required fields. Show an observed book number with article/quote date and price availability; otherwise explicitly say Waiting for a player line. A target threshold is an analyst screen, not an offered wager. Separate availability from skill: assess starters, replacements, continuity, pressure allowed, pass-block performance, run-block performance and opponent front, with source, date and sample. Never infer poor blocking from an injury alone, or missing coverage as health. State the countercase: quick outlets versus extra pass protection, rushing volume versus efficiency, likely script and injury sensitivity.
-Preserve candidate IDs and prior reports. Revisit due candidates each scheduled run, including pass/rejection reasons and changed numbers. Pregame candidates archive at kickoff. Publish qualified official early picks immediately at a verified price with projection, cutoff and expiry; early looks do not enter favorites, parlays, units or results. No invented confidence or minimum count. Research can be visible before a sportsbook posts a player line.
-
-## Workload and player-line notes
-For every player-specific gameWatch include verified player name, athleteId and marketTitle (exact Player OVER/UNDER number market syntax) when available. The history refresh enriches these separately from official picks, with last-game and last-five/ten carries, receptions, targets, yards and touches (carries plus receptions only when both are observed). Verify social graphics against primary box scores; never import the full graphic without checking. Seek snap/route share, red-zone/goal-line work and backfield/team shares separately, with denominator and dates; missing advanced data is unavailable, not zero. Note overtime, changing teams/roles and sample limitations.
-Preserve marketSnapshots across candidate revisions: book, market, window, direction, line, odds or null, observedAt, source, quoteType and sourceTimeNote. Capture at each scheduled pregame check where accessible. Keep different books, market windows and article references separate. Do not label the first observed number as the opener or a post-start feed as the close. When a move is observed add movementExplanation {type: Confirmed news / Analyst interpretation / Unknown, text, sources}. A news event near a move is not proof of causation. Explicitly distinguish plausible injury/weather/role effects from documented explanations; never invent sharp money or bookmaker liability. No verified second observation means no verified movement. Carry snapshots and the same standards into official picks.
-
-## Publication timing, broader lines and three parlay tiers
-Time-sensitive picks take priority over interface changes. On small slates actively research a compact card, aiming for one or two supported picks plus fun-ticket opportunities, without inventing an edge or guaranteeing a quota. At 11:30 ET publish any qualified evening plays immediately; by the 17:30 check publish the final evening card or a clear dated no-bet decision with reviewed markets and reasons. For earlier kickoffs use the last scheduled pregame run; never wait until after start. If sources or a host outage prevent review, report delayed/unavailable rather than pretending no value was found.
-Show a broad sourced player market board through gameWatch, alongside curated favorites. Available lines are not endorsements. Cover attempts, catches, yards, touches where actually offered, touchdowns, alternates, 1Q and 1H. Give book, price, observation time, status, rationale, workload and pending checks. Do not cap the watch board at five; only the core favorites have that ceiling.
-Publish up to three parlays: riskTier lower (Tier 1, lower relative risk), medium (Tier 2), high (Tier 3, fun/longshot; parlayType longshot where applicable). Tier labels are qualitative, never safe/guaranteed. Use fewer legs and lower payouts when supported in Tier 1; explain extra uncertainty in Tier 2; clearly state high miss probability for Tier 3. Research 1Q/1H tickets using period-specific opportunities and actual sportsbook combined prices and settlement rules, not full-game logs or multiplied same-game odds. State correlation and every leg's window. Do not force a ticket into each tier. Explicitly classify fun tickets as speculative with no demonstrated positive EV when that is all the evidence supports, never as favorites or a proven edge; exact available odds and a reasoned case remain required. Keep all published tickets at 1u and preserve separate parlay/longshot results. Odds and risk are different: explain both.
-
-For sourced individual parlay-leg history, use `legResearch` with exact player, market, comparison, line, window, source, and `valuesNewestFirst`; include `last5`/`last10` hit and sample counts only when the raw values reproduce them. An alternate 4+ catch leg is not OVER 4.5. Keep all legs and their windows visible on the expanded ticket. Never present individual rates as an aggregate ticket hit rate or multiply them into a joint probability. Unverified or mismatched leg history stays unavailable.
-
-## Season record visibility
-Default Results > Pick results must include the original Week 1 imported selections plus subsequent published picks in the full-season ledger, filtered by favorites/all, league and week. Label each historical import and unverified original publication time. Offer Verified pregame only as an explicit filter; never hide Week 1 behind the archive alone. Preserve imported outcomes, original final-five favorites and immutable original prices. Full-season imported-inclusive hit rate is not a verified pregame track record. Missing historical odds still mean unavailable combined units/ROI. Keep the archive and verified analytics for audit.
-
-
-## KeenRoudy Sports expansion and prompt publication
-The public brand is KeenRoudy Sports. The canonical address is https://keenroudy.com/sports/ and the repository is keenroudy22/sports. Preserve the legacy /football-predictions/ redirect in the root portfolio repository, all football IDs, original recommendations and Week 1 records. The local workspace folder stays named football-predictions. NFL and FBS remain the researched betting coverage. NBA and MLB currently have read-only date-based schedule/score coverage in sports.json; they must not inherit football forecasts, week rules, official recommendations or settlement assumptions. Refresh them through scripts/sports_refresh.py in the existing hosted workflow, preserving per-league failures and last successful timestamps. Consult SPORTS-ROADMAP.md for activation gates.
-The intended researched coverage includes all four leagues: NFL, FBS college football, NBA and MLB. Expand both NBA and MLB through their independent source, research and settlement activation gates; no further choice between them is required. Current NBA/MLB coverage remains schedules and scores until those gates pass.
-Prioritize FanDuel and DraftKings observations for Indiana market availability. State which book was actually checked; a research article is not a current sportsbook quote. Verify current Indiana rules and the exact book/market before marking college availability verified. A supplied jurisdiction is not itself proof that a market is offered.
-Research, rankings and hypothetical one-unit records are independent of visitors' personal stakes. Do not publish personal unit values or treat wagering amounts as a hosting/data-services budget. Continue with existing free sources; paid services require separate approval.
-At each existing research check, publish qualifying decisions as soon as the individual market is ready, ahead of interface work or completing the whole slate. A card can have an early recommendation and later price updates. Show an entryNote when a current quote is outside the published cutoff, expire new-entry availability immediately, and retain the original selection at its original odds for eventual settlement. Do not move a cutoff simply to keep a pick actionable. Before posting tonight's card review the existing earlier picks so they are not double-counted.
-Keep the four existing research times. The 17:30 final card can revise earlier decisions but must not become the first routine look at evening games. Publish short dated decisions for favorites, higher-risk tickets and rejected markets. Do not add unsupported picks to satisfy a count, or label a source failure a no-edge conclusion.
-
-Results navigation: preserve All sports, NFL, College football, NBA and MLB league filters. NBA/MLB results must show explicit untracked coverage until their official research and settlement are activated; scoreboard finals are not pick results. Keep football week filters league-specific, preserve Week 1 imports and favorite designations, and show all-sport score accuracy and performance reviews in separate league panels rather than a pooled cross-sport error rate. Every ledger selection retains its league label and counts once.
-
-Picks-page clarity: lead with simple official cards grouped into fixed favorites, other official picks and fun/risky plays. Keep player, exact line, book/price, quote time, projection, confidence, short reason and playable limit easy to scan. Show quote availability independently from eventual settlement; expired selections remain visible and preserved for grading, with new entries clearly unavailable. Keep game/position filters accessible and open when applied. Detailed charts, workload, matchup analysis and movement notes belong on linked #player/<league>/<athleteId> pages, searchable through #players. The player explorer includes only identifiable players from gathered research; do not imply comprehensive or live player-database coverage. Every selected market retains its own game window, threshold, direction and source date, including historical samples. Early research stays separately labeled and collapsed by default, never presented or counted as an official pick. Team-color accents use sourced player-identity metadata; verify the athlete's team is in the recorded matchup before applying its color, and never infer roster status or health from styling. Preserve these distinctions when adding research each scheduled run.
-
-The existing hosted refresh updates player-identity.json on publication, manual refresh, and the established daily history check, using scripts/player_identity.py for followed athlete IDs only. Preserve last-good identity timestamps and source failures. Each research run should supply verified athleteId, league, player and exact marketTitle so new supported players and markets appear in the explorer without duplicating players or mixing unlike history. No new polling schedule is added.
-
-## Historical matchup explorer
-
-Player Research now separates three questions: the player's recent performance at the recorded threshold, that player's past meetings with the recorded opponent, and other players at the same position against that defense. Use structured athlete/event/team IDs rather than name or abbreviation joins. Last 5/10/20, recorded-season and home/away filters apply to sourced regular-season games before the original publication and game cutoff. Keep pushes separate and exclude them from the descriptive hit-rate denominator. Show averages, medians, sample sizes, source game logs and incomplete coverage. Neither historical threshold hits nor defensive group totals are published betting wins or calibrated probabilities.
-
-The player-history refresh retains regular-season rows from the current and two previous seasons, alongside the original last-ten compatibility view. Older head-to-head meetings outside this coverage are not silently implied to be absent. On source failure preserve the last successful snapshot with its original checked time and a stale label; do not advance freshness for retained results.
-
-`scripts/opponent_history.py` runs with the existing player-history refresh, not a new schedule. It prioritizes at most four upcoming NFL games with followed, identifiable players, collects each relevant defense's last five completed regular-season box scores within the current and prior season, and writes `site/data/opponent-history.json`. Every opponent game has a source, date, season and individual position results. Position group totals combine all listed players at that position; never compare those totals directly with one player's prop to infer an edge. Historical position classification is provider-based, not verified snap alignment. Earlier-season personnel and roles can differ. CFB/NBA/MLB position-history coverage is not inferred from NFL coverage.
-
-At each scheduled research check, use this explorer to inspect workload consistency, medians versus outliers, player head-to-head context and individual opposing-position results. Prefer relevant current personnel and meaningful samples; report what would invalidate the matchup thesis. Do not automatically raise confidence because a historical rate is high. Broader opponent-adjusted rankings, teammate-on/off splits, snap/routes and period-specific props require their own sourced data and validation before being enabled.
-
-## Compact line board and personal ticket drafts
-
-The primary Picks & lines page is a compact, filterable research board. Keep favorite recommendations distinct from other official picks, public reference observations and game-market comparison feeds. Rows open exact-selection detail; long reasoning, charts and source context belong in the detail view or linked player/game page. Preserve game, position, market and book filters, searched player names, and accessible phone navigation. The player explorer and original season record remain separate destinations.
-
-Collect a broad sourced menu during the existing scheduled checks, not only the favorite picks. Capture precise player/team, athlete and event identity, period, side, threshold, book, odds, source, actual observation time, source time when available, quote type and expiry. Follow available volume, yardage, touchdown and period markets without inventing missing coverage. A public article, embedded comparison widget or ESPN game-odds feed remains a reference observation unless independently verified at the actual book. Conflicting article headings and widgets are separate source observations, not proof of timed line movement. Never infer an under/over price, opposite spread or offered combination from the other side. Do not claim an exhaustive live sportsbook feed.
-
-`scripts/market_lines.py` compiles the line catalog into `site/data/market-lines.json` from immutable reports, their observations, and explicitly sourced files in `market-observations/`. Run it in the existing hosted refresh after the source snapshots. Catalog build time does not make old quotes fresh. Keep original observation times, failures and stale/unknown status. Each scheduled research check should add or revisit due player-line observations as useful, preserving provenance and prior observations. No extra polling schedule or paid data service is authorized.
-
-Visitors may save any supported line as a personal research draft. Saving a reference, expired or unpriced line does not make it actionable, official or an endorsed bet. Drafts remain on the visitor's device, do not enter the published record, and retain quote snapshots so later price changes can be identified. Revalidate availability, timestamps, game start and price before displaying current estimates. Only compatible, current, same-book, different-game legs may receive a clearly labeled arithmetic payout estimate. Same-game correlation, mixed books, missing or stale odds require an actual sportsbook quote; do not multiply them into a fictitious combined offer or win probability. Gambly handoff is copied plain text and a user-opened service link, never automatic placement. An actual canonical exact-market link must still come from an authorized source.
-
-Research priorities remain early qualified favorites, broad market observations, relevant matchup context and settlement, ahead of optional UI changes. NBA and MLB remain schedules/scores-only until their separate activation gates are met. Keep the existing four scheduled research times, football week rules, one-unit official record and entertainment notice.
-
-
-### Personal parlay shuffle
-
-The Parlay lab separates visitor-built drafts from published one-unit tickets. Shuffle supports two to four full-game legs, league/week/game/book scope, locked legs and undo. It is a random discovery tool, not model-ranked picks, a guaranteed payout or a risk rating. Reference-idea mode can include explicitly sourced older quotes; it must keep their original timestamps and require rechecking. Current-quote mode and target-odds matching require eligible unexpired prices; targets only use compatible same-book, different-game arithmetic estimates. Do not infer same-game package odds, refresh quote timestamps to make shuffle work, fabricate lines or count shuffled/copied drafts in records or model learning. Insufficient data should leave the draft intact and explain the limitation. Research each leg through its exact-market detail view. Maintain this behavior during the existing research checks without adding polling or AI runs.
+`python scripts/refresh.py` validates every report against the slate; `python -m unittest discover -s tests` must pass, including `tests/test_integrity.py`. If the integrity test fails, the record was changed: undo the change, never regenerate a ledger. Commit only the new report (and any new `market-observations/` file), then push. NBA and MLB are schedules and scores only until their own research and settlement rules exist; see `SPORTS-ROADMAP.md`.

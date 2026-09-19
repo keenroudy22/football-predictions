@@ -3,3 +3,6 @@ __pycache__/
 .env
 .env.*
 work/
+
+# Page payloads are rebuilt from committed data on every deploy (scripts/build_site.py).
+site/data/app/

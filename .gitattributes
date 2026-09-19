@@ -1,0 +1,2 @@
+# Append-only stores are hashed line by line; keep LF on every platform.
+*.jsonl text eol=lf

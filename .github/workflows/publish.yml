@@ -4,8 +4,10 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '07 15 * * *'
-    - cron: '37 10,16,22 * * *'
+    - cron: '07 11 * * *'
+      timezone: America/New_York
+    - cron: '37 6,12,18 * * *'
+      timezone: America/New_York
     - cron: '17 17,20 * * *'
       timezone: America/New_York
     - cron: '47 23 * * *'
@@ -38,14 +40,17 @@ jobs:
         run: python -m unittest discover -s tests
       - name: Verify no published record was rewritten
         run: python -m unittest tests.test_integrity -v
-      - name: Check browser script
+      - name: Check browser scripts
         run: |
+          node --check site/core.js
           node --check site/app.js
           node --test tests/*.test.js
       - name: Refresh schedules and record original forecasts
         run: python scripts/refresh.py
       - name: Refresh NBA and MLB scoreboards
         run: python scripts/sports_refresh.py
+      - name: Store box scores, play-by-play and closing lines for new finals
+        run: python scripts/boxscores.py
       - name: Check whether player history needs rebuilding
         id: history
         env:
@@ -59,28 +64,37 @@ jobs:
               output.write('needed=' + str(needed).lower() + '\n')
           PY
       - name: Refresh verified player and position history
-        if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 11 * * *'
         run: python scripts/player_history.py
       - name: Refresh followed player identities and team colors
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 11 * * *'
         run: python scripts/player_identity.py
       - name: Refresh followed opponent matchup history
-        if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 15 * * *'
+        if: (github.event_name == 'push' && steps.history.outputs.needed == 'true') || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 11 * * *'
         run: python scripts/opponent_history.py
       - name: Refresh injury context
         run: python scripts/research_context.py
+      - name: Refresh NFL snap counts and game context from nflverse
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '07 11 * * *'
+        run: python scripts/nflverse.py
+      - name: Publish model v2 forecasts and player projections
+        run: python scripts/forecast.py
+      - name: Capture DraftKings NFL prop lines from ESPN
+        run: python scripts/prop_lines.py
+      - name: Grade forecasts and picks against the close
+        run: python scripts/scoreboard.py
       - name: Compile sourced line catalog
         run: python scripts/market_lines.py
       - name: Build research review evidence
         run: node scripts/review.cjs
-      - name: Build the board payload for the new front end
-        run: python scripts/build_next_data.py
+      - name: Build the page payloads (site/data/app, not committed)
+        run: python scripts/build_site.py
       - name: Preserve the public record
         run: |
           python scripts/integrity.py
           git config user.name 'football-forecast[bot]'
           git config user.email 'football-forecast[bot]@users.noreply.github.com'
-          git add site/data tests/integrity-ledger.json
+          git add site/data tests/integrity-ledger.json data/boxscores data/nflverse data/forecasts data/props data/model
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh schedules, finals and pregame forecasts'
             git push
