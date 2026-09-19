@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T16:24:47Z",
+  "updatedAt": "2026-09-19T17:57:34Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -1157,6 +1157,15 @@
           "name": "Chicago Bears",
           "players": [
             {
+              "id": "4361748",
+              "name": "Anthony Johnson Jr.",
+              "position": "S",
+              "status": "Injured Reserve",
+              "injury": "Undisclosed",
+              "reportedAt": "2026-09-19T17:36Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4361748/anthony-johnson-jr"
+            },
+            {
               "id": "4432595",
               "name": "Ozzy Trapilo",
               "position": "OT",
@@ -1371,15 +1380,6 @@
               "injury": null,
               "reportedAt": "2026-09-13T19:52Z",
               "source": "https://www.espn.com/nfl/player/_/id/4426374/tyrique-stevenson-sr"
-            },
-            {
-              "id": "4911952",
-              "name": "Keyshaun Elliott",
-              "position": "LB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-10T00:35Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4911952/keyshaun-elliott"
             }
           ]
         },
@@ -1617,6 +1617,15 @@
           "name": "Cleveland Browns",
           "players": [
             {
+              "id": "4242516",
+              "name": "Noah Igbinoghene",
+              "position": "CB",
+              "status": "Questionable",
+              "injury": "Hand",
+              "reportedAt": "2026-09-19T16:36Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4242516/noah-igbinoghene"
+            },
+            {
               "id": "3115485",
               "name": "Elgton Jenkins",
               "position": "C",
@@ -1741,15 +1750,6 @@
               "injury": null,
               "reportedAt": "2026-09-14T15:12Z",
               "source": "https://www.espn.com/nfl/player/_/id/4035505/daniel-thomas"
-            },
-            {
-              "id": "4242516",
-              "name": "Noah Igbinoghene",
-              "position": "CB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-14T15:12Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4242516/noah-igbinoghene"
             },
             {
               "id": "5150249",
@@ -2997,6 +2997,15 @@
           "name": "Indianapolis Colts",
           "players": [
             {
+              "id": "4429684",
+              "name": "Anthony Gould",
+              "position": "WR",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T16:37Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4429684/anthony-gould"
+            },
+            {
               "id": "4874509",
               "name": "DJ Giddens",
               "position": "RB",
@@ -3211,15 +3220,6 @@
               "injury": "Abdomen",
               "reportedAt": "2026-08-31T17:16Z",
               "source": "https://www.espn.com/nfl/player/_/id/4249030/dj-montgomery"
-            },
-            {
-              "id": "4362523",
-              "name": "Will Mallory",
-              "position": "TE",
-              "status": "Injured Reserve",
-              "injury": "Thumb",
-              "reportedAt": "2026-08-31T17:12Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4362523/will-mallory"
             }
           ]
         },
@@ -5527,6 +5527,15 @@
           "name": "New York Jets",
           "players": [
             {
+              "id": "4723820",
+              "name": "Omar Cooper Jr.",
+              "position": "WR",
+              "status": "Out",
+              "injury": "Ankle",
+              "reportedAt": "2026-09-19T16:24Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4723820/omar-cooper-jr"
+            },
+            {
               "id": "4362094",
               "name": "Joseph Ossai",
               "position": "DE",
@@ -5570,15 +5579,6 @@
               "injury": null,
               "reportedAt": "2026-09-18T14:57Z",
               "source": "https://www.espn.com/nfl/player/_/id/3124679/jason-sanders"
-            },
-            {
-              "id": "4723820",
-              "name": "Omar Cooper Jr.",
-              "position": "WR",
-              "status": "Out",
-              "injury": "Ankle",
-              "reportedAt": "2026-09-18T14:51Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4723820/omar-cooper-jr"
             },
             {
               "id": "5118340",
@@ -5987,6 +5987,42 @@
           "name": "Pittsburgh Steelers",
           "players": [
             {
+              "id": "4426506",
+              "name": "Joey Porter Jr.",
+              "position": "CB",
+              "status": "Out",
+              "injury": "Back",
+              "reportedAt": "2026-09-19T17:37Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4426506/joey-porter-jr"
+            },
+            {
+              "id": "4431492",
+              "name": "Roman Wilson",
+              "position": "WR",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T17:28Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4431492/roman-wilson"
+            },
+            {
+              "id": "4685261",
+              "name": "Germie Bernard",
+              "position": "WR",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T17:19Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4685261/germie-bernard"
+            },
+            {
+              "id": "4035687",
+              "name": "Michael Pittman Jr.",
+              "position": "WR",
+              "status": "Out",
+              "injury": "Ankle",
+              "reportedAt": "2026-09-19T17:09Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4035687/michael-pittman-jr"
+            },
+            {
               "id": "4427170",
               "name": "Troy Fautanu",
               "position": "OT",
@@ -5994,24 +6030,6 @@
               "injury": "Ankle",
               "reportedAt": "2026-09-19T01:20Z",
               "source": "https://www.espn.com/nfl/player/_/id/4427170/troy-fautanu"
-            },
-            {
-              "id": "4426506",
-              "name": "Joey Porter Jr.",
-              "position": "CB",
-              "status": "Out",
-              "injury": "Back",
-              "reportedAt": "2026-09-18T23:33Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4426506/joey-porter-jr"
-            },
-            {
-              "id": "4035687",
-              "name": "Michael Pittman Jr.",
-              "position": "WR",
-              "status": "Questionable",
-              "injury": "Ankle",
-              "reportedAt": "2026-09-18T19:47Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4035687/michael-pittman-jr"
             },
             {
               "id": "4570044",
@@ -6030,24 +6048,6 @@
               "injury": null,
               "reportedAt": "2026-09-16T01:14Z",
               "source": "https://www.espn.com/nfl/player/_/id/4361652/payton-wilson"
-            },
-            {
-              "id": "4685261",
-              "name": "Germie Bernard",
-              "position": "WR",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-15T01:26Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4685261/germie-bernard"
-            },
-            {
-              "id": "4431492",
-              "name": "Roman Wilson",
-              "position": "WR",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-15T01:22Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4431492/roman-wilson"
             },
             {
               "id": "3045282",
@@ -6919,8 +6919,8 @@
               "id": "4429834",
               "name": "Cedric Gray",
               "position": "LB",
-              "status": "Questionable",
-              "injury": "Concussion",
+              "status": "Active",
+              "injury": null,
               "reportedAt": "2026-09-19T00:03Z",
               "source": "https://www.espn.com/nfl/player/_/id/4429834/cedric-gray"
             },
@@ -7366,30 +7366,6 @@
       },
       "changes": [
         {
-          "teamId": "9",
-          "name": "Ty'Ron Hopper",
-          "from": "Questionable",
-          "to": "Active",
-          "observedAt": "2026-09-18T20:14:29Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4567406/tyron-hopper"
-        },
-        {
-          "teamId": "9",
-          "name": "Javon Hargrave",
-          "from": "Questionable",
-          "to": "Doubtful",
-          "observedAt": "2026-09-18T20:14:29Z",
-          "source": "https://www.espn.com/nfl/player/_/id/2983055/javon-hargrave"
-        },
-        {
-          "teamId": "11",
-          "name": "Alec Pierce",
-          "from": "Questionable",
-          "to": "Active",
-          "observedAt": "2026-09-18T20:14:29Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4360078/alec-pierce"
-        },
-        {
           "teamId": "16",
           "name": "Andrew Van Ginkel",
           "from": "Questionable",
@@ -7764,11 +7740,35 @@
           "to": "Out",
           "observedAt": "2026-09-19T13:58:49Z",
           "source": "https://www.espn.com/nfl/player/_/id/4361748/anthony-johnson-jr"
+        },
+        {
+          "teamId": "5",
+          "name": "Noah Igbinoghene",
+          "from": "Active",
+          "to": "Questionable",
+          "observedAt": "2026-09-19T17:57:34Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4242516/noah-igbinoghene"
+        },
+        {
+          "teamId": "23",
+          "name": "Michael Pittman Jr.",
+          "from": "Questionable",
+          "to": "Out",
+          "observedAt": "2026-09-19T17:57:34Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4035687/michael-pittman-jr"
+        },
+        {
+          "teamId": "10",
+          "name": "Cedric Gray",
+          "from": "Questionable",
+          "to": "Active",
+          "observedAt": "2026-09-19T17:57:34Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4429834/cedric-gray"
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-19T16:24:47Z",
-      "lastAttemptAt": "2026-09-19T16:24:47Z",
+      "checkedAt": "2026-09-19T17:57:34Z",
+      "lastAttemptAt": "2026-09-19T17:57:34Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7819,8 +7819,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-19T16:24:47Z",
-      "lastAttemptAt": "2026-09-19T16:24:47Z",
+      "checkedAt": "2026-09-19T17:57:34Z",
+      "lastAttemptAt": "2026-09-19T17:57:34Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }
