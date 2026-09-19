@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T17:57:34Z",
+  "updatedAt": "2026-09-19T18:50:38Z",
   "leagues": {
     "NFL": {
       "teams": {
@@ -1160,9 +1160,9 @@
               "id": "4361748",
               "name": "Anthony Johnson Jr.",
               "position": "S",
-              "status": "Injured Reserve",
+              "status": "Out",
               "injury": "Undisclosed",
-              "reportedAt": "2026-09-19T17:36Z",
+              "reportedAt": "2026-09-19T18:31Z",
               "source": "https://www.espn.com/nfl/player/_/id/4361748/anthony-johnson-jr"
             },
             {
@@ -2537,6 +2537,24 @@
           "name": "Green Bay Packers",
           "players": [
             {
+              "id": "4686906",
+              "name": "Lukas Van Ness",
+              "position": "DE",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T18:37Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4686906/lukas-van-ness"
+            },
+            {
+              "id": "2983055",
+              "name": "Javon Hargrave",
+              "position": "DT",
+              "status": "Out",
+              "injury": "Concussion",
+              "reportedAt": "2026-09-19T18:34Z",
+              "source": "https://www.espn.com/nfl/player/_/id/2983055/javon-hargrave"
+            },
+            {
               "id": "4242390",
               "name": "Aaron Banks",
               "position": "G",
@@ -2573,15 +2591,6 @@
               "source": "https://www.espn.com/nfl/player/_/id/4429136/warren-brinson"
             },
             {
-              "id": "4686906",
-              "name": "Lukas Van Ness",
-              "position": "DE",
-              "status": "Questionable",
-              "injury": "Concussion",
-              "reportedAt": "2026-09-18T23:40Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4686906/lukas-van-ness"
-            },
-            {
               "id": "4361791",
               "name": "Devonte Wyatt",
               "position": "DT",
@@ -2589,15 +2598,6 @@
               "injury": null,
               "reportedAt": "2026-09-18T23:34Z",
               "source": "https://www.espn.com/nfl/player/_/id/4361791/devonte-wyatt"
-            },
-            {
-              "id": "2983055",
-              "name": "Javon Hargrave",
-              "position": "DT",
-              "status": "Doubtful",
-              "injury": "Concussion",
-              "reportedAt": "2026-09-18T23:30Z",
-              "source": "https://www.espn.com/nfl/player/_/id/2983055/javon-hargrave"
             },
             {
               "id": "4258206",
@@ -3227,6 +3227,15 @@
           "name": "Jacksonville Jaguars",
           "players": [
             {
+              "id": "3059989",
+              "name": "Nick Mullens",
+              "position": "QB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T18:12Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3059989/nick-mullens"
+            },
+            {
               "id": "4035791",
               "name": "Cole Van Lanen",
               "position": "OT",
@@ -3441,15 +3450,6 @@
               "injury": null,
               "reportedAt": "2026-09-13T16:08Z",
               "source": "https://www.espn.com/nfl/player/_/id/4889929/quinn-ewers"
-            },
-            {
-              "id": "4431463",
-              "name": "Wyatt Milum",
-              "position": "G",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-10T00:25Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4431463/wyatt-milum"
             }
           ]
         },
@@ -4150,10 +4150,19 @@
               "id": "4569382",
               "name": "Jordan Whittington",
               "position": "WR",
-              "status": "Questionable",
+              "status": "Doubtful",
               "injury": "Quadriceps",
-              "reportedAt": "2026-09-19T00:37Z",
+              "reportedAt": "2026-09-19T18:45Z",
               "source": "https://www.espn.com/nfl/player/_/id/4569382/jordan-whittington"
+            },
+            {
+              "id": "4596363",
+              "name": "Kamren Kinchens",
+              "position": "S",
+              "status": "Out",
+              "injury": "Hamstring",
+              "reportedAt": "2026-09-19T18:45Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4596363/kamren-kinchens"
             },
             {
               "id": "4426515",
@@ -4161,7 +4170,7 @@
               "position": "WR",
               "status": "Questionable",
               "injury": "Hip",
-              "reportedAt": "2026-09-18T22:21Z",
+              "reportedAt": "2026-09-19T18:41Z",
               "source": "https://www.espn.com/nfl/player/_/id/4426515/puka-nacua"
             },
             {
@@ -4190,15 +4199,6 @@
               "injury": "Shoulder",
               "reportedAt": "2026-09-18T01:09Z",
               "source": "https://www.espn.com/nfl/player/_/id/4243181/nate-landman"
-            },
-            {
-              "id": "4596363",
-              "name": "Kamren Kinchens",
-              "position": "S",
-              "status": "Questionable",
-              "injury": "Hamstring",
-              "reportedAt": "2026-09-18T01:04Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4596363/kamren-kinchens"
             },
             {
               "id": "4242154",
@@ -4837,6 +4837,15 @@
           "name": "New England Patriots",
           "players": [
             {
+              "id": "3916923",
+              "name": "Carlton Davis III",
+              "position": "CB",
+              "status": "Out",
+              "injury": "Neck",
+              "reportedAt": "2026-09-19T18:40Z",
+              "source": "https://www.espn.com/nfl/player/_/id/3916923/carlton-davis-iii"
+            },
+            {
               "id": "4431526",
               "name": "Dametrious Crownover",
               "position": "OT",
@@ -4853,15 +4862,6 @@
               "injury": "Foot",
               "reportedAt": "2026-09-19T00:16Z",
               "source": "https://www.espn.com/nfl/player/_/id/3915525/dremont-jones"
-            },
-            {
-              "id": "3916923",
-              "name": "Carlton Davis III",
-              "position": "CB",
-              "status": "Questionable",
-              "injury": "Neck",
-              "reportedAt": "2026-09-18T22:11Z",
-              "source": "https://www.espn.com/nfl/player/_/id/3916923/carlton-davis-iii"
             },
             {
               "id": "3129446",
@@ -5066,6 +5066,15 @@
         "18": {
           "name": "New Orleans Saints",
           "players": [
+            {
+              "id": "4372758",
+              "name": "Kevin Austin Jr.",
+              "position": "WR",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T18:19Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4372758/kevin-austin-jr"
+            },
             {
               "id": "2575788",
               "name": "Zach Wood",
@@ -5281,15 +5290,6 @@
               "injury": null,
               "reportedAt": "2026-09-12T18:23Z",
               "source": "https://www.espn.com/nfl/player/_/id/4430684/treyton-welch"
-            },
-            {
-              "id": "4569682",
-              "name": "Audric Estime",
-              "position": "RB",
-              "status": "Injured Reserve",
-              "injury": "Thigh",
-              "reportedAt": "2026-09-12T18:18Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4569682/audric-estime"
             }
           ]
         },
@@ -6907,6 +6907,15 @@
           "name": "Tennessee Titans",
           "players": [
             {
+              "id": "4429834",
+              "name": "Cedric Gray",
+              "position": "LB",
+              "status": "Active",
+              "injury": null,
+              "reportedAt": "2026-09-19T17:42Z",
+              "source": "https://www.espn.com/nfl/player/_/id/4429834/cedric-gray"
+            },
+            {
               "id": "4431613",
               "name": "James Williams Sr.",
               "position": "LB",
@@ -6914,15 +6923,6 @@
               "injury": "Elbow",
               "reportedAt": "2026-09-19T00:05Z",
               "source": "https://www.espn.com/nfl/player/_/id/4431613/james-williams-sr"
-            },
-            {
-              "id": "4429834",
-              "name": "Cedric Gray",
-              "position": "LB",
-              "status": "Active",
-              "injury": null,
-              "reportedAt": "2026-09-19T00:03Z",
-              "source": "https://www.espn.com/nfl/player/_/id/4429834/cedric-gray"
             },
             {
               "id": "4429607",
@@ -7366,54 +7366,6 @@
       },
       "changes": [
         {
-          "teamId": "16",
-          "name": "Andrew Van Ginkel",
-          "from": "Questionable",
-          "to": "Active",
-          "observedAt": "2026-09-18T20:14:29Z",
-          "source": "https://www.espn.com/nfl/player/_/id/3133487/andrew-van-ginkel"
-        },
-        {
-          "teamId": "23",
-          "name": "Joey Porter Jr.",
-          "from": "Questionable",
-          "to": "Out",
-          "observedAt": "2026-09-18T20:14:29Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4426506/joey-porter-jr"
-        },
-        {
-          "teamId": "27",
-          "name": "Jalen McMillan",
-          "from": "Active",
-          "to": "Questionable",
-          "observedAt": "2026-09-18T20:14:29Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4430834/jalen-mcmillan"
-        },
-        {
-          "teamId": "22",
-          "name": "Garrett Williams",
-          "from": "Questionable",
-          "to": "Out",
-          "observedAt": "2026-09-18T23:21:26Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4568506/garrett-williams"
-        },
-        {
-          "teamId": "22",
-          "name": "Cody Simon",
-          "from": "Questionable",
-          "to": "Active",
-          "observedAt": "2026-09-18T23:21:26Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4429071/cody-simon"
-        },
-        {
-          "teamId": "22",
-          "name": "Jack Gibbens",
-          "from": "Questionable",
-          "to": "Active",
-          "observedAt": "2026-09-18T23:21:26Z",
-          "source": "https://www.espn.com/nfl/player/_/id/4249739/jack-gibbens"
-        },
-        {
           "teamId": "4",
           "name": "Samaje Perine",
           "from": "Questionable",
@@ -7764,11 +7716,59 @@
           "to": "Active",
           "observedAt": "2026-09-19T17:57:34Z",
           "source": "https://www.espn.com/nfl/player/_/id/4429834/cedric-gray"
+        },
+        {
+          "teamId": "3",
+          "name": "Anthony Johnson Jr.",
+          "from": "Injured Reserve",
+          "to": "Out",
+          "observedAt": "2026-09-19T18:50:38Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4361748/anthony-johnson-jr"
+        },
+        {
+          "teamId": "9",
+          "name": "Lukas Van Ness",
+          "from": "Questionable",
+          "to": "Active",
+          "observedAt": "2026-09-19T18:50:38Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4686906/lukas-van-ness"
+        },
+        {
+          "teamId": "9",
+          "name": "Javon Hargrave",
+          "from": "Doubtful",
+          "to": "Out",
+          "observedAt": "2026-09-19T18:50:38Z",
+          "source": "https://www.espn.com/nfl/player/_/id/2983055/javon-hargrave"
+        },
+        {
+          "teamId": "14",
+          "name": "Jordan Whittington",
+          "from": "Questionable",
+          "to": "Doubtful",
+          "observedAt": "2026-09-19T18:50:38Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4569382/jordan-whittington"
+        },
+        {
+          "teamId": "14",
+          "name": "Kamren Kinchens",
+          "from": "Questionable",
+          "to": "Out",
+          "observedAt": "2026-09-19T18:50:38Z",
+          "source": "https://www.espn.com/nfl/player/_/id/4596363/kamren-kinchens"
+        },
+        {
+          "teamId": "17",
+          "name": "Carlton Davis III",
+          "from": "Questionable",
+          "to": "Out",
+          "observedAt": "2026-09-19T18:50:38Z",
+          "source": "https://www.espn.com/nfl/player/_/id/3916923/carlton-davis-iii"
         }
       ],
       "status": "ok",
-      "checkedAt": "2026-09-19T17:57:34Z",
-      "lastAttemptAt": "2026-09-19T17:57:34Z",
+      "checkedAt": "2026-09-19T18:50:38Z",
+      "lastAttemptAt": "2026-09-19T18:50:38Z",
       "source": "https://www.espn.com/nfl/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     },
@@ -7819,8 +7819,8 @@
       },
       "changes": [],
       "status": "ok",
-      "checkedAt": "2026-09-19T17:57:34Z",
-      "lastAttemptAt": "2026-09-19T17:57:34Z",
+      "checkedAt": "2026-09-19T18:50:38Z",
+      "lastAttemptAt": "2026-09-19T18:50:38Z",
       "source": "https://www.espn.com/college-football/injuries",
       "coverage": "Provider-listed injuries only; not confirmed starters or game-day inactives."
     }

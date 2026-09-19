@@ -12,8 +12,8 @@
   "sha256": "baad3f2d0e28aba37268e6e870ecd04a7a3c560a58aa0ea06894f0c309a48061"
  },
  "cfb-2026.jsonl": {
-  "lines": 189,
-  "sha256": "1982ca491cff994e76ff6330f818fc3cd9493464459a7939cef26c16da393912"
+  "lines": 190,
+  "sha256": "7e95e9a8e1e1f8b0052e8ff4aa4cca3c786ada6f951975d8c531852f6d5e7c4b"
  },
  "nfl-2023.jsonl": {
   "lines": 285,
