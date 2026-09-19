@@ -136,6 +136,35 @@ test('a pick is open only until its quote expires, its entries close or its game
   assert.equal(C.isOpen({ ...pick, result: 'win' }, now), false);
 });
 
+test('a pick says where it stands in words, and red is only for a loss', () => {
+  const now = Date.parse('2026-09-20T12:00:00Z');
+  const pick = { status: 'active', expiresAt: '2026-09-20T15:30:00Z', kickoff: '2026-09-20T17:00:00Z' };
+  const word = p => C.pickState(p, now).word;
+  assert.equal(word(pick), 'Open');
+  assert.equal(word({ ...pick, entryNote: 'moved 2 against' }), 'Closed: line moved');
+  assert.equal(word({ ...pick, expiresAt: '2026-09-20T11:00:00Z' }), 'Closed: price expired');
+  assert.equal(word({ ...pick, kickoff: '2026-09-20T11:00:00Z' }), 'In play');
+  assert.deepEqual(C.pickState({ ...pick, result: 'win' }, now), { word: 'Won', tone: 'win' });
+  assert.deepEqual(C.pickState({ ...pick, result: 'loss' }, now), { word: 'Lost', tone: 'loss' });
+  assert.equal(C.pickState({ ...pick, entryNote: 'x' }, now).tone, 'closed', 'a closed pick is grey, not red');
+  assert.equal(C.isLongshot({ kind: 'riskyProps' }), true);
+  assert.equal(C.isLongshot({ kind: 'parlays', parlayType: 'longshot' }), true);
+  assert.equal(C.isLongshot({ kind: 'props' }), false);
+});
+
+test('a board line leads with a plain word and backs it with its numbers', () => {
+  assert.deepEqual(C.gradeOf({ tier: 'strong', chance: 0.61, push: 0, needs: 0.524, thin: false }),
+    { tier: 'strong', word: 'Model likes it', detail: '61% to win, needs 52%' });
+  assert.equal(C.gradeOf({ tier: 'lean', chance: 0.7, push: 0.03, needs: 0.5, thin: true }).detail, '70% to win, 3% push, needs 50% · thin sample');
+  assert.deepEqual(C.gradeOf(null), { tier: 'none', word: 'No model read', detail: '' });
+  const lines = [{ id: 'a', grade: { tier: 'pass', edge: -2 } }, { id: 'b' }, { id: 'c', grade: { tier: 'strong', edge: 6 } },
+    { id: 'd', grade: { tier: 'strong', edge: 9 } }, { id: 'e', grade: { tier: 'lean', edge: 3 } }];
+  assert.deepEqual(lines.sort(C.byGrade).map(l => l.id), ['d', 'c', 'e', 'a', 'b']);
+  const leans = [{ id: 'thin', grade: { tier: 'lean', edge: 30, thin: true } }, { id: 'solid', grade: { tier: 'lean', edge: 3 } }];
+  assert.deepEqual(leans.sort(C.byGrade).map(l => l.id), ['solid', 'thin'], 'a solid sample outranks a bigger thin one');
+  assert.equal(C.gradeOf(null, 'FBS vs FCS: v2 is not reliable here').detail, 'FBS vs FCS: v2 is not reliable here');
+});
+
 test('pick types match the old results page', () => {
   assert.equal(C.category({ kind: 'gamePicks', marketType: 'total' }), 'Totals');
   assert.equal(C.category({ kind: 'gamePicks', marketType: 'spread' }), 'Spreads');

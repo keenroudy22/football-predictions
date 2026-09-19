@@ -16,7 +16,7 @@
 
   const state = {
     league: saved.get('league', 'NFL'),
-    gamesScope: 'upcoming', boardScope: 'open', boardQuery: '', playerQuery: '',
+    gamesScope: 'upcoming', boardScope: 'open', boardSort: 'best', boardQuery: '', playerQuery: '',
     stat: null, defensePos: 'WR', defenseStat: 'recYds', defenseScope: 'season', defenseOrder: 'soft',
     logSeason: 'all', scoresLeague: 'MLB', scoresDate: null, recordScope: 'all',
     ticket: saved.get('ticket', []), stake: saved.get('stake', { amount: 1, mode: 'units', unit: 10 }),
@@ -62,11 +62,14 @@
   const external = (url, label) => /^https:\/\//.test(url || '') ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>` : '';
   const espnGame = id => { const [league, event] = String(id).split('-'); return `https://www.espn.com/${league === 'CFB' ? 'college-football' : 'nfl'}/game/_/gameId/${event}`; };
 
-  const hasLean = game => { const lean = C.leanText(game); return Boolean(lean && (lean.side || lean.total)); };
+  const hasLean = game => { const lean = C.leanText(game); return Boolean(game.fcs || (lean && (lean.side || lean.total))); };
+  /* Same colors as the board: green only on a solid sample, amber for a thin one or a small gap. */
   const leanChips = (game, strong = 3) => {
+    if (game.fcs) return '<span class="row-meta">FBS vs FCS: v2 is not reliable here</span>';
     const lean = C.leanText(game);
     if (!lean || (!lean.side && !lean.total)) return '<span class="row-meta">no model call</span>';
-    const chip = (text, size) => `<span class="lean ${size >= strong ? 'lean-strong' : size >= 1.5 ? 'lean-mild' : ''}">${esc(text)}</span>`;
+    const thin = Boolean((game.v2 || {}).sparse);
+    const chip = (text, size) => `<span class="lean ${size >= strong && !thin ? 'lean-strong' : size >= 1.5 ? 'lean-mild' : ''}">${esc(text)}</span>`;
     return `<span class="leans">${lean.side ? chip(`Lean ${lean.side.team} · ${lean.side.points.toFixed(1)} pts`, lean.side.points) : ''}${lean.total ? chip(`Lean ${lean.total.direction} · ${lean.total.points.toFixed(1)} pts`, lean.total.points) : ''}</span>`;
   };
 
@@ -88,11 +91,10 @@
     return `<button class="row" type="button" data-pick="${esc(pick.id)}">
       <span class="row-rail" style="background:${pick.result ? tone : esc(pick.color || 'var(--mint)')}"></span>
       <span class="row-main"><span class="row-top"><span class="row-name">${esc(pick.title || pick.player)}</span>
-        ${pick.favorite ? '<span class="pill pill-ours">Favorite</span>' : ''}${pick.historicalImport ? '<span class="pill pill-reference">Import</span>' : ''}
-        ${pick.result ? `<span class="pill pill-${pick.result === 'win' ? 'win' : pick.result === 'loss' ? 'loss' : 'closed'}">${esc(pick.result)}</span>`
-          : pick.historicalImport ? '' : C.isOpen(pick) ? '<span class="pill pill-open">Open</span>' : '<span class="pill pill-closed">Closed</span>'}</span>
+        ${pick.favorite ? '<span class="pill pill-ours">Favorite</span>' : ''}${C.isLongshot(pick) ? '<span class="pill pill-stale">Longshot</span>' : ''}${pick.historicalImport ? '<span class="pill pill-reference">Imported</span>' : ''}
+        <span class="pill pill-${C.pickState(pick).tone}">${esc(C.pickState(pick).word)}</span></span>
         <span class="row-market">${pick.actual ? esc(pick.actual) : pick.projection != null ? 'Our number ' + esc(pick.projection) : esc(pick.kind || '')}</span>
-        <span class="row-meta">${esc(whenShort(pick.kickoff || pick.publishedAt))}${pick.quotedAt ? ' · quoted ' + esc(ago(pick.quotedAt)) : ''}</span></span>
+        <span class="row-meta">${esc(whenShort(pick.kickoff || pick.publishedAt))}${pick.confidence != null ? ` · confidence ${esc(pick.confidence)}/10` : ''}${pick.quotedAt ? ' · quoted ' + esc(ago(pick.quotedAt)) : ''}</span></span>
       <span class="row-price"><span class="row-odds num">${odds(pick.odds)}</span><span class="row-book">${esc(pick.book || 'No book')}</span></span>
     </button>`;
   };
@@ -113,7 +115,7 @@
     const games = data.games.filter(inLeague);
     const now = slate(games);
     const first = now[0];
-    const gaps = now.filter(g => g.v2 && g.lean).sort((a, b) => disagreement(b) - disagreement(a)).slice(0, 8);
+    const gaps = now.filter(g => g.v2 && g.lean && !g.fcs).sort((a, b) => disagreement(b) - disagreement(a)).slice(0, 8);
     const picks = data.picks.filter(inLeague);
     const live = picks.filter(p => !p.result && !p.historicalImport)
       .sort((a, b) => (C.isOpen(b) - C.isOpen(a)) || String(a.kickoff).localeCompare(String(b.kickoff)));
@@ -315,14 +317,19 @@
     return section('Injury report', `<div class="grid-2"><div><p class="eyebrow">${esc(card.away.abbr)}</p>${block('away')}</div><div><p class="eyebrow">${esc(card.home.abbr)}</p>${block('home')}</div></div>`);
   };
 
+  const RAIL = { strong: 'var(--green)', lean: 'var(--amber)' };
+  const lineText = v => v === 0 ? 'PK' : `${v > 0 ? '+' : ''}${Math.round(v * 10) / 10}`;
   const lineRow = row => {
     const inTicket = state.ticket.some(t => t.id === row.id);
-    return `<div class="row" style="cursor:default">
-      <span class="row-rail" style="background:${esc(row.color || 'var(--line)')}"></span>
+    const g = C.gradeOf(row.grade, row.gradeNote);
+    const open = row.state === 'open';
+    return `<div class="row${open ? '' : ' row-closed'}" style="cursor:default">
+      <span class="row-rail" style="background:${open && RAIL[g.tier] || 'var(--line)'}"></span>
       <span class="row-main"><span class="row-top"><span class="row-name">${esc(row.player || row.title || 'Line')}</span>${row.position ? `<span class="row-meta">${esc(row.position)}</span>` : ''}
-        ${row.state !== 'open' ? `<span class="pill pill-${esc(row.state)}">${esc({ stale: 'Recheck', closed: 'Settled', unpriced: 'No price', reference: 'Reference' }[row.state] || row.state)}</span>` : ''}
-        ${row.move ? `<span class="move ${row.move > 0 ? 'move-up' : 'move-down'}">${signed(row.move)}</span>` : ''}</span>
+        ${!open ? `<span class="pill pill-${esc(row.state)}">${esc({ stale: 'Recheck price', closed: 'Closed', unpriced: 'No price', reference: 'Unverified price' }[row.state] || row.state)}</span>` : ''}
+        ${row.move && typeof row.line === 'number' ? `<span class="move">opened ${esc(lineText(row.line - row.move))}</span>` : ''}</span>
         ${row.player ? `<span class="row-market">${esc([row.direction, row.line, row.market].filter(v => v != null && v !== '').join(' '))}</span>` : ''}
+        ${open ? `<span class="grade grade-${g.tier}"><b>${esc(g.word)}</b>${g.detail ? `<span>${esc(g.detail)}</span>` : ''}</span>` : ''}
         <span class="row-meta">${esc(whenShort(row.kickoff))}${row.observedAt ? ' · seen ' + esc(ago(row.observedAt)) : ''}</span></span>
       <span class="row-price"><span class="row-odds num">${odds(row.odds)}</span><span class="row-book">${esc(row.book || 'No book')}</span></span>
       ${row.state === 'open' && row.odds != null ? `<button class="add" type="button" data-add="${esc(row.id)}" aria-pressed="${inTicket}" aria-label="${inTicket ? 'Remove from ticket' : 'Add to ticket'}">${inTicket ? '✓' : '+'}</button>` : ''}
@@ -566,9 +573,13 @@
       : state.boardScope === 'settled' ? l.state === 'closed' : true);
     if (query) shown = shown.filter(l => `${l.player || ''} ${l.title || ''} ${l.market || ''}`.toLowerCase().includes(query));
     const rank = { open: 0, reference: 1, stale: 2, unpriced: 3, closed: 4 };
-    shown.sort((a, b) => (rank[a.state] - rank[b.state]) || String(a.kickoff).localeCompare(String(b.kickoff)) || String(a.player || a.title).localeCompare(String(b.player || b.title)));
-    return `${head('The board', `${all.filter(l => l.state === 'open').length} open lines. Observations, not recommendations; only our picks are selections.`)}
-      <div class="toolbar">${seg('boardScope', [['open', 'Open'], ['all', 'Everything'], ['settled', 'Settled']], state.boardScope)}</div>
+    const byKickoff = (a, b) => String(a.kickoff).localeCompare(String(b.kickoff)) || String(a.player || a.title).localeCompare(String(b.player || b.title));
+    shown.sort((a, b) => (rank[a.state] - rank[b.state]) || (state.boardSort === 'best' ? C.byGrade(a, b) : 0) || byKickoff(a, b));
+    const open = all.filter(l => l.state === 'open');
+    const liked = open.filter(l => (l.grade || {}).tier === 'strong').length, leans = open.filter(l => (l.grade || {}).tier === 'lean').length;
+    return `${head('The board', `${open.length} open lines. The model likes ${liked} and leans slightly on ${leans}. These are prices we saw, not picks; only our picks are selections.`)}
+      <div class="toolbar">${seg('boardScope', [['open', 'Open'], ['all', 'Everything'], ['settled', 'Closed']], state.boardScope)}${seg('boardSort', [['best', 'Best first'], ['time', 'By kickoff']], state.boardSort)}</div>
+      <p class="row-meta" style="margin:0 0 10px">Each line shows v2's chance of winning it next to what its price needs. <b class="grade-word grade-strong">Model likes it</b> is 5+ points clear; <b class="grade-word grade-lean">Slight lean</b> is 2 to 5, or any edge on a thin early-season sample. v2 has not beaten the closing line yet: this is where to look, not what to bet.</p>
       <input class="search" type="search" data-input="boardQuery" placeholder="Player, team or market" value="${esc(state.boardQuery)}" aria-label="Search lines">
       <div id="board-rows">${shown.length ? `<div class="card"><div class="rows">${shown.slice(0, 250).map(lineRow).join('')}</div></div>` : empty('Nothing matches', 'Try another search or scope.')}</div>
       <p class="row-meta" style="margin-top:10px">Tap + to add a priced, current line to your ticket. Tickets stay on this device and never enter the record.</p>`;
@@ -667,7 +678,7 @@
     const prose = v => v == null ? '' : typeof v === 'string' ? v : Array.isArray(v) ? v.map(prose).join(' · ')
       : typeof v === 'object' ? Object.entries(v).map(([k, x]) => `${k}: ${prose(x)}`).join(' · ') : String(v);
     const leg = l => typeof l === 'string' ? l : l.title || [l.player, l.direction, l.line, l.market].filter(x => x != null && x !== '').join(' ');
-    const closed = !p.result && !p.historicalImport && !C.isOpen(p);
+    const closed = !p.result && !p.historicalImport && C.pickState(p).tone === 'closed';
     const started = p.kickoff && Date.parse(p.kickoff) <= Date.now();
     dialog.innerHTML = `<div class="detail-inner"><div class="detail-head"><div><div class="row-top">${p.result ? `<span class="pill pill-${p.result === 'win' ? 'win' : p.result === 'loss' ? 'loss' : 'closed'}">${esc(p.result)}</span>` : '<span class="pill pill-ours">Our pick</span>'}</div>
       <h3 style="margin:7px 0 0;font-size:17px">${esc(p.title)}</h3><p class="row-meta" style="margin:4px 0 0">${esc(when(p.kickoff || p.publishedAt))}</p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>

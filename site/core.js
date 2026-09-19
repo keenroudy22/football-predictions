@@ -210,9 +210,34 @@
   };
   /* Units and ROI use recorded original prices only; a result without one stays in the win-loss
      record and out of returns. No price is ever assumed. ROI waits for ten priced picks. */
+  /* Where a pick stands, in words. Color only backs the word up; red is kept for losses. */
+  const RESULT_WORD = { win: 'Won', loss: 'Lost', push: 'Push', void: 'Void' };
+  const pickState = (p, now = Date.now()) => {
+    if (p.result) return { word: RESULT_WORD[p.result] || p.result, tone: p.result === 'win' ? 'win' : p.result === 'loss' ? 'loss' : 'closed' };
+    if (p.historicalImport) return { word: 'Unsettled', tone: 'closed' };
+    if (p.status === 'withdrawn') return { word: 'Withdrawn', tone: 'closed' };
+    if (p.kickoff && Date.parse(p.kickoff) <= now) return { word: 'In play', tone: 'reference' };
+    if (p.entryNote) return { word: 'Closed: line moved', tone: 'closed' };
+    if (p.status === 'expired' || (p.expiresAt && Date.parse(p.expiresAt) <= now)) return { word: 'Closed: price expired', tone: 'closed' };
+    return { word: 'Open', tone: 'open' };
+  };
   /* Open to new entries: unsettled, not closed by a revision, quote unexpired, game not started. */
-  const isOpen = (p, now = Date.now()) => !p.result && p.status !== 'expired' && p.status !== 'withdrawn'
-    && !p.historicalImport && !(p.expiresAt && Date.parse(p.expiresAt) <= now) && !(p.kickoff && Date.parse(p.kickoff) <= now);
+  const isOpen = (p, now = Date.now()) => pickState(p, now).tone === 'open';
+  const isLongshot = p => p.kind === 'riskyProps' || p.parlayType === 'longshot';
+
+  /* A board line's model grade: the word leads, the numbers say why. */
+  const GRADE_WORD = { strong: 'Model likes it', lean: 'Slight lean', pass: 'No edge' };
+  const gradeOf = (g, note = '') => {
+    if (!g) return { tier: 'none', word: 'No model read', detail: note || '' };
+    const pct = x => `${Math.round(100 * x)}%`;
+    return { tier: g.tier, word: GRADE_WORD[g.tier] || GRADE_WORD.pass,
+      detail: `${pct(g.chance)} to win${g.push >= 0.01 ? `, ${pct(g.push)} push` : ''}, needs ${pct(g.needs)}${g.thin ? ' · thin sample' : ''}` };
+  };
+  const TIER_ORDER = { strong: 0, lean: 1, pass: 2, none: 3 };
+  /* Best first: tier, then a solid sample before a thin one, then the size of the edge. */
+  const byGrade = (a, b) => (TIER_ORDER[(a.grade || {}).tier || 'none'] - TIER_ORDER[(b.grade || {}).tier || 'none'])
+    || (Boolean((a.grade || {}).thin) - Boolean((b.grade || {}).thin))
+    || (((b.grade || {}).edge ?? -1e9) - ((a.grade || {}).edge ?? -1e9));
   const category = p => p.kind === 'gamePicks' ? (p.marketType === 'total' ? 'Totals' : 'Spreads')
     : p.kind === 'props' ? 'Straights' : p.kind === 'riskyProps' ? 'Risky lines'
       : p.parlayType === 'longshot' ? 'Longshots' : 'Parlays';
@@ -255,5 +280,5 @@
   return { esc, DASH, odds, signed, fixed, pct, when, whenShort, dayLabel, ago, spreadText, modelSpread, leanText,
     column, cell, summarize, windows, splits, hits, POSITION_STATS, LABEL, PROJECTION_MARKET,
     rankDefenses, rankOf, rankTone, decimal, american, eligible, summarizeTicket, ticketText,
-    unitsFor, recordOf, isOpen, category, parseRoute, shardOf, BASE };
+    unitsFor, recordOf, pickState, isOpen, isLongshot, gradeOf, byGrade, category, parseRoute, shardOf, BASE };
 });

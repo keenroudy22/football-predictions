@@ -14,53 +14,6 @@ SNAPSHOT = {'gameId': 'NFL-1', 'model': 'v2.0', 'publishedAt': '2026-09-20T10:00
                                               'receptions': [5.0, 2.4, 7.6]}]}, 'away': None}}
 
 
-class ArithmeticTests(unittest.TestCase):
-    def test_a_line_at_the_mean_is_a_coin_flip(self):
-        over, push, under = desk.chances(44.0, 12.0, 44.5)
-        self.assertAlmostEqual(over, 0.4834, places=3)
-        self.assertEqual(push, 0.0)
-        self.assertAlmostEqual(over + under, 1.0)
-
-    def test_whole_number_lines_can_push(self):
-        over, push, under = desk.chances(3.0, 13.0, 3)
-        self.assertAlmostEqual(push, 0.0307, places=3)
-        self.assertAlmostEqual(over, under, places=6)
-
-    def test_prices(self):
-        self.assertAlmostEqual(desk.break_even(-110), 110 / 210)
-        self.assertAlmostEqual(desk.break_even(150), 0.4)
-        self.assertEqual(desk.payout(-125), 0.8)
-        self.assertEqual(desk.worse_price(-110), -125)
-        self.assertEqual(desk.worse_price(110), -105, 'fifteen cents from +110 crosses even money')
-        self.assertEqual(desk.worse_price(120), 105)
-
-
-class PriceTests(unittest.TestCase):
-    def test_a_player_market_uses_the_stored_range(self):
-        p = desk.price(SNAPSHOT, 'recYds', 'over', 55.5, -115, athlete='10')
-        self.assertEqual(p['projection'], 60.0)
-        self.assertAlmostEqual(p['sd'], 29.5 / desk.Z80, places=2)
-        self.assertAlmostEqual(p['chance'], 0.5, delta=0.1)
-        self.assertEqual(p['breakEven'], round(115 / 215, 3))
-        self.assertIn('not calibrated at this line', p['edge'])
-        self.assertEqual(p['cutoff'], 'OVER 55.5 at -115 or better. Closed to new entries at 56+, or at -130 or worse at 55.5.')
-        self.assertEqual(desk.price(SNAPSHOT, 'receptions', 'under', 4.5, 120, athlete='10')['market'], 'rec')
-
-    def test_home_and_away_spreads_are_the_same_game(self):
-        home = desk.price(SNAPSHOT, 'spread', 'home', -2.5, -110)
-        away = desk.price(SNAPSHOT, 'spread', 'away', 2.5, -110)
-        self.assertAlmostEqual(home['chance'] + away['chance'], 1.0, places=3)
-        self.assertGreater(home['chance'], 0.5)
-        self.assertIn('if the line reaches -3', home['cutoff'])
-        self.assertIn('on any move against it', desk.price(SNAPSHOT, 'spread', 'away', 3, -110)['cutoff'])
-
-    def test_bad_requests_are_refused(self):
-        for args in (('spread', 'over', 3.5, -110, None), ('recYds', 'over', 55.5, -110, None),
-                     ('recYds', 'over', 55.5, -110, '99'), ('kPts', 'over', 7.5, -110, '10')):
-            with self.assertRaises(ValueError):
-                desk.price(SNAPSHOT, *args[:4], athlete=args[4])
-
-
 class EntryRuleTests(unittest.TestCase):
     def test_props_close_at_half_a_point_against(self):
         self.assertIsNotNone(desk.breaks('prop', 'over', 29.5, 30.0))

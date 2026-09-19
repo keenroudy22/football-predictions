@@ -66,6 +66,36 @@ class GameLineTests(unittest.TestCase):
         self.assertEqual(build_site.game_market_lines({'games': games}, self.now), [])
 
 
+class GradeTests(unittest.TestCase):
+    snapshot = {'gameId': 'NFL-1', 'model': 'v2.0', 'publishedAt': '2026-09-19T10:00:00Z', 'margin': 5.0, 'total': 41.0,
+                'sd': {'margin': 13.0, 'total': 12.0}, 'range80': {'margin': [-11.7, 21.7], 'total': [25.6, 56.4]},
+                'players': {'home': {'players': [{'id': '10', 'pos': 'WR', 'recYds': [70.0, 40.5, 99.5]}]}}}
+
+    def line(self, **extra):
+        return {'state': 'open', 'odds': -110, 'line': 44.5, 'gameMarket': True, 'market': 'total points',
+                'direction': 'under', **extra}
+
+    def test_a_game_line_is_graded_with_the_desk_arithmetic(self):
+        grade = build_site.grade_line(self.line(), self.snapshot, thin=False)
+        self.assertEqual(grade['tier'], 'strong')
+        self.assertGreater(grade['chance'], grade['needs'])
+        self.assertEqual(grade['needs'], round(110 / 210, 3))
+        spread = build_site.grade_line(self.line(market='point spread', line=-2.5, direction=None), self.snapshot, False)
+        self.assertGreater(spread['chance'], 0.5, 'v2 has the home side by 5 against -2.5')
+
+    def test_a_thin_sample_never_reads_strong_and_closed_or_unpriced_lines_get_no_grade(self):
+        self.assertEqual(build_site.grade_line(self.line(), self.snapshot, thin=True)['tier'], 'lean')
+        self.assertIsNone(build_site.grade_line(self.line(state='closed'), self.snapshot, False))
+        self.assertIsNone(build_site.grade_line(self.line(odds=None), self.snapshot, False))
+        self.assertIsNone(build_site.grade_line(self.line(), None, False))
+
+    def test_a_prop_needs_a_v2_projection_for_that_player(self):
+        prop = {'state': 'open', 'odds': -115, 'line': 55.5, 'direction': 'OVER', 'athleteId': '10',
+                'title': 'Player Ten OVER 55.5 receiving yards'}
+        self.assertEqual(build_site.grade_line(prop, self.snapshot, False)['projection'], 70.0)
+        self.assertIsNone(build_site.grade_line(dict(prop, athleteId='99'), self.snapshot, False))
+
+
 class ForecastTests(unittest.TestCase):
     def test_a_snapshot_published_after_kickoff_is_never_the_forecast(self):
         snaps = [{'publishedAt': '2026-09-20T12:00:00Z'}, {'publishedAt': '2026-09-20T16:30:00Z'}]

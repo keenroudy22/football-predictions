@@ -149,8 +149,8 @@ main { padding: 0 var(--gutter) 28px; max-width: 1240px; margin: 0 auto; }
 .row-meta { font-size: 11px; color: var(--faint); }
 .row-market { margin-top: 2px; font-size: 13px; color: #c7d2dc; }
 .row-price { padding: 11px 12px 11px 6px; text-align: right; flex-shrink: 0; align-self: center; }
-.row-odds { font-size: 21px; line-height: 1; }
-.row-book { margin-top: 3px; font-size: 11px; color: var(--faint); }
+.row-odds { display: block; font-size: 21px; line-height: 1; }
+.row-book { display: block; margin-top: 3px; font-size: 11px; color: var(--faint); }
 
 .pill {
   padding: 1px 6px; border-radius: 4px;
@@ -160,12 +160,16 @@ main { padding: 0 var(--gutter) 28px; max-width: 1240px; margin: 0 auto; }
 .pill-open { background: rgba(94, 234, 164, .16); color: var(--mint); }
 .pill-stale { background: rgba(255, 180, 61, .16); color: var(--amber); }
 .pill-closed { background: var(--raised); color: var(--dim); }
+.grade { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 7px; margin-top: 4px; font-size: 12px; color: var(--dim); }
+.grade b, .grade-word { padding: 1px 7px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.grade-strong b, b.grade-strong { background: rgba(63, 217, 139, .16); color: var(--green); }
+.grade-lean b, b.grade-lean { background: rgba(255, 180, 61, .16); color: var(--amber); }
+.grade-pass b, .grade-none b { background: var(--raised); color: var(--dim); }
+.row-closed { opacity: .6; }
 .pill-unpriced { background: var(--raised); color: var(--dim); }
 .pill-reference { background: rgba(111, 194, 240, .14); color: var(--sky); }
 
-.move { display: inline-flex; align-items: center; gap: 2px; font-size: 11px; font-weight: 700; }
-.move-up { color: var(--amber); }
-.move-down { color: var(--sky); }
+.move { display: inline-flex; align-items: center; gap: 2px; font-size: 11px; font-weight: 600; color: var(--faint); }
 
 /* ---------- games ---------- */
 
@@ -316,8 +320,8 @@ select.pick { min-height: 36px; padding: 0 10px; background: var(--surface); col
 
 /* model vs market chips */
 .lean { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: .02em; background: var(--raised); color: var(--dim); white-space: nowrap; }
-.lean-strong { background: rgba(94, 234, 164, .15); color: var(--mint); }
-.lean-mild { background: rgba(111, 194, 240, .12); color: var(--sky); }
+.lean-strong { background: rgba(63, 217, 139, .16); color: var(--green); }
+.lean-mild { background: rgba(255, 180, 61, .16); color: var(--amber); }
 .leans { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
 .game-model { flex-shrink: 0; text-align: right; min-width: 92px; }
 .game-model .num { font-size: 19px; line-height: 1; }

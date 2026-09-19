@@ -30,6 +30,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import boxscores
 import features
+import model_v2
+import pricing
 from sports_refresh import eastern_date
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -498,9 +500,27 @@ def build(now=None):
         for team, data in block.items():
             injuries[team] = [{k: p.get(k) for k in ('id', 'name', 'position', 'status', 'injury', 'reportedAt')}
                               for p in data.get('players', []) if str(p.get('status', '')).lower() != 'active']
+    # Grade every open line before anything is written, so the board and the game pages agree.
+    appearances = defaultdict(int)
+    for game in records:
+        if game['season'] == league_data[game['league']]['current']:
+            for player in game['players']:
+                appearances[player['id']] += 1
+    cfb = league_data['CFB']
+    fbs = model_v2.fbs_teams([g for g in cfb['records'] if g['season'] >= cfb['current'] - 1])
+    for line in lines:
+        game = by_id.get(line.get('gameId'))
+        snapshot = (pregame(forecasts.get(game['id'], []), game['kickoff']) or [None])[-1] if game else None
+        fcs = bool(game) and game['league'] == 'CFB' and not {str(game['home']['id']), str(game['away']['id'])} <= fbs
+        thin = bool(snapshot and snapshot.get('sparse')) \
+            or bool(line.get('athleteId')) and appearances[str(line['athleteId'])] < 3
+        # v2 compresses FBS-FCS blowouts badly enough that any chance it gives there would mislead.
+        line['grade'] = None if fcs else grade_line(line, snapshot, thin)
+        line['gradeNote'] = 'FBS vs FCS: v2 is not reliable here' if fcs and line.get('state') == 'open' else None
     for game in sorted(window, key=lambda g: (g['kickoff'], g['id'])):
         snaps_for = pregame(forecasts.get(game['id'], []), game['kickoff'])
         card = game_card(game, forecasts_v1, snaps_for[-1] if snaps_for else None, names, identities)
+        card['fcs'] = game['league'] == 'CFB' and not {str(game['home']['id']), str(game['away']['id'])} <= fbs
         cards.append(card)
         info = league_data[game['league']]
         write(OUT / 'games' / f"{game['id']}.json",
@@ -566,6 +586,32 @@ def board_picks(first, latest, by_id, identities):
                      'color': color(pick.get('league'), (game.get('home') or {}).get('abbreviation'), identities)})
     rows.sort(key=lambda p: p.get('publishedAt') or '', reverse=True)
     return rows
+
+
+def grade_line(line, snapshot, thin):
+    """v2's read on one open, priced line: its chance at the line, what the price needs, and a tier.
+
+    The same arithmetic as the research desk (scripts/pricing.py). thin: the game or the player has
+    too little this season for v2 to read as strong. None when v2 has no number for the line.
+    """
+    odds = line.get('odds')
+    if line.get('state') != 'open' or not snapshot or not isinstance(odds, (int, float)) or abs(odds) < 100 \
+            or not isinstance(line.get('line'), (int, float)):
+        return None
+    if line.get('gameMarket'):
+        market, side, athlete = ('spread', 'home', None) if line['market'] == 'point spread' \
+            else ('total', line.get('direction'), None)
+    else:
+        market, side, athlete = pricing.market_of(line), str(line.get('direction') or '').lower(), line.get('athleteId')
+        if not market or side not in ('over', 'under') or not athlete:
+            return None
+    try:
+        p = pricing.price(snapshot, market, side, float(line['line']), int(odds), athlete)
+    except ValueError:  # no projection for this player or market
+        return None
+    return {'chance': p['chance'], 'push': p['push'], 'needs': p['breakEven'], 'edge': p['edgePoints'],
+            'projection': p['projection'], 'thin': thin, 'tier': pricing.tier(p['edgePoints'], thin),
+            'model': p['model'], 'snapshotAt': p['snapshotAt']}
 
 
 def game_market_lines(slate, now):
