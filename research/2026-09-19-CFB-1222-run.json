@@ -1,0 +1,34 @@
+{
+ "league": "CFB",
+ "publishedAt": "2026-09-19T16:22:55Z",
+ "targetWeek": 3,
+ "summary": "11:45 AM ET run, published at 12:22 ET. Nothing to settle: Texas A&M -16.5 and Duke -10 kick off at 3:30 and 4:00 and are unchanged in the feed (-16.5 at -118, -10 at -105, seen at 9:58 ET); their quotes expired at 11:30 as published and they are graded as posted. No new picks. The afternoon and evening leans were researched: two overs run against quarterback news v2 does not have, one rests on FCS routs in two-game samples, FIU +6.5 has nothing beyond the model, and West Virginia vs Virginia under has no reason beyond the model while the total has moved up against it. Middle Tennessee +3.5 and Missouri State +4 stay passes with nothing new. NFL was screened for Sunday: no total clears 55% after calibration, and J.K. Dobbins' carries line rests on one game, so Sunday waits for the morning runs. The odds capture skipped inside its 3.5-hour gap.",
+ "takeaways": [
+  "Louisiana Tech at Baylor over 49.5: pass. Both teams start backups: Baylor's DJ Lagway is doubtful with an ankle injury and Nate Bennett makes his second straight start; Louisiana Tech's Blake Baker misses the game with a hand injury and Trey Kukuk starts (ESPN, Sept 17: https://www.espn.com/college-football/story/_/id/49965563/sources-baylor-lagway-doubtful-play-louisiana-tech). The total opened 55.5 and is 49.5; v2's 54.7 knows about neither change.",
+  "Ohio at South Alabama over 48.5: pass. Ohio's top two quarterbacks, Nick Poulos and Matt Vezza, were hurt against Jacksonville State and freshman Levi Davis is QB1 for now (The Post, Sept 18: https://www.thepostathens.com/article/2026/09/london-demarco-everything-to-know-for-ohios-away-game-against-south-alabama). The total opened 53.5 and is 48.5; v2's 54.0 predates it.",
+  "James Madison at San Diego State over 46.5: pass. v2's 52.6 leans on an FCS rout in each two-game sample: JMU 87-3 over Wagner (https://www.espn.com/college-football/boxscore/_/gameId/401867929) and San Diego State 53-20 over Portland State (https://www.espn.com/college-football/boxscore/_/gameId/401860879).",
+  "FIU +6.5 at FAU: pass. v2 has FIU by 1.2, but no injury or role news was found for either team and the line has already moved from 7.5 to 6.5 (https://www.espn.com/college-football/game/_/gameId/401862771). Model only."
+ ],
+ "gameWatch": [
+  {
+   "id": "CFB-2026-W3-wvu-uva-under-53-5-watch",
+   "gameId": "CFB-401856802",
+   "title": "West Virginia vs Virginia under 53.5",
+   "why": "Virginia starts Beau Pribula, 21 of 25 for 317 yards and five touchdowns in two games; West Virginia starts Michael Hawkins Jr. (ESPN box scores). Charlotte tonight: partly cloudy, low near 70, wind becoming calm (National Weather Service, issued 5:49 AM). The total has moved from 50.5 to 53.5, against v2. No reason beyond the model; not a pick. v2 total 45.5 (80% range 24.8 to 66.2). Chance of under 53.5: 56.8% (v2's raw 69.0% shrunk by its 2024-25 record against the close), against 52.4% break-even at -110: +4.4 points, +0.085u per unit.",
+   "needs": "A late availability note from either team before the 5:30 PM run; otherwise it stays a pass.",
+   "sources": [
+    "https://www.espn.com/college-football/game/_/gameId/401856802/west-virginia-virginia",
+    "https://www.espn.com/college-football/boxscore/_/gameId/401858202",
+    "https://www.espn.com/college-football/boxscore/_/gameId/401858220",
+    "https://www.espn.com/college-football/boxscore/_/gameId/401856780",
+    "https://www.espn.com/college-football/boxscore/_/gameId/401856791",
+    "https://forecast.weather.gov/MapClick.php?lat=35.2237867&lon=-80.8411413",
+    "https://sportsbook.draftkings.com/event/34634060"
+   ],
+   "projection": 45.5,
+   "modelVersion": "v2.0",
+   "snapshotAt": "2026-09-19T12:11:24Z",
+   "nextReviewAt": "2026-09-19T21:30:00Z"
+  }
+ ]
+}
