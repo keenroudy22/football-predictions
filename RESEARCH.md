@@ -36,7 +36,7 @@ When a pick closes, publish a revision with `status: "expired"` and an `entryNot
 
 ## Timing
 
-- Runs are at 8:30, 11:30, 17:30 and 23:30 Eastern. GitHub's hosted refresh runs late, so v2 snapshots and prop captures are whatever the last hosted run published; pull before working.
+- Runs are at 6:45, 8:30, 11:45, 17:30 and 23:30 Eastern; `PROMPT.md` says what each is for. GitHub's hosted refresh runs late, so v2 snapshots and prop captures are whatever the last hosted run published; pull before working.
 - Publish only before kickoff, checked against the clock when you publish. A game that will start before you finish is skipped.
 - `quotedAt` is when you saw the price; it must not be after `publishedAt`. `expiresAt` is the next scheduled run or kickoff, whichever comes first, and it is never extended.
 - A source that failed is reported as unavailable, never as "no value found".
