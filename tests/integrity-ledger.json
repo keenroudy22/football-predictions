@@ -533,6 +533,14 @@
   }
  },
  "picks": {
+  "CFB:gamePicks:CFB-2026-W3-duke-minus-10-vs-stan-dk": {
+   "digest": "29113d2eb67813bf",
+   "firstReport": "2026-09-19-CFB-0845-week-3-card.json"
+  },
+  "CFB:gamePicks:CFB-2026-W3-tamu-minus-16-5-vs-uk-dk": {
+   "digest": "91e287256aa3303f",
+   "firstReport": "2026-09-19-CFB-0845-week-3-card.json"
+  },
   "NFL:parlays:NFL-2026-W2-det-buf-volume-fun-sgp-dk": {
    "digest": "0c82b9b479abb279",
    "firstReport": "2026-09-17-NFL-1730-review.json"

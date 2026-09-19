@@ -5825,5 +5825,174 @@
       }
     ],
     "nextReviewAt": "2026-09-18T12:30:00Z"
+  },
+  {
+    "league": "CFB",
+    "publishedAt": "2026-09-19T12:23:55Z",
+    "targetWeek": 3,
+    "summary": "Saturday card, researched 8:15 to 8:45 AM ET with the first published v2 forecasts (12:11Z). Two picks: Texas A&M -16.5 and Duke -10, both on availability reports plus the model. Maryland +3 was dropped after reports that its top two running backs are in doubt. Five other model leans stay on watch because no sourced reason beyond v2 supports them; every Week 3 game is a thin sample and v2 has not beaten the closing line.",
+    "gamePicks": [
+      {
+        "id": "CFB-2026-W3-tamu-minus-16-5-vs-uk-dk",
+        "title": "Texas A&M -16.5 vs Kentucky",
+        "status": "active",
+        "favorite": true,
+        "marketType": "spread",
+        "line": -16.5,
+        "direction": "home",
+        "gameIds": [
+          "CFB-401856694"
+        ],
+        "book": "DraftKings",
+        "odds": -118,
+        "quotedAt": "2026-09-19T12:11:17Z",
+        "quoteType": "feed",
+        "quoteNote": "DraftKings' line and price as relayed by ESPN's odds feed at that time; not re-read at the DraftKings app. Check the price before following.",
+        "expiresAt": "2026-09-19T15:30:00Z",
+        "projection": 28.6,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "edge": "v2 home margin 28.6 (80% range 7.7 to 49.5). Chance of home -16.5: 77.1%, against 54.1% break-even at -118: +22.9 points, +0.424u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "cutoff": "HOME -16.5 at -118 or better. Closed to new entries on no key number, or at -133 or worse at -16.5.",
+        "confidence": 6,
+        "why": "Kentucky's Friday SEC availability report lists five players out: TE Lincoln Watkins, OL Jay Clark, DB Andre Clarke Jr., DB Grant Grayton and DL Jamarrion Harkless. That is a thinner line and secondary for an offense that managed 209 yards and three turnovers against Alabama last week (17-45). Texas A&M is 2-0: 50-0 over Missouri State and 48-20 over Arizona State with four takeaways. v2 has the home margin at 28.6 against a 16.5 line, the largest FBS-vs-FBS gap on the slate that is not a huge underdog.",
+        "risk": "16.5 is a lot of points. A&M's offense had only 255 yards against Arizona State and won on turnovers; RB Jamarion Morrow and WR Ashton Bethel-Roman are doubtful for A&M. v2's number leans on two games, one of them a 50-0 over a weak opponent, so treat its 77% as a direction, not a probability. A late Kentucky score can steal the cover.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634030",
+          "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/events/401856694/competitions/401856694/odds",
+          "https://www.kbtx.com/2026/09/19/two-texas-am-players-downgraded-doubtful-friday-availability-report/",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856674",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856683",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856668",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856659"
+        ],
+        "jurisdictionVerified": true,
+        "availabilityNote": "Indiana permits wagers on college sides and totals and DraftKings operates there; this is a full-game side on the DraftKings board."
+      },
+      {
+        "id": "CFB-2026-W3-duke-minus-10-vs-stan-dk",
+        "title": "Duke -10 vs Stanford",
+        "status": "active",
+        "favorite": true,
+        "marketType": "spread",
+        "line": -10.0,
+        "direction": "home",
+        "gameIds": [
+          "CFB-401858231"
+        ],
+        "book": "DraftKings",
+        "odds": -105,
+        "quotedAt": "2026-09-19T12:11:17Z",
+        "quoteType": "feed",
+        "quoteNote": "DraftKings' line and price as relayed by ESPN's odds feed at that time; not re-read at the DraftKings app. Check the price before following.",
+        "expiresAt": "2026-09-19T15:30:00Z",
+        "projection": 19.1,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "edge": "v2 home margin 19.1 (80% range -1.8 to 40). Chance of home -10: 70.1%, push 2.1%, against 51.2% break-even at -105: +18.9 points, +0.389u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "cutoff": "HOME -10 at -105 or better. Closed to new entries on no key number, or at -120 or worse at -10.",
+        "confidence": 6,
+        "why": "Stanford's ACC injury report lists twelve players out, including four cornerbacks (Jason Hill Jr., Chris Garland, Breylan Thompson, Jack Duckworth), safety Zaiden McDonald, two defensive linemen and three offensive linemen. Stanford scored 6 on 299 yards against Miami. Duke is 2-0, held Tulane to 3 and won at Illinois 31-27 as a 6-point underdog. v2 has the home margin at 19.1 against a 10-point line.",
+        "risk": "Duke has three offensive linemen out (Jacobowitz, McCranie, Fina) and a fourth questionable, and scored only 17 against Tulane; if Stanford controls the line of scrimmage this stays close. Stanford gets WR Nico Brown and OL Simione Pale back. Both teams have two games of history, so v2's margin is a thin read.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634033",
+          "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/events/401858231/competitions/401858231/odds",
+          "https://sports.yahoo.com/articles/stanford-duke-initial-injury-report-031226951.html",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858206",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858217",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858209",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858201"
+        ],
+        "jurisdictionVerified": true,
+        "availabilityNote": "Indiana permits wagers on college sides and totals and DraftKings operates there; this is a full-game side on the DraftKings board."
+      }
+    ],
+    "gameWatch": [
+      {
+        "id": "CFB-2026-W3-unt-plus-3-at-txst-watch",
+        "gameId": "CFB-401860889",
+        "title": "North Texas +3 at Texas State",
+        "why": "Texas State is 0-2 with three turnovers in each game and lost at home to UTSA as a favorite; North Texas beat UNLV 44-6 with a +4 turnover margin. WRs Zechariah Sample and Beau Sparks are listed questionable for Texas State, but that listing dates from before Week 2. v2 home margin -10.9 (80% range -31.8 to 10). Chance of away +3: 79.4%, push 1.7%, against 53.5% break-even at -115: +25.9 points, +0.501u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "needs": "A DraftKings price for the away side (the feed prices only Texas State -3 at -105) and a current Texas State injury report. Kickoff noon ET; not a pick at 5/10 research confidence.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34633932",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401860884",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401862705",
+          "https://www.covers.com/sport/football/ncaaf/teams/main/texas-state-bobcats/injuries"
+        ],
+        "projection": -10.9,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:30:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-kent-osu-under-59-5-watch",
+        "gameId": "CFB-401858454",
+        "title": "Kent State at Ohio State under 59.5",
+        "why": "weather.gov gives Columbus a 29-38% chance of showers and thunderstorms from 4 to 7 PM local. Ohio State's 56-3 over Ball State landed on 59; Kent State was shut out at South Carolina. v2 total 51.3 (80% range 30.5 to 72). Chance of under 59.5: 69.5%, against 54.1% break-even at -118: +15.3 points, +0.283u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "needs": "A reason beyond the model and the forecast: Ohio State's substitution pattern with a 50-point lead. Not a pick at 5/10.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34633885",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858432",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856665",
+          "https://api.weather.gov/points/40.002,-83.020"
+        ],
+        "projection": 51.3,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:30:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-wvu-uva-under-53-5-watch",
+        "gameId": "CFB-401856802",
+        "title": "West Virginia vs Virginia under 53.5",
+        "why": "Model only: both offenses put up 50+ against weak opponents last week, and the weather in Charlottesville is calm. v2 total 45.5 (80% range 24.8 to 66.2). Chance of under 53.5: 69.0%, against 52.4% break-even at -110: +16.6 points, +0.317u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "needs": "A sourced reason the market is high. Not a pick.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634060",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856791",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858220"
+        ],
+        "projection": 45.5,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:30:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-mtsu-plus-3-5-vs-nev-watch",
+        "gameId": "CFB-401864443",
+        "title": "Middle Tennessee +3.5 vs Nevada",
+        "why": "Model only. Nevada turned it over four times in a 7-20 loss to Montana State; MTSU lost 26-28 at Marshall. v2 home margin 4.2 (80% range -16.7 to 25.1). Chance of home +3.5: 68.2%, against 51.9% break-even at -108: +16.3 points, +0.313u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "needs": "Injury and quarterback status for both teams. Not a pick.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634056",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401864500",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401871045"
+        ],
+        "projection": 4.2,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:30:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-most-plus-4-vs-mrsh-watch",
+        "gameId": "CFB-401871047",
+        "title": "Missouri State +4 vs Marshall",
+        "why": "Model only. Both teams were blown out by SEC and Big Ten opponents in Week 1 and beat weak teams in Week 2. v2 home margin 4.5 (80% range -16.4 to 25.4). Chance of home +4: 68.8%, push 2.1%, against 52.4% break-even at -110: +16.4 points, +0.335u per unit. Normal approximation from the stored v2 range; not calibrated at this line.",
+        "needs": "Anything beyond two games of history. Not a pick.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634043",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401871046",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401871045"
+        ],
+        "projection": 4.5,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:30:00Z"
+      }
+    ],
+    "takeaways": [
+      "v2 grades 43 of 71 college games as FBS vs FCS or thin; the biggest raw gaps are all large underdogs, which is its known early-season compression, not an edge."
+    ]
   }
 ]
