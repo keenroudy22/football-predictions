@@ -33,6 +33,7 @@ import model_v2
 VERSION = 'v2.0'
 WINDOW = 8               # team games that define current roles
 TEAM_HALF_LIFE = 4.0     # games
+PRIOR_SEASON_WEIGHT = 1.0  # extra discount on last season's games in a team's recent window (1.0 = none)
 PLAYER_HALF_LIFE = 3.0   # games
 PSEUDO_GAMES = 0.5       # zero-share pseudo-games added to every role
 EFFICIENCY_GAMES = 24    # player games used for efficiency
@@ -183,12 +184,15 @@ def project_team(history, league, team, rival, cutoff, season, margin, slope, le
     if not games:
         return None
     this_season = any(g['season'] == season for g in games)
-    team_weights = weights(len(games), TEAM_HALF_LIFE)
+    team_weights = [w * (1.0 if g['season'] == season else PRIOR_SEASON_WEIGHT)
+                    for g, w in zip(games, weights(len(games), TEAM_HALF_LIFE))]
     lines = [team_line(g, team, league) for g in games]
     allowed_games = history.team_games(rival, cutoff, WINDOW)
     allowed = [team_line(g, opponent(g, rival), league) for g in allowed_games]
     own_plays = average((l['plays'], w) for l, w in zip(lines, team_weights))
-    allowed_plays = average((l['plays'], w) for l, w in zip(allowed, weights(len(allowed), TEAM_HALF_LIFE)))
+    allowed_weights = [w * (1.0 if g['season'] == season else PRIOR_SEASON_WEIGHT)
+                       for g, w in zip(allowed_games, weights(len(allowed), TEAM_HALF_LIFE))]
+    allowed_plays = average((l['plays'], w) for l, w in zip(allowed, allowed_weights))
     plays = own_plays if allowed_plays is None else 0.5 * (own_plays + allowed_plays) if own_plays else allowed_plays
     base_rate = average((l['dropbacks'] / l['plays'] if l['plays'] else None, w) for l, w in zip(lines, team_weights))
     if not plays or base_rate is None:
