@@ -143,10 +143,9 @@
       <div class="row-meta" style="margin-top:7px;font-size:13px">${graded ? r.hitRate.toFixed(1) + '% hit rate' : 'nothing settled'} · ${r.pending} pending</div></div>
       <div class="stats" style="margin-top:12px">
         ${stat('Net units', r.units == null ? DASH : signed(r.units, 2) + 'u', r.priced ? `${plural(r.priced, 'priced pick')}, ${r.pricedWins}–${r.pricedLosses}` : 'no recorded prices yet', r.units > 0 ? 'up' : r.units < 0 ? 'down' : '')}
-        ${stat('ROI', r.roi == null ? DASH : signed(r.roi, 1) + '%', r.roi != null ? 'priced picks only' : r.priced ? `hidden until ${r.roiMinimum} priced` : 'waiting for original prices')}
+        ${stat('ROI', r.roi == null ? DASH : signed(r.roi, 1) + '%', r.roi != null ? 'priced picks only' : r.priced ? `shows at ${r.roiMinimum} priced · ${r.priced} so far` : 'needs recorded prices')}
       </div>
-      ${r.roi == null && r.priced ? `<div class="meter" style="margin-top:12px"><div class="meter-track"><div class="meter-fill" style="width:${Math.min(100, 100 * r.priced / r.roiMinimum)}%"></div></div><div class="meter-text">${r.priced} / ${r.roiMinimum}</div></div>` : ''}
-      <p class="row-meta" style="margin:12px 0 0">Units and ROI use recorded original prices only, never an assumed −110.${r.unpriced ? ` ${plural(r.unpriced, 'settled pick')} had no recorded price: ${r.unpriced === 1 ? 'it counts' : 'they count'} in the win-loss record and ${r.unpriced === 1 ? 'is' : 'are'} left out of returns.` : ''}${r.priced && r.roi == null ? ` A return over ${plural(r.priced, 'priced pick')} is noise, not a track record.` : ''}</p>
+      ${r.unpriced ? `<p class="row-meta" style="margin:12px 0 0">${plural(r.unpriced, 'pick')} ${r.unpriced === 1 ? 'has' : 'have'} no recorded price, so ${r.unpriced === 1 ? 'it counts' : 'they count'} in the record but not in units or ROI.</p>` : ''}
     </div>`;
   };
 

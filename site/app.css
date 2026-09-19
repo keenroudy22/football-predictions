@@ -209,11 +209,6 @@ main { padding: 0 var(--gutter) 28px; max-width: 1240px; margin: 0 auto; }
 }
 .notice strong { color: var(--amber); }
 
-.meter { display: flex; align-items: center; gap: 9px; margin-top: 10px; }
-.meter-track { flex-grow: 1; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
-.meter-fill { height: 6px; border-radius: 3px; background: var(--amber); }
-.meter-text { font-size: 11px; font-weight: 700; color: var(--dim); }
-
 /* ---------- filters ---------- */
 
 .filters { display: flex; gap: 7px; overflow-x: auto; padding: 2px 0 10px; scrollbar-width: none; }
