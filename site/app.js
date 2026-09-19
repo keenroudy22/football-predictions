@@ -45,12 +45,13 @@
     today: '<path d="M3 12l9-8 9 8"/><path d="M5 10v10h14V10"/>',
     games: '<ellipse cx="12" cy="12" rx="9" ry="6"/><path d="M8 12h8"/>',
     stats: '<path d="M4 19V10"/><path d="M10 19V5"/><path d="M16 19v-6"/><path d="M22 19H2"/>',
+    board: '<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/>',
     model: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
     record: '<path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/>',
     more: '<circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/>',
   };
-  const TABS = [['today', 'Today'], ['games', 'Games'], ['stats', 'Stats'], ['model', 'Model'], ['record', 'Record'], ['more', 'More']];
-  const TAB_FOR = { game: 'games', player: 'stats', team: 'stats', board: 'more', ticket: 'more', research: 'more', scores: 'more' };
+  const TABS = [['today', 'Today'], ['board', 'Board'], ['games', 'Games'], ['stats', 'Stats'], ['record', 'Record'], ['more', 'More']];
+  const TAB_FOR = { game: 'games', player: 'stats', team: 'stats', model: 'more', ticket: 'board', research: 'more', scores: 'more' };
 
   const empty = (title, text, action = '') => `<div class="empty"><h3>${esc(title)}</h3><p>${esc(text)}</p>${action}</div>`;
   const head = (title, text, back = '') => `<div class="page-head">${back}<h1${back ? ' style="margin-top:8px"' : ''}>${esc(title)}</h1>${text ? `<p>${text}</p>` : ''}</div>`;
@@ -685,7 +686,7 @@
     const count = state.ticket.length;
     const link = (href, label, note) => `<a href="${href}"><span>${label}</span><small>${note}</small></a>`;
     return `${head('More', '')}
-      <div class="card menu">${link('#board', 'The board', 'Lines we observe, with sources')}${link('#ticket', 'Your ticket', count ? `${count} line${count === 1 ? '' : 's'}` : 'Parlay builder')}
+      <div class="card menu">${link('#model', 'Model scoreboard', 'v2 graded against the closing line')}${link('#ticket', 'Your ticket', count ? `${count} line${count === 1 ? '' : 's'}` : 'Parlay builder')}
       ${link('#research', 'Research desk', 'Injuries and analyst notes')}${link('#stats/defense', 'Defense vs position', 'Rankings')}${link('#scores/NBA', 'NBA scores', 'Schedules and scores')}${link('#scores/MLB', 'MLB scores', 'Schedules and scores')}</div>
       <div class="section card" style="padding:14px"><p class="prose" style="margin:0"><b>About.</b> KeenRoudy Sports is a stats engine graded against the betting market. The model publishes score and player projections before kickoff, every forecast is kept, and the scoreboard grades them against the closing line. Stats come from ESPN’s public feeds and nflverse. For entertainment only; nothing here is betting advice.</p></div>`;
   }

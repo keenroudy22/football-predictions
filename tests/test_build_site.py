@@ -71,6 +71,7 @@ class GameLineTests(unittest.TestCase):
         self.assertEqual((rows['game-NFL-1-away']['title'], rows['game-NFL-1-away']['book'], rows['game-NFL-1-away']['odds']), ('CAR +3.5', 'DraftKings', -108))
         self.assertEqual((rows['game-NFL-1-over']['book'], rows['game-NFL-1-over']['odds']), ('FanDuel', -105))
         self.assertEqual(len(rows['game-NFL-1-home']['books']), 2)
+        self.assertEqual([rows[k]['side'] for k in ('game-NFL-1-home', 'game-NFL-1-away', 'game-NFL-1-over')], ['home', 'away', None])
         stale = dict(record, retrievedAt='2026-09-18T11:00:00Z')
         old = {r['id'] for r in build_site.game_market_lines({'games': [game]}, self.now, {'NFL-1': stale})}
         self.assertEqual(old, {'game-NFL-1-spread', 'game-NFL-1-over', 'game-NFL-1-under'}, 'a day-old capture falls back to the feed')
@@ -99,6 +100,13 @@ class GradeTests(unittest.TestCase):
         self.assertGreater(spread['chance'], 0.5, 'v2 has the home side by 5 against -2.5')
         self.assertLess(grade['chance'], grade['raw'], 'the shown chance is the calibrated one')
         self.assertTrue(grade['calibrated'])
+
+    def test_an_away_spread_row_is_graded_as_the_away_side(self):
+        home = build_site.grade_line(self.line(market='point spread', line=-2.5, direction=None), self.snapshot, False)
+        away = build_site.grade_line(self.line(market='point spread', line=2.5, direction=None, side='away'), self.snapshot, False)
+        self.assertLess(away['raw'], 0.5, 'v2 has the home side by 5, so the visitor at +2.5 is the wrong side')
+        self.assertAlmostEqual(home['raw'] + away['raw'], 1.0, places=2)
+        self.assertEqual(away['tier'], 'pass')
 
     def test_a_thin_sample_never_reads_strong_and_closed_or_unpriced_lines_get_no_grade(self):
         self.assertEqual(build_site.grade_line(self.line(), self.snapshot, thin=True)['tier'], 'lean')

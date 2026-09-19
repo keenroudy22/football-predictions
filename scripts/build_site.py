@@ -616,7 +616,8 @@ def grade_line(line, snapshot, thin):
             or not isinstance(line.get('line'), (int, float)):
         return None
     if line.get('gameMarket'):
-        market, side, athlete = ('spread', 'home', None) if line['market'] == 'point spread' \
+        # A spread row is the home side unless it names the away side; its line is that side's own number.
+        market, side, athlete = ('spread', line.get('side') or 'home', None) if line['market'] == 'point spread' \
             else ('total', line.get('direction'), None)
     else:
         market, side, athlete = pricing.market_of(line), str(line.get('direction') or '').lower(), line.get('athleteId')
@@ -711,7 +712,8 @@ def book_rows(game, record):
                  else f"{away} @ {home} {side} {line:g}")
         rows.append({'id': f"game-{game['id']}-{side}", 'league': game['league'], 'gameId': game['id'],
                      'market': name, 'line': line, 'odds': price if price != -1000 else None,
-                     'direction': side if kind == 'total' else None, 'book': BOOK_NAMES.get(key, key),
+                     'direction': side if kind == 'total' else None, 'side': side if kind == 'spread' else None,
+                     'book': BOOK_NAMES.get(key, key),
                      'books': sorted(quotes, key=lambda q: q['book']), 'state': 'open', 'kickoff': game['kickoff'],
                      'observedAt': record['retrievedAt'], 'title': title, 'gameMarket': True,
                      'marketWindow': 'Full game', 'move': None})
