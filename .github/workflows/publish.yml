@@ -85,8 +85,6 @@ jobs:
         run: python scripts/scoreboard.py
       - name: Compile sourced line catalog
         run: python scripts/market_lines.py
-      - name: Build research review evidence
-        run: node scripts/review.cjs
       - name: Build the page payloads (site/data/app, not committed)
         run: python scripts/build_site.py
       - name: Preserve the public record
