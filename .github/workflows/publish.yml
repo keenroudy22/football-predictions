@@ -81,6 +81,10 @@ jobs:
         run: python scripts/forecast.py
       - name: Capture DraftKings NFL prop lines from ESPN
         run: python scripts/prop_lines.py
+      - name: Capture spreads and totals across books (The Odds API, budgeted)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/odds_api.py
       - name: Grade forecasts and picks against the close
         run: python scripts/scoreboard.py
       - name: Compile sourced line catalog
@@ -92,7 +96,7 @@ jobs:
           python scripts/integrity.py
           git config user.name 'football-forecast[bot]'
           git config user.email 'football-forecast[bot]@users.noreply.github.com'
-          git add site/data tests/integrity-ledger.json data/boxscores data/nflverse data/forecasts data/props data/model
+          git add site/data tests/integrity-ledger.json data/boxscores data/nflverse data/forecasts data/props data/odds data/model
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh schedules, finals and pregame forecasts'
             git push

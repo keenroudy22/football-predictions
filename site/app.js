@@ -335,8 +335,9 @@
         ${row.move && typeof row.line === 'number' ? `<span class="move">opened ${esc(lineText(row.line - row.move))}</span>` : ''}</span>
         ${row.player ? `<span class="row-market">${esc([row.direction, row.line, row.market].filter(v => v != null && v !== '').join(' '))}</span>` : ''}
         ${open ? `<span class="grade grade-${g.tier}"><b>${esc(g.word)}</b>${g.detail ? `<span>${esc(g.detail)}</span>` : ''}</span>` : ''}
+        ${(row.books || []).length > 1 ? `<span class="row-meta">${row.books.map(q => `${esc(q.book)} ${esc(C.spreadText('', q.line).trim())} ${odds(q.odds)}`).join(' · ')}</span>` : ''}
         <span class="row-meta">${esc(whenShort(row.kickoff))}${row.observedAt ? ' · seen ' + esc(ago(row.observedAt)) : ''}</span></span>
-      <span class="row-price"><span class="row-odds num">${odds(row.odds)}</span><span class="row-book">${esc(row.book || 'No book')}</span></span>
+      <span class="row-price"><span class="row-odds num">${odds(row.odds)}</span><span class="row-book">${esc(row.book || 'No book')}${(row.books || []).length > 1 ? ` · best of ${row.books.length}` : ''}</span></span>
       ${row.state === 'open' && row.odds != null ? `<button class="add" type="button" data-add="${esc(row.id)}" aria-pressed="${inTicket}" aria-label="${inTicket ? 'Remove from ticket' : 'Add to ticket'}">${inTicket ? '✓' : '+'}</button>` : ''}
     </div>`;
   };

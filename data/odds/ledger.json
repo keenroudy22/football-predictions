@@ -1,0 +1,10 @@
+{
+ "cfb-2026.jsonl": {
+  "lines": 77,
+  "sha256": "4d2f0bb8ae8ba74f59abcbbabe48408dfae37ed110bfec8b392e80fc3c94adc2"
+ },
+ "nfl-2026.jsonl": {
+  "lines": 29,
+  "sha256": "4312846da1026dae72cdee9a95fe1f5b967e50720f63ef1b2340520bad17628b"
+ }
+}

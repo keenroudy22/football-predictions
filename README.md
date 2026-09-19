@@ -70,6 +70,8 @@ python scripts/boxscores.py --backfill NFL 2025
 python scripts/features.py                     coverage and agreement with official box scores
 ```
 
+`data/odds/<league>-<season>.jsonl` holds each book's spread and total (DraftKings, FanDuel, BetMGM, Caesars, BetRivers, ESPN BET, Fanatics) for upcoming games, from The Odds API, appended only when a game's numbers change. The board prices every side at its best book. The free tier is 500 credits a month and a call costs 2, so `scripts/odds_api.py` captures a league only with a game inside two days, at least 3.5 hours apart, at most three times a day (four on its big day) and never below a 24-credit reserve; `data/odds/status.json` carries the pacing. The key is the `ODDS_API_KEY` repository secret (or environment variable locally) and never enters the store or a log.
+
 `data/nflverse/nfl-<season>.jsonl` adds NFL snap counts (skill players) and game context (roof, surface, temperature, wind, rest, starting quarterbacks) from nflverse's free CSVs, sourced from Pro Football Reference and joined to ESPN IDs; `python scripts/nflverse.py`.
 
 `scripts/features.py` derives player logs, team logs, defense-versus-position logs, last 5/10/20 and home/away/opponent splits from the store without network access. Every function that feeds a forecast takes a cutoff and uses only earlier games.

@@ -31,6 +31,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import boxscores
 import features
 import model_v2
+import odds_api
 import pricing
 from sports_refresh import eastern_date
 
@@ -488,7 +489,8 @@ def build(now=None):
     by_id = {g['id']: g for g in slate.get('games', [])}
     first, latest = first_publications(reports)
     picks = [p for p in board_picks(first, latest, by_id, identities)]
-    lines = catalog_lines(catalog, by_id, identities, now) + game_market_lines(slate, now)
+    books = {gid: rows[-1] for gid, rows in load_store('odds').items()}
+    lines = catalog_lines(catalog, by_id, identities, now) + game_market_lines(slate, now, books)
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -679,16 +681,59 @@ def prop_rows(captures, by_id, forecasts, names, appearances, identities, now):
     return rows
 
 
-def game_market_lines(slate, now):
+BOOK_NAMES = {'draftkings': 'DraftKings', 'fanduel': 'FanDuel', 'betmgm': 'BetMGM', 'caesars': 'Caesars',
+              'betrivers': 'BetRivers', 'espnbet': 'ESPN BET', 'fanatics': 'Fanatics'}
+ODDS_FRESH = timedelta(hours=12)   # an older multi-book capture is history, not a board row
+
+
+def book_rows(game, record):
+    """Four board rows from a multi-book capture: each side at its best number and price, all books listed."""
+    home, away = game['home']['abbreviation'], game['away']['abbreviation']
+    rows = []
+    for side, kind, name in (('home', 'spread', 'point spread'), ('away', 'spread', 'point spread'),
+                             ('over', 'total', 'total points'), ('under', 'total', 'total points')):
+        top = odds_api.best(record, side)
+        if not top:
+            continue
+        key, line, price = top
+        quotes = []
+        for book, entry in record['books'].items():
+            block = entry.get(kind)
+            if not block:
+                continue
+            if kind == 'spread':
+                quotes.append({'book': BOOK_NAMES.get(book, book), 'line': block['home'] if side == 'home' else -block['home'],
+                               'odds': block['homePrice'] if side == 'home' else block['awayPrice']})
+            else:
+                quotes.append({'book': BOOK_NAMES.get(book, book), 'line': block['line'],
+                               'odds': block['over'] if side == 'over' else block['under']})
+        title = (f"{home if side == 'home' else away} {line:+g}" if kind == 'spread'
+                 else f"{away} @ {home} {side} {line:g}")
+        rows.append({'id': f"game-{game['id']}-{side}", 'league': game['league'], 'gameId': game['id'],
+                     'market': name, 'line': line, 'odds': price if price != -1000 else None,
+                     'direction': side if kind == 'total' else None, 'book': BOOK_NAMES.get(key, key),
+                     'books': sorted(quotes, key=lambda q: q['book']), 'state': 'open', 'kickoff': game['kickoff'],
+                     'observedAt': record['retrievedAt'], 'title': title, 'gameMarket': True,
+                     'marketWindow': 'Full game', 'move': None})
+    return rows
+
+
+def game_market_lines(slate, now, captures=None):
     """Current spread and total for each upcoming game, as board rows.
 
-    The feed prices the home side of the spread and both sides of the total, so
-    those are the rows. The away spread has no quoted price and is left out.
+    With a fresh multi-book capture, each side gets its best number and price and the
+    book is named. Otherwise ESPN's DraftKings feed prices the home side of the spread
+    and both sides of the total, so those are the rows; the away spread has no quoted
+    price and is left out.
     """
     out = []
     for game in slate.get('games', []):
         m = market(game)
         if not m or game.get('state') != 'pre' or features.when(game['kickoff']) <= now:
+            continue
+        record = (captures or {}).get(game['id'])
+        if record and now - features.when(record['retrievedAt']) <= ODDS_FRESH:
+            out += book_rows(game, record)
             continue
         home, away = game['home']['abbreviation'], game['away']['abbreviation']
         rows = []
