@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import pricing
 
-SNAPSHOT = {'gameId': 'NFL-1', 'model': 'v2.0', 'publishedAt': '2026-09-20T10:00:00Z', 'kickoff': '2026-09-20T17:00:00Z',
+SNAPSHOT = {'gameId': 'CFB-1', 'league': 'CFB', 'model': 'v2.0', 'publishedAt': '2026-09-20T10:00:00Z', 'kickoff': '2026-09-20T17:00:00Z',
             'margin': 3.0, 'total': 44.0, 'sd': {'margin': 13.0, 'total': 12.0},
             'range80': {'margin': [-13.7, 19.7], 'total': [28.6, 59.4]},
             'players': {'home': {'players': [{'id': '10', 'pos': 'WR', 'recYds': [60.0, 30.5, 89.5],
@@ -40,7 +40,8 @@ class PriceTests(unittest.TestCase):
         self.assertAlmostEqual(p['sd'], 29.5 / pricing.Z80, places=2)
         self.assertAlmostEqual(p['chance'], 0.5, delta=0.1)
         self.assertEqual(p['breakEven'], round(115 / 215, 3))
-        self.assertIn('not calibrated at this line', p['edge'])
+        self.assertIn('uncalibrated', p['edge'])
+        self.assertFalse(p['calibrated'])
         self.assertEqual(p['cutoff'], 'OVER 55.5 at -115 or better. Closed to new entries at 56+, or at -130 or worse at 55.5.')
         self.assertEqual(pricing.price(SNAPSHOT, 'receptions', 'under', 4.5, 120, athlete='10')['market'], 'rec')
 
@@ -57,6 +58,18 @@ class PriceTests(unittest.TestCase):
                      ('recYds', 'over', 55.5, -110, '99'), ('kPts', 'over', 7.5, -110, '10')):
             with self.assertRaises(ValueError):
                 pricing.price(SNAPSHOT, *args[:4], athlete=args[4])
+
+
+class CalibrationTests(unittest.TestCase):
+    def test_game_lines_are_shrunk_toward_fifty_by_league_and_market(self):
+        cfb = pricing.price(SNAPSHOT, 'total', 'under', 52.5, -110)      # raw phi(8.5/12) = 76.1%
+        self.assertAlmostEqual(cfb['rawChance'], 0.761, places=3)
+        self.assertAlmostEqual(cfb['chance'], 0.5 + 0.36 * (0.761 - 0.5), places=3)
+        self.assertTrue(cfb['calibrated'])
+        self.assertIn('shrunk by its 2024-25 record', cfb['edge'])
+        nfl = pricing.price(dict(SNAPSHOT, gameId='NFL-1', league='NFL'), 'spread', 'home', -2.5, -110)
+        self.assertEqual(nfl['chance'], 0.5, 'NFL sides carried no information against the close')
+        self.assertLess(nfl['edgePoints'], 0)
 
 
 class TierTests(unittest.TestCase):

@@ -10,7 +10,7 @@ import math
 import model_v2
 
 Z80 = model_v2.Z80
-CAVEAT = 'Normal approximation from the stored v2 range; not calibrated at this line.'
+CAVEAT = "Chances are v2's normal curve shrunk toward 50% by its 2024-25 record against the close; player props are raw."
 # Prop markets as the DraftKings capture names them, and the v2 stat that projects each.
 PROJECTED = {'rec': 'receptions', 'car': 'carries', 'recYds': 'recYds', 'rushYds': 'rushYds', 'att': 'att',
              'cmp': 'cmp', 'passYds': 'passYds'}
@@ -23,8 +23,12 @@ TITLE_MARKETS = (('receiving yards', 'recYds'), ('rushing yards', 'rushYds'), ('
 KEYS = (-7, -3, 3, 7)
 RULES = {'prop': 0.5, 'total': 1.5, 'cents': 15}
 
-# Board colors: how many points v2's chance clears what the price needs.
+# Board colors: how many points v2's calibrated chance clears what the price needs.
 STRONG, LEAN = 5.0, 2.0
+# calibrated = 50% + k * (raw - 50%). Fit by scripts/calibrate.py on the 2024-25 walk-forward against the close,
+# where the side v2 favoured won 49.5% (NFL spreads), 52.9% (NFL totals), 50.5% (FBS spreads) and 53.4% (FBS
+# totals) whatever the raw number said. No entry means no graded history yet: the raw chance is shown as such.
+CALIBRATION = {('NFL', 'spread'): 0.0, ('NFL', 'total'): 0.42, ('CFB', 'spread'): 0.15, ('CFB', 'total'): 0.36}
 
 
 # ------------------------------------------------------------------ arithmetic
@@ -89,8 +93,12 @@ def player_line(snapshot, athlete):
 
 
 def price(snapshot, market, side, line, odds, athlete=None):
-    """The numbers for one candidate, from one stored v2 snapshot."""
+    """The numbers for one candidate, from one stored v2 snapshot.
+
+    chance is calibrated (see CALIBRATION); rawChance is the normal curve's own number.
+    """
     market = {v: k for k, v in PROJECTED.items()}.get(market, market)
+    league = snapshot.get('league') or str(snapshot.get('gameId', '')).split('-')[0]
     game_market = market in ('spread', 'total')
     if game_market:
         if market == 'spread' and side not in ('home', 'away') or market == 'total' and side not in ('over', 'under'):
@@ -121,18 +129,26 @@ def price(snapshot, market, side, line, odds, athlete=None):
         over, push, under = chances(mean, sd, line)
         win, loss = (over, under) if side == 'over' else (under, over)
         what, low_high = WORDS[market], [low, high]
+    raw = win
+    k = CALIBRATION.get((league, market))
+    if k is not None:
+        win = 0.5 + k * (raw - 0.5)
+        loss = max(0.0, 1 - win - push)
     even = break_even(odds)
     edge = 100 * (win - even)
     ev = win * payout(odds) - loss
+    trust = (f"v2's raw {100 * raw:.1f}% shrunk by its 2024-25 record against the close" if k is not None
+             else 'uncalibrated: no graded history against a line yet')
     return {'gameId': snapshot['gameId'], 'market': market, 'side': side, 'line': line, 'odds': odds,
             'athleteId': str(athlete) if athlete else None, 'model': snapshot['model'],
             'snapshotAt': snapshot['publishedAt'], 'projection': round(mean, 1), 'range80': low_high,
-            'sd': round(sd, 2), 'chance': round(win, 3), 'push': round(push, 3), 'breakEven': round(even, 3),
+            'sd': round(sd, 2), 'chance': round(win, 3), 'rawChance': round(raw, 3), 'calibration': k,
+            'calibrated': k is not None, 'push': round(push, 3), 'breakEven': round(even, 3),
             'edgePoints': round(edge, 1), 'evPerUnit': round(ev, 3),
             'edge': (f"v2 {what} {mean:.1f} (80% range {fmt(low_high[0])} to {fmt(low_high[1])}). "
-                     f"Chance of {side} {signed(line) if market == 'spread' else fmt(line)}: {100 * win:.1f}%"
+                     f"Chance of {side} {signed(line) if market == 'spread' else fmt(line)}: {100 * win:.1f}% ({trust})"
                      f"{f', push {100 * push:.1f}%' if push >= 0.0005 else ''}, against {100 * even:.1f}% "
-                     f"break-even at {odds:+d}: {edge:+.1f} points, {ev:+.3f}u per unit. {CAVEAT}"),
+                     f"break-even at {odds:+d}: {edge:+.1f} points, {ev:+.3f}u per unit."),
             'cutoff': cutoff(market, side, line, odds)}
 
 

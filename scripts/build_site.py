@@ -233,8 +233,11 @@ def v2_summary(snapshot):
             'publishedAt': snapshot['publishedAt'], 'model': snapshot['model']}
 
 
-def lean(v2, mkt):
-    """How far v2 sits from the market, from the home side and on the total."""
+def lean(v2, mkt, league=None, sd=None):
+    """How far v2 sits from the market, from the home side and on the total, with the calibrated chance of each lean.
+
+    The chances use pricing.CALIBRATION, so a chip on a game card means the same thing as a grade on the board.
+    """
     if not v2 or not mkt:
         return None
     out = {}
@@ -242,9 +245,20 @@ def lean(v2, mkt):
         points = round(v2['margin'] - (-mkt['spread']), 1)
         out['spread'] = points
         out['side'] = 'home' if points > 0 else 'away' if points < 0 else None
+        if sd and out['side']:
+            home, push, away = pricing.chances(v2['margin'], sd['margin'], -mkt['spread'])
+            out['spreadChance'] = calibrated(league, 'spread', home if out['side'] == 'home' else away)
     if mkt.get('total') is not None:
         out['total'] = round(v2['total'] - mkt['total'], 1)
+        if sd and out['total']:
+            over, push, under = pricing.chances(v2['total'], sd['total'], mkt['total'])
+            out['totalChance'] = calibrated(league, 'total', over if out['total'] > 0 else under)
     return out
+
+
+def calibrated(league, market, raw):
+    k = pricing.CALIBRATION.get((league, market))
+    return round(0.5 + k * (raw - 0.5), 3) if k is not None else round(raw, 3)
 
 
 def game_card(game, forecasts_v1, snapshot, names, identities):
@@ -263,7 +277,7 @@ def game_card(game, forecasts_v1, snapshot, names, identities):
             'completed': bool(game.get('completed')), 'status': game.get('status'), 'neutral': bool(game.get('neutral')),
             'home': side('home'), 'away': side('away'), 'market': mkt,
             'v1': {'home': v1['home'], 'away': v1['away'], 'publishedAt': v1['publishedAt']} if v1 else None,
-            'v2': v2, 'lean': lean(v2, mkt)}
+            'v2': v2, 'lean': lean(v2, mkt, league, snapshot.get('sd') if snapshot else None)}
 
 
 def recent_form(team, league, logs, before, count=5):
@@ -517,6 +531,7 @@ def build(now=None):
         # v2 compresses FBS-FCS blowouts badly enough that any chance it gives there would mislead.
         line['grade'] = None if fcs else grade_line(line, snapshot, thin)
         line['gradeNote'] = 'FBS vs FCS: v2 is not reliable here' if fcs and line.get('state') == 'open' else None
+    lines += prop_rows(captures, by_id, forecasts, names, appearances, identities, now)
     for game in sorted(window, key=lambda g: (g['kickoff'], g['id'])):
         snaps_for = pregame(forecasts.get(game['id'], []), game['kickoff'])
         card = game_card(game, forecasts_v1, snaps_for[-1] if snaps_for else None, names, identities)
@@ -609,9 +624,59 @@ def grade_line(line, snapshot, thin):
         p = pricing.price(snapshot, market, side, float(line['line']), int(odds), athlete)
     except ValueError:  # no projection for this player or market
         return None
-    return {'chance': p['chance'], 'push': p['push'], 'needs': p['breakEven'], 'edge': p['edgePoints'],
+    return {'chance': p['chance'], 'raw': p['rawChance'], 'calibrated': p['calibrated'], 'push': p['push'],
+            'needs': p['breakEven'], 'edge': p['edgePoints'],
             'projection': p['projection'], 'thin': thin, 'tier': pricing.tier(p['edgePoints'], thin),
             'model': p['model'], 'snapshotAt': p['snapshotAt']}
+
+
+def prop_rows(captures, by_id, forecasts, names, appearances, identities, now):
+    """DraftKings' main player lines for upcoming NFL games as board rows, with v2's lean at each.
+
+    ESPN relays the lines without prices, so the rows carry no odds and cannot join a ticket. They
+    are graded on v2's raw chance alone: 60% or better on the lean side reads as a slight lean and
+    never stronger, because player projections have no graded history against a line yet. A player
+    with under three games this season stays grey: a role set by one or two games is the model's
+    most common error, and the biggest early-season gaps are those.
+    """
+    rows = []
+    for gid, caps in captures.items():
+        game = by_id.get(gid)
+        if not game or game.get('state') != 'pre' or features.when(game['kickoff']) <= now:
+            continue
+        capture = caps[-1]
+        snapshot = (pregame(forecasts.get(gid, []), game['kickoff']) or [None])[-1]
+        for athlete, markets in capture['lines'].items():
+            side, player = pricing.player_line(snapshot, athlete) if snapshot else (None, None)
+            for key, (main, opening) in markets.items():
+                if key not in pricing.PROJECTED:
+                    continue
+                grade, lean = None, 'over'
+                if player and pricing.PROJECTED[key] in player:
+                    mean, low, high = player[pricing.PROJECTED[key]]
+                    sd = (high - mean) / pricing.Z80
+                    if sd > 0:
+                        over, push, under = pricing.chances(mean, sd, main)
+                        lean = 'over' if over >= under else 'under'
+                        chance = max(over, under)
+                        thin = appearances[str(athlete)] < 3
+                        grade = {'chance': round(chance, 3), 'raw': round(chance, 3), 'calibrated': False,
+                                 'push': round(push, 3), 'needs': None, 'edge': round(100 * (chance - 0.5), 1),
+                                 'projection': round(mean, 1), 'thin': thin,
+                                 'tier': 'lean' if chance >= 0.6 and not thin else 'pass', 'model': snapshot['model'],
+                                 'snapshotAt': snapshot['publishedAt']}
+                name = names.get(athlete, f'Athlete {athlete}')
+                team = game[side]['abbreviation'] if side else None
+                rows.append({'id': f'prop-{gid}-{athlete}-{key}', 'league': game['league'], 'gameId': gid,
+                             'player': name, 'athleteId': str(athlete), 'position': player['pos'] if player else None,
+                             'market': pricing.WORDS[key], 'direction': lean, 'line': main, 'odds': None,
+                             'book': 'DraftKings', 'state': 'unpriced', 'kickoff': game['kickoff'],
+                             'observedAt': capture['retrievedAt'], 'source': capture['source'],
+                             'title': f'{name} {lean} {main:g} {pricing.WORDS[key]}', 'gameMarket': False,
+                             'color': color(game['league'], team, identities), 'grade': grade,
+                             'gradeNote': None if grade else 'no v2 projection for this player',
+                             'opened': opening})
+    return rows
 
 
 def game_market_lines(slate, now):

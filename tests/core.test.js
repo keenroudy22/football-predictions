@@ -28,7 +28,12 @@ test('text helpers escape markup and format numbers without claiming precision',
 
 test('leans name the team and the total direction the model prefers', () => {
   const game = { home: { abbr: 'ATL' }, away: { abbr: 'CAR' }, lean: { spread: 6.8, side: 'home', total: -2.3 } };
-  assert.deepEqual(C.leanText(game), { side: { team: 'ATL', points: 6.8 }, total: { direction: 'Under', points: 2.3 } });
+  assert.deepEqual(C.leanText(game), { side: { team: 'ATL', points: 6.8, chance: null }, total: { direction: 'Under', points: 2.3, chance: null } });
+  assert.equal(C.leanTone(0.58, false), 'lean-strong');
+  assert.equal(C.leanTone(0.58, true), 'lean-mild', 'a thin sample never shows green');
+  assert.equal(C.leanTone(0.55, false), 'lean-mild');
+  assert.equal(C.leanTone(0.52, false), '');
+  assert.equal(C.leanTone(null, false), '');
   assert.deepEqual(C.leanText({ ...game, lean: { spread: 1, side: 'home', total: 0.5 } }, 2), {});
   assert.equal(C.leanText({ home: {}, away: {} }), null);
 });
@@ -154,9 +159,11 @@ test('a pick says where it stands in words, and red is only for a loss', () => {
 
 test('a board line leads with a plain word and backs it with its numbers', () => {
   assert.deepEqual(C.gradeOf({ tier: 'strong', chance: 0.61, push: 0, needs: 0.524, thin: false }),
-    { tier: 'strong', word: 'Model likes it', detail: '61% to win, needs 52%' });
-  assert.equal(C.gradeOf({ tier: 'lean', chance: 0.7, push: 0.03, needs: 0.5, thin: true }).detail, '70% to win, 3% push, needs 50% · thin sample');
+    { tier: 'strong', word: 'Model likes it', detail: '61% to win · needs 52%' });
+  assert.equal(C.gradeOf({ tier: 'lean', chance: 0.7, push: 0.03, needs: 0.5, thin: true }).detail, '70% to win, 3% push · needs 50% · thin sample');
   assert.deepEqual(C.gradeOf(null), { tier: 'none', word: 'No model read', detail: '' });
+  assert.equal(C.gradeOf({ tier: 'lean', chance: 0.6, push: 0, needs: 0.524, calibrated: false }).detail, '60% to win · needs 52% · uncalibrated');
+  assert.equal(C.gradeOf({ tier: 'lean', chance: 0.62, push: 0, needs: null, calibrated: false }).detail, '62% to win · no price yet · uncalibrated');
   const lines = [{ id: 'a', grade: { tier: 'pass', edge: -2 } }, { id: 'b' }, { id: 'c', grade: { tier: 'strong', edge: 6 } },
     { id: 'd', grade: { tier: 'strong', edge: 9 } }, { id: 'e', grade: { tier: 'lean', edge: 3 } }];
   assert.deepEqual(lines.sort(C.byGrade).map(l => l.id), ['d', 'c', 'e', 'a', 'b']);

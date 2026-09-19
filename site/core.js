@@ -68,13 +68,15 @@
     if (!lean) return null;
     const out = {};
     if (lean.spread != null && Math.abs(lean.spread) >= threshold && lean.side) {
-      out.side = { team: lean.side === 'home' ? game.home.abbr : game.away.abbr, points: Math.abs(lean.spread) };
+      out.side = { team: lean.side === 'home' ? game.home.abbr : game.away.abbr, points: Math.abs(lean.spread), chance: lean.spreadChance ?? null };
     }
     if (lean.total != null && Math.abs(lean.total) >= threshold && lean.total !== 0) {
-      out.total = { direction: lean.total > 0 ? 'Over' : 'Under', points: Math.abs(lean.total) };
+      out.total = { direction: lean.total > 0 ? 'Over' : 'Under', points: Math.abs(lean.total), chance: lean.totalChance ?? null };
     }
     return out;
   };
+  /* A chip's color is its calibrated chance against a standard -110 price: the same bar as the board. */
+  const leanTone = (chance, thin) => chance == null ? '' : chance >= 0.574 && !thin ? 'lean-strong' : chance >= 0.544 ? 'lean-mild' : '';
 
   /* ---------- stat windows ---------- */
 
@@ -230,8 +232,11 @@
   const gradeOf = (g, note = '') => {
     if (!g) return { tier: 'none', word: 'No model read', detail: note || '' };
     const pct = x => `${Math.round(100 * x)}%`;
-    return { tier: g.tier, word: GRADE_WORD[g.tier] || GRADE_WORD.pass,
-      detail: `${pct(g.chance)} to win${g.push >= 0.01 ? `, ${pct(g.push)} push` : ''}, needs ${pct(g.needs)}${g.thin ? ' · thin sample' : ''}` };
+    const parts = [`${pct(g.chance)} to win${g.push >= 0.01 ? `, ${pct(g.push)} push` : ''}`,
+      g.needs == null ? 'no price yet' : `needs ${pct(g.needs)}`];
+    if (g.thin) parts.push('thin sample');
+    if (g.calibrated === false) parts.push('uncalibrated');
+    return { tier: g.tier, word: GRADE_WORD[g.tier] || GRADE_WORD.pass, detail: parts.join(' · ') };
   };
   const TIER_ORDER = { strong: 0, lean: 1, pass: 2, none: 3 };
   /* Best first: tier, then a solid sample before a thin one, then the size of the edge. */
@@ -277,7 +282,7 @@
 
   const shardOf = (id, shards) => Number(id) % shards;
 
-  return { esc, DASH, odds, signed, fixed, pct, when, whenShort, dayLabel, ago, spreadText, modelSpread, leanText,
+  return { esc, DASH, odds, signed, fixed, pct, when, whenShort, dayLabel, ago, spreadText, modelSpread, leanText, leanTone,
     column, cell, summarize, windows, splits, hits, POSITION_STATS, LABEL, PROJECTION_MARKET,
     rankDefenses, rankOf, rankTone, decimal, american, eligible, summarizeTicket, ticketText,
     unitsFor, recordOf, pickState, isOpen, isLongshot, gradeOf, byGrade, category, parseRoute, shardOf, BASE };

@@ -20,7 +20,7 @@ Work in the repository clone. Read `RESEARCH.md` on your first run and whenever 
 
 ## Each run, in order
 
-1. **Sync.** `git pull --rebase`. If it fails, stop and report; never force.
+1. **Sync.** `git pull --rebase`. If it fails, stop and report; never force. If the hosted workflow on GitHub has failed, say so in your report and carry on: it is not a reason to skip the card. The box-score store is the source of truth for who plays for whom; a player listed under a game plays for one of its teams as of their latest stored game. If that looks wrong, open the linked ESPN box score. Never "fix" data.
 2. **Settle.** For every unsettled pick whose game is final, publish a revision with `status: "settled"`, `result`, `actual`, `actualValue`, `settledAt` and `resultSource` (the ESPN box score). Use `void` only when the sportsbook's own rule voids the bet, such as a player prop on a player who did not play or a cancelled game, and cite the rule. If the outcome is unclear, leave it unsettled with `settlementState` and `nextReviewAt`.
 3. **Check open picks.** Run `python scripts/desk.py moves`.
    - For every `CLOSE`, publish a revision with `status: "expired"` and an `entryNote` quoting the rule and the numbers: "Closed to new entries at 16:05 ET: DraftKings main line 31.5, 2 against; props close at 0.5." The pick stays in the record at its published price and is graded as posted. Never re-price it. Never void it because the line moved.
@@ -35,8 +35,8 @@ Work in the repository clone. Read `RESEARCH.md` on your first run and whenever 
    - the stats on the site: last 5/10/20, home/away, head-to-head and defense vs position. `python scripts/build_site.py` builds them locally in `site/data/app/`.
 
    If you cannot name a sourced reason, pass.
-6. **Price.** Read the current line and price at the book: DraftKings or FanDuel, as available in Indiana. Record the book, market, line, price, the time you saw it and the page URL. An article, a widget or ESPN's feed is a reference, not a quote. No price, no pick.
-7. **Numbers.** Run `python scripts/desk.py price GAME MARKET SIDE LINE ODDS [--player ATHLETE_ID]`. Copy `projection`, `edge` and `cutoff` into the pick as they are, and set `modelVersion` from `model` and `snapshotAt` from `snapshotAt`. If the desk has no v2 snapshot or no projection for that player, the pick has no model number: say so in `edge`, and do not substitute your own.
+6. **Price.** Read the current line and price at any book available in Indiana (DraftKings, FanDuel, BetMGM and the rest), take the best price, and record the book, market, line, price, the time you saw it and the page URL. If no book's page can be reached, a game line may use DraftKings' price as relayed by ESPN's odds feed (`market` and `marketRetrievedAt` in `site/data/slate.json`), with `quoteType: "feed"` and a `quoteNote` saying it was not re-read at the app. The feed carries player lines without prices, so a prop still needs a price from a book. An article or a widget is a reference, not a quote. No price, no pick.
+7. **Numbers.** Run `python scripts/desk.py price GAME MARKET SIDE LINE ODDS [--player ATHLETE_ID]`. Copy `projection`, `edge` and `cutoff` into the pick as they are, and set `modelVersion` from `model` and `snapshotAt` from `snapshotAt`. The chance it prints is already shrunk by v2's record against the closing line (spreads carry almost no information, totals a little); a pick needs a sourced reason beyond it. If the desk has no v2 snapshot or no projection for that player, the pick has no model number: say so in `edge`, and do not substitute your own.
 8. **Publish.** Write one new report file for the run, in the format in `RESEARCH.md`.
    - Decide `favorite` now; it can never change.
    - Set `expiresAt` to the next scheduled run or kickoff, whichever comes first.

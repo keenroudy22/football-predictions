@@ -16,7 +16,7 @@
 
   const state = {
     league: saved.get('league', 'NFL'),
-    gamesScope: 'upcoming', boardScope: 'open', boardSort: 'best', boardQuery: '', playerQuery: '',
+    gamesScope: 'upcoming', gamesQuery: '', boardDay: 'today', boardScope: 'open', boardSort: 'best', boardQuery: '', playerQuery: '', recordQuery: '',
     stat: null, defensePos: 'WR', defenseStat: 'recYds', defenseScope: 'season', defenseOrder: 'soft',
     logSeason: 'all', scoresLeague: 'MLB', scoresDate: null, recordScope: 'all',
     ticket: saved.get('ticket', []), stake: saved.get('stake', { amount: 1, mode: 'units', unit: 10 }),
@@ -69,8 +69,9 @@
     const lean = C.leanText(game);
     if (!lean || (!lean.side && !lean.total)) return '<span class="row-meta">no model call</span>';
     const thin = Boolean((game.v2 || {}).sparse);
-    const chip = (text, size) => `<span class="lean ${size >= strong && !thin ? 'lean-strong' : size >= 1.5 ? 'lean-mild' : ''}">${esc(text)}</span>`;
-    return `<span class="leans">${lean.side ? chip(`Lean ${lean.side.team} · ${lean.side.points.toFixed(1)} pts`, lean.side.points) : ''}${lean.total ? chip(`Lean ${lean.total.direction} · ${lean.total.points.toFixed(1)} pts`, lean.total.points) : ''}</span>`;
+    const pct = c => c == null ? '' : ` · ${Math.round(100 * c)}%`;
+    const chip = (text, chance) => `<span class="lean ${C.leanTone(chance, thin)}">${esc(text)}</span>`;
+    return `<span class="leans">${lean.side ? chip(`Lean ${lean.side.team} · ${lean.side.points.toFixed(1)} pts${pct(lean.side.chance)}`, lean.side.chance) : ''}${lean.total ? chip(`Lean ${lean.total.direction} · ${lean.total.points.toFixed(1)} pts${pct(lean.total.chance)}`, lean.total.chance) : ''}</span>`;
   };
 
   const gameRow = game => {
@@ -120,10 +121,12 @@
     const live = picks.filter(p => !p.result && !p.historicalImport)
       .sort((a, b) => (C.isOpen(b) - C.isOpen(a)) || String(a.kickoff).localeCompare(String(b.kickoff)));
     const forecasts = now.filter(g => g.v2).length;
-    return `${head(first ? dayLabel(first.kickoff) : 'No games scheduled',
+    const todayLabel = dayLabel(new Date().toISOString());
+    const title = !first ? 'No games scheduled' : dayLabel(first.kickoff) === todayLabel ? todayLabel : `Next slate: ${dayLabel(first.kickoff)}`;
+    return `${head(title,
       first ? `${now.length} games on this slate · ${forecasts} with a v2 forecast · market lines from ${esc((first.market || {}).book || 'the book')}` : 'Nothing kicks off in the next eight days in this league.')}
       <div class="two-col"><div>
-        ${section('Where the model and the market disagree', gaps.length ? `<p class="row-meta" style="margin:0 0 8px">A lean is how many points v2 sits from the current line, and on which side. It is not a pick.</p><div class="card">${gaps.map(gameRow).join('')}</div>`
+        ${section('Where the model and the market disagree', gaps.length ? `<p class="row-meta" style="margin:0 0 8px">A lean is how many points v2 sits from the current line, on which side, and its calibrated chance of beating that line. Green needs 57%+ on a solid sample; most early-season leans are worth about 52%. Not a pick.</p><div class="card">${gaps.map(gameRow).join('')}</div>`
           : empty('No model calls yet', 'The model publishes after the hosted refresh runs. Every game still shows the market number.'), '<a href="#games">All games →</a>')}
         ${section('Our picks', live.length ? `<div class="card"><div class="rows">${live.map(pickRow).join('')}</div></div>`
           : empty('No picks waiting to settle', 'Nothing has cleared the bar for this slate. Fewer picks, or none, is part of the process.', '<a class="btn" href="#board">Open the board</a>'), '<a href="#record">Record →</a>')}
@@ -173,12 +176,15 @@
     let games = data.games.filter(inLeague);
     games = state.gamesScope === 'final' ? games.filter(g => g.completed).sort((a, b) => b.kickoff.localeCompare(a.kickoff))
       : upcoming(games);
+    const gq = state.gamesQuery.trim().toLowerCase();
+    if (gq) games = games.filter(g => [g.home.abbr, g.home.name, g.away.abbr, g.away.name].some(v => String(v || '').toLowerCase().includes(gq)));
     const groups = new Map();
     for (const g of games) { const day = dayLabel(g.kickoff); if (!groups.has(day)) groups.set(day, []); groups.get(day).push(g); }
     return `${head('Games', 'Every game with the model’s score next to the market’s spread and total. The chips show how far the model is from the market.')}
       <div class="toolbar">${seg('gamesScope', [['upcoming', 'Upcoming'], ['final', 'Recent finals']], state.gamesScope)}</div>
+      <input class="search" type="search" data-input="gamesQuery" placeholder="Find a team" value="${esc(state.gamesQuery)}" aria-label="Find a team">
       ${games.length ? [...groups].map(([day, rows]) => section(day, `<div class="card">${rows.map(gameRow).join('')}</div>`)).join('')
-        : empty(state.gamesScope === 'final' ? 'No recent finals' : 'No upcoming games', 'Nothing in this league inside the current window.')}`;
+        : empty(gq ? 'No game matches' : state.gamesScope === 'final' ? 'No recent finals' : 'No upcoming games', gq ? 'Try a team abbreviation or name.' : 'Nothing in this league inside the current window.')}`;
   }
 
   /* ---------- one game ---------- */
@@ -548,14 +554,21 @@
     const clv = new Map((((board || {}).picks || {}).rows || []).map(r => [r.id, r]));
     const league = data.picks.filter(inLeague);
     const picks = state.recordScope === 'favorites' ? league.filter(p => p.favorite) : league;
-    const settled = picks.filter(p => p.result).sort((a, b) => String(b.settledAt || b.publishedAt).localeCompare(String(a.settledAt || a.publishedAt)));
+    const rq = state.recordQuery.trim().toLowerCase();
+    const matches = p => !rq || [p.title, p.player, p.kind, p.result, p.book].some(v => String(v || '').toLowerCase().includes(rq));
+    const settled = picks.filter(p => p.result && matches(p)).sort((a, b) => String(b.settledAt || b.publishedAt).localeCompare(String(a.settledAt || a.publishedAt)));
     const r = C.recordOf(picks);
+    const scoped = state.recordScope === 'favorites' ? data.picks.filter(p => p.favorite) : data.picks;
+    const leagues = [['NFL', 'NFL'], ['CFB', 'College']].map(([id, name]) => [name, C.recordOf(scoped.filter(p => p.league === id))]);
     const types = [...new Set(picks.map(C.category))].map(name => [name, C.recordOf(picks.filter(p => C.category(p) === name))]);
     const typeRow = ([name, t]) => `<tr><th scope="row">${esc(name)}</th><td class="num">${t.wins}–${t.losses}–${t.pushes}</td><td class="num">${t.units == null ? DASH : signed(t.units, 2) + 'u'}</td><td class="num">${t.priced}</td></tr>`;
     return `${head('The record', 'Every published pick at one unit, win or lose. Original prices are frozen; later moves are logged, never re-priced.')}
       <div class="toolbar">${seg('recordScope', [['all', `All picks (${league.length})`], ['favorites', `Favorites (${league.filter(p => p.favorite).length})`]], state.recordScope)}</div>
       ${recordCard(r, false)}
+      ${section('By sport', `<div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>W–L–P</th><th>Net units</th><th>Priced</th><th>Pending</th></tr></thead><tbody>${leagues.map(([name, t]) =>
+        `<tr><th scope="row">${esc(name)}</th><td class="num">${t.wins}–${t.losses}–${t.pushes}</td><td class="num">${t.units == null ? DASH : signed(t.units, 2) + 'u'}</td><td class="num">${t.priced}</td><td class="num">${t.pending}</td></tr>`).join('')}</tbody></table></div>`)}
       ${types.length > 1 ? section('By type', `<div class="table-wrap"><table class="data"><thead><tr><th>Type</th><th>W–L–P</th><th>Net units</th><th>Priced</th></tr></thead><tbody>${types.map(typeRow).join('')}</tbody></table></div>`) : ''}
+      <input class="search" type="search" data-input="recordQuery" placeholder="Search settled picks by player, team or market" value="${esc(state.recordQuery)}" aria-label="Search settled picks">
       ${section('Every settled pick', settled.length ? `<div class="card"><div class="rows">${settled.map(p => {
         const c = clv.get(p.id);
         return pickRow({ ...p, actual: [p.actual, c && c.clv != null ? `CLV ${signed(c.clv)}` : null].filter(Boolean).join(' · ') });
@@ -568,17 +581,28 @@
     const data = await get('app/lines.json');
     const all = data.lines.filter(inLeague);
     const query = state.boardQuery.trim().toLowerCase();
-    let shown = all.filter(l => state.boardScope === 'open' ? l.state === 'open' || l.state === 'reference'
+    let shown = all.filter(l => state.boardScope === 'open' ? ['open', 'reference', 'unpriced'].includes(l.state)
       : state.boardScope === 'settled' ? l.state === 'closed' : true);
     if (query) shown = shown.filter(l => `${l.player || ''} ${l.title || ''} ${l.market || ''}`.toLowerCase().includes(query));
+    /* Today first. With nothing left today, the next day that has lines stands in, and the header says so. */
+    const todayLabel = dayLabel(new Date().toISOString());
+    let dayNote = '';
+    if (state.boardDay === 'today') {
+      const upcomingLines = shown.filter(l => Date.parse(l.kickoff) > Date.now()).sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)));
+      const todayLines = upcomingLines.filter(l => dayLabel(l.kickoff) === todayLabel);
+      if (todayLines.length) shown = todayLines;
+      else if (upcomingLines.length) { const next = dayLabel(upcomingLines[0].kickoff); shown = upcomingLines.filter(l => dayLabel(l.kickoff) === next); dayNote = `Nothing left today; showing ${next}.`; }
+      else shown = [];
+    }
     const rank = { open: 0, reference: 1, stale: 2, unpriced: 3, closed: 4 };
     const byKickoff = (a, b) => String(a.kickoff).localeCompare(String(b.kickoff)) || String(a.player || a.title).localeCompare(String(b.player || b.title));
     shown.sort((a, b) => (rank[a.state] - rank[b.state]) || (state.boardSort === 'best' ? C.byGrade(a, b) : 0) || byKickoff(a, b));
-    const open = all.filter(l => l.state === 'open');
-    const liked = open.filter(l => (l.grade || {}).tier === 'strong').length, leans = open.filter(l => (l.grade || {}).tier === 'lean').length;
-    return `${head('The board', `${open.length} open lines. The model likes ${liked} and leans slightly on ${leans}. These are prices we saw, not picks; only our picks are selections.`)}
-      <div class="toolbar">${seg('boardScope', [['open', 'Open'], ['all', 'Everything'], ['settled', 'Closed']], state.boardScope)}${seg('boardSort', [['best', 'Best first'], ['time', 'By kickoff']], state.boardSort)}</div>
-      <p class="row-meta" style="margin:0 0 10px">Each line shows v2's chance of winning it next to what its price needs. <b class="grade-word grade-strong">Model likes it</b> is 5+ points clear; <b class="grade-word grade-lean">Slight lean</b> is 2 to 5, or any edge on a thin early-season sample. v2 has not beaten the closing line yet: this is where to look, not what to bet.</p>
+    const open = all.filter(l => l.state === 'open'), props = all.filter(l => l.state === 'unpriced' && l.athleteId);
+    const liked = all.filter(l => (l.grade || {}).tier === 'strong').length, leans = all.filter(l => (l.grade || {}).tier === 'lean').length;
+    return `${head('The board', `${open.length} priced lines and ${props.length} player lines. The model likes ${liked} and leans slightly on ${leans}. These are lines we saw, not picks; only our picks are selections.`)}
+      <div class="toolbar">${seg('boardDay', [['today', 'Today'], ['week', 'This week']], state.boardDay)}${seg('boardScope', [['open', 'Open'], ['all', 'Everything'], ['settled', 'Closed']], state.boardScope)}${seg('boardSort', [['best', 'Best first'], ['time', 'By kickoff']], state.boardSort)}</div>
+      ${dayNote ? `<p class="row-meta" style="margin:0 0 8px">${esc(dayNote)}</p>` : ''}
+      <p class="row-meta" style="margin:0 0 10px">Each line shows v2's chance of winning it next to what its price needs. The chance is already shrunk by v2's 2024-25 record against the closing line, which it has not beaten: spreads carry little information, totals a bit more. <b class="grade-word grade-strong">Model likes it</b> is 5+ points clear; <b class="grade-word grade-lean">Slight lean</b> is 2 to 5, a thin early-season sample, or a player line where v2 leans 60%+ on three or more games this season. Player lines are DraftKings' main numbers via ESPN, with no price and no calibration yet. This is where to look, not what to bet.</p>
       <input class="search" type="search" data-input="boardQuery" placeholder="Player, team or market" value="${esc(state.boardQuery)}" aria-label="Search lines">
       <div id="board-rows">${shown.length ? `<div class="card"><div class="rows">${shown.slice(0, 250).map(lineRow).join('')}</div></div>` : empty('Nothing matches', 'Try another search or scope.')}</div>
       <p class="row-meta" style="margin-top:10px">Tap + to add a priced, current line to your ticket. Tickets stay on this device and never enter the record.</p>`;
@@ -788,10 +812,11 @@
     if (field.dataset.input === 'playerQuery') {
       state.playerQuery = field.value;
       get(`app/players/${dataLeague()}.json`).then(index => { const box = $('#player-results'); if (box) box.innerHTML = playerResults(index, dataLeague()); });
-    } else if (field.dataset.input === 'boardQuery') {
-      state.boardQuery = field.value;
+    } else if (field.dataset.input) {
+      const key = field.dataset.input;
+      state[key] = field.value;
       const caret = field.selectionStart;
-      render().then(() => { const box = document.querySelector('[data-input="boardQuery"]'); if (box) { box.focus(); box.setSelectionRange(caret, caret); } });
+      render().then(() => { const box = document.querySelector(`[data-input="${key}"]`); if (box) { box.focus(); box.setSelectionRange(caret, caret); } });
     } else if (field.dataset.stake) {
       state.stake[field.dataset.stake] = Number(field.value);
       saved.set('stake', state.stake);
