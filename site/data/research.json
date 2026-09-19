@@ -5994,5 +5994,98 @@
     "takeaways": [
       "v2 grades 43 of 71 college games as FBS vs FCS or thin; the biggest raw gaps are all large underdogs, which is its known early-season compression, not an edge."
     ]
+  },
+  {
+    "league": "CFB",
+    "publishedAt": "2026-09-19T12:49:15Z",
+    "targetWeek": 3,
+    "summary": "8:50 AM ET check. Both morning picks are open: Texas A&M -16.5 is still -16.5 at -118 and Duke -10 is -10 at -108, three cents against, inside the 15-cent rule. Nothing to settle. No new picks: the five watch items were researched again and none has a sourced reason beyond the model, which after calibration reads every early-season spread at about 50 to 54%. Nevada's quarterback is expected back, which removes the reason v2 leaned to Middle Tennessee.",
+    "gameWatch": [
+      {
+        "id": "CFB-2026-W3-unt-plus-3-at-txst-watch",
+        "gameId": "CFB-401860889",
+        "title": "North Texas +3 at Texas State",
+        "why": "Texas State WR Beau Sparks is limited and day-to-day per Yahoo's preview; nothing current on Zechariah Sample. Texas State is 0-2 with three turnovers in each game. Kickoff noon ET; stays at 5/10, not a pick. v2 home margin -10.9 (80% range -31.8 to 10). Chance of away +3: 54.4% (v2's raw 79.4% shrunk by its 2024-25 record against the close), push 1.7%, against 52.4% break-even at -110: +2.0 points, +0.056u per unit.",
+        "needs": "A confirmed inactive list and a DraftKings price for the away side (the feed prices Texas State -3 at -105).",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34633932",
+          "https://sports.yahoo.com/articles/2026-week-3-preview-north-080000871.html",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401860884",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401862705"
+        ],
+        "projection": -10.9,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:45:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-wvu-uva-under-53-5-watch",
+        "gameId": "CFB-401856802",
+        "title": "West Virginia vs Virginia under 53.5",
+        "why": "Neutral site in Charlotte (Duke's Mayo Classic), calm weather. Virginia's quarterback is Beau Pribula or Eli Holstein; no availability report for this game was found. Model only; not a pick. v2 total 45.5 (80% range 24.8 to 66.2). Chance of under 53.5: 56.8% (v2's raw 69.0% shrunk by its 2024-25 record against the close), against 52.4% break-even at -110: +4.4 points, +0.085u per unit.",
+        "needs": "Virginia's ACC availability report and the named starting quarterback.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634060",
+          "https://www.espn.com/college-football/game/_/gameId/401856802/west-virginia-virginia",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856791",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858220"
+        ],
+        "projection": 45.5,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:45:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-mtsu-plus-3-5-vs-nev-watch",
+        "gameId": "CFB-401864443",
+        "title": "Middle Tennessee +3.5 vs Nevada",
+        "why": "Nevada QB Carter Jones missed the 7-20 loss to Montana State with a shoulder injury and is expected to play (KOLO, Nevada Sports Net). v2's lean to MTSU rests on that loss, so the reason is gone. The line moved to MTSU +4. Leaning pass. v2 home margin 4.2 (80% range -16.7 to 25.1). Chance of home +4: 52.7% (v2's raw 68.2% shrunk by its 2024-25 record against the close), push 2.2%, against 51.9% break-even at -108: +0.8 points, +0.037u per unit.",
+        "needs": "Confirmation that Jones starts; if he does not, revisit.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634056",
+          "https://www.kolotv.com/2026/09/17/four-downs-previewing-nevada-vs-middle-tennessee/",
+          "https://nevadasportsnet.com/newsletter-daily/nevada-football-at-middle-tennessee-three-keys-to-victory-and-a-prediction",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401864500",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401871045"
+        ],
+        "projection": 4.2,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:45:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-most-plus-4-vs-mrsh-watch",
+        "gameId": "CFB-401871047",
+        "title": "Missouri State +4 vs Marshall",
+        "why": "No new information since the morning. Model only; not a pick. v2 home margin 4.5 (80% range -16.4 to 25.4). Chance of home +4: 52.8% (v2's raw 68.8% shrunk by its 2024-25 record against the close), push 2.1%, against 52.4% break-even at -110: +0.4 points, +0.030u per unit.",
+        "needs": "Anything beyond two games of history.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34634043",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401871046",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401871045"
+        ],
+        "projection": 4.5,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:45:00Z"
+      },
+      {
+        "id": "CFB-2026-W3-kent-osu-under-59-5-watch",
+        "gameId": "CFB-401858454",
+        "title": "Kent State at Ohio State under 59.5",
+        "why": "Storm chance in Columbus from 4 to 7 PM local (29 to 38%) is unchanged. Model only beyond that; not a pick. v2 total 51.3 (80% range 30.5 to 72). Chance of under 59.5: 57.0% (v2's raw 69.5% shrunk by its 2024-25 record against the close), against 54.1% break-even at -118: +2.9 points, +0.053u per unit.",
+        "needs": "A reason beyond the forecast: Ohio State's substitution pattern with a large lead.",
+        "sources": [
+          "https://sportsbook.draftkings.com/event/34633885",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401858432",
+          "https://www.espn.com/college-football/boxscore/_/gameId/401856665",
+          "https://api.weather.gov/points/40.002,-83.020"
+        ],
+        "projection": 51.3,
+        "modelVersion": "v2.0",
+        "snapshotAt": "2026-09-19T12:11:24Z",
+        "nextReviewAt": "2026-09-19T15:45:00Z"
+      }
+    ]
   }
 ]
