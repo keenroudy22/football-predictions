@@ -40,13 +40,13 @@ class PickTests(unittest.TestCase):
         rows = {r['id']: r for r in build_site.board_picks(*build_site.first_publications(reports), {}, {})}
         self.assertEqual({k: r['favorite'] for k, r in rows.items()}, {'a': True, 'b': False, 'w1-otton-rec': True})
 
-    def test_the_published_record_flags_seven_favorites(self):
+    def test_the_published_record_keeps_week_one_favorites_and_the_flag(self):
         reports = [json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT / 'research').glob('*.json'))]
         rows = build_site.board_picks(*build_site.first_publications(reports), {}, {})
-        favorites = sorted(r['id'] for r in rows if r['favorite'])
-        self.assertEqual(len(favorites), 7, favorites)
+        favorites = {r['id'] for r in rows if r['favorite']}
+        self.assertTrue(build_site.FAVORITES_BEFORE_FLAG <= favorites, 'the five Week 1 favorites predate the flag')
         self.assertIn('NFL-2026-W2-gibbs-over-29-5-recyd-dk', favorites)
-        self.assertNotIn('NFL-2026-W2-det-buf-volume-fun-sgp-dk', favorites)
+        self.assertNotIn('NFL-2026-W2-det-buf-volume-fun-sgp-dk', favorites, 'favorite: false stays false')
 
 
 class GameLineTests(unittest.TestCase):
